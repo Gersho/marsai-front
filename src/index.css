@@ -1,3 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #155dfccc;
+  --color-secondary: #f0b100;
+  --color-tertiary: #c27aff;
+  --color-accent: #7a2552;
+  --color-bg: #000000;
+  --color-muted: rgba(255, 255, 255, 0.2);
+  --color-subtitle: #51a2ff;
+  --font-default: 'Arimo', sans-serif;
+  --font-weight-normal: 400;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
