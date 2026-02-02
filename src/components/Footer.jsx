@@ -18,7 +18,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
             {/* Paragraphe de description */}
             <p className="text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
-              Une co-création de l'école du numérique La Plateforme et le Mobile Film Festival. 
+              Une co-création de l&apos;école du numérique La Plateforme et le Mobile Film Festival. 
               Ensemble pour dessiner les nouveaux horizons du cinéma.
             </p>
 
@@ -56,7 +56,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
                 type="submit" 
                 className="bg-gray-500 text-white rounded-full px-6 py-3 font-bold text-xs uppercase"
               >
-                S'inscrire
+                S&apos;inscrire
               </button>
             </form>
           </div>

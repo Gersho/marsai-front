@@ -10,7 +10,7 @@ function HomePage() {
         </h1>
         <p className="pb-6 text-center text-white">
           Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours
-          d'immersion au cœur de Marseille.
+          d&apos;immersion au cœur de Marseille.
         </p>
         <div className="flex gap-2 mx-2 lg:mx-0">
           <Link
