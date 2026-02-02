@@ -6,7 +6,7 @@
   --color-primary: #155dfccc;
   --color-secondary: #f0b100;
   --color-tertiary: #c27aff;
-  --color-accent: #7a2552;
+  --color-accent: #ff5845;
   --color-bg: #000000;
   --color-muted: rgba(255, 255, 255, 0.2);
   --color-subtitle: #51a2ff;
@@ -48,6 +48,9 @@
     }
   }
   .active {
-    color: var(--color-primary);
+    @apply text-primary;
+  }
+  .button {
+    @apply rounded-full py-2 px-4 lg:px-6;
   }
 }
