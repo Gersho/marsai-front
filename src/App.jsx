@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import GaleryPage from './pages/GaleryPage';
 import HomePage from './pages/HomePage';
@@ -10,8 +11,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<GaleryPage />} />
+
       </Routes>
+      <Footer/>
     </>
+    
   );
 }
 
