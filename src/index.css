@@ -12,11 +12,12 @@
   --color-subtitle: #51a2ff;
   --font-default: 'Arimo', sans-serif;
   --font-weight-normal: 400;
+  --line-height: 1.5;
 }
 
 :root {
   font-family: var(--font-default);
-  line-height: 1.5;
+  line-height: var(--line-height);
   font-weight: var(--font-weight-normal);
 
   color-scheme: light dark;
