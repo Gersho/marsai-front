@@ -5,5 +5,11 @@
     "gallery": "Galerie",
     "programme_info": "Programme & Infos",
     "jury": "Jury"
+  },
+  "hero": {
+    "title": "Imaginez des <0>futurs</0> souhaitables",
+    "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
+    "cta_participate": "Participez maintenant",
+    "cta_learn_more": "En savoir plus <0>+</0>"
   }
 }
