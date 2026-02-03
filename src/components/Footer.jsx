@@ -1,4 +1,12 @@
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import marsaiLogo from '../assets/marsai-logo.svg';
+import Logo from './Logo';
+
+const footerLogo = {
+  logo: {
+    src: marsaiLogo,
+    alt: 'logo marsai',
+  },};
 
  const Footer = () => {
   return (
@@ -13,7 +21,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
           <div className="space-y-6 text-center lg:text-left">
             {/* Badge Logo MARS.A.I */}
             <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
-              MARS.A.I
+              <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
 
             {/* Paragraphe de description */}
