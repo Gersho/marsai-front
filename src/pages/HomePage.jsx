@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import SectionProjet from '../components/Projet';
+import FilmsCompetition from '../components/Filmscompet';
 
 function HomePage() {
   return (
     <>
-        <div className="typography py-24  md:py-36 lg:py-0 lg:min-h-screen bg-black bg-[url(/src/assets/banner-mobile.png)] md:bg-[url(/src/assets/banner.png)] bg-no-repeat bg-cover flex text-white">
+    <div className="typography py-24  md:py-36 lg:py-0 lg:min-h-screen bg-black bg-[url(/src/assets/banner-mobile.png)] md:bg-[url(/src/assets/banner.png)] bg-no-repeat bg-cover flex text-white">
       <div className="flex-1 flex flex-col justify-center items-center max-w-lg mx-auto">
         <h1 className="uppercase text-center text-4xl md:text-6xl pb-4 text-white">
           Imaginez des <strong className="text-accent">futurs </strong>
@@ -41,8 +42,9 @@ function HomePage() {
       </div>
     </div>
     <SectionProjet />
-    </>
 
+    <FilmsCompetition/>
+    </>
   );
 }
 
