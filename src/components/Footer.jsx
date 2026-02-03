@@ -23,7 +23,6 @@ const footerLogo = {
             <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
               <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
-
             {/* Paragraphe de description */}
             <p className="text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
               Une co-création de l&apos;école du numérique La Plateforme et le Mobile Film Festival. 
