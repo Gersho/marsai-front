@@ -69,7 +69,7 @@ function Login() {
           >
             MOT DE PASSE
           </label>
-          <div className="flex items-center gap-2 bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 focus-within:outline-neutral-300">
+          <div className="flex items-center gap-4 bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 focus-within:outline-neutral-300">
             <FaLock size={24} />
             <input
               className="placeholder:font-bold outline-0"
