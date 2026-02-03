@@ -6,7 +6,7 @@
   --color-primary: #155dfccc;
   --color-secondary: #f0b100;
   --color-tertiary: #c27aff;
-  --color-accent: #7a2552;
+  --color-accent: #ff5845;
   --color-bg: #000000;
   --color-muted: rgba(255, 255, 255, 0.2);
   --color-subtitle: #51a2ff;
@@ -21,7 +21,6 @@
   font-weight: var(--font-weight-normal);
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -49,29 +48,9 @@
     }
   }
   .active {
-    color: aqua;
+    @apply text-primary;
   }
-  a {
-    font-weight: 400;
-    color: white;
-    text-decoration: inherit;
-  }
-  a:hover {
-    color: #535bf2;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
+  .button {
+    @apply rounded-full py-2 px-4 lg:px-6;
   }
 }
