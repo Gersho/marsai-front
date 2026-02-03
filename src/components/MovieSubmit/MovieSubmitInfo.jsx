@@ -1,7 +1,7 @@
 function MovieSubmitInfo() {
     return (
         // TODO change gray to theme color
-        <div className="border-2 border-gray rounded-md w-5/6 flex flex-col items-center">
+        <div className="border-2 border-gray rounded-md w-5/6 flex flex-col items-center pb-4">
             <h2 className="px-4 py-2 self-start">01. Identité du film</h2>
 
             <div className="flex flex-col w-5/6 bg-primary">
