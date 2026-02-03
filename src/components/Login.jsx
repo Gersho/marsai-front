@@ -3,6 +3,7 @@ import arrow from '../assets/arrow.png';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaEnvelope, FaLock } from 'react-icons/fa';
 
 function Login() {
   const { register, handleSubmit } = useForm();
@@ -31,8 +32,8 @@ function Login() {
   }
 
   return (
-    <div className="w-full py-4">
-      <div className="text-5xl font-bold text-white text-center mb-5">
+    <div className="w-full py-4 pt-17 h-screen">
+      <div className="text-5xl font-bold text-white text-center m-10">
         CONNEXION
       </div>
       <div className="flex justify-center text-zinc-100 my-10 gap-4">
@@ -49,14 +50,17 @@ function Login() {
           <label className="text-[#c7deff] text-xs font-bold" htmlFor="email">
             ADRESSE E-MAIL
           </label>
-          <input
-            className="bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 placeholder:font-bold focus:outline-neutral-300"
-            type="email"
-            id="email"
-            name="email"
-            {...register('email', { required: true })}
-            placeholder="EMAIL@EXAMPLE.COM"
-          />
+          <div className="flex items-center gap-4 bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 focus-within:outline-neutral-300">
+            <FaEnvelope size={24} />
+            <input
+              className=" placeholder:font-bold outline-0"
+              type="email"
+              id="email"
+              name="email"
+              {...register('email', { required: true })}
+              placeholder="email@example.com"
+            />
+          </div>
         </div>
         <div className="flex flex-col gap-2">
           <label
@@ -65,18 +69,20 @@ function Login() {
           >
             MOT DE PASSE
           </label>
-          <input
-            className="bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 placeholder:font-bold focus:outline-neutral-300"
-            type="password"
-            id="password"
-            name="password"
-            {...register('password', { required: 'test' })}
-            placeholder="******************"
-          />
+          <div className="flex items-center gap-2 bg-zinc-800 rounded-xl h-14 text-zinc-50  outline-2 outline-neutral-400 pl-4 focus-within:outline-neutral-300">
+            <FaLock size={24} />
+            <input
+              className="placeholder:font-bold outline-0"
+              type="password"
+              id="password"
+              name="password"
+              {...register('password', { required: 'test' })}
+            />
+          </div>
         </div>
         <button
           type="submit"
-          className="bg-sky-700 text-white rounded-xl uppercase h-14 font-bold cursor-pointer hover:bg-sky-600 active:bg-sky-700"
+          className="bg-primary text-white rounded-xl uppercase h-14 font-bold cursor-pointer hover:bg-blue-600 active:bg-primary"
         >
           accéder à l’espace
         </button>

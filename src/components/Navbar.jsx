@@ -45,7 +45,7 @@ function Navbar() {
     <div
       className={`z-40 flex w-full items-center bg-transparent py-4 lg:py-2 ${
         sticky
-          ? 'fixed top-0 bg-white bg-opacity-80 shadow-sticky backdrop-blur-sm transition'
+          ? 'fixed top-0 bg-white bg-opacity-80 shadow-sticky backdrop-blur-sm transition duration-300'
           : `absolute`
       }`}
     >
