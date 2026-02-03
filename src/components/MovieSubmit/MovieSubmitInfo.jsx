@@ -1,43 +1,48 @@
 function MovieSubmitInfo() {
     return (
+        // TODO change gray to theme color
+        <div className="border-2 border-gray rounded-md w-5/6 flex flex-col items-center">
+            <h2 className="px-4 py-2 self-start">01. Identité du film</h2>
 
-        <div >
-            <h2>01. Identité du film</h2>
-            <div>
+            <div className="flex flex-col w-5/6 bg-primary">
                 <label htmlFor="form-original-title">Titre original *</label>
-                <input id="form-original-title" type="text" name="original-title" placeholder="Titre original" title="Titre original"
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-original-title" type="text" name="original-title" placeholder="Titre original" title="Titre original"
                     autoFocus required></input>
 
                 <label htmlFor="form-english-translation">Traduction anglaise *</label>
-                <input id="form-english-translation" type="text" name="english-translation" placeholder="Traduction anglaise" title="Traduction anglaise"
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-english-translation" type="text" name="english-translation" placeholder="Traduction anglaise" title="Traduction anglaise"
                     required></input>
             </div>
 
-            <div>
+            <div className="flex flex-col w-5/6 bg-secondary">
                 <label htmlFor="form-movie-duration">Dureé exacte * (en secondes)</label>
-                <input id="form-movie-duration" type="text" name="duration" placeholder="ex: 60" title="Dureé exacte (en secondes)"
+                <input className="border border-gray rounded-sm pl-2 py-1 my-2" id="form-movie-duration" type="text" name="duration" placeholder="ex: 60" title="Dureé exacte (en secondes)"
                     required></input>
 
                 <label htmlFor="form-main-language">Langue parlée/Principale du film *</label>
-                <input id="form-main-language" type="text" name="language" placeholder="Langue" title="Langue parlée/Principale du film"
+                <input className="border border-gray rounded-sm pl-2 py-1 my-2" id="form-main-language" type="text" name="language" placeholder="Langue" title="Langue parlée/Principale du film"
                     required></input>
             </div>
 
 
 
-            <div>
-                <label htmlFor="form-movie-synopsis">synopsis langue originale * (max. 300 caractères)</label>
-                <p>0/300</p>
-                <input id="form-movie-synopsis" type="textarea" name="original-synopsis" placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..." title="synopsis langue originale (max. 300 caractères)"
-                    required></input>
+            <div className="flex flex-col w-5/6 bg-tertiary">
+                <div className="flex justify-between">
+                    <label htmlFor="form-movie-synopsis">synopsis langue originale *</label>
+                    <p >0/300</p>
+                </div>
+                <textarea className="border border-gray rounded-sm pl-2 py-1 my-2" id="form-movie-synopsis" type="textarea" name="original-synopsis" placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..." title="synopsis langue originale (max. 300 caractères)"
+                    required></textarea>
             </div>
 
 
-            <div>
-                <label htmlFor="form-movie-synopsis-english">synopsis anglais * (max. 300 caractères)</label>
-                <p>0/300</p>
-                <input id="form-movie-synopsis-english" type="textarea" name="english-synopsis" placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..." title="synopsis anglais* (max. 300 caractères)"
-                    required></input>
+            <div className="flex flex-col w-5/6">
+                <div className="flex justify-between">
+                    <label className="self-start" htmlFor="form-movie-synopsis-english">synopsis anglais *</label>
+                    <p>0/300</p>
+                </div>
+                <textarea className="border border-gray rounded-sm pl-2 py-1 my-2" id="form-movie-synopsis-english" type="textarea" name="english-synopsis" placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..." title="synopsis anglais* (max. 300 caractères)"
+                    required></textarea>
             </div>
 
 
