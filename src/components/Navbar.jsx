@@ -1,35 +1,31 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from './Logo';
 import marsaiLogo from '../assets/marsai-logo.svg';
 import marsaiLogoDark from '../assets/marsai-logo-dark.svg';
-import flag_french from '../assets/france.png';
-import flag_english from '../assets/united-kingdom.png';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
-const navbarData = {
-  logo: {
-    src: marsaiLogo,
-    alt: 'logo marsai',
-  },
-  logo_dark: {
-    src: marsaiLogoDark,
-    alt: 'logo marsai dark',
-  },
-  menu: [
-    { id: 1, url: '/', text: 'Accueil' },
-    { id: 2, url: '/movies', text: 'Galerie' },
-    { id: 3, url: '/programme-infos', text: 'Programme & Infos' },
-    { id: 4, url: '/jury', text: 'Jury' },
-  ],
-  languages: [
-    /* { id: 1, locale: 'french', flag: flag_french }, */
-    { id: 2, locale: 'english', flag: flag_english },
-  ],
-};
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
-
+  const { t } = useTranslation();
+  const navbarData = {
+    logo: {
+      src: marsaiLogo,
+      alt: 'logo marsai',
+    },
+    logo_dark: {
+      src: marsaiLogoDark,
+      alt: 'logo marsai dark',
+    },
+    menu: [
+      { id: 1, url: '/', text: t('navbar.home') },
+      { id: 2, url: '/movies', text: t('navbar.gallery') },
+      { id: 3, url: '/programme_info', text: t('navbar.programme_info') },
+      { id: 4, url: '/jury', text: t('navbar.jury') },
+    ],
+  };
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
@@ -113,20 +109,10 @@ function Navbar() {
         </nav>
         <div className="flex gap-4 items-center mr-16 lg:mr-0 lg:gap-8">
           <button className="bg-primary text-white py-2 px-6 text-xs rounded rounded-full lg:text-sm lg:px-8">
-            Soumettre
+            {t('submit')}
           </button>
           <div role="menu" className="flex gap-4">
-            {navbarData.languages.map(language => {
-              return (
-                <Link key={language.id}>
-                  <img
-                    src={language.flag}
-                    alt={language.locale}
-                    className="w-6"
-                  />
-                </Link>
-              );
-            })}
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

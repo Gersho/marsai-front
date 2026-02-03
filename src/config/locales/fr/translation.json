@@ -1,0 +1,9 @@
+{
+  "submit": "Soumettre",
+  "navbar": {
+    "home": "Accueil",
+    "gallery": "Galerie",
+    "programme_info": "Programme & Infos",
+    "jury": "Jury"
+  }
+}
