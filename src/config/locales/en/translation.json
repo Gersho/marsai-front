@@ -1,0 +1,9 @@
+{
+  "submit": "Submit",
+  "navbar": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "programme_info": "Programme & Info",
+    "jury": "Jury"
+  }
+}

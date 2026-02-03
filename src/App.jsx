@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import GaleryPage from './pages/GaleryPage';
 import HomePage from './pages/HomePage';
@@ -13,7 +14,9 @@ function App() {
         <Route path="/movies" element={<GaleryPage />} />
         <Route path="/submit" element={<SubmitMoviePage />} />
       </Routes>
+      <Footer />
     </>
+
   );
 }
 
