@@ -28,6 +28,32 @@
       "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
     }
   ]},
+  "formatSelection":{
+    "title":"Format de la Sélection",
+    "subtitle":"Le parcours des œuvres",
+    "items": [
+      {
+        "title":"2 mois",
+        "subtitle":"appel à projet",
+        "text":"Candidatures ouvertes aux créateurs du monde entier."
+      },
+      {
+        "title":"50 Films",
+        "subtitle":"Sélection Officielle",
+        "text":"Courts-métrages d'une minute retenus pour la compétition."
+      },
+      {
+        "title":"Web & RS",
+        "subtitle":"Diffusion Digitale",
+        "text":"Visibilité mondiale via les réseaux et plateformes."
+      },
+      {
+        "title":"Festival",
+        "subtitle":"Salles de Cinéma",
+        "text":"Projection sur grand écran pour une immersion totale."
+      }],
+      "ctaParticipate": "Participez maintenant"
+  },
   "login": {
     "title": "CONNEXION",
     "subTitle": "ESPACE MEMBRE MARS.A.I",

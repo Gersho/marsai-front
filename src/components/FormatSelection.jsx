@@ -1,35 +1,37 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function FormatSelection() {
+    const { t } = useTranslation();
     const formatSelectionData = [
         {
-            title:"2 mois",
-            subtitle:"appel à projet",
-            text:"Candidatures ouvertes aux créateurs du monde entier."
+            title: t("formatSelection.items.0.title"),
+            subtitle: t("formatSelection.items.0.subtitle"),
+            text: t("formatSelection.items.0.text")
         },
         {
-            title:"50 films",
-            subtitle:"Sélection Officielle",
-            text:"Courts-métrages d'une minute retenus pour la compétition."
+            title: t("formatSelection.items.1.title"),
+            subtitle: t("formatSelection.items.1.subtitle"),
+            text: t("formatSelection.items.1.text")
         },
         {
-            title:"Web & RS",
-            subtitle:"Diffusion Digitale",
-            text:"Visibilité mondiale via les réseaux et plateformes."
+            title: t("formatSelection.items.2.title"),
+            subtitle: t("formatSelection.items.2.subtitle"),
+            text: t("formatSelection.items.2.text")
         },
         {
-            title:"Festival",
-            subtitle:"Salles de Cinéma",
-            text:"Projection sur grand écran pour une immersion totale."
+            title: t("formatSelection.items.3.title"),
+            subtitle: t("formatSelection.items.3.subtitle"),
+            text: t("formatSelection.items.3.text")
         },
     ]
     return(
         <section className="typography py-12 text-white lg:py-24">
             <div className="max-w-5xl mx-auto">
                 <h2 className="uppercase text-4xl font-bold mb-4 text-center md:text-5xl">
-                    Format de la sélection
+                    {t("formatSelection.title")}
                 </h2>
-                <p className="uppercase text-dark text-center mb-6 lg:mb-12">Le parcours des œuvres</p>
+                <p className="uppercase text-dark text-center mb-6 lg:mb-12">{t("formatSelection.subtitle")}</p>
                 <div className="flex flex-col gap-4 mb-6 lg:gap-4 lg:mb-12 lg:flex-row">
                     {formatSelectionData.map((format, index) => (
                         <div key={index} className="bg-back rounded-md px-8 py-8 mx-16 lg:py-12 lg:mx-0">
@@ -44,7 +46,7 @@ function FormatSelection() {
                       to="/movies"
                       className="button flex items-center gap-2  bg-white text-back"
                     >
-                      Participer maintenant
+                      {t("formatSelection.ctaParticipate")}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
