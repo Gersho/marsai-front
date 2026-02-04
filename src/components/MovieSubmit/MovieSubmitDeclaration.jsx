@@ -1,7 +1,11 @@
+import { CiCircleInfo } from "react-icons/ci";
+
 function MovieSubmitDeclaration() {
-    return <div className="border-2 border-gray rounded-md w-5/6 flex flex-col items-center gap-3" >
-        <h2 className="px-4 py-2 self-start">02. Déclaration Usage de l&apos;IA</h2>
-        <p className="border border-gray rounded-sm w-5/6 pl-2">MARS.A.I exige une transparence totale sur l&apos;utilisation de l&apos;Intelligence Artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.</p>
+    return <div className=" w-11/12 flex flex-col items-center gap-3" >
+        <h2 className="px-4 py-2 self-start sm:self-center">02. Déclaration Usage de l&apos;IA</h2>
+        <p className="border border-gray rounded-sm w-5/6 pl-2">
+            <CiCircleInfo className="text-4xl" />
+            MARS.A.I exige une transparence totale sur l&apos;utilisation de l&apos;Intelligence Artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.</p>
 
         <div className="w-5/6">
             {/* appearance-none to remove radio btn */}
