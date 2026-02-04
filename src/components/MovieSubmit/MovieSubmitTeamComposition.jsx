@@ -25,6 +25,19 @@ function MovieSubmitTeamComposition() {
                     required></input>
             </div>
 
+            <div className="w-5/6 bg-primary">
+
+
+                <label htmlFor="form-director-job">métier actuel *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-job" type="text" name="director-job" placeholder="" title="métier actuel du realisateur"
+                    required></input>
+
+
+                <label htmlFor="form-director-birthdate">date de naissance *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-birthdate" type="date" name="director-birthdate" placeholder="" title="date de naissance du realisateur"
+                    required></input>
+
+            </div>
 
             <div className="flex flex-col w-5/6 bg-secondary">
                 <label htmlFor="form-director-email">email *</label>
@@ -36,13 +49,76 @@ function MovieSubmitTeamComposition() {
                     required></input>
             </div>
 
-            <div className="w-5/6 bg-primary">
 
-                <label htmlFor="form-director-job">métier actuel *</label>
-                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-job" type="text" name="director-job" placeholder="" title="métier actuel du realisateur"
+
+            <div className="w-5/6 bg-primary">
+                <label htmlFor="form-director-address">Addresse *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-address" type="text" name="director-address" placeholder="" title="Addresse postale du directeur"
+                    required></input>
+            </div>
+
+            <div className="flex flex-col w-5/6 bg-primary">
+                <label htmlFor="form-director-city">Ville *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-city" type="text" name="director-city" placeholder="" title="Ville du directeur"
                     required></input>
 
+                <label htmlFor="form-director-zipcode">Code Postal</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-zipcode" type="text" name="director-zipcode" placeholder="" title="Code Postal du realisateur"
+                ></input>
             </div>
+
+            <div className="flex flex-col w-5/6 bg-primary">
+                <label htmlFor="form-director-region">Region</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-region" type="text" name="director-region" placeholder="" title="Region du directeur"
+                    required></input>
+
+                <label htmlFor="form-director-country">Pays *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-country" type="text" name="director-country" placeholder="" title="Pays du realisateur"
+                ></input>
+            </div>
+
+            {/* ici */}
+            présence en ligne
+
+            <div className="flex flex-col w-5/6 bg-primary">
+                <label htmlFor="form-director-facebook">Facebook</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-facebook" type="text" name="director-facebook" placeholder="" title="Ville du directeur"
+                ></input>
+
+                <label htmlFor="form-director-zipcode">Instagram</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-zipcode" type="text" name="director-zipcode" placeholder="" title="Code Postal du realisateur"
+                ></input>
+            </div>
+
+            <div className="flex flex-col w-5/6 bg-primary">
+                <label htmlFor="form-director-city">Ville *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-city" type="text" name="director-city" placeholder="" title="Ville du directeur"
+                ></input>
+
+                <label htmlFor="form-director-zipcode">Code Postal</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-zipcode" type="text" name="director-zipcode" placeholder="" title="Code Postal du realisateur"
+                ></input>
+            </div>
+
+            <div className="flex flex-col w-5/6 bg-primary">
+                <label htmlFor="form-director-city">Ville *</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-city" type="text" name="director-city" placeholder="" title="Ville du directeur"
+                ></input>
+
+                <label htmlFor="form-director-zipcode">Code Postal</label>
+                <input className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2" id="form-director-zipcode" type="text" name="director-zipcode" placeholder="" title="Code Postal du realisateur"
+                ></input>
+            </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

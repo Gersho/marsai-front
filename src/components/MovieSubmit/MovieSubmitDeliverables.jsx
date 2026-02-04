@@ -31,12 +31,12 @@ function MovieSubmitDeliverables() {
                 <label className="flex flex-col items-center" htmlFor="form-cover-image">
                     <p className="self-start">Vignette Officielle (16:9) *</p>
                     <div className="flex flex-col items-center gap-5 m-2 w-full max-w-sm bg-zinc-800 p-5 rounded-xl border-2 border-zinc-300 border-dashed hover:bg-zinc-900" >
-                        <div className="p-2 rounded-3xl bg-zinc-600">
-                            <IoImageOutline className="text-zinc-800" size={80} />
+                        <div>
+                            <IoImageOutline className="text-zinc-500" size={80} />
                             <input className="hidden" type="file" id="form-cover-image" name="cover-image"></input>
                         </div>
                         <p className="uppercase text-zinc-200 font-bold">Cliquez pour upload</p>
-                        <p className="py-2 px-4 bg-zinc-600 text-zinc-200 rounded-3xl  text-sm">PNG ou JPG • Max 15Mo</p>
+                        <p className="py-2 px-4 bg-zinc-700 text-zinc-200 rounded-3xl  text-sm">PNG ou JPG • Max 15Mo</p>
                     </div>
                 </label>
 
