@@ -19,7 +19,7 @@ function Hero() {
             to="/movies"
             className="button flex items-center gap-2  text-white bg-primary"
           >
-            {t('hero.cta_participate')}
+            {t('hero.ctaParticipate')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -36,7 +36,7 @@ function Hero() {
           </Link>
           <Link to="/programme-infos" className="button text-black bg-white">
             <Trans
-              i18nKey="hero.cta_learn_more"
+              i18nKey="hero.ctaLearn_more"
               components={[<strong className="text-accent" />]}
             />
           </Link>

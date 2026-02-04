@@ -8,8 +8,8 @@ function HomePage() {
     <>
       <Hero />
       <SectionProjet />
-      <Objectif />
       <FilmsCompetition />
+      <Objectif />
     </>
   );
 }

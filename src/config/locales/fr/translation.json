@@ -3,13 +3,25 @@
   "navbar": {
     "home": "Accueil",
     "gallery": "Galerie",
-    "programme_info": "Programme & Infos",
+    "programmeInfo": "Programme & Infos",
     "jury": "Jury"
   },
   "hero": {
     "title": "Imaginez des <0>futurs</0> souhaitables",
     "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
-    "cta_participate": "Participez maintenant",
-    "cta_learn_more": "En savoir plus <0>+</0>"
+    "ctaParticipate": "Participez maintenant",
+    "ctaLearn_more": "En savoir plus <0>+</0>"
+  },
+  "login": {
+    "title": "CONNEXION",
+    "subTitle": "ESPACE MEMBRE MARS.A.I",
+    "emailLabel": "ADRESSE E-MAIL",
+    "passwordLabel": "MOT DE PASSE",
+    "submitBtn": "ACCÉDER À L’ESPACE",
+    "backBtn": "RETOUR ACCUEIL",
+    "errors": {
+      "invalidCredentials": "Email ou mot de passe invalide",
+      "default": "Quelque chose s'est mal passé"
+    }
   }
 }
