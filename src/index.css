@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import 'tailwindcss';
 
@@ -7,10 +7,13 @@
   --color-secondary: #f0b100;
   --color-tertiary: #c27aff;
   --color-accent: #ff5845;
-  --color-bg: #000000;
+  --color-bg: #242424;
+  --color-back:#333333;
+  --color-dark:#94A3B8;
   --color-muted: rgba(255, 255, 255, 0.2);
   --color-subtitle: #51a2ff;
   --font-default: 'Arimo', sans-serif;
+  --font-secondary: "Plus Jakarta Sans", sans-serif;
   --font-weight-normal: 400;
   --line-height: 1.5;
 }
@@ -34,13 +37,17 @@
       font-size: var(--text-5xl);
       line-height: var(--line-height);
       font-weight: var(--font-weight-semibold);
-      color: var(--color-black);
     }
     h2 {
       font-size: var(--text-4xl);
       line-height: var(--line-height);
       font-weight: var(--font-weight-semibold);
-      color: var(--color-black);
+    }
+    h3{
+      font-family: var(--font-secondary);
+      font-size: var(--text-4xl);
+      line-height: var(--line-height);
+      font-weight: var(--font-weight-semibold);
     }
     p {
       font-size: var(--text-base);
