@@ -23,7 +23,6 @@ const footerLogo = {
             <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
               <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
-
             {/* Paragraphe de description */}
             <p className="text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
               Une co-création de l&apos;école du numérique La Plateforme et le Mobile Film Festival. 
@@ -32,16 +31,16 @@ const footerLogo = {
 
             {/* Icônes Réseaux Sociaux */}
             <div className="flex justify-center lg:justify-start space-x-4 pt-2">
-              <a href="#" className="!text-white rounded-full p-2  hover:bg-[#1877F2] hover:border-[#1877F2] transition">
+              <a href="#" className="text-white! rounded-full p-2  hover:bg-[#1877F2] hover:border-[#1877F2] transition">
                 <FaFacebookF size={20}  />
               </a>
-              <a href="#" className=" !text-white rounded-full p-2 hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] hover:border-transparent transition duration-300">
+              <a href="#" className=" text-white! rounded-full p-2 hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] hover:border-transparent transition duration-300">
                 <FaInstagram size={20}  />
               </a>
-              <a href="#" className=" !text-white rounded-full p-2 hover:bg-[#FF0000] hover:border-[#FF0000] transition">
+              <a href="#" className=" text-white! rounded-full p-2 hover:bg-[#FF0000] hover:border-[#FF0000] transition">
                 <FaYoutube size={20}  />
               </a>
-              <a href="#" className="!text-white rounded-full p-2 hover:bg-[#1DA1F2] hover:!text-white transition hover:bg-red transition">
+              <a href="#" className="text-white! rounded-full p-2 hover:bg-[#1DA1F2] hover:text-white!  hover:bg-red transition">
                 <FaTwitter size={20} />
               </a>
             </div>
@@ -58,7 +57,7 @@ const footerLogo = {
               <input 
                 type="email" 
                 placeholder="votre@email.com" 
-                className="bg-transparent text-gray-200 placeholder text-sm flex-grow px-4 outline-none w-full"
+                className="bg-transparent text-gray-200 placeholder text-sm grow px-4 outline-none w-full"
               />
               <button 
                 type="submit" 
