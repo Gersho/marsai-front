@@ -45,7 +45,7 @@ const FilmsCompetition = () => {
           
           {/* Sous-titre */}
           <p className="text-gray-400 text-lg">
-            Découvrez les courts-métrages finalistes générés par l'IA.
+            Découvrez les courts-métrages finalistes générés par l&apos;IA.
           </p>
         </div>
 
