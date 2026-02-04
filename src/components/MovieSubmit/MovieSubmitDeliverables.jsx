@@ -1,6 +1,9 @@
+import { IoImageOutline } from "react-icons/io5";
+
+
 function MovieSubmitDeliverables() {
     return (
-        <div className="border-2 border-gray rounded-md w-5/6 flex flex-col items-center pb-4 gap-3">
+        <div className=" border-zinc-600 rounded-md  flex flex-col items-center pb-4 gap-3 bg-zinc-800 text-zinc-200">
             <h2 className="px-4 py-2 self-start">03. Livrables & Accessibilité</h2>
 
             <div className="w-5/6 flex flex-col">
@@ -23,13 +26,26 @@ function MovieSubmitDeliverables() {
 
             </div>
 
-            <div className="w-5/6 ">
+            <div className="w-5/6">
 
-                <label htmlFor="form-cover-image">Vignette Officielle (16:9) *</label>
-                <input type="file" id="form-cover-image" name="cover-image"></input>
+                <label className="flex flex-col items-center" htmlFor="form-cover-image">
+                    <p className="self-start">Vignette Officielle (16:9) *</p>
+                    <div className="flex flex-col items-center gap-5 m-2 w-full max-w-sm bg-zinc-800 p-5 rounded-xl border-2 border-zinc-300 border-dashed hover:bg-zinc-900" >
+                        <div className="p-2 rounded-3xl bg-zinc-600">
+                            <IoImageOutline className="text-zinc-800" size={80} />
+                            <input className="hidden" type="file" id="form-cover-image" name="cover-image"></input>
+                        </div>
+                        <p className="uppercase text-zinc-200 font-bold">Cliquez pour upload</p>
+                        <p className="py-2 px-4 bg-zinc-600 text-zinc-200 rounded-3xl  text-sm">PNG ou JPG • Max 15Mo</p>
+                    </div>
+                </label>
 
-                <label htmlFor="form-still-image">Galerie Médias (Stills - Max 3)</label>
-                <input type="file" id="form-still-image" name="still-image" multiple></input>
+                <label htmlFor="form-still-image-a">Galerie Médias (Stills - Max 3)</label>
+                <input type="file" id="form-still-image-a" name="still-image-a"></input>
+                <label htmlFor="form-still-image-b" hidden>Galerie Médias deuxieme image</label>
+                <input type="file" id="form-still-image-b" name="still-image-b"></input>
+                <label htmlFor="form-still-image-c" hidden>Galerie Médias troisieme image</label>
+                <input type="file" id="form-still-image-c" name="still-image-c"></input>
             </div>
         </div>
     );
