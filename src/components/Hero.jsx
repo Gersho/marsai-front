@@ -10,7 +10,7 @@ function Hero() {
         <h1 className="uppercase text-center text-4xl md:text-6xl pb-4 text-white">
           <Trans
             i18nKey="hero.title"
-            components={[<strong className="text-accent" />]}
+            components={[<strong key="highlight" className="text-accent" />]}
           />
         </h1>
         <p className="pb-6 text-center text-white">{t('hero.subtitle')}</p>
@@ -37,7 +37,7 @@ function Hero() {
           <Link to="/programme-infos" className="button text-black bg-white">
             <Trans
               i18nKey="hero.ctaLearn_more"
-              components={[<strong className="text-accent" />]}
+              components={[<strong key="highlight" className="text-accent" />]}
             />
           </Link>
         </div>

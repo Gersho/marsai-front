@@ -31,7 +31,7 @@ function Objectif() {
           <h2 className="uppercase text-4xl font-bold mb-4 md:max-w-lg md:text-5xl">
             <Trans
               i18nKey="objectif.title"
-              components={[<strong className="text-accent" />]}
+              components={[<strong key="highlight" className="text-accent" />]}
             />
           </h2>
           <span className='block w-24 h-1 bg-white'></span>
