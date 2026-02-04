@@ -1,14 +1,15 @@
-import { Link } from 'react-router-dom';
 import SectionProjet from '../components/Projet';
-import FilmsCompetition from '../components/Filmscompet';
 import Hero from '../components/Hero';
+import Objectif from '../components/Objectif';
+import FilmsCompetition from '../components/FilmsCompet';
 
 function HomePage() {
   return (
     <>
       <Hero />
       <SectionProjet />
-      <FilmsCompetition/>
+      <FilmsCompetition />
+      <Objectif />
     </>
   );
 }
