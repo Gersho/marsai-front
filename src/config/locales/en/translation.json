@@ -12,6 +12,23 @@
     "ctaParticipate": "Participate now",
     "ctaLearn_more": "Learn more <0>+</0>"
   },
+  "objectif": {
+    "title": "Objectives of the <0>festival</0>",
+    "items": [
+    {
+      "title": "Putting Humans First",
+      "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
+    },
+    {
+      "title": "Creative Challenge",
+      "text": "Pushing participants’ creativity through an ultra-short 60-second format."
+    },
+    {
+      "title": "Desirable Futures",
+      "text": "Using the power of AI to explore a theme: Imagine desirable futures."
+    }
+  ]
+},
   "login": {
     "title": "LOGIN",
     "subTitle": "MARS.A.I MEMBERS AREA",

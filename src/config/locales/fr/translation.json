@@ -12,6 +12,22 @@
     "ctaParticipate": "Participez maintenant",
     "ctaLearn_more": "En savoir plus <0>+</0>"
   },
+  "objectif":{
+    "title":" Objectifs du <0>festival</0>",
+    "items": [
+    {
+      "title": "L'humain au centre",
+      "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
+    },
+    {
+      "title": "Challenge Créatif",
+      "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
+    },
+    {
+      "title": "Futurs Souhaitables",
+      "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
+    }
+  ]},
   "login": {
     "title": "CONNEXION",
     "subTitle": "ESPACE MEMBRE MARS.A.I",
