@@ -27,8 +27,34 @@
       "title": "Desirable Futures",
       "text": "Using the power of AI to explore a theme: Imagine desirable futures."
     }
-  ]
-},
+  ]},
+  "formatSelection":{
+    "title":"Selection Format",
+    "subtitle":"The Journey of the Works",
+    "items": [
+      {
+        "title": "2 Months",
+        "subtitle": "Open Call for Projects",
+        "text": "Submissions open to creators from around the world."
+      },
+      {
+        "title": "50 Films",
+        "subtitle": "Official Selection",
+        "text": "One-minute short films selected for the competition."
+      },
+      {
+        "title": "Web & Social Media",
+        "subtitle": "Digital Distribution",
+        "text": "Global visibility through social networks and online platforms."
+      },
+      {
+        "title": "Festival",
+        "subtitle": "Cinema Theaters",
+        "text": "Screening on the big screen for a fully immersive experience."
+      }
+    ],
+    "ctaParticipate": "Participate now"
+  },
   "login": {
     "title": "LOGIN",
     "subTitle": "MARS.A.I MEMBERS AREA",
