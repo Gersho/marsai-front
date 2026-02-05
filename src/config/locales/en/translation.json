@@ -15,22 +15,23 @@
   "objectif": {
     "title": "Objectives of the <0>festival</0>",
     "items": [
-    {
-      "title": "Putting Humans First",
-      "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
-    },
-    {
-      "title": "Creative Challenge",
-      "text": "Pushing participants’ creativity through an ultra-short 60-second format."
-    },
-    {
-      "title": "Desirable Futures",
-      "text": "Using the power of AI to explore a theme: Imagine desirable futures."
-    }
-  ]},
-  "formatSelection":{
-    "title":"Selection Format",
-    "subtitle":"The Journey of the Works",
+      {
+        "title": "Putting Humans First",
+        "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
+      },
+      {
+        "title": "Creative Challenge",
+        "text": "Pushing participants’ creativity through an ultra-short 60-second format."
+      },
+      {
+        "title": "Desirable Futures",
+        "text": "Using the power of AI to explore a theme: Imagine desirable futures."
+      }
+    ]
+  },
+  "formatSelection": {
+    "title": "Selection Format",
+    "subtitle": "The Journey of the Works",
     "items": [
       {
         "title": "2 Months",
@@ -97,5 +98,23 @@
       "time": "from 7 p.m.",
       "cta": "Get my pass"
     }
+  },
+  "lieuxPlateforme": {
+    "tag": "the place",
+    "titlePart1": "The",
+    "titlePart2": "platform",
+    "description": "4,000 m² of modular spaces in the center of Marseille, at the heart of the digital ecosystem.",
+    "salles": [
+      {
+        "title": "Salle des Sucres",
+        "text": "Future sanctuary for Mars.A.I. conferences and awards ceremony. A majestic space combining heritage and technology."
+      },
+      {
+        "title": "Salle Plaza",
+        "text": "The epicenter of the festival: reception, entertainment, workshops and catering. The meeting point for all participants."
+      }
+    ],
+    "location1": "Marseille, France",
+    "location2": "La Plateforme Event Center"
   }
 }
