@@ -65,5 +65,36 @@
       "invalidCredentials": "Email ou mot de passe invalide",
       "default": "Quelque chose s'est mal passé"
     }
+  },
+  "conference": {
+    "tag": "le coeur du festival",
+    "title": "Deux journées de <0>conférences</0> gratuites",
+    "list": [
+      "Débats engagés sur l'éthique et le futur",
+      "Confrontations d'idées entre artistes et tech",
+      "Interrogations stimulantes sur la création"
+    ],
+    "listTwo": [
+      {
+        "title": "projections",
+        "text": "Films en compétition et hors-compétition sur écran géant."
+      },
+      {
+        "title": "Workshops",
+        "text": "Scénario, création et post-prod avec des experts de l'IA."
+      },
+      {
+        "title": "Remise des prix",
+        "text": "Cinéastes, acteurs et créateurs renommés pour récompenser l'excellence."
+      }
+    ],
+    "closingCeremony": {
+      "tag": "Cérémonie de clôture",
+      "title": "Mars.a.i night",
+      "text": "Fête Électro mêlant IA et futurs souhaitables.Une expérience immersive sonore et visuelle.",
+      "date": "13 juin",
+      "time": "à partir de 19h",
+      "cta": "Prendre mon pass"
+    }
   }
 }
