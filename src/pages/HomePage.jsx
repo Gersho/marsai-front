@@ -4,6 +4,7 @@ import Objectif from '../components/Objectif';
 import FilmsCompetition from '../components/FilmsCompet';
 import FormatSelection from '../components/FormatSelection';
 import Conference from '../components/Conference';
+import LieuxPlateforme from '../components/LieuxPlateforme';
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <Objectif />
       <FormatSelection />
       <Conference />
+      <LieuxPlateforme />
     </>
   );
 }
