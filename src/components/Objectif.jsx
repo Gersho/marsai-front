@@ -1,23 +1,26 @@
 import { TbTargetArrow } from 'react-icons/tb';
 import { MdOutlineRocketLaunch } from 'react-icons/md';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
+import { useTranslation, Trans } from 'react-i18next';
 
 function Objectif() {
+    const { t } = useTranslation();
+  
   const objectifsData = [
     {
       icon: <TbTargetArrow />,
-      title: "l'humain au centre",
-      text: "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion.",
+      title: t("objectif.items.0.title"),
+      text: t("objectif.items.0.text"),
     },
     {
       icon: <AiOutlineThunderbolt />,
-      title: 'Challenge Créatif',
-      text: 'Challenger la créativité des participants grâce à un format très court de 60 secondes.',
+      title: t("objectif.items.1.title"),
+      text: t("objectif.items.1.text"),
     },
     {
       icon: <MdOutlineRocketLaunch />,
-      title: 'Futurs Souhaitables',
-      text: "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables.",
+      title: t("objectif.items.2.title"),
+      text: t("objectif.items.2.text"),
     },
   ];
 
@@ -26,7 +29,10 @@ function Objectif() {
       <div className="max-w-5xl mx-auto">
         <div className='mb-12 px-4 lg:px-0'>
           <h2 className="uppercase text-4xl font-bold mb-4 md:max-w-lg md:text-5xl">
-            Objectifs du <strong className='text-accent'>festival</strong>
+            <Trans
+              i18nKey="objectif.title"
+              components={[<strong key="highlight" className="text-accent" />]}
+            />
           </h2>
           <span className='block w-24 h-1 bg-white'></span>
         </div>

@@ -12,6 +12,49 @@
     "ctaParticipate": "Participate now",
     "ctaLearn_more": "Learn more <0>+</0>"
   },
+  "objectif": {
+    "title": "Objectives of the <0>festival</0>",
+    "items": [
+    {
+      "title": "Putting Humans First",
+      "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
+    },
+    {
+      "title": "Creative Challenge",
+      "text": "Pushing participants’ creativity through an ultra-short 60-second format."
+    },
+    {
+      "title": "Desirable Futures",
+      "text": "Using the power of AI to explore a theme: Imagine desirable futures."
+    }
+  ]},
+  "formatSelection":{
+    "title":"Selection Format",
+    "subtitle":"The Journey of the Works",
+    "items": [
+      {
+        "title": "2 Months",
+        "subtitle": "Open Call for Projects",
+        "text": "Submissions open to creators from around the world."
+      },
+      {
+        "title": "50 Films",
+        "subtitle": "Official Selection",
+        "text": "One-minute short films selected for the competition."
+      },
+      {
+        "title": "Web & Social Media",
+        "subtitle": "Digital Distribution",
+        "text": "Global visibility through social networks and online platforms."
+      },
+      {
+        "title": "Festival",
+        "subtitle": "Cinema Theaters",
+        "text": "Screening on the big screen for a fully immersive experience."
+      }
+    ],
+    "ctaParticipate": "Participate now"
+  },
   "login": {
     "title": "LOGIN",
     "subTitle": "MARS.A.I MEMBERS AREA",
@@ -22,6 +65,37 @@
     "errors": {
       "invalidCredentials": "Invalid credentials",
       "default": "Something went wrong"
+    }
+  },
+  "conference": {
+    "tag": "The heart of the festival",
+    "title": "Two days of free <0>conferences</0>",
+    "list": [
+      "Engaging debates on ethics and the future",
+      "Confrontations of ideas between artists and tech",
+      "Stimulating questions about creation"
+    ],
+    "listTwo": [
+      {
+        "title": "screenings",
+        "text": "Films in and out of competition on a giant screen."
+      },
+      {
+        "title": "Workshops",
+        "text": "Screenwriting, creation and post-production with AI experts."
+      },
+      {
+        "title": "Awards ceremony",
+        "text": "Renowned filmmakers, actors and creators to reward excellence."
+      }
+    ],
+    "closingCeremony": {
+      "tag": "Closing ceremony",
+      "title": "Mars.a.i night",
+      "text": "Electro party mixing AI and desirable futures. An immersive sound and visual experience.",
+      "date": "June 13",
+      "time": "from 7 p.m.",
+      "cta": "Get my pass"
     }
   }
 }

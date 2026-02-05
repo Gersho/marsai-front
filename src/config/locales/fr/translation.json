@@ -12,6 +12,48 @@
     "ctaParticipate": "Participez maintenant",
     "ctaLearn_more": "En savoir plus <0>+</0>"
   },
+  "objectif":{
+    "title":" Objectifs du <0>festival</0>",
+    "items": [
+    {
+      "title": "L'humain au centre",
+      "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
+    },
+    {
+      "title": "Challenge Créatif",
+      "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
+    },
+    {
+      "title": "Futurs Souhaitables",
+      "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
+    }
+  ]},
+  "formatSelection":{
+    "title":"Format de la Sélection",
+    "subtitle":"Le parcours des œuvres",
+    "items": [
+      {
+        "title":"2 mois",
+        "subtitle":"appel à projet",
+        "text":"Candidatures ouvertes aux créateurs du monde entier."
+      },
+      {
+        "title":"50 Films",
+        "subtitle":"Sélection Officielle",
+        "text":"Courts-métrages d'une minute retenus pour la compétition."
+      },
+      {
+        "title":"Web & RS",
+        "subtitle":"Diffusion Digitale",
+        "text":"Visibilité mondiale via les réseaux et plateformes."
+      },
+      {
+        "title":"Festival",
+        "subtitle":"Salles de Cinéma",
+        "text":"Projection sur grand écran pour une immersion totale."
+      }],
+      "ctaParticipate": "Participez maintenant"
+  },
   "login": {
     "title": "CONNEXION",
     "subTitle": "ESPACE MEMBRE MARS.A.I",
@@ -22,6 +64,37 @@
     "errors": {
       "invalidCredentials": "Email ou mot de passe invalide",
       "default": "Quelque chose s'est mal passé"
+    }
+  },
+  "conference": {
+    "tag": "le coeur du festival",
+    "title": "Deux journées de <0>conférences</0> gratuites",
+    "list": [
+      "Débats engagés sur l'éthique et le futur",
+      "Confrontations d'idées entre artistes et tech",
+      "Interrogations stimulantes sur la création"
+    ],
+    "listTwo": [
+      {
+        "title": "projections",
+        "text": "Films en compétition et hors-compétition sur écran géant."
+      },
+      {
+        "title": "Workshops",
+        "text": "Scénario, création et post-prod avec des experts de l'IA."
+      },
+      {
+        "title": "Remise des prix",
+        "text": "Cinéastes, acteurs et créateurs renommés pour récompenser l'excellence."
+      }
+    ],
+    "closingCeremony": {
+      "tag": "Cérémonie de clôture",
+      "title": "Mars.a.i night",
+      "text": "Fête Électro mêlant IA et futurs souhaitables.Une expérience immersive sonore et visuelle.",
+      "date": "13 juin",
+      "time": "à partir de 19h",
+      "cta": "Prendre mon pass"
     }
   }
 }
