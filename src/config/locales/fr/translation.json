@@ -12,47 +12,49 @@
     "ctaParticipate": "Participez maintenant",
     "ctaLearn_more": "En savoir plus <0>+</0>"
   },
-  "objectif":{
-    "title":" Objectifs du <0>festival</0>",
-    "items": [
-    {
-      "title": "L'humain au centre",
-      "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
-    },
-    {
-      "title": "Challenge Créatif",
-      "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
-    },
-    {
-      "title": "Futurs Souhaitables",
-      "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
-    }
-  ]},
-  "formatSelection":{
-    "title":"Format de la Sélection",
-    "subtitle":"Le parcours des œuvres",
+  "objectif": {
+    "title": " Objectifs du <0>festival</0>",
     "items": [
       {
-        "title":"2 mois",
-        "subtitle":"appel à projet",
-        "text":"Candidatures ouvertes aux créateurs du monde entier."
+        "title": "L'humain au centre",
+        "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
       },
       {
-        "title":"50 Films",
-        "subtitle":"Sélection Officielle",
-        "text":"Courts-métrages d'une minute retenus pour la compétition."
+        "title": "Challenge Créatif",
+        "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
       },
       {
-        "title":"Web & RS",
-        "subtitle":"Diffusion Digitale",
-        "text":"Visibilité mondiale via les réseaux et plateformes."
+        "title": "Futurs Souhaitables",
+        "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
+      }
+    ]
+  },
+  "formatSelection": {
+    "title": "Format de la Sélection",
+    "subtitle": "Le parcours des œuvres",
+    "items": [
+      {
+        "title": "2 mois",
+        "subtitle": "appel à projet",
+        "text": "Candidatures ouvertes aux créateurs du monde entier."
       },
       {
-        "title":"Festival",
-        "subtitle":"Salles de Cinéma",
-        "text":"Projection sur grand écran pour une immersion totale."
-      }],
-      "ctaParticipate": "Participez maintenant"
+        "title": "50 Films",
+        "subtitle": "Sélection Officielle",
+        "text": "Courts-métrages d'une minute retenus pour la compétition."
+      },
+      {
+        "title": "Web & RS",
+        "subtitle": "Diffusion Digitale",
+        "text": "Visibilité mondiale via les réseaux et plateformes."
+      },
+      {
+        "title": "Festival",
+        "subtitle": "Salles de Cinéma",
+        "text": "Projection sur grand écran pour une immersion totale."
+      }
+    ],
+    "ctaParticipate": "Participez maintenant"
   },
   "login": {
     "title": "CONNEXION",

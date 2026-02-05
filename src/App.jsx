@@ -13,11 +13,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<GaleryPage />} />
-        <Route path="/submit" element={<SubmitMoviePage />} />        <Route path="/login" element={<Login />} />
+        <Route path="/submit" element={<SubmitMoviePage />} />{' '}
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>
-
   );
 }
 

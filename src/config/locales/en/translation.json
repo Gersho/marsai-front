@@ -15,22 +15,23 @@
   "objectif": {
     "title": "Objectives of the <0>festival</0>",
     "items": [
-    {
-      "title": "Putting Humans First",
-      "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
-    },
-    {
-      "title": "Creative Challenge",
-      "text": "Pushing participants’ creativity through an ultra-short 60-second format."
-    },
-    {
-      "title": "Desirable Futures",
-      "text": "Using the power of AI to explore a theme: Imagine desirable futures."
-    }
-  ]},
-  "formatSelection":{
-    "title":"Selection Format",
-    "subtitle":"The Journey of the Works",
+      {
+        "title": "Putting Humans First",
+        "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
+      },
+      {
+        "title": "Creative Challenge",
+        "text": "Pushing participants’ creativity through an ultra-short 60-second format."
+      },
+      {
+        "title": "Desirable Futures",
+        "text": "Using the power of AI to explore a theme: Imagine desirable futures."
+      }
+    ]
+  },
+  "formatSelection": {
+    "title": "Selection Format",
+    "subtitle": "The Journey of the Works",
     "items": [
       {
         "title": "2 Months",
