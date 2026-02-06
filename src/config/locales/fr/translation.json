@@ -154,5 +154,15 @@
     "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
     "directorLabel": "Réalisateur",
     "viewSelection": "Voir toute la sélection"
+  },
+  "footer": {
+    "description": "Une co-création de l'école du numérique La Plateforme et le Mobile Film Festival. Ensemble pour dessiner les nouveaux horizons du cinéma.",
+    "stayConnected": "Restez connectés",
+    "emailPlaceholder": "votre@email.com",
+    "subscribe": "S'inscrire",
+    "legalNotice": "Mentions Légales",
+    "press": "Presse",
+    "contact": "Contact",
+    "copyright": "© 2025 MARS.A.I"
   }
 }
