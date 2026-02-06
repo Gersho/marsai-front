@@ -6,6 +6,7 @@ import FormatSelection from '../components/FormatSelection';
 import Conference from '../components/Conference';
 import LieuxPlateforme from '../components/LieuxPlateforme';
 import Chiffres from '../components/Chiffres';
+import Partner from '../components/Partner';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Conference />
       <LieuxPlateforme />
       <Chiffres />
+      <Partner />
     </>
   );
 }

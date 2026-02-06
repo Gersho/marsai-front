@@ -122,5 +122,9 @@
     "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
     "countriesRepresented": "Pays représentés",
     "filmsSubmitted": "Films soumis"
+  },
+  "partner": {
+    "tag": "Nos partenaires",
+    "title": "ils soutiennent <0>le futur</0>"
   }
 }
