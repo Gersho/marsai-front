@@ -62,7 +62,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="métier actuel *"
-                    id="form-director-job"
                     type="text"
                     name="director-job"
                     placeholder=""
@@ -72,7 +71,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="date de naissance *"
-                    id="form-director-birthdate"
                     type="date"
                     name="director-birthdate"
                     placeholder=""
@@ -89,7 +87,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="email *"
-                    id="form-director-email"
                     type="email"
                     name="director-email"
                     placeholder="exemple@gmail.com"
@@ -100,7 +97,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Telephone *"
-                    id="form-director-phone"
                     type="text"
                     name="director-phone"
                     placeholder="0102030405"
@@ -115,7 +111,6 @@ function MovieSubmitTeamComposition() {
                 <label htmlFor="form-director-address">Addresse *</label>
                 <input
                     className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-                    id="form-director-address"
                     type="text"
                     name="director-address"
                     placeholder=""
@@ -130,8 +125,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Ville *"
-                    // className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-                    id="form-director-city"
                     type="text"
                     name="director-city"
                     placeholder=""
@@ -142,7 +135,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Code Postal"
-                    id="form-director-zipcode"
                     type="text"
                     name="director-zipcode"
                     placeholder=""
@@ -158,7 +150,6 @@ function MovieSubmitTeamComposition() {
                 <BasicFormInput
 
                     label="Region"
-                    id="form-director-region"
                     type="text"
                     name="director-region"
                     placeholder=""
@@ -170,7 +161,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Pays *"
-                    id="form-director-country"
                     type="text"
                     name="director-country"
                     placeholder=""
@@ -188,7 +178,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Facebook"
-                    id="form-director-facebook"
                     type="text"
                     name="director-facebook"
                     placeholder=""
@@ -198,7 +187,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Instagram"
-                    id="form-director-instagram"
                     type="text"
                     name="director-instagram"
                     placeholder=""
@@ -211,7 +199,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="Youtube"
-                    id="form-director-youtube"
                     type="text"
                     name="director-youtube"
                     placeholder=""
@@ -220,7 +207,6 @@ function MovieSubmitTeamComposition() {
 
                 <BasicFormInput
                     label="LinkedIn"
-                    id="form-director-linkedin"
                     type="text"
                     name="director-linkedin"
                     placeholder=""

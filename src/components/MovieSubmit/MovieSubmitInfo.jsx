@@ -1,6 +1,7 @@
 import BasicFormInput from './base/BasicFormInput'
 import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
+import FormTextArea from './base/FormTextArea';
 
 function MovieSubmitInfo() {
     return (
@@ -9,11 +10,9 @@ function MovieSubmitInfo() {
                 text="01. Identité du film"
             />
 
-
             <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label="Titre original *"
-                    id="form-original-title"
                     type="text"
                     name="original-title"
                     placeholder="Titre original"
@@ -23,7 +22,6 @@ function MovieSubmitInfo() {
 
                 <BasicFormInput
                     label="Traduction anglaise *"
-                    id="form-english-translation"
                     type="text"
                     name="english-translation"
                     placeholder="Traduction anglaise"
@@ -35,7 +33,6 @@ function MovieSubmitInfo() {
             <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label="Dureé exacte * (en secondes)"
-                    id="form-movie-duration"
                     type="text"
                     name="duration"
                     placeholder="ex: 60"
@@ -45,7 +42,6 @@ function MovieSubmitInfo() {
 
                 <BasicFormInput
                     label="Langue parlée/Principale du film *"
-                    id="form-main-language"
                     type="text"
                     name="language"
                     placeholder="Langue"
@@ -56,41 +52,28 @@ function MovieSubmitInfo() {
             </div>
 
             <div className="flex flex-col items-center w-full sm:flex-row sm:justify-between sm:gap-20">
-                <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                        <label htmlFor="form-movie-synopsis">
-                            synopsis langue originale *
-                        </label>
-                        <p>0/300</p>
-                    </div>
-                    <textarea
-                        className="border border-gray rounded-sm p-3 my-2 h-36 sm:h-44"
-                        id="form-movie-synopsis"
-                        type="textarea"
-                        name="original-synopsis"
-                        placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..."
-                        title="synopsis langue originale (max. 300 caractères)"
-                        required
-                    ></textarea>
-                </div>
+                <FormTextArea
+                    className=""
+                    label="Synopsis langue originale *"
+                    currentCount={0}
+                    maxCount={300}
+                    name="original-synopsis"
+                    placeholder="Résumez l&apos;intention de votre film et l&apos;histoire qu&apos;il raconte en quelques lignes..."
+                    title="synopsis langue originale (max. 300 caractères)"
+                    required={true}
 
-                <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                        <label htmlFor="form-movie-synopsis-english">
-                            synopsis anglais *
-                        </label>
-                        <p>0/300</p>
-                    </div>
-                    <textarea
-                        className="border border-gray rounded-sm p-3 my-2 h-36 sm:h-44"
-                        id="form-movie-synopsis-english"
-                        type="textarea"
-                        name="english-synopsis"
-                        placeholder="résumez l’intention de votre film et l’histoire qu’il raconte en quelques lignes..."
-                        title="synopsis anglais* (max. 300 caractères)"
-                        required
-                    ></textarea>
-                </div>
+                />
+
+                <FormTextArea
+                    className=""
+                    label="Synopsis anglais *"
+                    currentCount={0}
+                    maxCount={300}
+                    name="english-synopsis"
+                    placeholder="Traduction en anglais du synopsis"
+                    title="synopsis anglais (max. 300 caractères)"
+                    required={true}
+                />
             </div>
         </FormSection>
     );

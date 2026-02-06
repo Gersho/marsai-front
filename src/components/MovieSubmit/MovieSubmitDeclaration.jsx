@@ -1,6 +1,7 @@
 import { CiCircleInfo } from 'react-icons/ci';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
+import FormTextArea from './base/FormTextArea';
 
 function MovieSubmitDeclaration() {
   return (
@@ -9,10 +10,7 @@ function MovieSubmitDeclaration() {
 
       <FormSectionTitle
         text="02. Déclaration Usage de l&apos;IA"
-
       />
-
-
 
       <div className="flex flex-col sm:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
         <CiCircleInfo className="text-accent text-4xl" />
@@ -24,7 +22,6 @@ function MovieSubmitDeclaration() {
       </div>
 
       <div className="flex flex-col w-full gap-3">
-        {/* appearance-none to remove radio btn */}
 
         <p>Classification de l&apos;Œuvre :* Choix exclusif entre :</p>
         <div className="flex flex-row justify-around gap-3 w-full ">
@@ -64,39 +61,29 @@ function MovieSubmitDeclaration() {
       </div>
 
       <div className="flex flex-col items-center sm:flex-row w-full sm:justify-between sm:gap-20">
-        <div className="flex flex-col w-full">
-          <div className="flex justify-between">
-            <label htmlFor="form-technical-stack">Stack Technologique *</label>
-            <p>0/500</p>
-          </div>
-          <textarea
-            className="border border-gray rounded-sm p-3 my-2 h-36 sm:h-44"
-            id="form-technical-stack"
-            type="textarea"
-            name="technical-stack"
-            placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)"
-            title="Stack Technologique (max. 500 caractères)"
-            required
-          ></textarea>
-        </div>
 
-        <div className="flex flex-col w-full">
-          <div className="flex justify-between">
-            <label htmlFor="form-creative-methodology">
-              Méthodologie Créative *
-            </label>
-            <p>0/500</p>
-          </div>
-          <textarea
-            className="border border-gray rounded-sm p-3 my-2 h-36 sm:h-44"
-            id="form-creative-methodology"
-            type="textarea"
-            name="creative-methodology"
-            placeholder="Décrivez l'interaction entre l'humain et la machine dans ce processus.."
-            title="Méthodologie Créative (max. 500 caractères)"
-            required
-          ></textarea>
-        </div>
+        <FormTextArea
+          className=""
+          label="Stack Technologique *"
+          currentCount={0}
+          maxCount={500}
+          name="technical-stack"
+          placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l&apos;animation...)"
+          title="Stack Technologique (max. 500 caractères)"
+          required={true}
+        />
+
+        <FormTextArea
+          className=""
+          label="Méthodologie Créative *"
+          currentCount={0}
+          maxCount={500}
+          name="creative-methodology"
+          placeholder="Décrivez l&apos;interaction entre l&apos;humain et la machine dans ce processus.."
+          title="Méthodologie Créative (max. 500 caractères)"
+          required={true}
+        />
+
       </div>
     </FormSection>
   );

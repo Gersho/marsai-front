@@ -59,7 +59,6 @@ function FormNewCollabotor({
 
                 <BasicFormInput
                     label="Profession *"
-                    id="form-collaborator-job"
                     type="text"
                     name="collaborator-job"
                     placeholder=""
@@ -69,7 +68,6 @@ function FormNewCollabotor({
 
                 <BasicFormInput
                     label="e-mail *"
-                    id="form-collaborator-email"
                     type="email"
                     name="collaborator-email"
                     placeholder="bob@gmail.com"
