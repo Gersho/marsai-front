@@ -126,5 +126,26 @@
   "partner": {
     "tag": "Our partners",
     "title": "they support <0>the future</0>"
+  },
+  "projet": {
+    "title": "THE MARS.A.I PROJECT",
+    "items": {
+      "oneMinute": {
+        "title": "1 minute",
+        "text": "Ultra-short format to maximize creative impact."
+      },
+      "free": {
+        "title": "free",
+        "text": "Conferences and workshops accessible to all."
+      },
+      "forEveryone": {
+        "title": "For all",
+        "text": "Professionals, students and curious minds."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "text": "Meet the world's leading AI experts."
+      }
+    }
   }
 }
