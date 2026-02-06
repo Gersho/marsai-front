@@ -1,6 +1,6 @@
 import { CiCircleInfo } from 'react-icons/ci';
 
-function MovieSubmitDeclaration() {
+function MovieSubmitDeclaration({ register }) {
   return (
     <div className="flex flex-col items-center gap-3 w-12/14 sm:w-10/14">
       <h2 className="self-start sm:self-center">
@@ -33,7 +33,8 @@ function MovieSubmitDeclaration() {
               type="radio"
               id="form-full-ai"
               name="ai-classification"
-              value="ai-full"
+              value={false}
+              {...register('isHybrid')}
               required
             ></input>
           </label>
@@ -49,7 +50,8 @@ function MovieSubmitDeclaration() {
               type="radio"
               id="form-hybrid"
               name="ai-classification"
-              value="ai-hybrid"
+              value={true}
+              {...register('isHybrid')}
               required
             ></input>
           </label>
@@ -69,6 +71,7 @@ function MovieSubmitDeclaration() {
             name="technical-stack"
             placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)"
             title="Stack Technologique (max. 500 caractères)"
+            {...register('aiTools')}
             required
           ></textarea>
         </div>
@@ -87,6 +90,7 @@ function MovieSubmitDeclaration() {
             name="creative-methodology"
             placeholder="Décrivez l'interaction entre l'humain et la machine dans ce processus.."
             title="Méthodologie Créative (max. 500 caractères)"
+            {...register('creativeProcess')}
             required
           ></textarea>
         </div>
