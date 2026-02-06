@@ -17,7 +17,7 @@ function Hero() {
         <div className="flex gap-2 mx-2 lg:mx-0">
           <Link
             to="/movies"
-            className="button flex items-center gap-2  text-white bg-primary"
+            className="button flex items-center gap-2  text-white bg-accent"
           >
             {t('hero.ctaParticipate')}
             <svg
