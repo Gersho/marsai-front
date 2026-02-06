@@ -215,7 +215,7 @@ function MovieSubmitTeamComposition() {
                     type="text"
                     name="director-youtube"
                     placeholder=""
-                    title="youtube du directeur"
+                    title="Youtube du directeur"
                 />
 
                 <BasicFormInput
@@ -229,17 +229,16 @@ function MovieSubmitTeamComposition() {
 
             </div>
 
-
-            <div className="flex flex-col w-full sm:flex-row ">
-
-                <BasicFormInput
-                    className="bg-accent "
-                    label="Twitter"
-                    id="form-director-twitter"
+            <div className="flex flex-col w-full sm:w-1/2 self-start sm:pr-10">
+                <label htmlFor="form-director-twitter">Twitter</label>
+                <input
+                    className="border border-gray rounded-sm pl-2 py-1"
                     type="text"
+                    id="form-director-twitter"
                     name="director-twitter"
                     placeholder=""
-                    title="Code Postal du realisateur"
+                    title="Twitter du realisateur"
+
                 />
             </div>
 

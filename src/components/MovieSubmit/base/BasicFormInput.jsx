@@ -9,10 +9,12 @@ function BasicFormInput({
     autoFocus = false,
     required = false,
 }) {
+    let htmlFor = "form-" + { name };
     className = "flex flex-col sm:w-full gap-2 " + " " + className;
+
     return (
         <div className={className}>
-            <label htmlFor="form-movie-duration">{label}</label>
+            <label htmlFor={htmlFor}>{label}</label>
             <input
                 className="border border-gray rounded-sm pl-2 py-1"
                 id={id}
