@@ -122,5 +122,9 @@
     "description": "Based on the expertise of the Mobile Film Festival and the influence of La Plateforme.",
     "countriesRepresented": "Countries represented",
     "filmsSubmitted": "Films submitted"
+  },
+  "partner": {
+    "tag": "Our partners",
+    "title": "they support <0>the future</0>"
   }
 }
