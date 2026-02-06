@@ -5,6 +5,7 @@ import FilmsCompetition from '../components/FilmsCompet';
 import FormatSelection from '../components/FormatSelection';
 import Conference from '../components/Conference';
 import LieuxPlateforme from '../components/LieuxPlateforme';
+import Chiffres from '../components/Chiffres';
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
       <FormatSelection />
       <Conference />
       <LieuxPlateforme />
+      <Chiffres />
     </>
   );
 }

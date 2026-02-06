@@ -116,5 +116,11 @@
     ],
     "location1": "Marseille, France",
     "location2": "La Plateforme Event Center"
+  },
+  "chiffres": {
+    "title": "Projected <0>figures</0>",
+    "description": "Based on the expertise of the Mobile Film Festival and the influence of La Plateforme.",
+    "countriesRepresented": "Countries represented",
+    "filmsSubmitted": "Films submitted"
   }
 }
