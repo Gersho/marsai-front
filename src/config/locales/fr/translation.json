@@ -147,5 +147,12 @@
         "text": "Rencontrez les leaders mondiaux de l'IA."
       }
     }
+  },
+  "filmsCompet": {
+    "previewSelection": "Aperçu Sélection",
+    "title": "Films en <0>compétition</0>",
+    "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
+    "directorLabel": "Réalisateur",
+    "viewSelection": "Voir toute la sélection"
   }
 }
