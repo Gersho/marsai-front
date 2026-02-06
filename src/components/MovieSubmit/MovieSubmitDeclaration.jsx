@@ -1,11 +1,18 @@
 import { CiCircleInfo } from 'react-icons/ci';
+import FormSectionTitle from './base/FormSectionTitle';
+import FormSection from './base/FormSection';
 
 function MovieSubmitDeclaration() {
   return (
-    <div className="flex flex-col items-center gap-3 w-12/14 sm:w-10/14">
-      <h2 className="self-start sm:self-center">
-        02. Déclaration Usage de l&apos;IA
-      </h2>
+    <FormSection className="bg-zinc-800 text-zinc-200">
+
+
+      <FormSectionTitle
+        text="02. Déclaration Usage de l&apos;IA"
+
+      />
+
+
 
       <div className="flex flex-col sm:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
         <CiCircleInfo className="text-accent text-4xl" />
@@ -56,7 +63,7 @@ function MovieSubmitDeclaration() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center sm:flex-row w-full sm:justify-around gap-8">
+      <div className="flex flex-col items-center sm:flex-row w-full sm:justify-between sm:gap-20">
         <div className="flex flex-col w-full">
           <div className="flex justify-between">
             <label htmlFor="form-technical-stack">Stack Technologique *</label>
@@ -91,7 +98,7 @@ function MovieSubmitDeclaration() {
           ></textarea>
         </div>
       </div>
-    </div>
+    </FormSection>
   );
 }
 

@@ -5,14 +5,16 @@ function BasicFormInput({
     name,
     placeholder,
     title,
+    className = "",
     autoFocus = false,
     required = false,
 }) {
+    className = "flex flex-col sm:w-full gap-2 " + " " + className;
     return (
-        <div className="flex flex-col  sm:flex sm:flex-col sm:w-3/7">
+        <div className={className}>
             <label htmlFor="form-movie-duration">{label}</label>
             <input
-                className="border border-gray rounded-sm pl-2 py-1 my-2"
+                className="border border-gray rounded-sm pl-2 py-1"
                 id={id}
                 type={type}
                 name={name}

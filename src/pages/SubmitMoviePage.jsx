@@ -9,8 +9,7 @@ function SubmitMoviePage() {
     <>
       <div className="py-25 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
-          <h2 className="text-2xl">Appel à Projets 2026</h2>
-          <h1 className="text-5xl">soumettre un film</h1>
+          <h1 className="text-5xl text-accent">soumettre un film</h1>
           <p>
             Transmettez les éléments techniques, l&apos;usage de l&apos;IA et la
             composition de votre équipe. Tous les champs marqués d&apos;une

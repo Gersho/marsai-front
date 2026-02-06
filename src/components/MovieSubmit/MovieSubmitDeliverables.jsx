@@ -1,14 +1,18 @@
 import { useForm } from 'react-hook-form';
 import InputImage from './base/InputImage';
+import FormSectionTitle from './base/FormSectionTitle';
+import FormSection from './base/FormSection';
 
 function MovieSubmitDeliverables() {
   const { register, handleSubmit } = useForm();
   handleSubmit;
 
   return (
-    <div className="border-zinc-600 rounded-md w-11/12 flex flex-col items-center pb-4 gap-6 bg-zinc-800 text-zinc-200">
-      <h2 className="px-4 py-2 self-start">03. Livrables & Accessibilité</h2>
-      <div className="w-5/6 flex flex-col gap-2">
+    <FormSection className="bg-zinc-700 text-zinc-200">
+      <FormSectionTitle text="03. Livrables & Accessibilité" />
+
+      <div className="flex flex-col gap-2 w-full">
+
         <label htmlFor="form-youtube-url">
           Lien YouTube * (Public / Non-répertorié)
         </label>
@@ -21,6 +25,7 @@ function MovieSubmitDeliverables() {
           title="Lien YouTube (Public / Non-répertorié)"
           required
         ></input>
+
         <div>
           <p>Sous-titres (.srt)</p>
 
@@ -32,20 +37,12 @@ function MovieSubmitDeliverables() {
             value="true"
           ></input>
           <label htmlFor="form-has-subtitles">
-            Voix ou textes nécessitant des sous-titres
+            La video contient des sous titres incrustés
           </label>
         </div>
-        <label htmlFor="form-subtitles">
-          Choisir fichier sous-titres
-          <input
-            className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-            id="form-subtitles"
-            type="file"
-            name="subtitles"
-            title="Choisir fichier .SRT"
-          ></input>
-        </label>
+
       </div>
+
       <div className="w-5/6 flex flex-col justify-center sm:flex-row sm:justify-evenly gap-6">
         <div className="flex flex-col justify-center items-center gap-3 w-full">
           <p className="">Vignette Officielle (16:9) *</p>
@@ -87,7 +84,7 @@ function MovieSubmitDeliverables() {
           </div>
         </div>
       </div>
-    </div>
+    </FormSection>
   );
 }
 

@@ -1,38 +1,46 @@
 import BasicFormInput from './base/BasicFormInput'
+import FormNewCollabotor from './base/FormNewCollaborator';
+import FormSection from './base/FormSection';
+import FormSectionTitle from './base/FormSectionTitle';
 
 function MovieSubmitTeamComposition() {
     return (
-        <div className="flex flex-col items-center gap-3  w-12/14 sm:w-10/14">
-            <h2 className="px-4 py-2 self-start sm:self-center">
-                04. Composition de l&apos;Équipe
-            </h2>
+        <FormSection className="bg-zinc-800 text-zinc-200">
+
+            <FormSectionTitle text="04. Composition de l&apos;Équipe" />
+
+
             <p className="py-2 self-center">Realisateur:</p>
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
-                <div className="flex flex-col">
-                    <label htmlFor="form-director-gender">civilité *</label>
-                    <select
-                        className="w-fit py-1"
-                        name="form-director-gender"
-                        id="director-gender"
-                    >
-                        <option value="mr">Mr.</option>
-                        <option value="mme">Mme.</option>
-                        <option value="mx">Mx.</option>
-                    </select>
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+                <div className="flex flex-col sm:flex-row sm:w-full sm:gap-x-5">
+
+                    <div className="flex flex-col gap-2">
+                        <label className="" htmlFor="form-director-gender">civilité *</label>
+                        <select
+                            className="w-fit py-1 justify-center"
+                            name="director-gender"
+                            id="form-director-gender"
+                        >
+                            <option value="mr">Mr.</option>
+                            <option value="mme">Mme.</option>
+                            <option value="mx">Mx.</option>
+                        </select>
+                    </div>
+                    <div className="flex flex-col sm:w-full">
+                        <label htmlFor="form-director-firstname">Prenom *</label>
+                        <input
+                            className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
+                            id="form-director-firstname"
+                            type="text"
+                            name="director-firstname"
+                            placeholder="Prenom"
+                            title="Prenom du realisateur"
+                            required
+                        ></input>
+                    </div>
                 </div>
 
-                <div className="flex flex-col sm:w-full">
-                    <label htmlFor="form-director-firstname">Prenom *</label>
-                    <input
-                        className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-                        id="form-director-firstname"
-                        type="text"
-                        name="director-firstname"
-                        placeholder="Prenom"
-                        title="Prenom du realisateur"
-                        required
-                    ></input>
-                </div>
+
 
                 <div className="flex flex-col sm:w-full">
                     <label htmlFor="form-director-lastname">Nom *</label>
@@ -50,7 +58,7 @@ function MovieSubmitTeamComposition() {
 
 
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
                 <BasicFormInput
                     label="métier actuel *"
@@ -61,9 +69,6 @@ function MovieSubmitTeamComposition() {
                     title="métier actuel du realisateur"
                     required={true}
                 />
-
-
-
 
                 <BasicFormInput
                     label="date de naissance *"
@@ -79,7 +84,7 @@ function MovieSubmitTeamComposition() {
             </div>
 
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
 
                 <BasicFormInput
@@ -106,7 +111,7 @@ function MovieSubmitTeamComposition() {
             </div>
 
 
-            <div className="w-full sm:px-9">
+            <div className="w-full">
                 <label htmlFor="form-director-address">Addresse *</label>
                 <input
                     className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
@@ -121,11 +126,11 @@ function MovieSubmitTeamComposition() {
 
 
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
                 <BasicFormInput
                     label="Ville *"
-                    className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
+                    // className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
                     id="form-director-city"
                     type="text"
                     name="director-city"
@@ -144,13 +149,11 @@ function MovieSubmitTeamComposition() {
                     title="Code Postal du realisateur"
                 />
 
-
-
             </div>
 
 
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
                 <BasicFormInput
 
@@ -181,7 +184,7 @@ function MovieSubmitTeamComposition() {
 
 
             présence en ligne
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
                 <BasicFormInput
                     label="Facebook"
@@ -204,7 +207,7 @@ function MovieSubmitTeamComposition() {
 
             </div>
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
 
                 <BasicFormInput
                     label="Youtube"
@@ -227,9 +230,10 @@ function MovieSubmitTeamComposition() {
             </div>
 
 
-            <div className="flex flex-col w-full sm:flex-row">
+            <div className="flex flex-col w-full sm:flex-row ">
 
                 <BasicFormInput
+                    className="bg-accent "
                     label="Twitter"
                     id="form-director-twitter"
                     type="text"
@@ -237,94 +241,21 @@ function MovieSubmitTeamComposition() {
                     placeholder=""
                     title="Code Postal du realisateur"
                 />
-                {/* <div className="w-full ">
-                    <label htmlFor="form-director-twitter">Twitter</label>
-                    <input
-                        className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-                        id="form-director-twitter"
-                        type="text"
-                        name="director-twitter"
-                        placeholder=""
-                        title="Code Postal du realisateur"
-                    ></input>
-                </div> */}
-
-
             </div>
 
             <p className="py-2 self-center">Collaborateurs:</p>
+            <div className="flex flex-col gap-4 w-full pb-5">
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
-                <div className="flex flex-col">
-                    <label htmlFor="form-collaborator-gender">civilité *</label>
-                    <select
-                        className="w-fit py-1"
-                        name="form-collaborator-gender"
-                        id="collaborator-gender"
-                    >
-                        <option value="mr">Mr.</option>
-                        <option value="mme">Mme.</option>
-                        <option value="mx">Mx.</option>
-                    </select>
-                </div>
+                <FormNewCollabotor />
+                <FormNewCollabotor />
+                <FormNewCollabotor />
 
-                <div className="flex flex-col sm:w-full">
-                    <label htmlFor="form-collaborator-firstname">Prenom *</label>
-                    <input
-                        className="border border-gray rounded-sm  pl-2 py-1 my-2"
-                        id="form-collaborator-firstname"
-                        type="text"
-                        name="collaborator-firstname"
-                        placeholder="Prenom"
-                        title="Prenom du collaborateur"
-                        required
-                    ></input>
-                </div>
-
-                <div className="flex flex-col sm:w-full">
-                    <label htmlFor="form-collaborator-lastname">Nom *</label>
-                    <input
-                        className="border border-gray rounded-sm  pl-2 py-1 my-2"
-                        id="form-collaborator-lastname"
-                        type="text"
-                        name="collaborator-lastname"
-                        placeholder="Nom"
-                        title="Nom du collaborateur"
-                        required
-                    ></input>
-                </div>
-            </div>
-
-
-
-
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around gap-3">
-
-                <BasicFormInput
-                    label="Profession *"
-                    id="form-collaborator-job"
-                    type="text"
-                    name="collaborator-job"
-                    placeholder=""
-                    title="profession du collaborateur"
-                    required={true}
-                />
-
-                <BasicFormInput
-                    label="e-mail *"
-                    id="form-collaborator-email"
-                    type="email"
-                    name="collaborator-email"
-                    placeholder="bob@gmail.com"
-                    title="email du collaborateur"
-                    required={true}
-                />
             </div>
 
             <button className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center">
                 + ajouter collaborateur
             </button>
-        </div>
+        </FormSection>
     );
 }
 

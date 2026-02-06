@@ -1,12 +1,16 @@
 import BasicFormInput from './base/BasicFormInput'
+import FormSection from './base/FormSection';
+import FormSectionTitle from './base/FormSectionTitle';
 
 function MovieSubmitInfo() {
     return (
-        // TODO change gray to theme color
-        <div className="flex flex-col items-center w-12/14 sm:w-10/14">
-            <h2 className="self-start sm:self-center">01. Identité du film</h2>
+        <FormSection className="bg-zinc-700 text-zinc-200">
+            <FormSectionTitle
+                text="01. Identité du film"
+            />
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-between">
+
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label="Titre original *"
                     id="form-original-title"
@@ -28,7 +32,7 @@ function MovieSubmitInfo() {
                 />
             </div>
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-around">
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label="Dureé exacte * (en secondes)"
                     id="form-movie-duration"
@@ -51,8 +55,8 @@ function MovieSubmitInfo() {
 
             </div>
 
-            <div className="flex flex-col items-center w-full sm:flex-row sm:justify-around">
-                <div className="flex flex-col w-full sm:w-3/7">
+            <div className="flex flex-col items-center w-full sm:flex-row sm:justify-between sm:gap-20">
+                <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                         <label htmlFor="form-movie-synopsis">
                             synopsis langue originale *
@@ -70,7 +74,7 @@ function MovieSubmitInfo() {
                     ></textarea>
                 </div>
 
-                <div className="flex flex-col w-full sm:w-3/7">
+                <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                         <label htmlFor="form-movie-synopsis-english">
                             synopsis anglais *
@@ -88,7 +92,7 @@ function MovieSubmitInfo() {
                     ></textarea>
                 </div>
             </div>
-        </div>
+        </FormSection>
     );
 }
 
