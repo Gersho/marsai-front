@@ -5,10 +5,8 @@ import MovieSubmitDeliverables from '../components/MovieSubmit/MovieSubmitDelive
 import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
 
-
-
 function SubmitMoviePage() {
-  const { register, handleSubmit } = useForm();
+  const form = useForm();
 
   async function onSubmit(data) {
     console.log('data: ', data);
@@ -53,14 +51,14 @@ function SubmitMoviePage() {
         </div>
         <form
           className="flex flex-col items-center gap-7 w-full"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(onSubmit)}
           encType="multipart/form-data"
         >
-          <MovieSubmitInfo register={register} />
-          <MovieSubmitDeclaration register={register} />
-          <MovieSubmitDeliverables register={register} />
-          <MovieSubmitTeamComposition register={register} />
-          <MovieCertificateOfOwnership />
+          {/* <MovieSubmitInfo register={form.register} />
+          <MovieSubmitDeclaration register={form.register} />
+          <MovieSubmitDeliverables register={form.register} /> */}
+          <MovieSubmitTeamComposition form={form} />
+          {/* <MovieCertificateOfOwnership /> */}
           <button className="border p-3 rounded-md">
             finaliser ma soumission
           </button>
@@ -71,3 +69,4 @@ function SubmitMoviePage() {
 }
 
 export default SubmitMoviePage;
+
