@@ -3,7 +3,7 @@ import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 import FormTextArea from './base/FormTextArea';
 
-function MovieSubmitDeclaration() {
+function MovieSubmitDeclaration({ register }) {
   return (
     <FormSection className="bg-zinc-800 text-zinc-200">
 
@@ -37,7 +37,8 @@ function MovieSubmitDeclaration() {
               type="radio"
               id="form-full-ai"
               name="ai-classification"
-              value="ai-full"
+              value={false}
+              {...register('isHybrid')}
               required
             ></input>
           </label>
@@ -53,7 +54,8 @@ function MovieSubmitDeclaration() {
               type="radio"
               id="form-hybrid"
               name="ai-classification"
-              value="ai-hybrid"
+              value={true}
+              {...register('isHybrid')}
               required
             ></input>
           </label>
