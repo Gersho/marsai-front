@@ -9,7 +9,7 @@ function BasicFormInput({
     required = false,
 }) {
     let id = "form-" + { name };
-    className = "flex flex-col sm:w-full gap-2 " + " " + className;
+    className = "flex flex-col sm:w-full gap-2 sm:pb-0 pb-3" + " " + className;
 
     return (
         <div className={className}>

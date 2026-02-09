@@ -215,18 +215,21 @@ function MovieSubmitTeamComposition() {
 
             </div>
 
-            <div className="flex flex-col w-full sm:w-1/2 self-start sm:pr-10">
-                <label htmlFor="form-director-twitter">Twitter</label>
-                <input
-                    className="border border-gray rounded-sm pl-2 py-1"
+            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+
+
+                <BasicFormInput
+                    label="Twitter"
                     type="text"
-                    id="form-director-twitter"
                     name="director-twitter"
                     placeholder=""
-                    title="Twitter du realisateur"
+                    title="twitter du directeur"
 
                 />
+
+                <div className="w-full"></div>
             </div>
+
 
             <p className="py-2 self-center">Collaborateurs:</p>
             <div className="flex flex-col gap-4 w-full pb-5">

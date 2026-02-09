@@ -11,7 +11,7 @@ function FormTextArea({
 }) {
 
     let id = "form-" + name;
-    className = "flex flex-col w-full" + " " + className;
+    className = "flex flex-col w-full gap-2 sm:pb-0 pb-3" + " " + className;
 
     return (
         <div className={className}>
@@ -22,7 +22,7 @@ function FormTextArea({
                 <p>{currentCount}/{maxCount}</p>
             </div>
             <textarea
-                className="border border-gray rounded-sm p-3 my-2 h-36 sm:h-44"
+                className="border border-gray rounded-sm p-3 h-36 sm:h-44"
                 id={id}
                 type="textarea"
                 name={name}

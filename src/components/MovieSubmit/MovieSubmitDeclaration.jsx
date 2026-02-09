@@ -24,7 +24,7 @@ function MovieSubmitDeclaration() {
       <div className="flex flex-col w-full gap-3">
 
         <p>Classification de l&apos;Œuvre :* Choix exclusif entre :</p>
-        <div className="flex flex-row justify-around gap-3 w-full ">
+        <div className="flex flex-row justify-around gap-3 w-full pb-4">
           <label
             className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-2 "
             htmlFor="form-full-ai"
