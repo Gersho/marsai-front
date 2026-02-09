@@ -32,8 +32,8 @@ function MovieSubmitTeamComposition({ form }) {
             </label>
             <select
               className="w-fit py-1 justify-center"
-              name="director-gender"
               id="form-director-gender"
+              {...form.register('director.gender')}
             >
               <option value="mr">Mr.</option>
               <option value="mme">Mme.</option>
@@ -46,7 +46,7 @@ function MovieSubmitTeamComposition({ form }) {
               className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
               id="form-director-firstname"
               type="text"
-              name="director-firstname"
+              {...form.register('director.firstname')}
               placeholder="Prenom"
               title="Prenom du realisateur"
               required
@@ -60,7 +60,7 @@ function MovieSubmitTeamComposition({ form }) {
             className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
             id="form-director-lastname"
             type="text"
-            name="director-lastname"
+            {...form.register('director.lastname')}
             placeholder="Nom"
             title="Nom du realisateur"
             required
@@ -69,18 +69,22 @@ function MovieSubmitTeamComposition({ form }) {
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="métier actuel *"
           type="text"
-          name="director-job"
+          id="director-job"
+          name="director.job"
           placeholder=""
           title="métier actuel du realisateur"
           required={true}
         />
 
         <BasicFormInput
+          register={form.register}
           label="date de naissance *"
           type="date"
-          name="director-birthdate"
+          id="director-birthdate"
+          name="director.birthdate"
           placeholder=""
           title="date de naissance du realisateur"
           required={true}
@@ -88,18 +92,22 @@ function MovieSubmitTeamComposition({ form }) {
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="email *"
           type="email"
-          name="director-email"
+          id="director-email"
+          name="director.email"
           placeholder="exemple@gmail.com"
           title="email du realisateur"
           required={true}
         />
 
         <BasicFormInput
+          register={form.register}
           label="Telephone *"
           type="text"
-          name="director-phone"
+          id="director-phone"
+          name="director.phone"
           placeholder="0102030405"
           title="Numero de telephone du realisateur"
           required={true}
@@ -110,7 +118,8 @@ function MovieSubmitTeamComposition({ form }) {
         <input
           className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
           type="text"
-          name="director-address"
+          id="form-director-address"
+          {...form.register('director.address')}
           placeholder=""
           title="Addresse postale du directeur"
           required
@@ -118,36 +127,43 @@ function MovieSubmitTeamComposition({ form }) {
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="Ville *"
           type="text"
-          name="director-city"
+          id="director-city"
+          name="director.city"
           placeholder=""
           title="Ville du directeur"
           required={true}
         />
 
         <BasicFormInput
+          register={form.register}
           label="Code Postal"
           type="text"
-          name="director-zipcode"
+          id="director-zipcode"
+          name="director.zipcode"
           placeholder=""
           title="Code Postal du realisateur"
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="Region"
           type="text"
-          name="director-region"
+          id="director-region"
+          name="director.region"
           placeholder=""
           title="Region du directeur"
-          required={true}
         />
 
         <BasicFormInput
+          register={form.register}
           label="Pays *"
           type="text"
-          name="director-country"
+          id="director-country"
+          name="director.country"
           placeholder=""
           title="Pays du realisateur"
           required={true}
@@ -156,43 +172,53 @@ function MovieSubmitTeamComposition({ form }) {
       présence en ligne
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="Facebook"
           type="text"
-          name="director-facebook"
+          id="director-facebook"
+          name="director.facebook"
           placeholder=""
           title="facebook du directeur"
         />
 
         <BasicFormInput
+          register={form.register}
           label="Instagram"
           type="text"
-          name="director-instagram"
+          id="director-instagram"
+          name="director.instagram"
           placeholder=""
           title="instagram du realisateur"
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="Youtube"
           type="text"
-          name="director-youtube"
+          id="director-youtube"
+          name="director.youtube"
           placeholder=""
           title="Youtube du directeur"
         />
 
         <BasicFormInput
+          register={form.register}
           label="LinkedIn"
           type="text"
-          name="director-linkedin"
+          id="director-linkedin"
+          name="director.linkedin"
           placeholder=""
           title="Linkedin du directeur"
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
+          register={form.register}
           label="Twitter"
           type="text"
-          name="director-twitter"
+          id="director-twitter"
+          name="director.twitter"
           placeholder=""
           title="twitter du directeur"
         />
