@@ -55,7 +55,6 @@ function MovieSubmitInfo() {
                 <FormTextArea
                     className=""
                     label="Synopsis langue originale *"
-                    currentCount={0}
                     maxCount={300}
                     name="original-synopsis"
                     placeholder="Résumez l&apos;intention de votre film et l&apos;histoire qu&apos;il raconte en quelques lignes..."
@@ -67,7 +66,6 @@ function MovieSubmitInfo() {
                 <FormTextArea
                     className=""
                     label="Synopsis anglais *"
-                    currentCount={0}
                     maxCount={300}
                     name="english-synopsis"
                     placeholder="Traduction en anglais du synopsis"

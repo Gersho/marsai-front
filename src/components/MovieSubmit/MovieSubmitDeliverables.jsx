@@ -12,19 +12,10 @@ function MovieSubmitDeliverables() {
       <FormSectionTitle text="03. Livrables & Accessibilité" />
 
       <div className="flex flex-col gap-2 w-full">
-
-        <label htmlFor="form-youtube-url">
-          Lien YouTube * (Public / Non-répertorié)
-        </label>
-        <input
-          className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-          id="form-youtube-url"
-          type="text"
-          name="youtube-url"
-          placeholder="https://www.youtube.com/watch?v=..."
-          title="Lien YouTube (Public / Non-répertorié)"
-          required
-        ></input>
+        <div className="sm:self-center sm:flex sm:flex-col">
+          <label htmlFor="form-movie-upload">Ajout du film</label>
+          <input className="border" id="form-movie-upload" name="movie-upload" type="file"></input>
+        </div>
 
         <div>
           <p>Sous-titres (.srt)</p>

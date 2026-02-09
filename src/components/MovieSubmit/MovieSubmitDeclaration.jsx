@@ -67,7 +67,6 @@ function MovieSubmitDeclaration({ register }) {
         <FormTextArea
           className=""
           label="Stack Technologique *"
-          currentCount={0}
           maxCount={500}
           name="technical-stack"
           placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l&apos;animation...)"
@@ -78,7 +77,6 @@ function MovieSubmitDeclaration({ register }) {
         <FormTextArea
           className=""
           label="Méthodologie Créative *"
-          currentCount={0}
           maxCount={500}
           name="creative-methodology"
           placeholder="Décrivez l&apos;interaction entre l&apos;humain et la machine dans ce processus.."
