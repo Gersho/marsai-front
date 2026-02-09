@@ -1,14 +1,15 @@
 function BasicFormInput({
     label,
     type,
-    name,
     placeholder,
     title,
+    id,
+    register,
+    name,
     className = "",
     autoFocus = false,
     required = false,
 }) {
-    let id = "form-" + name;
     className = "flex flex-col sm:w-full gap-2 sm:pb-4 pb-3" + " " + className;
 
     return (
@@ -18,9 +19,9 @@ function BasicFormInput({
                 className="border border-gray rounded-sm pl-2 py-1"
                 id={id}
                 type={type}
-                name={name}
                 placeholder={placeholder}
                 title={title}
+                {...register(name)}
                 autoFocus={autoFocus}
                 required={required}
             ></input>

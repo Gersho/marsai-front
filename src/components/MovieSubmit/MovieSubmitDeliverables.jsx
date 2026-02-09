@@ -1,11 +1,8 @@
-import { useForm } from 'react-hook-form';
 import InputImage from './base/InputImage';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 
-function MovieSubmitDeliverables() {
-  const { register, handleSubmit } = useForm();
-  handleSubmit;
+function MovieSubmitDeliverables({ register }) {
 
   return (
     <FormSection className="bg-zinc-700 text-zinc-200">
@@ -14,7 +11,7 @@ function MovieSubmitDeliverables() {
       <div className="flex flex-col gap-2 w-full">
         <div className="sm:self-center sm:flex sm:flex-col">
           <label htmlFor="form-movie-upload">Ajout du film</label>
-          <input className="border" id="form-movie-upload" name="movie-upload" type="file"></input>
+          <input className="border" id="form-movie-upload" name="movie-upload" type="file" {...register('video')} ></input>
         </div>
 
         <div>
@@ -26,6 +23,7 @@ function MovieSubmitDeliverables() {
             id="form-has-subtitles"
             name="has-subtitles"
             value="true"
+            {...register('hasSubs')}
           ></input>
           <label htmlFor="form-has-subtitles">
             La video contient des sous titres incrustés
@@ -41,7 +39,7 @@ function MovieSubmitDeliverables() {
             className="aspect-video w-full max-w-sm"
             label="Vignette Officielle (16:9) *"
             id="poster"
-            name="poster"
+            name="coverImage"
             iconSize={80}
             description="Cliquez pour upload"
             subDescription="PNG ou JPG • Max 15Mo"
@@ -55,21 +53,21 @@ function MovieSubmitDeliverables() {
               className="aspect-3/4 w-20 justify-center"
               label="Galerie Médias premiere image"
               id="still-image-a"
-              name="still-image-a"
+              name="stillImageA"
               register={register}
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center"
               label="Galerie Médias deuxieme image"
               id="still-image-b"
-              name="still-image-b"
+              name="stillImageB"
               register={register}
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center"
               label="Galerie Médias troisieme image"
               id="still-image-c"
-              name="still-image-c"
+              name="stillImageC"
               register={register}
             />
           </div>

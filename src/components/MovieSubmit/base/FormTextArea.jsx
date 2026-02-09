@@ -4,9 +4,11 @@ function FormTextArea({
 
     label,
     maxCount,
-    name,
+    id,
     placeholder,
     title,
+    register,
+    name,
     className = "",
     required = false
 }) {
@@ -17,8 +19,6 @@ function FormTextArea({
         setCount(event?.target.value.length);
     }
 
-
-    let id = "form-" + name;
     className = "flex flex-col w-full gap-2 sm:pb-0 pb-3" + " " + className;
 
     return (
@@ -33,11 +33,11 @@ function FormTextArea({
                 className="border border-gray rounded-sm p-3 h-36 sm:h-44"
                 id={id}
                 type="textarea"
-                name={name}
                 placeholder={placeholder}
                 title={title}
-                required={required}
                 onChange={countCharacters}
+                {...register(name)}
+                required={required}
             ></textarea>
         </div>
 

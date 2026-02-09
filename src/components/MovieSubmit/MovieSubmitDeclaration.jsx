@@ -68,9 +68,11 @@ function MovieSubmitDeclaration({ register }) {
           className=""
           label="Stack Technologique *"
           maxCount={500}
-          name="technical-stack"
+          id="form-technical-stack"
           placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l&apos;animation...)"
           title="Stack Technologique (max. 500 caractères)"
+          register={register}
+          name="aiTools"
           required={true}
         />
 
@@ -78,9 +80,11 @@ function MovieSubmitDeclaration({ register }) {
           className=""
           label="Méthodologie Créative *"
           maxCount={500}
-          name="creative-methodology"
+          id="form-creative-methodology"
           placeholder="Décrivez l&apos;interaction entre l&apos;humain et la machine dans ce processus.."
           title="Méthodologie Créative (max. 500 caractères)"
+          register={register}
+          name="creativeProcess"
           required={true}
         />
 

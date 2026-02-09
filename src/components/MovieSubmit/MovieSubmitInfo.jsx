@@ -3,7 +3,7 @@ import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormTextArea from './base/FormTextArea';
 
-function MovieSubmitInfo() {
+function MovieSubmitInfo({ register }) {
     return (
         <FormSection className="bg-zinc-700 text-zinc-200">
             <FormSectionTitle
@@ -14,18 +14,22 @@ function MovieSubmitInfo() {
                 <BasicFormInput
                     label="Titre original *"
                     type="text"
-                    name="original-title"
+                    id="form-original-title"
                     placeholder="Titre original"
                     title="Titre original"
+                    register={register}
+                    name="originalTitle"
                     autoFocus={true}
                     required={true} />
 
                 <BasicFormInput
                     label="Traduction anglaise *"
                     type="text"
-                    name="english-translation"
+                    id="form-english-translation"
                     placeholder="Traduction anglaise"
                     title="Traduction anglaise"
+                    register={register}
+                    name="englishTitle"
                     required={true}
                 />
             </div>
@@ -34,18 +38,22 @@ function MovieSubmitInfo() {
                 <BasicFormInput
                     label="Dureé exacte * (en secondes)"
                     type="text"
-                    name="duration"
+                    id="form-duration"
                     placeholder="ex: 60"
                     title="Dureé exacte (en secondes)"
+                    register={register}
+                    name="duration"
                     required={true}
                 />
 
                 <BasicFormInput
                     label="Langue parlée/Principale du film *"
                     type="text"
-                    name="language"
+                    id="form-language"
                     placeholder="Langue"
                     title="Langue parlée/Principale du film"
+                    register={register}
+                    name="language"
                     required={true}
                 />
 
@@ -56,9 +64,11 @@ function MovieSubmitInfo() {
                     className=""
                     label="Synopsis langue originale *"
                     maxCount={300}
-                    name="original-synopsis"
+                    id="form-original-synopsis"
                     placeholder="Résumez l&apos;intention de votre film et l&apos;histoire qu&apos;il raconte en quelques lignes..."
                     title="synopsis langue originale (max. 300 caractères)"
+                    register={register}
+                    name="originalSynopsis"
                     required={true}
 
                 />
@@ -67,9 +77,11 @@ function MovieSubmitInfo() {
                     className=""
                     label="Synopsis anglais *"
                     maxCount={300}
-                    name="english-synopsis"
+                    id="form-english-synopsis"
                     placeholder="Traduction en anglais du synopsis"
                     title="synopsis anglais (max. 300 caractères)"
+                    register={register}
+                    name="englishSynopsis"
                     required={true}
                 />
             </div>
