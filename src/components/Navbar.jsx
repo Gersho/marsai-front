@@ -45,42 +45,37 @@ function Navbar() {
     <div
       className={`z-40 flex w-full items-center bg-transparent py-4 lg:py-2 ${
         sticky
-          ? 'fixed top-0 bg-white bg-opacity-80 shadow-sticky backdrop-blur-sm transition duration-300'
+          ? 'fixed top-0 bg-opacity-0 shadow-sticky backdrop-blur-lg transition duration-300'
           : `absolute`
       }`}
     >
       <div className="relative flex-1 flex items-center justify-between px-4 lg:px-24">
-        {sticky ? (
-          <Logo src={navbarData.logo_dark.src} alt={navbarData.logo_dark.alt} />
-        ) : (
-          <Logo src={navbarData.logo.src} alt={navbarData.logo.alt} />
-        )}
-
+        <Logo src={navbarData.logo.src} alt={navbarData.logo.alt} />
         <button
           onClick={navbarToggleHandler}
           id="navbarToggler"
           aria-label="Mobile Menu"
-          className={`absolute right-2 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px]  focus:ring-2 ${sticky ? 'ring-black' : 'ring-white'} lg:hidden`}
+          className={`absolute right-2 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px]  focus:ring-2  ring-white lg:hidden`}
         >
           <span
-            className={`relative my-1.5 block h-0.5 w-[30px] ${sticky ? 'bg-black' : 'bg-white'} transition-all duration-300 ${
+            className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
               navbarOpen ? ' top-[7px] rotate-45' : ' '
             }`}
           />
           <span
-            className={`relative my-1.5 block h-0.5 w-[30px] ${sticky ? 'bg-black' : 'bg-white'} transition-all duration-300 ${
+            className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
               navbarOpen ? 'opacity-0 ' : ' '
             }`}
           />
           <span
-            className={`relative my-1.5 block h-0.5 w-[30px] ${sticky ? 'bg-black' : 'bg-white'} transition-all duration-300 ${
+            className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
               navbarOpen ? ' top-[-8px] -rotate-45' : ' '
             }`}
           />
         </button>
         <nav
           id="navbarCollapse"
-          className={`navbar absolute left-0 right-0 z-30 w-full bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+          className={`navbar absolute left-0 right-0 z-30 w-full bg-back px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
             navbarOpen
               ? 'visibility top-[150%] opacity-100'
               : 'invisible top-[260%] opacity-0'
@@ -89,10 +84,7 @@ function Navbar() {
           <ul className="block items-center lg:flex lg:space-x-12">
             {navbarData.menu.map(menuItem => {
               return (
-                <li
-                  key={menuItem.id}
-                  className={`group relative ${sticky ? 'text-black' : 'lg:text-white'}`}
-                >
+                <li key={menuItem.id} className={`group relative text-white`}>
                   {menuItem.url && (
                     <NavLink
                       to={menuItem.url}
@@ -108,7 +100,7 @@ function Navbar() {
           </ul>
         </nav>
         <div className="flex gap-4 items-center mr-16 lg:mr-0 lg:gap-8">
-          <button className="bg-primary text-white py-2 px-6 text-xs rounded rounded-full lg:text-sm lg:px-8">
+          <button className="bg-accent text-white py-2 px-6 text-xs rounded-full lg:text-sm lg:px-8">
             {t('submit')}
           </button>
           <div role="menu" className="flex gap-4">

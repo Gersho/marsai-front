@@ -98,5 +98,71 @@
       "time": "à partir de 19h",
       "cta": "Prendre mon pass"
     }
+  },
+  "lieuxPlateforme": {
+    "tag": "le lieu",
+    "titlePart1": "La",
+    "titlePart2": "plateforme",
+    "description": "4 000 m² d'espaces modulables dans le centre de Marseille, au cœur de l'écosystème numérique.",
+    "salles": [
+      {
+        "title": "Salle des Sucres",
+        "text": "Futur sanctuaire des conférences et de la remise des prix de Mars.A.I. Un espace majestueux alliant patrimoine et technologie."
+      },
+      {
+        "title": "Salle Plaza",
+        "text": "L'épicentre du festival : accueil, animations, workshops et restauration. Le point de rencontre de tous les participants."
+      }
+    ],
+    "location1": "Marseille, France",
+    "location2": "Centre Événementiel La Plateforme"
+  },
+  "chiffres": {
+    "title": "Chiffres <0>projectés</0>",
+    "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
+    "countriesRepresented": "Pays représentés",
+    "filmsSubmitted": "Films soumis"
+  },
+  "partner": {
+    "tag": "Nos partenaires",
+    "title": "ils soutiennent <0>le futur</0>"
+  },
+  "projet": {
+    "title": "LE PROJET MARS.A.I",
+    "items": {
+      "oneMinute": {
+        "title": "1 minute",
+        "text": "Format ultra-court pour maximiser l'impact créatif."
+      },
+      "free": {
+        "title": "gratuité",
+        "text": "Conférences et workshops accessibles à tous."
+      },
+      "forEveryone": {
+        "title": "Pour tous",
+        "text": "Professionnels, étudiants et curieux."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "text": "Rencontrez les leaders mondiaux de l'IA."
+      }
+    }
+  },
+  "filmsCompet": {
+    "previewSelection": "Aperçu Sélection",
+    "title": "Films en <0>compétition</0>",
+    "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
+    "directorLabel": "Réalisateur",
+    "viewSelection": "Voir toute la sélection"
+  },
+  "footer": {
+    "description": "Une co-création de l'école du numérique La Plateforme et le Mobile Film Festival. Ensemble pour dessiner les nouveaux horizons du cinéma.",
+    "stayConnected": "Restez connectés",
+    "emailPlaceholder": "votre@email.com",
+    "subscribe": "S'inscrire",
+    "legalNotice": "Mentions Légales",
+    "press": "Presse",
+    "contact": "Contact",
+    "copyright": "© 2025 MARS.A.I"
   }
 }

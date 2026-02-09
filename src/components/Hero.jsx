@@ -14,10 +14,10 @@ function Hero() {
           />
         </h1>
         <p className="pb-6 text-center text-white">{t('hero.subtitle')}</p>
-        <div className="flex gap-2 mx-2 lg:mx-0">
+        <div className="flex gap-4 mx-2 lg:mx-0">
           <Link
             to="/movies"
-            className="button flex items-center gap-2  text-white bg-primary"
+            className="button flex items-center gap-2  text-white bg-accent"
           >
             {t('hero.ctaParticipate')}
             <svg

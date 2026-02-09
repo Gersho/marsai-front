@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import marsaiLogo from '../assets/marsai-logo.svg';
 import Logo from './Logo';
+import { useTranslation } from 'react-i18next';
 
 const footerLogo = {
   logo: {
@@ -9,24 +10,20 @@ const footerLogo = {
   },
 };
 
+
 const Footer = () => {
+  const { t } = useTranslation();
   return (
-    <footer className="bg-[#2E2E2E] text-white py-16 px-4">
-      {/* Conteneur principal centré */}
-      <div className="max-w-7xl mx-auto">
-        {/* Partie Haute : Grille 2 colonnes (Contenu gauche + Newsletter droite) */}
+    <footer className=" bg-back text-white py-16 px-4">
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-20">
-          {/* --- Colonne Gauche : Logo, Texte, Réseaux --- */}
           <div className="space-y-6 text-center lg:text-left">
             {/* Badge Logo MARS.A.I */}
             <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
               <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
-            {/* Paragraphe de description */}
-            <p className="text-gray-300 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
-              Une co-création de l&apos;école du numérique La Plateforme et le
-              Mobile Film Festival. Ensemble pour dessiner les nouveaux horizons
-              du cinéma.
+            <p className=" text-white text-sm leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-4">
+              {t('footer.description')}
             </p>
 
             {/* Icônes Réseaux Sociaux */}
@@ -63,17 +60,15 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-6 uppercase tracking-wide">
               Restez connectés
             </h3>
-
-            {/* Formulaire input + bouton combinés */}
-            <form className="bg-[#3F3F46] rounded-full p-1.5 flex items-center max-w-md mx-auto">
+            <form className="bg-white rounded-full p-1.5 flex items-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="votre@email.com"
+                placeholder={t('footer.emailPlaceholder')}
                 className="bg-transparent text-gray-200 placeholder text-sm grow px-4 outline-none w-full"
               />
               <button
                 type="submit"
-                className="bg-gray-500 text-white rounded-full px-6 py-3 font-bold text-xs uppercase"
+                className="bg-accent text-white rounded-full px-6 py-3 font-bold text-xs uppercase"
               >
                 S&apos;inscrire
               </button>
@@ -83,19 +78,23 @@ const Footer = () => {
 
         {/* Partie Basse : Liens et Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-[#52525B] uppercase tracking-wider mt-12">
+
           <div className="flex space-x-8 mb-4 md:mb-0">
             <a href="#" className="hover:text-gray-300 transition">
-              Mentions Légales
+              {t('footer.legalNotice')}
             </a>
             <a href="#" className="hover:text-gray-300 transition">
-              Presse
+              {t('footer.press')}
             </a>
             <a href="#" className="hover:text-gray-300 transition">
-              Contact
+              {t('footer.contact')}
             </a>
           </div>
 
-          <div>© 2025 MARS.A.I</div>
+          <div>
+            © 2025 MARS.A.I
+          </div>
+
         </div>
       </div>
     </footer>
