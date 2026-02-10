@@ -1,10 +1,14 @@
 import { useFieldArray } from 'react-hook-form';
 import BasicFormInput from './base/BasicFormInput';
-import FormNewCollabotor from './base/FormNewCollaborator';
+import FormNewCollaborator from './base/FormNewCollaborator';
 import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
+import { useTranslation } from 'react-i18next';
 
 function MovieSubmitTeamComposition({ form }) {
+  const { t } = useTranslation();
+  const target = "submitMovieForm.teamComposition.";
+
   const { fields, append, remove } = useFieldArray({
     name: 'collaborators',
     control: form.control,
@@ -22,47 +26,47 @@ function MovieSubmitTeamComposition({ form }) {
   }
   return (
     <FormSection className="bg-zinc-800 text-zinc-200">
-      <FormSectionTitle text="04. Composition de l'Équipe" />
-      <p className="py-2 self-center">Realisateur:</p>
+      <FormSectionTitle text={t(target + 'title')} />
+      <p className="py-2 self-center">{t(target + 'director.header')}</p>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <div className="flex flex-col sm:flex-row sm:w-full sm:gap-x-5">
           <div className="flex flex-col gap-2">
             <label className="" htmlFor="form-director-gender">
-              civilité *
+              {t(target + 'director.gender.label')}
             </label>
             <select
               className="w-fit py-1 justify-center"
               id="form-director-gender"
               {...form.register('director.gender')}
             >
-              <option value="mr">Mr.</option>
-              <option value="mme">Mme.</option>
-              <option value="mx">Mx.</option>
+              <option value="mr">{t(target + 'director.gender.mr')}</option>
+              <option value="mme">{t(target + 'director.gender.mrs')}</option>
+              <option value="mx">{t(target + 'director.gender.mx')}</option>
             </select>
           </div>
           <div className="flex flex-col sm:w-full">
-            <label htmlFor="form-director-firstname">Prenom *</label>
+            <label htmlFor="form-director-firstname">{t(target + 'director.firstname.label')}</label>
             <input
               className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
               id="form-director-firstname"
               type="text"
               {...form.register('director.firstname')}
-              placeholder="Prenom"
-              title="Prenom du realisateur"
+              placeholder={t(target + 'director.firstname.placeholder')}
+              title={t(target + 'director.firstname.title')}
               required
             ></input>
           </div>
         </div>
 
         <div className="flex flex-col sm:w-full">
-          <label htmlFor="form-director-lastname">Nom *</label>
+          <label htmlFor="form-director-lastname">{t(target + 'director.lastname.label')}</label>
           <input
             className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
             id="form-director-lastname"
             type="text"
             {...form.register('director.lastname')}
-            placeholder="Nom"
-            title="Nom du realisateur"
+            placeholder={t(target + 'director.lastname.placeholder')}
+            title={t(target + 'director.lastname.title')}
             required
           ></input>
         </div>
@@ -70,166 +74,166 @@ function MovieSubmitTeamComposition({ form }) {
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="métier actuel *"
+          label={t(target + 'director.job.label')}
           type="text"
           id="director-job"
           name="director.job"
           placeholder=""
-          title="métier actuel du realisateur"
+          title={t(target + 'director.job.title')}
           required={true}
         />
 
         <BasicFormInput
           register={form.register}
-          label="date de naissance *"
+          label={t(target + 'director.birthdate.label')}
           type="date"
           id="director-birthdate"
           name="director.birthdate"
           placeholder=""
-          title="date de naissance du realisateur"
+          title={t(target + 'director.birthdate.title')}
           required={true}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="email *"
+          label={t(target + 'director.email.label')}
           type="email"
           id="director-email"
           name="director.email"
-          placeholder="exemple@gmail.com"
-          title="email du realisateur"
+          placeholder={t(target + 'director.email.placeholder')}
+          title={t(target + 'director.email.title')}
           required={true}
         />
 
         <BasicFormInput
           register={form.register}
-          label="Telephone *"
+          label={t(target + 'director.phone.label')}
           type="text"
           id="director-phone"
           name="director.phone"
-          placeholder="0102030405"
-          title="Numero de telephone du realisateur"
+          placeholder={t(target + 'director.phone.placeholder')}
+          title={t(target + 'director.phone.title')}
           required={true}
         />
       </div>
       <div className="w-full">
-        <label htmlFor="form-director-address">Addresse *</label>
+        <label htmlFor="form-director-address">{t(target + 'director.address.label')}</label>
         <input
           className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
           type="text"
           id="form-director-address"
           {...form.register('director.address')}
           placeholder=""
-          title="Addresse postale du directeur"
+          title={t(target + 'director.address.title')}
           required
         ></input>
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="Ville *"
+          label={t(target + 'director.city.label')}
           type="text"
           id="director-city"
           name="director.city"
           placeholder=""
-          title="Ville du directeur"
+          title={t(target + 'director.city.title')}
           required={true}
         />
 
         <BasicFormInput
           register={form.register}
-          label="Code Postal"
+          label={t(target + 'director.zipcode.label')}
           type="text"
           id="director-zipcode"
           name="director.zipcode"
           placeholder=""
-          title="Code Postal du realisateur"
+          title={t(target + 'director.zipcode.title')}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="Region"
+          label={t(target + 'director.region.label')}
           type="text"
           id="director-region"
           name="director.region"
           placeholder=""
-          title="Region du directeur"
+          title={t(target + 'director.region.title')}
         />
 
         <BasicFormInput
           register={form.register}
-          label="Pays *"
+          label={t(target + 'director.country.label')}
           type="text"
           id="director-country"
           name="director.country"
           placeholder=""
-          title="Pays du realisateur"
+          title={t(target + 'director.country.title')}
           required={true}
         />
       </div>
-      présence en ligne
+      {t(target + 'director.socials')}
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="Facebook"
+          label={t(target + 'director.facebook.label')}
           type="text"
           id="director-facebook"
           name="director.facebook"
           placeholder=""
-          title="facebook du directeur"
+          title={t(target + 'director.facebook.title')}
         />
 
         <BasicFormInput
           register={form.register}
-          label="Instagram"
+          label={t(target + 'director.instagram.label')}
           type="text"
           id="director-instagram"
           name="director.instagram"
           placeholder=""
-          title="instagram du realisateur"
+          title={t(target + 'director.instagram.title')}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="Youtube"
+          label={t(target + 'director.youtube.label')}
           type="text"
           id="director-youtube"
           name="director.youtube"
           placeholder=""
-          title="Youtube du directeur"
+          title={t(target + 'director.youtube.title')}
         />
 
         <BasicFormInput
           register={form.register}
-          label="LinkedIn"
+          label={t(target + 'director.linkedin.label')}
           type="text"
           id="director-linkedin"
           name="director.linkedin"
           placeholder=""
-          title="Linkedin du directeur"
+          title={t(target + 'director.linkedin.title')}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
-          label="Twitter"
+          label={t(target + 'director.twitter.label')}
           type="text"
           id="director-twitter"
           name="director.twitter"
           placeholder=""
-          title="twitter du directeur"
+          title={t(target + 'director.twitter.title')}
         />
 
         <div className="w-full"></div>
       </div>
-      <p className="py-2 self-center">Collaborateurs:</p>
+      <p className="py-2 self-center">{t(target + 'collaborators.header')}</p>
       <div className="flex flex-col gap-4 w-full pb-5">
         {fields.map((field, index) => (
           <div key={field.id}>
-            <FormNewCollabotor index={index} form={form} remove={remove} />
+            <FormNewCollaborator index={index} form={form} remove={remove} />
           </div>
         ))}
       </div>
@@ -238,7 +242,7 @@ function MovieSubmitTeamComposition({ form }) {
         type="button"
         onClick={addCollaborator}
       >
-        + ajouter collaborateur
+        {t(target + 'collaborators.button')}
       </button>
     </FormSection>
   );

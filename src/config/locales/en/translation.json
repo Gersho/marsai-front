@@ -164,5 +164,203 @@
     "press": "Press",
     "contact": "Contact",
     "copyright": "© 2025 MARS.A.I"
+  },
+  "submitMovieForm":{
+    "page":{
+      "titlePart1": "Call for Projects 2026",
+      "titlePart2": "submit a film",
+      "paragraph": "Please provide the technical details, AI usage, and your team composition. All fields marked with an asterisk (*) are required.",
+      "submitButton": "finalize my submission"
+    },
+    "info": {
+      "title": "01. Film Identity",
+      "originalTitle": {
+        "label": "Original title *",
+        "title": "Original title"
+      },
+      "englishTitle": {
+        "label": "English title *",
+        "title": "English title"
+      },
+      "duration": {
+        "label": "Exact duration * (in seconds)",
+        "title": "Exact duration (in seconds)"
+      },
+      "language": {
+        "label": "Spoken / Primary language of the film *",
+        "placeholder": "Language",
+        "title": "Spoken or primary language of the film"
+      },
+      "originalSynopsis": {
+        "label": "Synopsis in original language *",
+        "placeholder": "Summarize your film’s intent and the story it tells in a few lines...",
+        "title": "Synopsis in original language (max. 300 characters)"
+      },
+      "englishSynopsis": {
+        "label": "English synopsis *",
+        "placeholder": "English translation of the synopsis",
+        "title": "English synopsis (max. 300 characters)"
+      }
+    },
+    "declaration":{
+      "title": "02. AI Usage Declaration",
+      "paragraph": "MARS.A.I requires full transparency regarding the use of Artificial Intelligence. Please select all generative tools used in your creative process.",
+      "isHybrid":{
+        "title": "Work Classification:* Exclusive choice between:",
+        "false": ["Fully generated", "(100% AI)"],
+        "true": ["Hybrid production", "(Live-action footage + AI contributions)"]
+      },
+      "aiTools":{
+        "label": "Technology stack *",
+        "placeholder": "List the tools used (e.g. Midjourney for visuals, ElevenLabs for voices, Runway for animation...)",
+        "title": "Technology stack (max. 500 characters)"
+      },
+      "creativeProcess":{
+        "label": "Creative methodology *",
+        "placeholder": "Describe the interaction between humans and machines in this process...",
+        "title": "Creative methodology (max. 500 characters)"
+      }
+    },
+    "deliverables":{
+      "title": "03. Deliverables & Accessibility",
+      "video" : {
+        "label": "Upload the film",
+        "title": "Upload the film"
+      },
+      "hasSubs":{
+        "header": "Subtitles (.srt)",
+        "label": "The video contains embedded subtitles",
+        "title": "Does the video contain embedded subtitles?"
+      },
+      "coverImage": {
+        "header": "Official thumbnail (16:9) *",
+        "label": "Official thumbnail (16:9) *",
+        "description":"Click to upload",
+        "subDescription":"PNG or JPG • Max 15MB"
+      },
+      "stills":{
+        "header": "Media Gallery (Stills - Max 3)",
+        "stillA": "Media gallery first image",
+        "stillB": "Media gallery second image",
+        "stillC": "Media gallery third image"
+      }
+    },
+    "teamComposition":{
+      "title": "04. Team Composition",
+      "director":{
+        "header": "Director:",
+        "gender": {
+          "label": "Title *",
+          "mr": "Mr.",
+          "mrs": "Mrs.",
+          "mx": "Mx."
+        },
+        "firstname":{
+          "label": "First name *",
+          "placeholder":"First name",
+          "title": "Director's first name"
+        },
+        "lastname":{
+          "label": "Last name *",
+          "placeholder": "Last name",
+          "title": "Director's last name"
+        },
+        "job":{
+          "label": "Current occupation *",
+          "title": "Director's current occupation"
+        },
+        "birthdate":{
+          "label": "Date of birth *",
+          "title": "Director's date of birth"
+        },
+        "email":{
+          "label": "Email *",
+          "placeholder": "example@gmail.com",
+          "title": "Director's email"
+        },
+        "phone":{
+          "label": "Phone number *",
+          "placeholder": "0102030405",
+          "title": "Director's phone number"
+        },
+        "address":{
+          "label": "Address *",
+          "title": "Director's postal address"
+        },
+        "city":{
+          "label": "City *",
+          "title": "Director's city"
+        },
+        "zipcode":{
+          "label": "Postal code",
+          "title": "Director's postal code"
+        },
+        "region":{
+          "label": "Region",
+          "title": "Director's region"
+        },
+        "country":{
+          "label": "Country *",
+          "title": "Director's country"
+        },
+        "socials": "online presence",
+        "facebook":{
+          "label": "Facebook",
+          "title": "Director's Facebook"
+        },
+        "instagram":{
+          "label": "Instagram",
+          "title": "Director's Instagram"
+        },
+        "youtube":{
+          "label": "YouTube",
+          "title": "Director's YouTube"
+        },
+        "linkedin":{
+          "label": "LinkedIn",
+          "title": "Director's LinkedIn"
+        },
+        "twitter":{
+          "label": "Twitter",
+          "title": "Director's Twitter"
+        }
+      },
+      "collaborators":{
+        "header": "Collaborators:",
+        "button": "+ add collaborator"
+      },
+      "newCollaborator":{
+        "remove": "Remove collaborator",
+        "gender": {
+          "label": "Title *",
+          "mr": "Mr.",
+          "mrs": "Mrs.",
+          "mx": "Mx."
+        },
+        "firstname":{
+          "label": "First name *",
+          "placeholder":"First name",
+          "title": "Collaborator's first name"
+        },
+        "lastname":{
+          "label": "Last name *",
+          "placeholder": "Last name",
+          "title": "Collaborator's last name"
+        },
+        "contribution":{
+          "label": "Contribution *",
+          "title": "Collaborator's contribution"
+        },
+        "email":{
+          "label": "Email *",
+          "placeholder": "example@gmail.com",
+          "title": "Collaborator's email"
+        }
+      }
+    },
+    "certificate":{
+      "title": "Certificate of Ownership",
+      "paragraph": "By submitting this application, you certify on your honor that you are the original author of the work and that you hold all distribution rights. You agree that MARS.A.I may use these materials for the promotion of the festival."
+    }
   }
 }

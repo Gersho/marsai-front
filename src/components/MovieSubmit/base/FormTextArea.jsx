@@ -20,8 +20,6 @@ function FormTextArea({
     } = register(name);
 
     function countCharacters(event) {
-        // event.preventDefault();
-        console.log("1111");
         onFormChange(event);
         setCount(event?.target.value.length);
     }
