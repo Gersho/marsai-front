@@ -11,7 +11,7 @@ function Card({
 }) {
   return (
     <div
-      className={`flex-1 bg-primary rounded-md px-8 py-8 lg:py-12 mx-4 lg:mx-0 ${className}`}
+      className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
     >
       {icon && <div className="text-accent text-5xl pb-4">{icon}</div>}
       <h3 className="pr-6 uppercase">{title}</h3>

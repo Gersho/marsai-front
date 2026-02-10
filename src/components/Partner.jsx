@@ -1,22 +1,24 @@
 import { FaRegHandshake } from 'react-icons/fa';
 import { Trans, useTranslation } from 'react-i18next';
 import marsai from '../assets/marsai-logo.svg';
+import TitleSection from './base/TitleSection';
 function Partner() {
   const { t } = useTranslation();
   return (
-    <section className="typography py-12 px-4 lg:py-24 text-white">
+    <section className="section text-white">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-center gap-2 mb-4">
           <FaRegHandshake className="text-2xl text-accent" />
           <p className="text-white uppercase text-lg">{t('partner.tag')}</p>
         </div>
-        <h2 className="uppercase text-center text-4xl font-bold mb-18 lg:mb-24">
+        <TitleSection className="mx-auto text-center">
           <Trans
             i18nKey="partner.title"
             components={[<strong key="highlight" className="text-accent" />]}
           />
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-12 md:gap-18 lg:gap-24">
+        </TitleSection>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-12 md:gap-18 lg:gap-24 md:py-12">
           <img src={marsai} alt="marsai" className="w-32" />
           <img src={marsai} alt="marsai" className="w-32" />
           <img src={marsai} alt="marsai" className="w-32" />

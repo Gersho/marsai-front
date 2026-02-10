@@ -7,7 +7,7 @@ function TitleSection({
   className = '',
 }) {
   return (
-    <div className={`mb-6 lg:mb-8 px-4 md:max-w-lg lg:px-0 ${className}`}>
+    <div className={`mb-6 lg:mb-8 md:max-w-lg ${className}`}>
       <h2 className="uppercase">{children}</h2>
       {hasUnderline && <UnderLine className={underlineColor} />}
     </div>

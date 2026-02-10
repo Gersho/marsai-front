@@ -1,6 +1,7 @@
 import { IoMdPlay } from 'react-icons/io';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { useTranslation, Trans } from 'react-i18next';
+import TitleSection from './base/TitleSection';
 
 const films = [
   {
@@ -32,25 +33,19 @@ const films = [
 const FilmsCompetition = () => {
   const { t } = useTranslation();
   return (
-    <section className="typography py-12 px-4 lg:py-24 text-white bg-back">
+    <section className="section text-white bg-primary">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
           <span className="flex text-xs font-bold tracking-[0.2em] uppercase gap-2 mb-3">
             <IoMdPlay className="text-accent" />{' '}
             {t('filmsCompet.previewSelection')}
           </span>
-          <div className="mb-12 px-4 lg:px-0">
-            <h2 className="uppercase text-4xl font-bold mb-4 md:max-w-lg md:text-5xl">
-              <Trans
-                i18nKey="filmsCompet.title"
-                components={[
-                  <strong key="highlight" className="text-accent" />,
-                ]}
-              />
-            </h2>
-            <span className="block w-24 h-1 bg-white"></span>
-          </div>
-
+          <TitleSection hasUnderline={true} underlineColor="bg-white">
+            <Trans
+              i18nKey="filmsCompet.title"
+              components={[<strong key="highlight" className="text-accent" />]}
+            />
+          </TitleSection>
           <p className="text-white">{t('filmsCompet.description')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -69,7 +64,7 @@ const FilmsCompetition = () => {
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-1 group-hover:text-gray-300 transition">
+                  <h3 className="group-hover:text-gray-300 transition">
                     {film.title}
                   </h3>
                   <div className="text-sm text-gray-400">

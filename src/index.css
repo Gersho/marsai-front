@@ -35,14 +35,14 @@
     }
     h3 {
       font-family: var(--font-secondary);
-      @apply text-xl pb-4 font-semibold lg:text-2xl;
+      @apply text-lg pb-4 font-semibold lg:text-2xl;
     }
     p {
       @apply text-base font-light;
     }
   }
   .section {
-    @apply py-12 px-4 lg:py-24;
+    @apply py-12 px-4 lg:py-20;
   }
   .active {
     @apply text-accent;
