@@ -2,36 +2,38 @@ import { CiCircleInfo } from 'react-icons/ci';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 import FormTextArea from './base/FormTextArea';
+import { useTranslation } from 'react-i18next';
 
 function MovieSubmitDeclaration({ register }) {
+  const { t } = useTranslation();
+  const target = "submitMovieForm.declaration.";
+
   return (
     <FormSection className="bg-zinc-800 text-zinc-200">
 
 
       <FormSectionTitle
-        text="02. Déclaration Usage de l&apos;IA"
+        text={t(target + 'title')}
       />
 
       <div className="flex flex-col sm:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
         <CiCircleInfo className="text-accent text-4xl" />
         <p>
-          MARS.A.I exige une transparence totale sur l&apos;utilisation de
-          l&apos;Intelligence Artificielle. Sélectionnez tous les outils
-          génératifs sollicités dans votre processus créatif.
+          {t(target + 'paragraph')}
         </p>
       </div>
 
       <div className="flex flex-col w-full gap-3">
 
-        <p>Classification de l&apos;Œuvre :* Choix exclusif entre :</p>
+        <p>{t(target + 'isHybrid.title')}</p>
         <div className="flex flex-row justify-around gap-3 w-full pb-4">
           <label
             className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-2 "
             htmlFor="form-full-ai"
           >
-            Génération intégrale
+            {t(target + 'isHybrid.false.0')}
             <br />
-            (100% IA)
+            {t(target + 'isHybrid.false.1')}
             <input
               className=" appearance-none"
               type="radio"
@@ -46,9 +48,9 @@ function MovieSubmitDeclaration({ register }) {
             className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-2 "
             htmlFor="form-hybrid"
           >
-            Production hybride
+            {t(target + 'isHybrid.true.0')}
             <br />
-            (Prises de vues réelles + apports IA)
+            {t(target + 'isHybrid.true.1')}
             <input
               className=" appearance-none"
               type="radio"
@@ -66,11 +68,11 @@ function MovieSubmitDeclaration({ register }) {
 
         <FormTextArea
           className=""
-          label="Stack Technologique *"
+          label={t(target + 'aiTools.label')}
           maxCount={500}
           id="form-technical-stack"
-          placeholder="Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l&apos;animation...)"
-          title="Stack Technologique (max. 500 caractères)"
+          placeholder={t(target + 'aiTools.placeholder')}
+          title={t(target + 'aiTools.title')}
           register={register}
           name="aiTools"
           required={true}
@@ -78,11 +80,11 @@ function MovieSubmitDeclaration({ register }) {
 
         <FormTextArea
           className=""
-          label="Méthodologie Créative *"
+          label={t(target + 'creativeProcess.label')}
           maxCount={500}
           id="form-creative-methodology"
-          placeholder="Décrivez l&apos;interaction entre l&apos;humain et la machine dans ce processus.."
-          title="Méthodologie Créative (max. 500 caractères)"
+          placeholder={t(target + 'creativeProcess.placeholder')}
+          title={t(target + 'creativeProcess.title')}
           register={register}
           name="creativeProcess"
           required={true}

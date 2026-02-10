@@ -1,6 +1,7 @@
 import InputImage from './base/InputImage';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
+import { useTranslation } from 'react-i18next';
 
 function MovieSubmitDeliverables({ register }) {
 

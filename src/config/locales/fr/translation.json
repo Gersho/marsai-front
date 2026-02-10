@@ -164,5 +164,66 @@
     "press": "Presse",
     "contact": "Contact",
     "copyright": "© 2025 MARS.A.I"
+  },
+  "submitMovieForm":{
+    "page":{
+        "titlePart1": "Appel à Projets 2026",
+        "titlePart2": "soumettre un film",
+        "paragraph": "Transmettez les éléments techniques, l'usage de l'IA et la composition de votre équipe. Tous les champs marqués d'une étoile (*) sont obligatoires.",
+        "submitButton": "finaliser ma soumission"
+    },
+    "info": {
+        "title": "01. Identité du film",
+        "originalTitle": {
+          "label": "Titre original *",
+          "title": "Titre original"
+        },
+        "englishTitle": {
+          "label": "Traduction anglaise *",
+          "title": "Traduction anglaise"
+        },
+        "duration": {
+          "label": "Dureé exacte * (en secondes)",
+          "title": "Dureé exacte (en secondes)"
+        },
+        "language": {
+          "label": "Langue parlée/Principale du film *",
+          "placeholder": "Langue",
+          "title": "Langue parlée ou Principale du film"
+        },
+        "originalSynopsis": {
+          "label": "Synopsis langue originale *",
+          "placeholder": "Résumez l'intention de votre film et l'histoire qu'il raconte en quelques lignes...",
+          "title": "synopsis langue originale (max. 300 caractères)"
+        },
+
+        "englishSynopsis": {
+          "label": "Synopsis anglais *",
+          "placeholder": "Traduction en anglais du synopsis",
+          "title": "synopsis anglais (max. 300 caractères)"
+        }
+    },
+    "declaration":{
+      "title": "02. Déclaration Usage de l'IA",
+      "paragraph": "MARS.A.I exige une transparence totale sur l'utilisation de l'Intelligence Artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.",
+      "isHybrid":{
+        "title": "Classification de l'Œuvre :* Choix exclusif entre :",
+        "false": ["Génération intégrale", "(100% IA)"],
+        "true": ["Production hybride", "(Prises de vues réelles + apports IA)"]
+      },
+      "aiTools":{
+          "label": "Stack Technologique *",
+          "placeholder": "Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)",
+          "title": "Stack Technologique (max. 500 caractères)"
+      },
+      "creativeProcess":{
+          "label": "Méthodologie Créative *",
+          "placeholder": "Décrivez l'interaction entre l'humain et la machine dans ce processus..",
+          "title": "Méthodologie Créative (max. 500 caractères)"
+      }
+    },
+    "deliverables":{
+      "title": ""
+    }
   }
 }

@@ -4,9 +4,13 @@ import MovieSubmitDeclaration from '../components/MovieSubmit/MovieSubmitDeclara
 import MovieSubmitDeliverables from '../components/MovieSubmit/MovieSubmitDeliverables';
 import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
+import { useTranslation } from 'react-i18next';
+
 
 function SubmitMoviePage() {
   const form = useForm();
+  const { t } = useTranslation();
+  const target = "submitMovieForm.page.";
 
   async function onSubmit(data) {
     console.log('data: ', data);
@@ -41,12 +45,10 @@ function SubmitMoviePage() {
     <>
       <div className="py-25 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
-          <h2 className="text-2xl">Appel à Projets 2026</h2>
-          <h1 className="text-5xl">soumettre un film</h1>
+          <h2 className="text-2xl">{t(target + 'titlePart1')}</h2>
+          <h1 className="text-5xl">{t(target + 'titlePart2')}</h1>
           <p>
-            Transmettez les éléments techniques, l&apos;usage de l&apos;IA et la
-            composition de votre équipe. Tous les champs marqués d&apos;une
-            étoile (*) sont obligatoires.
+            {t(target + 'paragraph')}
           </p>
         </div>
         <form
@@ -54,13 +56,13 @@ function SubmitMoviePage() {
           onSubmit={form.handleSubmit(onSubmit)}
           encType="multipart/form-data"
         >
-          {/* <MovieSubmitInfo register={form.register} />
+          <MovieSubmitInfo register={form.register} />
           <MovieSubmitDeclaration register={form.register} />
-          <MovieSubmitDeliverables register={form.register} /> */}
+          <MovieSubmitDeliverables register={form.register} />
           <MovieSubmitTeamComposition form={form} />
-          {/* <MovieCertificateOfOwnership /> */}
+          <MovieCertificateOfOwnership />
           <button className="border p-3 rounded-md">
-            finaliser ma soumission
+            {t(target + 'submitButton')}
           </button>
         </form>
       </div>
