@@ -3,15 +3,11 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: #155dfccc;
-  --color-secondary: #f0b100;
-  --color-tertiary: #c27aff;
+  --color-primary: #333333;
+  --color-secondary: #242424;
   --color-accent: #ff5845;
-  --color-bg: #242424;
-  --color-back: #333333;
   --color-dark: #94a3b8;
   --color-muted: rgba(255, 255, 255, 0.2);
-  --color-subtitle: #51a2ff;
   --font-default: 'Arimo', sans-serif;
   --font-secondary: 'Plus Jakarta Sans', sans-serif;
   --font-weight-normal: 400;
@@ -22,10 +18,8 @@
   font-family: var(--font-default);
   line-height: var(--line-height);
   font-weight: var(--font-weight-normal);
-
   color-scheme: light dark;
-  background-color: #242424;
-
+  background-color: var(--color-secondary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,25 +28,21 @@
 @layer components {
   .typography {
     h1 {
-      font-size: var(--text-5xl);
-      line-height: var(--line-height);
-      font-weight: var(--font-weight-semibold);
+      @apply text-4xl uppercase pb-4 font-semibold md:text-6xl;
     }
     h2 {
-      font-size: var(--text-4xl);
-      line-height: var(--line-height);
-      font-weight: var(--font-weight-semibold);
+      @apply text-4xl font-semibold mb-4 md:text-5xl;
     }
     h3 {
       font-family: var(--font-secondary);
-      font-size: var(--text-4xl);
-      line-height: var(--line-height);
-      font-weight: var(--font-weight-semibold);
+      @apply text-xl pb-4 font-semibold lg:text-2xl;
     }
     p {
-      font-size: var(--text-base);
-      color: var(--color-gray-700);
+      @apply text-base font-light;
     }
+  }
+  .section {
+    @apply py-12 px-4 lg:py-24;
   }
   .active {
     @apply text-accent;
