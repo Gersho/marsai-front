@@ -13,7 +13,7 @@ const footerLogo = {
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className=" bg-back text-white py-16 px-4">
+    <footer className=" bg-primary text-white py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-20">
           <div className="space-y-6 text-center lg:text-left">
@@ -50,15 +50,15 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="bg-bg rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-bold mb-6 uppercase tracking-wide">
+          <div className="bg-secondary rounded-3xl p-8 md:p-12 text-center">
+            <h2 className="text-2xl font-bold mb-6 uppercase tracking-wide">
               {t('footer.stayConnected')}
-            </h3>
+            </h2>
             <form className="bg-white rounded-full p-1.5 flex items-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder={t('footer.emailPlaceholder')}
-                className="bg-transparent text-gray-200 placeholder text-sm grow px-4 outline-none w-full"
+                className="text-primary placeholder text-sm grow px-4 outline-none w-full"
               />
               <button
                 type="submit"
@@ -70,8 +70,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Partie Basse : Liens et Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-[#52525B] uppercase tracking-wider mt-12">
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-muted uppercase tracking-wider mt-12">
           <div className="flex space-x-8 mb-4 md:mb-0">
             <a href="#" className="hover:text-gray-300 transition">
               {t('footer.legalNotice')}

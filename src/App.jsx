@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <div className="typography">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
