@@ -13,13 +13,7 @@ function InputImage({
   className = '',
 }) {
   const [preview, setPreview] = useState(null);
-
-  const {
-    onChange: onFormChange,
-    onBlur,
-    name: formName,
-    ref,
-  } = register(name);
+  const { onChange: onFormChange, onBlur, ref } = register(name);
 
   function handlePreview(e) {
     onFormChange(e);
@@ -68,7 +62,7 @@ function InputImage({
               className="sr-only"
               type="file"
               id={id}
-              name={formName}
+              name={name}
               ref={ref}
               onBlur={onBlur}
               onChange={handlePreview}
@@ -93,3 +87,4 @@ function InputImage({
 }
 
 export default InputImage;
+

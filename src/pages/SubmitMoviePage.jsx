@@ -17,7 +17,9 @@ function SubmitMoviePage() {
     const formData = new FormData();
 
     for (const [key, value] of Object.entries(data)) {
-      if (value instanceof FileList) {
+      if (key === 'director' || key === 'collaborators') {
+        formData.append(key, JSON.stringify(value));
+      } else if (value instanceof FileList) {
         if (value.length > 0) {
           formData.append(key, value[0]);
         }

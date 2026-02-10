@@ -5,8 +5,10 @@ import { useTranslation } from 'react-i18next';
 
 function MovieSubmitDeliverables({ register }) {
   const { t } = useTranslation();
-  const target = "submitMovieForm.deliverables.";
-  { t(target + 'titlePart1') }
+  const target = 'submitMovieForm.deliverables.';
+  {
+    t(target + 'titlePart1');
+  }
   return (
     <FormSection className="bg-zinc-700 text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
@@ -14,7 +16,14 @@ function MovieSubmitDeliverables({ register }) {
       <div className="flex flex-col gap-2 w-full">
         <div className="sm:self-center sm:flex sm:flex-col">
           <label htmlFor="form-movie-upload">{t(target + 'video.label')}</label>
-          <input className="border" id="form-movie-upload" name="movie-upload" type="file" title={t(target + 'video.title')} {...register('video')} ></input>
+          <input
+            className="border"
+            id="form-movie-upload"
+            name="movie-upload"
+            type="file"
+            title={t(target + 'video.title')}
+            {...register('video')}
+          ></input>
         </div>
 
         <div>
@@ -33,7 +42,6 @@ function MovieSubmitDeliverables({ register }) {
             {t(target + 'hasSubs.label')}
           </label>
         </div>
-
       </div>
 
       <div className="w-5/6 flex flex-col justify-center sm:flex-row sm:justify-evenly gap-6">
@@ -82,3 +90,4 @@ function MovieSubmitDeliverables({ register }) {
 }
 
 export default MovieSubmitDeliverables;
+
