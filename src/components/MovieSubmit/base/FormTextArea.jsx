@@ -14,8 +14,15 @@ function FormTextArea({
 }) {
     const [count, setCount] = useState(0);
 
+    const {
+        onChange: onFormChange,
+        ref
+    } = register(name);
 
     function countCharacters(event) {
+        // event.preventDefault();
+        console.log("1111");
+        onFormChange(event);
         setCount(event?.target.value.length);
     }
 
@@ -35,8 +42,9 @@ function FormTextArea({
                 type="textarea"
                 placeholder={placeholder}
                 title={title}
+                name={name}
+                ref={ref}
                 onChange={countCharacters}
-                {...register(name)}
                 required={required}
             ></textarea>
         </div>
