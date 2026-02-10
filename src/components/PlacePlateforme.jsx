@@ -1,7 +1,8 @@
 import { FiMapPin } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import Card from './base/Card';
 
-function LieuxPlateforme() {
+function PlacePlateforme() {
   const { t } = useTranslation();
 
   const salles = [
@@ -17,7 +18,7 @@ function LieuxPlateforme() {
     },
   ];
   return (
-    <section className="text-white typography py-12 px-4 lg:py-24">
+    <section className="text-white section">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-between flex-col mb-6 lg:mb-12 lg:gap-60 lg:flex-row">
           <div className="">
@@ -36,16 +37,16 @@ function LieuxPlateforme() {
           </div>
           <p className="text-white">{t('lieuxPlateforme.description')}</p>
         </div>
-        <div className="flex flex-col gap-4 lg:gap-12 mb-4 lg:mb-12 md:flex-row">
-          {salles.map((salle, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-4 bg-back p-6 rounded-2xl"
-            >
-              <h3 className="text-3xl uppercase">{salle.title}</h3>
-              <p className="text-dark">{salle.text}</p>
-              <span className="block w-12 h-1 bg-accent"></span>
-            </div>
+        <div className="flex flex-col gap-2 mb-4 lg:mb-12 md:flex-row">
+          {salles.map(obj => (
+            <Card
+              key={obj.id}
+              icon=""
+              title={obj.title}
+              subtitle=""
+              text={obj.text}
+              hasUnderline={true}
+            />
           ))}
         </div>
         <div className="relative flex flex-col justify-end lg:min-h-80 px-4 py-12 bg-[url(/src/assets/lieux_img.png)] bg-no-repeat bg-cover rounded-2xl overflow-hidden shadow-xl lg:px-12 lg:py-12">
@@ -61,4 +62,4 @@ function LieuxPlateforme() {
     </section>
   );
 }
-export default LieuxPlateforme;
+export default PlacePlateforme;

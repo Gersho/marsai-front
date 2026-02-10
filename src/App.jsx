@@ -8,7 +8,7 @@ import SubmitMoviePage from './pages/SubmitMoviePage';
 
 function App() {
   return (
-    <>
+    <div className="typography">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
