@@ -223,7 +223,28 @@
       }
     },
     "deliverables":{
-      "title": ""
+      "title": "03. Livrables & Accessibilité",
+      "video" : {
+        "label": "Ajout du film",
+        "title": "Ajout du film"
+      },
+      "hasSubs":{
+        "header": "Sous-titres (.srt)",
+        "label": "La video contient des sous titres incrustés",
+        "title": "Est-ce que la video contient des sous titres incrustés"
+      },
+      "coverImage": {
+        "header": "Vignette Officielle (16:9) *",
+        "label": "Vignette Officielle (16:9) *",
+        "description":"Cliquez pour upload",
+        "subDescription":"PNG ou JPG • Max 15Mo"
+      },
+      "stills":{
+        "header": "Galerie Médias (Stills - Max 3)",
+        "stillA": "Galerie Médias premiere image",
+        "stillB":"Galerie Médias deuxieme image",
+        "stillC":"Galerie Médias troisieme image"
+      }
     }
   }
 }
