@@ -66,7 +66,6 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'contribution.label')}
-          type="text"
           name={`collaborators.${index}.contribution`}
           placeholder=""
           title={t(target + 'contribution.title')}

@@ -362,6 +362,11 @@
     "certificate":{
       "title": "Certificat de Propriété",
       "paragraph": "En soumettant ce dossier, vous certifiez sur l'honneur être l'auteur original de l'œuvre et détenir l'intégralité des droits de diffusion. Vous acceptez que MARS.A.I utilise ces éléments pour la promotion du festival."
+    },
+    "formErrors":{
+      "required": "Ce champ est obligatoire",
+      "minLength3": "Au moins 3 caracteres",
+      "maxLength255" : "Maximum 255 caracteres"
     }
   }
 }

@@ -1,16 +1,25 @@
+import { ErrorMessage } from "@hookform/error-message"
+
 function BasicFormInput({
   label,
-  type,
   placeholder,
   title,
   id,
-  register,
   name,
+  form,
+  validation = false,
+  type = 'text',
   className = '',
   autoFocus = false,
-  required = false,
 }) {
+
+  const register = form.register;
+
   className = 'flex flex-col sm:w-full gap-2 sm:pb-4 pb-3' + ' ' + className;
+
+  if (!validation) {
+    validation = { required: false }
+  }
 
   return (
     <div className={className}>
@@ -21,10 +30,20 @@ function BasicFormInput({
         type={type}
         placeholder={placeholder}
         title={title}
-        {...register(name)}
+        {...register(name, validation)}
         autoFocus={autoFocus}
-        required={required}
       ></input>
+
+      <ErrorMessage
+        errors={form.formState.errors}
+        name={name}
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p key={type}>{message}</p>
+          ))
+        }
+      />
     </div>
   );
 }

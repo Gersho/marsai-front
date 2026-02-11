@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "@tailwindcss/vite": "^4.1.18",
     "i18next": "^25.8.0",
     "react": "^19.2.0",

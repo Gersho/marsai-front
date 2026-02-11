@@ -4,9 +4,10 @@ import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormTextArea from './base/FormTextArea';
 
-function MovieSubmitInfo({ register }) {
+function MovieSubmitInfo({ form }) {
     const { t } = useTranslation();
     const target = "submitMovieForm.info.";
+    const errors = "submitMovieForm.formErrors.";
 
     return (
         <FormSection className="bg-zinc-700 text-zinc-200">
@@ -17,31 +18,50 @@ function MovieSubmitInfo({ register }) {
             <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label={t(target + 'originalTitle.label')}
-                    type="text"
                     id="form-original-title"
                     placeholder={t(target + 'originalTitle.title')}
                     title={t(target + 'originalTitle.title')}
-                    register={register}
+                    form={form}
                     name="originalTitle"
                     autoFocus={true}
-                    required={true} />
+                    validation={{
+                        required: t(errors + 'required'),
+                        minLength: {
+                            value: 3,
+                            message: t(errors + 'minLength3'),
+                        },
+                        maxLength: {
+                            value: 255,
+                            message: t(errors + 'maxLength255'),
+                        }
+                    }}
+                />
 
                 <BasicFormInput
                     label={t(target + 'englishTitle.label')}
-                    type="text"
                     id="form-english-translation"
                     placeholder={t(target + 'englishTitle.title')}
                     title={t(target + 'englishTitle.title')}
-                    register={register}
+                    form={form}
                     name="englishTitle"
-                    required={true}
+                    validation={{
+                        required: t(errors + 'required'),
+                        minLength: {
+                            value: 3,
+                            message: t(errors + 'minLength3'),
+                        },
+                        maxLength: {
+                            value: 255,
+                            message: t(errors + 'maxLength255'),
+                        }
+                    }}
                 />
-            </div>
 
+            </div>
+            {/* 
             <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label={t(target + 'duration.label')}
-                    type="text"
                     id="form-duration"
                     placeholder="ex: 60"
                     title={t(target + 'duration.title')}
@@ -52,7 +72,6 @@ function MovieSubmitInfo({ register }) {
 
                 <BasicFormInput
                     label={t(target + 'language.label')}
-                    type="text"
                     id="form-language"
                     placeholder={t(target + 'language.placeholder')}
                     title={t(target + 'language.title')}
@@ -88,7 +107,7 @@ function MovieSubmitInfo({ register }) {
                     name="englishSynopsis"
                     required={true}
                 />
-            </div>
+            </div> */}
         </FormSection>
     );
 }

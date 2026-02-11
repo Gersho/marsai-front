@@ -8,7 +8,31 @@ import { useTranslation } from 'react-i18next';
 
 
 function SubmitMoviePage() {
-  const form = useForm();
+
+
+  const form = useForm({
+    criteriaMode: "all",
+  })
+
+  // const { register, formState: { errors }, handleSubmit, control } = form
+
+  // const {
+  //   register,
+  //   formState: { errors },
+  //   handleSubmit,
+  //   control
+  // } = useForm({
+  //   criteriaMode: "all",
+  // })
+
+  // const form = {
+  //   register,
+  //   formState: { errors },
+  //   handleSubmit,
+  //   control
+  // }
+
+  // const form = useForm();
   const { t } = useTranslation();
   const target = "submitMovieForm.page.";
 
@@ -59,11 +83,13 @@ function SubmitMoviePage() {
           onSubmit={form.handleSubmit(onSubmit)}
           encType="multipart/form-data"
         >
-          <MovieSubmitInfo register={form.register} />
-          <MovieSubmitDeclaration register={form.register} />
-          <MovieSubmitDeliverables register={form.register} />
-          <MovieSubmitTeamComposition form={form} />
-          <MovieCertificateOfOwnership />
+          {/* <MovieSubmitInfo register={register} errors={errors} /> */}
+
+          <MovieSubmitInfo form={form} />
+          {/* <MovieSubmitDeclaration register={form.register} /> */}
+          {/* <MovieSubmitDeliverables register={form.register} /> */}
+          {/* <MovieSubmitTeamComposition form={form} /> */}
+          {/* <MovieCertificateOfOwnership /> */}
           <button className="border p-3 rounded-md">
             {t(target + 'submitButton')}
           </button>

@@ -75,7 +75,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.job.label')}
-          type="text"
           id="director-job"
           name="director.job"
           placeholder=""
@@ -109,7 +108,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.phone.label')}
-          type="text"
           id="director-phone"
           name="director.phone"
           placeholder={t(target + 'director.phone.placeholder')}
@@ -121,7 +119,6 @@ function MovieSubmitTeamComposition({ form }) {
         <label htmlFor="form-director-address">{t(target + 'director.address.label')}</label>
         <input
           className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
-          type="text"
           id="form-director-address"
           {...form.register('director.address')}
           placeholder=""
@@ -133,7 +130,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.city.label')}
-          type="text"
           id="director-city"
           name="director.city"
           placeholder=""
@@ -144,7 +140,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.zipcode.label')}
-          type="text"
           id="director-zipcode"
           name="director.zipcode"
           placeholder=""
@@ -155,7 +150,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.region.label')}
-          type="text"
           id="director-region"
           name="director.region"
           placeholder=""
@@ -165,7 +159,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.country.label')}
-          type="text"
           id="director-country"
           name="director.country"
           placeholder=""
@@ -178,7 +171,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.facebook.label')}
-          type="text"
           id="director-facebook"
           name="director.facebook"
           placeholder=""
@@ -188,7 +180,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.instagram.label')}
-          type="text"
           id="director-instagram"
           name="director.instagram"
           placeholder=""
@@ -199,7 +190,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.youtube.label')}
-          type="text"
           id="director-youtube"
           name="director.youtube"
           placeholder=""
@@ -209,7 +199,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.linkedin.label')}
-          type="text"
           id="director-linkedin"
           name="director.linkedin"
           placeholder=""
@@ -220,7 +209,6 @@ function MovieSubmitTeamComposition({ form }) {
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.twitter.label')}
-          type="text"
           id="director-twitter"
           name="director.twitter"
           placeholder=""
