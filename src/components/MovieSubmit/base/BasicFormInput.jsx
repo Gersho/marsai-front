@@ -1,4 +1,4 @@
-import { ErrorMessage } from "@hookform/error-message"
+import FormErrors from "./FormErrors";
 
 function BasicFormInput({
   label,
@@ -34,15 +34,9 @@ function BasicFormInput({
         autoFocus={autoFocus}
       ></input>
 
-      <ErrorMessage
-        errors={form.formState.errors}
+      <FormErrors
+        form={form}
         name={name}
-        render={({ messages }) =>
-          messages &&
-          Object.entries(messages).map(([type, message]) => (
-            <p key={type}>{message}</p>
-          ))
-        }
       />
     </div>
   );

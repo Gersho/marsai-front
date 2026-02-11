@@ -2,13 +2,13 @@ import InputImage from './base/InputImage';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 import { useTranslation } from 'react-i18next';
+import FormErrors from "./base/FormErrors";
 
-function MovieSubmitDeliverables({ register }) {
+function MovieSubmitDeliverables({ form }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.deliverables.';
-  {
-    t(target + 'titlePart1');
-  }
+  const errors = "submitMovieForm.formErrors.";
+
   return (
     <FormSection className="bg-zinc-700 text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
@@ -22,8 +22,14 @@ function MovieSubmitDeliverables({ register }) {
             name="movie-upload"
             type="file"
             title={t(target + 'video.title')}
-            {...register('video')}
+            {...form.register('video', { required: t(errors + 'required') })}
           ></input>
+
+          <FormErrors
+            form={form}
+            name={"video"}
+          />
+
         </div>
 
         <div>
@@ -36,7 +42,7 @@ function MovieSubmitDeliverables({ register }) {
             name="has-subtitles"
             value="true"
             title={t(target + 'hasSubs.title')}
-            {...register('hasSubs')}
+            {...form.register('hasSubs')}
           ></input>
           <label htmlFor="form-has-subtitles">
             {t(target + 'hasSubs.label')}
@@ -55,7 +61,8 @@ function MovieSubmitDeliverables({ register }) {
             iconSize={80}
             description={t(target + 'coverImage.description')}
             subDescription={t(target + 'coverImage.subDescription')}
-            register={register}
+            form={form}
+            validation={{ required: t(errors + 'required') }}
           />
         </div>
         <div className="flex flex-col items-center gap-3 w-full">
@@ -66,21 +73,21 @@ function MovieSubmitDeliverables({ register }) {
               label={t(target + 'stills.stillA')}
               id="still-image-a"
               name="stillImageA"
-              register={register}
+              form={form}
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center"
               label={t(target + 'stills.stillB')}
               id="still-image-b"
               name="stillImageB"
-              register={register}
+              form={form}
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center"
               label={t(target + 'stills.stillC')}
               id="still-image-c"
               name="stillImageC"
-              register={register}
+              form={form}
             />
           </div>
         </div>

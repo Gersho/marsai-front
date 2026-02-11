@@ -1,19 +1,29 @@
 import { IoImageOutline } from 'react-icons/io5';
 import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
+import FormErrors from "./FormErrors";
 
 function InputImage({
   label,
   id,
   name,
-  register,
+  form,
   description,
   subDescription,
+  validation = false,
   iconSize = 40,
   className = '',
 }) {
   const [preview, setPreview] = useState(null);
-  const { onChange: onFormChange, onBlur, ref } = register(name);
+  const register = form.register;
+
+
+  if (!validation) {
+    validation = { required: false }
+  }
+
+
+  const { onChange: onFormChange, onBlur, ref } = register(name, validation);
 
   function handlePreview(e) {
     onFormChange(e);
@@ -82,6 +92,11 @@ function InputImage({
           </div>
         </label>
       )}
+
+      <FormErrors
+        form={form}
+        name={name}
+      />
     </>
   );
 }

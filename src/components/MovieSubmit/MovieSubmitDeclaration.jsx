@@ -3,14 +3,16 @@ import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 import FormTextArea from './base/FormTextArea';
 import { useTranslation } from 'react-i18next';
+import FormErrors from './base/FormErrors';
 
-function MovieSubmitDeclaration({ register }) {
+function MovieSubmitDeclaration({ form }) {
+  // const register = form.register;
   const { t } = useTranslation();
   const target = "submitMovieForm.declaration.";
+  const errors = "submitMovieForm.formErrors.";
 
   return (
     <FormSection className="bg-zinc-800 text-zinc-200">
-
 
       <FormSectionTitle
         text={t(target + 'title')}
@@ -40,8 +42,8 @@ function MovieSubmitDeclaration({ register }) {
               id="form-full-ai"
               name="ai-classification"
               value={false}
-              {...register('isHybrid')}
-              required
+              {...form.register('isHybrid', { required: t(errors + 'requiredRadio') })}
+
             ></input>
           </label>
           <label
@@ -57,11 +59,17 @@ function MovieSubmitDeclaration({ register }) {
               id="form-hybrid"
               name="ai-classification"
               value={true}
-              {...register('isHybrid')}
-              required
+              {...form.register('isHybrid', { required: t(errors + 'requiredRadio') })}
+
             ></input>
           </label>
+
         </div>
+
+        <FormErrors
+          form={form}
+          name="ai-classification"
+        />
       </div>
 
       <div className="flex flex-col items-center sm:flex-row w-full sm:justify-between sm:gap-20">
@@ -73,9 +81,19 @@ function MovieSubmitDeclaration({ register }) {
           id="form-technical-stack"
           placeholder={t(target + 'aiTools.placeholder')}
           title={t(target + 'aiTools.title')}
-          register={register}
+          form={form}
           name="aiTools"
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 500,
+              message: t(errors + 'maxLength500'),
+            }
+          }}
         />
 
         <FormTextArea
@@ -85,9 +103,19 @@ function MovieSubmitDeclaration({ register }) {
           id="form-creative-methodology"
           placeholder={t(target + 'creativeProcess.placeholder')}
           title={t(target + 'creativeProcess.title')}
-          register={register}
+          form={form}
           name="creativeProcess"
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 500,
+              message: t(errors + 'maxLength500'),
+            }
+          }}
         />
 
       </div>

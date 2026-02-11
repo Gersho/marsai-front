@@ -365,8 +365,16 @@
     },
     "formErrors":{
       "required": "Ce champ est obligatoire",
+      "requiredRadio": "Veuillez choisir une option",
       "minLength3": "Au moins 3 caracteres",
-      "maxLength255" : "Maximum 255 caracteres"
+      "maxLength100" : "Maximum 100 caracteres",
+      "maxLength255" : "Maximum 255 caracteres",
+      "maxLength300" : "Maximum 300 caracteres",
+      "maxLength500" : "Maximum 500 caracteres",
+      "digitsOnly": "Chiffres uniquement",
+      "minDuration": "Minimum 1 sec",
+      "maxDuration": "Maximum 90 sec"
+      
     }
   }
 }

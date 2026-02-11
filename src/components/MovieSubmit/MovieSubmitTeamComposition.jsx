@@ -4,10 +4,12 @@ import FormNewCollaborator from './base/FormNewCollaborator';
 import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
 import { useTranslation } from 'react-i18next';
+import FormErrors from "./base/FormErrors";
 
 function MovieSubmitTeamComposition({ form }) {
   const { t } = useTranslation();
   const target = "submitMovieForm.teamComposition.";
+  const errors = "submitMovieForm.formErrors.";
 
   const { fields, append, remove } = useFieldArray({
     name: 'collaborators',
@@ -50,11 +52,26 @@ function MovieSubmitTeamComposition({ form }) {
               className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
               id="form-director-firstname"
               type="text"
-              {...form.register('director.firstname')}
+              {...form.register('director.firstname', {
+                required: t(errors + 'required'),
+                minLength: {
+                  value: 3,
+                  message: t(errors + 'minLength3'),
+                },
+                maxLength: {
+                  value: 100,
+                  message: t(errors + 'maxLength100'),
+                }
+              })}
               placeholder={t(target + 'director.firstname.placeholder')}
               title={t(target + 'director.firstname.title')}
-              required
+
             ></input>
+
+            <FormErrors
+              form={form}
+              name="director.firstname"
+            />
           </div>
         </div>
 
@@ -64,55 +81,76 @@ function MovieSubmitTeamComposition({ form }) {
             className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
             id="form-director-lastname"
             type="text"
-            {...form.register('director.lastname')}
+            {...form.register('director.lastname', {
+              required: t(errors + 'required'),
+              minLength: {
+                value: 3,
+                message: t(errors + 'minLength3'),
+              },
+              maxLength: {
+                value: 100,
+                message: t(errors + 'maxLength100'),
+              }
+            })}
             placeholder={t(target + 'director.lastname.placeholder')}
             title={t(target + 'director.lastname.title')}
-            required
+
           ></input>
+          <FormErrors
+            form={form}
+            name="director.lastname"
+          />
         </div>
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
           label={t(target + 'director.job.label')}
           id="director-job"
           name="director.job"
           placeholder=""
           title={t(target + 'director.job.title')}
-          required={true}
+          form={form}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
           label={t(target + 'director.birthdate.label')}
           type="date"
           id="director-birthdate"
           name="director.birthdate"
           placeholder=""
           title={t(target + 'director.birthdate.title')}
-          required={true}
+          form={form}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
           label={t(target + 'director.email.label')}
           type="email"
           id="director-email"
           name="director.email"
           placeholder={t(target + 'director.email.placeholder')}
           title={t(target + 'director.email.title')}
-          required={true}
+          form={form}
         />
 
         <BasicFormInput
-          register={form.register}
           label={t(target + 'director.phone.label')}
           id="director-phone"
           name="director.phone"
           placeholder={t(target + 'director.phone.placeholder')}
           title={t(target + 'director.phone.title')}
-          required={true}
+          form={form}
         />
       </div>
       <div className="w-full">
@@ -120,13 +158,27 @@ function MovieSubmitTeamComposition({ form }) {
         <input
           className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
           id="form-director-address"
-          {...form.register('director.address')}
+          {...form.register('director.address', {
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          })}
           placeholder=""
           title={t(target + 'director.address.title')}
-          required
         ></input>
+
+        <FormErrors
+          form={form}
+          name="director.address"
+        />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      {/* <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.city.label')}
@@ -185,8 +237,8 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder=""
           title={t(target + 'director.instagram.title')}
         />
-      </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      </div> */}
+      {/* <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           register={form.register}
           label={t(target + 'director.youtube.label')}
@@ -224,7 +276,7 @@ function MovieSubmitTeamComposition({ form }) {
             <FormNewCollaborator index={index} form={form} remove={remove} />
           </div>
         ))}
-      </div>
+      </div> */}
       <button
         className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center"
         type="button"

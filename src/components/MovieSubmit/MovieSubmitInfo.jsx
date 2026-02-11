@@ -58,16 +58,30 @@ function MovieSubmitInfo({ form }) {
                 />
 
             </div>
-            {/* 
+
             <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
                 <BasicFormInput
                     label={t(target + 'duration.label')}
                     id="form-duration"
                     placeholder="ex: 60"
                     title={t(target + 'duration.title')}
-                    register={register}
+                    form={form}
                     name="duration"
-                    required={true}
+                    validation={{
+                        required: t(errors + 'required'),
+                        pattern: {
+                            value: /^[0-9]*$/,
+                            message: t(errors + 'digitsOnly'),
+                        },
+                        min: {
+                            value: 1,
+                            message: t(errors + 'minDuration'),
+                        },
+                        max: {
+                            value: 90,
+                            message: t(errors + 'maxDuration'),
+                        },
+                    }}
                 />
 
                 <BasicFormInput
@@ -75,9 +89,11 @@ function MovieSubmitInfo({ form }) {
                     id="form-language"
                     placeholder={t(target + 'language.placeholder')}
                     title={t(target + 'language.title')}
-                    register={register}
+                    form={form}
                     name="language"
-                    required={true}
+                    validation={{
+                        required: t(errors + 'required'),
+                    }}
                 />
 
             </div>
@@ -90,9 +106,19 @@ function MovieSubmitInfo({ form }) {
                     id="form-original-synopsis"
                     placeholder={t(target + 'originalSynopsis.placeholder')}
                     title={t(target + 'originalSynopsis.title')}
-                    register={register}
+                    form={form}
                     name="originalSynopsis"
-                    required={true}
+                    validation={{
+                        required: t(errors + 'required'),
+                        minLength: {
+                            value: 3,
+                            message: t(errors + 'minLength3'),
+                        },
+                        maxLength: {
+                            value: 300,
+                            message: t(errors + 'maxLength300'),
+                        }
+                    }}
 
                 />
 
@@ -103,11 +129,22 @@ function MovieSubmitInfo({ form }) {
                     id="form-english-synopsis"
                     placeholder={t(target + 'englishSynopsis.placeholder')}
                     title={t(target + 'englishSynopsis.title')}
-                    register={register}
+                    form={form}
                     name="englishSynopsis"
-                    required={true}
+                    validation={{
+                        required: t(errors + 'required'),
+                        minLength: {
+                            value: 3,
+                            message: t(errors + 'minLength3'),
+                        },
+                        maxLength: {
+                            value: 300,
+                            message: t(errors + 'maxLength300'),
+                        }
+                    }}
+
                 />
-            </div> */}
+            </div>
         </FormSection>
     );
 }

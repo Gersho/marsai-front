@@ -83,12 +83,10 @@ function SubmitMoviePage() {
           onSubmit={form.handleSubmit(onSubmit)}
           encType="multipart/form-data"
         >
-          {/* <MovieSubmitInfo register={register} errors={errors} /> */}
-
-          <MovieSubmitInfo form={form} />
-          {/* <MovieSubmitDeclaration register={form.register} /> */}
-          {/* <MovieSubmitDeliverables register={form.register} /> */}
-          {/* <MovieSubmitTeamComposition form={form} /> */}
+          {/* <MovieSubmitInfo form={form} /> */}
+          {/* <MovieSubmitDeclaration form={form} /> */}
+          {/* <MovieSubmitDeliverables form={form} /> */}
+          <MovieSubmitTeamComposition form={form} />
           {/* <MovieCertificateOfOwnership /> */}
           <button className="border p-3 rounded-md">
             {t(target + 'submitButton')}

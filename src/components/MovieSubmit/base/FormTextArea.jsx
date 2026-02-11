@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormErrors from "./FormErrors";
 
 function FormTextArea({
 
@@ -7,17 +8,23 @@ function FormTextArea({
     id,
     placeholder,
     title,
-    register,
+    form,
+    validation,
+    // register,
     name,
     className = "",
-    required = false
+    // required = false
 }) {
-    const [count, setCount] = useState(0);
+    if (!validation) {
+        validation = { required: false }
+    }
 
+
+    const [count, setCount] = useState(0);
     const {
         onChange: onFormChange,
         ref
-    } = register(name);
+    } = form.register(name, validation);
 
     function countCharacters(event) {
         onFormChange(event);
@@ -43,8 +50,12 @@ function FormTextArea({
                 name={name}
                 ref={ref}
                 onChange={countCharacters}
-                required={required}
             ></textarea>
+
+            <FormErrors
+                form={form}
+                name={name}
+            />
         </div>
 
     );
