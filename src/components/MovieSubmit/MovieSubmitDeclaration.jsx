@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import FormErrors from './base/FormErrors';
 
 function MovieSubmitDeclaration({ form }) {
-  // const register = form.register;
   const { t } = useTranslation();
   const target = "submitMovieForm.declaration.";
   const errors = "submitMovieForm.formErrors.";

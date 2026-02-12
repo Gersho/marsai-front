@@ -378,8 +378,7 @@
       "validEmail": "Entrez un email valide",
       "digitsOnly": "Chiffres uniquement",
       "minDuration": "Minimum 1 sec",
-      "maxDuration": "Maximum 90 sec"
-      
+      "maxDuration": "Maximum 90 sec"  
     }
   }
 }
