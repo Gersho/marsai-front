@@ -131,17 +131,38 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder=""
           title={t(target + 'director.birthdate.title')}
           form={form}
+          validation={{
+            // valueAsDate: {
+            //   value: true,
+            //   message: "fkdjlksjf"
+            // },
+            required: t(errors + 'required'),
+          }}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
           label={t(target + 'director.email.label')}
-          type="email"
           id="director-email"
           name="director.email"
           placeholder={t(target + 'director.email.placeholder')}
           title={t(target + 'director.email.title')}
           form={form}
+          validation={{
+            required: t(errors + 'required'),
+            pattern: {
+              value: /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+              message: t(errors + 'validEmail'),
+            },
+            minLength: {
+              value: 5,
+              message: t(errors + 'minLength5'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
 
         <BasicFormInput
@@ -151,6 +172,21 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder={t(target + 'director.phone.placeholder')}
           title={t(target + 'director.phone.title')}
           form={form}
+          validation={{
+            required: t(errors + 'required'),
+            pattern: {
+              value: /^[+]?[0-9]*$/,
+              message: t(errors + 'validPhone'),
+            },
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 50,
+              message: t(errors + 'maxLength50'),
+            }
+          }}
         />
       </div>
       <div className="w-full">
@@ -178,93 +214,183 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.address"
         />
       </div>
-      {/* <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.city.label')}
           id="director-city"
           name="director.city"
           placeholder=""
           title={t(target + 'director.city.title')}
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.zipcode.label')}
           id="director-zipcode"
           name="director.zipcode"
           placeholder=""
           title={t(target + 'director.zipcode.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 20,
+              message: t(errors + 'maxLength20'),
+            }
+          }}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.region.label')}
           id="director-region"
           name="director.region"
           placeholder=""
           title={t(target + 'director.region.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.country.label')}
           id="director-country"
           name="director.country"
           placeholder=""
           title={t(target + 'director.country.title')}
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
       </div>
       {t(target + 'director.socials')}
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.facebook.label')}
           id="director-facebook"
           name="director.facebook"
           placeholder=""
           title={t(target + 'director.facebook.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.instagram.label')}
           id="director-instagram"
           name="director.instagram"
           placeholder=""
           title={t(target + 'director.instagram.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          }}
         />
-      </div> */}
-      {/* <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      </div>
+      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.youtube.label')}
           id="director-youtube"
           name="director.youtube"
           placeholder=""
           title={t(target + 'director.youtube.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.linkedin.label')}
           id="director-linkedin"
           name="director.linkedin"
           placeholder=""
           title={t(target + 'director.linkedin.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          }}
         />
       </div>
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'director.twitter.label')}
           id="director-twitter"
           name="director.twitter"
           placeholder=""
           title={t(target + 'director.twitter.title')}
+          validation={{
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 255,
+              message: t(errors + 'maxLength255'),
+            }
+          }}
         />
 
         <div className="w-full"></div>
@@ -276,7 +402,7 @@ function MovieSubmitTeamComposition({ form }) {
             <FormNewCollaborator index={index} form={form} remove={remove} />
           </div>
         ))}
-      </div> */}
+      </div>
       <button
         className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center"
         type="button"

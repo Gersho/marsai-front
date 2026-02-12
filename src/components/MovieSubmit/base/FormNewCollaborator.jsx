@@ -1,10 +1,12 @@
 import BasicFormInput from './BasicFormInput';
 import { IoMdClose } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
+import FormErrors from './FormErrors';
 
 function FormNewCollaborator({ index, form, remove, className = '' }) {
   const { t } = useTranslation();
   const target = "submitMovieForm.teamComposition.newCollaborator.";
+  const errors = "submitMovieForm.formErrors.";
 
 
   className = 'w-full relative bg-zinc-700 p-5 rounded-xl' + ' ' + className;
@@ -42,9 +44,22 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
               name="collaborator-firstname"
               placeholder={t(target + 'firstname.placeholder')}
               title={t(target + 'firstname.title')}
-              {...form.register(`collaborators.${index}.firstname`)}
-              required
+              {...form.register(`collaborators.${index}.firstname`, {
+                required: t(errors + 'required'),
+                minLength: {
+                  value: 3,
+                  message: t(errors + 'minLength3'),
+                },
+                maxLength: {
+                  value: 100,
+                  message: t(errors + 'maxLength100'),
+                }
+              })}
             ></input>
+            <FormErrors
+              form={form}
+              name={`collaborators.${index}.firstname`}
+            />
           </div>
         </div>
 
@@ -56,30 +71,66 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
             type="text"
             placeholder={t(target + 'lastname.label')}
             title={t(target + 'lastname.label')}
-            {...form.register(`collaborators.${index}.lastname`)}
-            required
+            {...form.register(`collaborators.${index}.lastname`, {
+              required: t(errors + 'required'),
+              minLength: {
+                value: 3,
+                message: t(errors + 'minLength3'),
+              },
+              maxLength: {
+                value: 100,
+                message: t(errors + 'maxLength100'),
+              }
+            })}
           ></input>
+          <FormErrors
+            form={form}
+            name={`collaborators.${index}.lastname`}
+          />
         </div>
       </div>
 
       <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'contribution.label')}
           name={`collaborators.${index}.contribution`}
           placeholder=""
           title={t(target + 'contribution.title')}
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            minLength: {
+              value: 3,
+              message: t(errors + 'minLength3'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
 
         <BasicFormInput
-          register={form.register}
+          form={form}
           label={t(target + 'email.label')}
-          type="email"
           name={`collaborators.${index}.email`}
           placeholder={t(target + 'email.placeholder')}
           title={t(target + 'email.title')}
-          required={true}
+          validation={{
+            required: t(errors + 'required'),
+            pattern: {
+              value: /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+              message: t(errors + 'validEmail'),
+            },
+            minLength: {
+              value: 5,
+              message: t(errors + 'minLength5'),
+            },
+            maxLength: {
+              value: 100,
+              message: t(errors + 'maxLength100'),
+            }
+          }}
         />
       </div>
     </div>

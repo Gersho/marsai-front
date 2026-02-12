@@ -25,12 +25,12 @@ function MovieSubmitDeclaration({ form }) {
         </p>
       </div>
 
-      <div className="flex flex-col w-full gap-3">
+      <div className="flex flex-col w-full gap-3 pb-4">
 
         <p>{t(target + 'isHybrid.title')}</p>
-        <div className="flex flex-row justify-around gap-3 w-full pb-4">
+        <div className="flex flex-row justify-around gap-3 w-full">
           <label
-            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-2 "
+            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-1 "
             htmlFor="form-full-ai"
           >
             {t(target + 'isHybrid.false.0')}
@@ -47,7 +47,7 @@ function MovieSubmitDeclaration({ form }) {
             ></input>
           </label>
           <label
-            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-2 "
+            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-indigo-50 has-checked:text-black w-1/2 p-1 "
             htmlFor="form-hybrid"
           >
             {t(target + 'isHybrid.true.0')}
@@ -67,8 +67,9 @@ function MovieSubmitDeclaration({ form }) {
         </div>
 
         <FormErrors
+          className="self-center"
           form={form}
-          name="ai-classification"
+          name="isHybrid"
         />
       </div>
 

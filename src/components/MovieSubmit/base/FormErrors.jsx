@@ -3,9 +3,11 @@ import { ErrorMessage } from "@hookform/error-message";
 
 
 function FormErrors({
+    className = "",
     form,
     name
 }) {
+    className = "text-red-500 " + className;
     return (
         <ErrorMessage
             errors={form.formState.errors}
@@ -13,7 +15,7 @@ function FormErrors({
             render={({ messages }) =>
                 messages &&
                 Object.entries(messages).map(([type, message]) => (
-                    <p className="text-red-500" key={type}>{message}</p>
+                    <p className={className} key={type}>{message}</p>
                 ))
             }
         />

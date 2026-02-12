@@ -82,12 +82,13 @@ function SubmitMoviePage() {
           className="flex flex-col items-center gap-7 w-full"
           onSubmit={form.handleSubmit(onSubmit)}
           encType="multipart/form-data"
+          noValidate
         >
-          {/* <MovieSubmitInfo form={form} /> */}
-          {/* <MovieSubmitDeclaration form={form} /> */}
-          {/* <MovieSubmitDeliverables form={form} /> */}
+          <MovieSubmitInfo form={form} />
+          <MovieSubmitDeclaration form={form} />
+          <MovieSubmitDeliverables form={form} />
           <MovieSubmitTeamComposition form={form} />
-          {/* <MovieCertificateOfOwnership /> */}
+          <MovieCertificateOfOwnership />
           <button className="border p-3 rounded-md">
             {t(target + 'submitButton')}
           </button>
