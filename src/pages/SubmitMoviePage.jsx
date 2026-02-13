@@ -92,11 +92,11 @@ function SubmitMoviePage() {
           encType="multipart/form-data"
           noValidate
         >
-          <MovieSubmitInfo form={form} />
-          <MovieSubmitDeclaration form={form} />
+          {/* <MovieSubmitInfo form={form} /> */}
+          {/* <MovieSubmitDeclaration form={form} /> */}
           <MovieSubmitDeliverables form={form} />
-          <MovieSubmitTeamComposition form={form} />
-          <MovieCertificateOfOwnership />
+          {/* <MovieSubmitTeamComposition form={form} /> */}
+          {/* <MovieCertificateOfOwnership /> */}
           <button className="border p-3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all" >
             {t(target + 'submitButton')}
           </button>
