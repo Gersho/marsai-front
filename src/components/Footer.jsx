@@ -10,7 +10,6 @@ const footerLogo = {
   },
 };
 
-
 const Footer = () => {
   const { t } = useTranslation();
   return (
@@ -87,10 +86,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div>
-            © 2025 MARS.A.I
-          </div>
-
+          <div>© 2025 MARS.A.I</div>
         </div>
       </div>
     </footer>

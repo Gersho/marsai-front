@@ -4,12 +4,12 @@ import FormNewCollaborator from './base/FormNewCollaborator';
 import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
 import { useTranslation } from 'react-i18next';
-import FormErrors from "./base/FormErrors";
+import FormErrors from './base/FormErrors';
 
 function MovieSubmitTeamComposition({ form }) {
   const { t } = useTranslation();
-  const target = "submitMovieForm.teamComposition.";
-  const errors = "submitMovieForm.formErrors.";
+  const target = 'submitMovieForm.teamComposition.';
+  const errors = 'submitMovieForm.formErrors.';
 
   const { fields, append, remove } = useFieldArray({
     name: 'collaborators',
@@ -29,7 +29,9 @@ function MovieSubmitTeamComposition({ form }) {
   return (
     <FormSection className="bg-primary text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
-      <p className="pt-2 pb-3 self-center text-2xl">{t(target + 'director.header')}</p>
+      <p className="pt-2 pb-3 self-center text-2xl">
+        {t(target + 'director.header')}
+      </p>
       <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <div className="flex flex-col md:flex-row md:w-full md:gap-x-5 md:pb-2">
           <div className="flex flex-col gap-2">
@@ -47,7 +49,9 @@ function MovieSubmitTeamComposition({ form }) {
             </select>
           </div>
           <div className="flex flex-col md:w-full">
-            <label htmlFor="form-director-firstname">{t(target + 'director.firstname.label')}</label>
+            <label htmlFor="form-director-firstname">
+              {t(target + 'director.firstname.label')}
+            </label>
             <input
               className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
               id="form-director-firstname"
@@ -61,22 +65,20 @@ function MovieSubmitTeamComposition({ form }) {
                 maxLength: {
                   value: 100,
                   message: t(errors + 'maxLength100'),
-                }
+                },
               })}
               placeholder={t(target + 'director.firstname.placeholder')}
               title={t(target + 'director.firstname.title')}
-
             ></input>
 
-            <FormErrors
-              form={form}
-              name="director.firstname"
-            />
+            <FormErrors form={form} name="director.firstname" />
           </div>
         </div>
 
         <div className="flex flex-col md:w-full">
-          <label htmlFor="form-director-lastname">{t(target + 'director.lastname.label')}</label>
+          <label htmlFor="form-director-lastname">
+            {t(target + 'director.lastname.label')}
+          </label>
           <input
             className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
             id="form-director-lastname"
@@ -90,16 +92,12 @@ function MovieSubmitTeamComposition({ form }) {
               maxLength: {
                 value: 100,
                 message: t(errors + 'maxLength100'),
-              }
+              },
             })}
             placeholder={t(target + 'director.lastname.placeholder')}
             title={t(target + 'director.lastname.title')}
-
           ></input>
-          <FormErrors
-            form={form}
-            name="director.lastname"
-          />
+          <FormErrors form={form} name="director.lastname" />
         </div>
       </div>
       <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
@@ -119,7 +117,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
 
@@ -161,7 +159,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
 
@@ -185,12 +183,14 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 50,
               message: t(errors + 'maxLength50'),
-            }
+            },
           }}
         />
       </div>
       <div className="w-full pb-2">
-        <label htmlFor="form-director-address">{t(target + 'director.address.label')}</label>
+        <label htmlFor="form-director-address">
+          {t(target + 'director.address.label')}
+        </label>
         <input
           className="outline-2 outline-neutral-400 rounded-sm border-0 focus:outline-neutral-100 min-w-full pl-2 py-1 my-2"
           id="form-director-address"
@@ -203,16 +203,13 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           })}
           placeholder=""
           title={t(target + 'director.address.title')}
         ></input>
 
-        <FormErrors
-          form={form}
-          name="director.address"
-        />
+        <FormErrors form={form} name="director.address" />
       </div>
       <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
@@ -231,7 +228,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
 
@@ -250,7 +247,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 20,
               message: t(errors + 'maxLength20'),
-            }
+            },
           }}
         />
       </div>
@@ -270,7 +267,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
 
@@ -290,11 +287,13 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
       </div>
-      <p className="pt-4 pb-3 self-center text-2xl">{t(target + 'director.socials')}</p>
+      <p className="pt-4 pb-3 self-center text-2xl">
+        {t(target + 'director.socials')}
+      </p>
       <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
@@ -311,7 +310,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           }}
         />
 
@@ -330,7 +329,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           }}
         />
       </div>
@@ -350,7 +349,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           }}
         />
 
@@ -369,7 +368,7 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           }}
         />
       </div>
@@ -389,13 +388,15 @@ function MovieSubmitTeamComposition({ form }) {
             maxLength: {
               value: 255,
               message: t(errors + 'maxLength255'),
-            }
+            },
           }}
         />
 
         <div className="w-full"></div>
       </div>
-      <p className="pt-4 pb-3 self-center text-2xl">{t(target + 'collaborators.header')}</p>
+      <p className="pt-4 pb-3 self-center text-2xl">
+        {t(target + 'collaborators.header')}
+      </p>
       <div className="flex flex-col gap-4 w-full pb-5">
         {fields.map((field, index) => (
           <div key={field.id}>
@@ -415,4 +416,3 @@ function MovieSubmitTeamComposition({ form }) {
 }
 
 export default MovieSubmitTeamComposition;
-

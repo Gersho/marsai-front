@@ -5,9 +5,8 @@ import FormErrors from './FormErrors';
 
 function FormNewCollaborator({ index, form, remove, className = '' }) {
   const { t } = useTranslation();
-  const target = "submitMovieForm.teamComposition.newCollaborator.";
-  const errors = "submitMovieForm.formErrors.";
-
+  const target = 'submitMovieForm.teamComposition.newCollaborator.';
+  const errors = 'submitMovieForm.formErrors.';
 
   className = 'w-full relative bg-secondary p-5 rounded-xl' + ' ' + className;
 
@@ -24,7 +23,9 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
       <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <div className="flex flex-col md:flex-row md:w-full md:gap-x-5">
           <div className="flex flex-col gap-2">
-            <label htmlFor="form-collaborator-gender">{t(target + 'gender.label')}</label>
+            <label htmlFor="form-collaborator-gender">
+              {t(target + 'gender.label')}
+            </label>
             <select
               className="w-fit justify-center bg-secondary px-2 pt-2 pb-1.5 rounded-md border border-zinc-200"
               id="form-collaborator-gender"
@@ -36,7 +37,9 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
             </select>
           </div>
           <div className="flex flex-col md:w-full">
-            <label htmlFor="form-collaborator-firstname">{t(target + 'firstname.label')}</label>
+            <label htmlFor="form-collaborator-firstname">
+              {t(target + 'firstname.label')}
+            </label>
             <input
               className="border border-gray rounded-sm  min-w-full pl-2 py-1 my-2"
               id="form-collaborator-firstname"
@@ -53,18 +56,17 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
                 maxLength: {
                   value: 100,
                   message: t(errors + 'maxLength100'),
-                }
+                },
               })}
             ></input>
-            <FormErrors
-              form={form}
-              name={`collaborators.${index}.firstname`}
-            />
+            <FormErrors form={form} name={`collaborators.${index}.firstname`} />
           </div>
         </div>
 
         <div className="flex flex-col md:w-full">
-          <label htmlFor="form-collaborator-lastname">{t(target + 'lastname.label')}</label>
+          <label htmlFor="form-collaborator-lastname">
+            {t(target + 'lastname.label')}
+          </label>
           <input
             className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
             id="form-collaborator-lastname"
@@ -80,13 +82,10 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
               maxLength: {
                 value: 100,
                 message: t(errors + 'maxLength100'),
-              }
+              },
             })}
           ></input>
-          <FormErrors
-            form={form}
-            name={`collaborators.${index}.lastname`}
-          />
+          <FormErrors form={form} name={`collaborators.${index}.lastname`} />
         </div>
       </div>
 
@@ -106,7 +105,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
 
@@ -129,7 +128,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
             maxLength: {
               value: 100,
               message: t(errors + 'maxLength100'),
-            }
+            },
           }}
         />
       </div>
@@ -138,4 +137,3 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
 }
 
 export default FormNewCollaborator;
-

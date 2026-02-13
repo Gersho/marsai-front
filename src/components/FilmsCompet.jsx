@@ -51,10 +51,8 @@ const FilmsCompetition = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {films.map(film => (
             <div key={film.id} className="group cursor-pointer">
-
               {/* 1. Zone Image (Le rectangle gris de ta maquette) */}
               <div className="relative aspect-video bg-[#27272A] rounded-2xl overflow-hidden border border-white/5 group-hover:border-white/20 transition-all duration-300 mb-5">
-
                 {/* Placeholder Image (tu remplaceras par <img src={...} />) */}
                 <div className="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition">
                   <IoMdPlay

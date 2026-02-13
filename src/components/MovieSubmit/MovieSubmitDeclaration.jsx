@@ -7,25 +7,19 @@ import FormErrors from './base/FormErrors';
 
 function MovieSubmitDeclaration({ form }) {
   const { t } = useTranslation();
-  const target = "submitMovieForm.declaration.";
-  const errors = "submitMovieForm.formErrors.";
+  const target = 'submitMovieForm.declaration.';
+  const errors = 'submitMovieForm.formErrors.';
 
   return (
     <FormSection className="bg-primary text-zinc-200">
-
-      <FormSectionTitle
-        text={t(target + 'title')}
-      />
+      <FormSectionTitle text={t(target + 'title')} />
 
       <div className="flex flex-col md:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
         <CiCircleInfo className="text-accent text-4xl" />
-        <p>
-          {t(target + 'paragraph')}
-        </p>
+        <p>{t(target + 'paragraph')}</p>
       </div>
 
       <div className="flex flex-col w-full gap-3 pb-4">
-
         <p>{t(target + 'isHybrid.title')}</p>
         <div className="flex flex-row justify-around gap-3 w-full">
           <label
@@ -41,8 +35,9 @@ function MovieSubmitDeclaration({ form }) {
               id="form-full-ai"
               name="ai-classification"
               value={false}
-              {...form.register('isHybrid', { required: t(errors + 'requiredRadio') })}
-
+              {...form.register('isHybrid', {
+                required: t(errors + 'requiredRadio'),
+              })}
             ></input>
           </label>
           <label
@@ -58,16 +53,14 @@ function MovieSubmitDeclaration({ form }) {
               id="form-hybrid"
               name="ai-classification"
               value={true}
-              {...form.register('isHybrid', { required: t(errors + 'requiredRadio') })}
+              {...form.register('isHybrid', {
+                required: t(errors + 'requiredRadio'),
+              })}
             ></input>
           </label>
         </div>
 
-        <FormErrors
-          className="self-center"
-          form={form}
-          name="isHybrid"
-        />
+        <FormErrors className="self-center" form={form} name="isHybrid" />
       </div>
       <div className="flex flex-col items-center md:flex-row w-full md:justify-between md:gap-20">
         <FormTextArea
@@ -88,7 +81,7 @@ function MovieSubmitDeclaration({ form }) {
             maxLength: {
               value: 500,
               message: t(errors + 'maxLength500'),
-            }
+            },
           }}
         />
 
@@ -110,10 +103,9 @@ function MovieSubmitDeclaration({ form }) {
             maxLength: {
               value: 500,
               message: t(errors + 'maxLength500'),
-            }
+            },
           }}
         />
-
       </div>
     </FormSection>
   );

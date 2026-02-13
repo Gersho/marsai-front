@@ -165,8 +165,8 @@
     "contact": "Contact",
     "copyright": "© 2025 MARS.A.I"
   },
-  "submitMovieForm":{
-    "page":{
+  "submitMovieForm": {
+    "page": {
       "titlePart1": "Call for Projects 2026",
       "titlePart2": "submit a movie",
       "paragraph": "Please provide the technical details, AI usage, and your team composition. All fields marked with an asterisk (*) are required.",
@@ -202,32 +202,35 @@
         "title": "English synopsis (max. 300 characters)"
       }
     },
-    "declaration":{
+    "declaration": {
       "title": "02. AI Usage Declaration",
       "paragraph": "MARS.A.I requires full transparency regarding the use of Artificial Intelligence. Please select all generative tools used in your creative process.",
-      "isHybrid":{
+      "isHybrid": {
         "title": "Work Classification:* Exclusive choice between:",
         "false": ["Fully generated", "(100% AI)"],
-        "true": ["Hybrid production", "(Live-action footage + AI contributions)"]
+        "true": [
+          "Hybrid production",
+          "(Live-action footage + AI contributions)"
+        ]
       },
-      "aiTools":{
+      "aiTools": {
         "label": "Technology stack *",
         "placeholder": "List the tools used (e.g. Midjourney for visuals, ElevenLabs for voices, Runway for animation...)",
         "title": "Technology stack (max. 500 characters)"
       },
-      "creativeProcess":{
+      "creativeProcess": {
         "label": "Creative methodology *",
         "placeholder": "Describe the interaction between humans and machines in this process...",
         "title": "Creative methodology (max. 500 characters)"
       }
     },
-    "deliverables":{
+    "deliverables": {
       "title": "03. Deliverables & Accessibility",
-      "video" : {
+      "video": {
         "label": "Upload the film",
         "title": "Upload the film"
       },
-      "hasSubs":{
+      "hasSubs": {
         "header": "Subtitles (.srt)",
         "label": "The video contains embedded subtitles",
         "title": "Does the video contain embedded subtitles?"
@@ -235,19 +238,19 @@
       "coverImage": {
         "header": "Official thumbnail (16:9) *",
         "label": "Official thumbnail (16:9) *",
-        "description":"Click to upload",
-        "subDescription":"PNG or JPG • Max 15MB"
+        "description": "Click to upload",
+        "subDescription": "PNG or JPG • Max 15MB"
       },
-      "stills":{
+      "stills": {
         "header": "Media Gallery (Stills - Max 3)",
         "stillA": "Media gallery first image",
         "stillB": "Media gallery second image",
         "stillC": "Media gallery third image"
       }
     },
-    "teamComposition":{
+    "teamComposition": {
       "title": "04. Team Composition",
-      "director":{
+      "director": {
         "header": "Director:",
         "gender": {
           "label": "Title *",
@@ -255,81 +258,81 @@
           "mrs": "Mrs.",
           "mx": "Mx."
         },
-        "firstname":{
+        "firstname": {
           "label": "First name *",
-          "placeholder":"First name",
+          "placeholder": "First name",
           "title": "Director's first name"
         },
-        "lastname":{
+        "lastname": {
           "label": "Last name *",
           "placeholder": "Last name",
           "title": "Director's last name"
         },
-        "job":{
+        "job": {
           "label": "Current occupation *",
           "title": "Director's current occupation"
         },
-        "birthdate":{
+        "birthdate": {
           "label": "Date of birth *",
           "title": "Director's date of birth"
         },
-        "email":{
+        "email": {
           "label": "Email *",
           "placeholder": "example@gmail.com",
           "title": "Director's email"
         },
-        "phone":{
+        "phone": {
           "label": "Phone number *",
           "placeholder": "0102030405",
           "title": "Director's phone number"
         },
-        "address":{
+        "address": {
           "label": "Address *",
           "title": "Director's postal address"
         },
-        "city":{
+        "city": {
           "label": "City *",
           "title": "Director's city"
         },
-        "zipcode":{
+        "zipcode": {
           "label": "Postal code",
           "title": "Director's postal code"
         },
-        "region":{
+        "region": {
           "label": "Region",
           "title": "Director's region"
         },
-        "country":{
+        "country": {
           "label": "Country *",
           "title": "Director's country"
         },
         "socials": "online presence",
-        "facebook":{
+        "facebook": {
           "label": "Facebook",
           "title": "Director's Facebook"
         },
-        "instagram":{
+        "instagram": {
           "label": "Instagram",
           "title": "Director's Instagram"
         },
-        "youtube":{
+        "youtube": {
           "label": "YouTube",
           "title": "Director's YouTube"
         },
-        "linkedin":{
+        "linkedin": {
           "label": "LinkedIn",
           "title": "Director's LinkedIn"
         },
-        "twitter":{
+        "twitter": {
           "label": "Twitter",
           "title": "Director's Twitter"
         }
       },
-      "collaborators":{
+      "collaborators": {
         "header": "Collaborators:",
         "button": "+ add collaborator"
       },
-      "newCollaborator":{
+      "newCollaborator": {
         "remove": "Remove collaborator",
         "gender": {
           "label": "Title *",
@@ -337,47 +340,47 @@
           "mrs": "Mrs.",
           "mx": "Mx."
         },
-        "firstname":{
+        "firstname": {
           "label": "First name *",
-          "placeholder":"First name",
+          "placeholder": "First name",
           "title": "Collaborator's first name"
         },
-        "lastname":{
+        "lastname": {
           "label": "Last name *",
           "placeholder": "Last name",
           "title": "Collaborator's last name"
         },
-        "contribution":{
+        "contribution": {
           "label": "Contribution *",
           "title": "Collaborator's contribution"
         },
-        "email":{
+        "email": {
           "label": "Email *",
           "placeholder": "example@gmail.com",
           "title": "Collaborator's email"
         }
       }
     },
-    "certificate":{
+    "certificate": {
       "title": "Certificate of Ownership",
       "paragraph": "By submitting this application, you certify on your honor that you are the original author of the work and that you hold all distribution rights. You agree that MARS.A.I may use these materials for the promotion of the festival."
     },
-  "formErrors": {
-    "required": "This field is required",
-    "requiredRadio": "Please choose an option",
-    "minLength3": "At least 3 characters",
-    "minLength5": "At least 5 characters",
-    "maxLength20": "Maximum 20 characters",
-    "maxLength50": "Maximum 50 characters",
-    "maxLength100": "Maximum 100 characters",
-    "maxLength255": "Maximum 255 characters",
-    "maxLength300": "Maximum 300 characters",
-    "maxLength500": "Maximum 500 characters",
-    "validPhone": "Enter the number without spaces or separators",
-    "validEmail": "Enter a valid email",
-    "digitsOnly": "Digits only",
-    "minDuration": "Minimum 1 sec",
-    "maxDuration": "Maximum 90 sec"
+    "formErrors": {
+      "required": "This field is required",
+      "requiredRadio": "Please choose an option",
+      "minLength3": "At least 3 characters",
+      "minLength5": "At least 5 characters",
+      "maxLength20": "Maximum 20 characters",
+      "maxLength50": "Maximum 50 characters",
+      "maxLength100": "Maximum 100 characters",
+      "maxLength255": "Maximum 255 characters",
+      "maxLength300": "Maximum 300 characters",
+      "maxLength500": "Maximum 500 characters",
+      "validPhone": "Enter the number without spaces or separators",
+      "validEmail": "Enter a valid email",
+      "digitsOnly": "Digits only",
+      "minDuration": "Minimum 1 sec",
+      "maxDuration": "Maximum 90 sec"
     }
   }
 }

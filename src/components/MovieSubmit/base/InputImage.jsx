@@ -1,7 +1,7 @@
 import { IoImageOutline } from 'react-icons/io5';
 import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
-import FormErrors from "./FormErrors";
+import FormErrors from './FormErrors';
 
 function InputImage({
   label,
@@ -15,14 +15,10 @@ function InputImage({
   className = '',
 }) {
   const [preview, setPreview] = useState(null);
-  const {
-    register,
-    resetField
-  } = form;
-
+  const { register, resetField } = form;
 
   if (!validation) {
-    validation = { required: false }
+    validation = { required: false };
   }
 
   const { onChange: onFormChange, onBlur, ref } = register(name);
@@ -97,13 +93,9 @@ function InputImage({
         </label>
       )}
 
-      <FormErrors
-        form={form}
-        name={name}
-      />
+      <FormErrors form={form} name={name} />
     </>
   );
 }
 
 export default InputImage;
-

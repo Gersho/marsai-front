@@ -7,16 +7,13 @@ import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTea
 import { useTranslation } from 'react-i18next';
 import TopPage from '../components/base/TopPage';
 
-
 function SubmitMoviePage() {
-
-
   const form = useForm({
-    criteriaMode: "all",
-  })
+    criteriaMode: 'all',
+  });
 
   const { t } = useTranslation();
-  const target = "submitMovieForm.page.";
+  const target = 'submitMovieForm.page.';
 
   async function onSubmit(data) {
     console.log('data: ', data);
@@ -53,16 +50,12 @@ function SubmitMoviePage() {
   return (
     <>
       <TopPage className="text-white pt-20">
-
         <h2 className="">{t(target + 'titlePart1')}</h2>
         <h1 className="">{t(target + 'titlePart2')}</h1>
       </TopPage>
       <div className="pb-25 pt-5 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
-
-          <p>
-            {t(target + 'paragraph')}
-          </p>
+          <p>{t(target + 'paragraph')}</p>
         </div>
         <form
           className="flex flex-col items-center gap-7 w-full"
@@ -75,7 +68,7 @@ function SubmitMoviePage() {
           <MovieSubmitDeliverables form={form} />
           <MovieSubmitTeamComposition form={form} />
           <MovieCertificateOfOwnership />
-          <button className="border p-3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all" >
+          <button className="border p-3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all">
             {t(target + 'submitButton')}
           </button>
         </form>
@@ -85,4 +78,3 @@ function SubmitMoviePage() {
 }
 
 export default SubmitMoviePage;
-

@@ -1,4 +1,4 @@
-import FormErrors from "./FormErrors";
+import FormErrors from './FormErrors';
 
 function BasicFormInput({
   label,
@@ -12,13 +12,12 @@ function BasicFormInput({
   className = '',
   autoFocus = false,
 }) {
-
   const register = form.register;
 
   className = 'flex flex-col md:w-full gap-2 md:pb-4 pb-3' + ' ' + className;
 
   if (!validation) {
-    validation = { required: false }
+    validation = { required: false };
   }
 
   return (
@@ -34,13 +33,9 @@ function BasicFormInput({
         autoFocus={autoFocus}
       ></input>
 
-      <FormErrors
-        form={form}
-        name={name}
-      />
+      <FormErrors form={form} name={name} />
     </div>
   );
 }
 
 export default BasicFormInput;
-

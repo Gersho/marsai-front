@@ -7,22 +7,17 @@ import InputMovie from './base/InputMovie';
 function MovieSubmitDeliverables({ form }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.deliverables.';
-  const errors = "submitMovieForm.formErrors.";
+  const errors = 'submitMovieForm.formErrors.';
 
   return (
     <FormSection className=" text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
 
       <div className="flex flex-col gap-2 w-full">
+        <InputMovie form={form} />
 
-
-        <InputMovie
-          form={form}
-        />
-
-
-        <div className='flex flex-col gap-2 pb-10 pt-1 items-center'>
-          <div className='flex flex-row items'>
+        <div className="flex flex-col gap-2 pb-10 pt-1 items-center">
+          <div className="flex flex-row items">
             <input
               className="mr-3"
               type="checkbox"
@@ -36,8 +31,6 @@ function MovieSubmitDeliverables({ form }) {
               {t(target + 'hasSubs.label')}
             </label>
           </div>
-
-
         </div>
       </div>
 
@@ -88,4 +81,3 @@ function MovieSubmitDeliverables({ form }) {
 }
 
 export default MovieSubmitDeliverables;
-
