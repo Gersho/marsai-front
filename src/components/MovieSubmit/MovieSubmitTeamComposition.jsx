@@ -37,7 +37,7 @@ function MovieSubmitTeamComposition({ form }) {
               {t(target + 'director.gender.label')}
             </label>
             <select
-              className="w-fit justify-center bg-primary px-2 py-2 rounded-md border border-zinc-200"
+              className="w-fit justify-center bg-primary px-2  pt-2 pb-1.5 rounded-md border border-zinc-200"
               id="form-director-gender"
               {...form.register('director.gender')}
             >

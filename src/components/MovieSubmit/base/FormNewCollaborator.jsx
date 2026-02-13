@@ -26,7 +26,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
           <div className="flex flex-col gap-2">
             <label htmlFor="form-collaborator-gender">{t(target + 'gender.label')}</label>
             <select
-              className="w-fit py-1 justify-center"
+              className="w-fit justify-center bg-secondary px-2 pt-2 pb-1.5 rounded-md border border-zinc-200"
               id="form-collaborator-gender"
               {...form.register(`collaborators.${index}.gender`)}
             >

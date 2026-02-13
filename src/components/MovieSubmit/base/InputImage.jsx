@@ -15,7 +15,10 @@ function InputImage({
   className = '',
 }) {
   const [preview, setPreview] = useState(null);
-  const register = form.register;
+  const {
+    register,
+    resetField
+  } = form;
 
 
   if (!validation) {
@@ -36,6 +39,7 @@ function InputImage({
 
   function removePreview(e) {
     e.preventDefault();
+    resetField(name);
     setPreview(null);
   }
 

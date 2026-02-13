@@ -50,7 +50,7 @@ function MovieSubmitDeliverables({ form }) {
 
         </div>
 
-        <div className='flex flex-col gap-2 pb-3 items-center'>
+        <div className='flex flex-col gap-2 pb-10 pt-1 items-center'>
           {/* <p>{t(target + 'hasSubs.header')}</p> */}
 
           <div className='flex flex-row items'>
