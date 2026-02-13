@@ -11,13 +11,13 @@ function MovieSubmitDeclaration({ form }) {
   const errors = "submitMovieForm.formErrors.";
 
   return (
-    <FormSection className="bg-zinc-800 text-zinc-200">
+    <FormSection className="bg-primary text-zinc-200">
 
       <FormSectionTitle
         text={t(target + 'title')}
       />
 
-      <div className="flex flex-col sm:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
+      <div className="flex flex-col md:flex-row gap-2 border border-gray rounded-sm w-full p-3 my-4">
         <CiCircleInfo className="text-accent text-4xl" />
         <p>
           {t(target + 'paragraph')}
@@ -72,7 +72,7 @@ function MovieSubmitDeclaration({ form }) {
         />
       </div>
 
-      <div className="flex flex-col items-center sm:flex-row w-full sm:justify-between sm:gap-20">
+      <div className="flex flex-col items-center md:flex-row w-full md:justify-between md:gap-20">
 
         <FormTextArea
           className=""

@@ -27,17 +27,17 @@ function MovieSubmitTeamComposition({ form }) {
     console.log(fields);
   }
   return (
-    <FormSection className="bg-zinc-800 text-zinc-200">
+    <FormSection className="bg-primary text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
-      <p className="py-2 self-center">{t(target + 'director.header')}</p>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
-        <div className="flex flex-col sm:flex-row sm:w-full sm:gap-x-5">
+      <p className="pt-2 pb-3 self-center text-2xl">{t(target + 'director.header')}</p>
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
+        <div className="flex flex-col md:flex-row md:w-full md:gap-x-5 md:pb-2">
           <div className="flex flex-col gap-2">
             <label className="" htmlFor="form-director-gender">
               {t(target + 'director.gender.label')}
             </label>
             <select
-              className="w-fit py-1 justify-center"
+              className="w-fit justify-center bg-primary px-2 py-2 rounded-md border border-zinc-200"
               id="form-director-gender"
               {...form.register('director.gender')}
             >
@@ -46,10 +46,10 @@ function MovieSubmitTeamComposition({ form }) {
               <option value="mx">{t(target + 'director.gender.mx')}</option>
             </select>
           </div>
-          <div className="flex flex-col sm:w-full">
+          <div className="flex flex-col md:w-full">
             <label htmlFor="form-director-firstname">{t(target + 'director.firstname.label')}</label>
             <input
-              className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
+              className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
               id="form-director-firstname"
               type="text"
               {...form.register('director.firstname', {
@@ -75,10 +75,10 @@ function MovieSubmitTeamComposition({ form }) {
           </div>
         </div>
 
-        <div className="flex flex-col sm:w-full">
+        <div className="flex flex-col md:w-full">
           <label htmlFor="form-director-lastname">{t(target + 'director.lastname.label')}</label>
           <input
-            className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
+            className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
             id="form-director-lastname"
             type="text"
             {...form.register('director.lastname', {
@@ -102,7 +102,7 @@ function MovieSubmitTeamComposition({ form }) {
           />
         </div>
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           label={t(target + 'director.job.label')}
           id="director-job"
@@ -140,7 +140,7 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           label={t(target + 'director.email.label')}
           id="director-email"
@@ -189,10 +189,10 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      <div className="w-full">
+      <div className="w-full pb-2">
         <label htmlFor="form-director-address">{t(target + 'director.address.label')}</label>
         <input
-          className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
+          className="outline-2 outline-neutral-400 rounded-sm border-0 focus:outline-neutral-100 min-w-full pl-2 py-1 my-2"
           id="form-director-address"
           {...form.register('director.address', {
             required: t(errors + 'required'),
@@ -214,7 +214,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.address"
         />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'director.city.label')}
@@ -254,7 +254,7 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'director.region.label')}
@@ -294,8 +294,8 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      {t(target + 'director.socials')}
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <p className="pt-4 pb-3 self-center text-2xl">{t(target + 'director.socials')}</p>
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'director.facebook.label')}
@@ -334,7 +334,7 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'director.youtube.label')}
@@ -373,7 +373,7 @@ function MovieSubmitTeamComposition({ form }) {
           }}
         />
       </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'director.twitter.label')}
@@ -395,7 +395,7 @@ function MovieSubmitTeamComposition({ form }) {
 
         <div className="w-full"></div>
       </div>
-      <p className="py-2 self-center">{t(target + 'collaborators.header')}</p>
+      <p className="pt-4 pb-3 self-center text-2xl">{t(target + 'collaborators.header')}</p>
       <div className="flex flex-col gap-4 w-full pb-5">
         {fields.map((field, index) => (
           <div key={field.id}>
@@ -404,7 +404,7 @@ function MovieSubmitTeamComposition({ form }) {
         ))}
       </div>
       <button
-        className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center"
+        className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center cursor-pointer uppercase font-bold bg-secondary transition-all hover:bg-neutral-600"
         type="button"
         onClick={addCollaborator}
       >

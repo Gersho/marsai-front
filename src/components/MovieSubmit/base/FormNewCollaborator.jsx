@@ -9,7 +9,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
   const errors = "submitMovieForm.formErrors.";
 
 
-  className = 'w-full relative bg-zinc-700 p-5 rounded-xl' + ' ' + className;
+  className = 'w-full relative bg-secondary p-5 rounded-xl' + ' ' + className;
 
   return (
     <div className={className}>
@@ -21,8 +21,8 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
       >
         <IoMdClose size={24} />
       </button>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
-        <div className="flex flex-col sm:flex-row sm:w-full sm:gap-x-5">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
+        <div className="flex flex-col md:flex-row md:w-full md:gap-x-5">
           <div className="flex flex-col gap-2">
             <label htmlFor="form-collaborator-gender">{t(target + 'gender.label')}</label>
             <select
@@ -35,7 +35,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
               <option value="mx">{t(target + 'gender.mx')}</option>
             </select>
           </div>
-          <div className="flex flex-col sm:w-full">
+          <div className="flex flex-col md:w-full">
             <label htmlFor="form-collaborator-firstname">{t(target + 'firstname.label')}</label>
             <input
               className="border border-gray rounded-sm  min-w-full pl-2 py-1 my-2"
@@ -63,7 +63,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
           </div>
         </div>
 
-        <div className="flex flex-col sm:w-full">
+        <div className="flex flex-col md:w-full">
           <label htmlFor="form-collaborator-lastname">{t(target + 'lastname.label')}</label>
           <input
             className="border border-gray rounded-sm min-w-full pl-2 py-1 my-2"
@@ -90,7 +90,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
         </div>
       </div>
 
-      <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+      <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
         <BasicFormInput
           form={form}
           label={t(target + 'contribution.label')}

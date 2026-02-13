@@ -3,6 +3,8 @@ import FormSectionTitle from './base/FormSectionTitle';
 import FormSection from './base/FormSection';
 import { useTranslation } from 'react-i18next';
 import FormErrors from "./base/FormErrors";
+// import { MdOutlineCloudUpload } from "react-icons/md";
+import { BiCameraMovie } from "react-icons/bi";
 
 function MovieSubmitDeliverables({ form }) {
   const { t } = useTranslation();
@@ -10,21 +12,37 @@ function MovieSubmitDeliverables({ form }) {
   const errors = "submitMovieForm.formErrors.";
 
   return (
-    <FormSection className="bg-zinc-700 text-zinc-200">
+    <FormSection className=" text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
 
       <div className="flex flex-col gap-2 w-full">
-        <div className="sm:self-center sm:flex sm:flex-col">
-          <label htmlFor="form-movie-upload">{t(target + 'video.label')}</label>
-          <input
-            className="border"
-            id="form-movie-upload"
-            name="movie-upload"
-            type="file"
-            title={t(target + 'video.title')}
-            {...form.register('video', { required: t(errors + 'required') })}
-          ></input>
+        <div className="md:self-center flex flex-col gap-2 items-center w-full">
+          <p>{t(target + 'video.label')}</p>
 
+          <label
+            className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl outline-2 outline-zinc-300 outline-dashed hover:bg-zinc-900 focus-within:bg-zinc-900 cursor-pointer w-1/2 h-44"
+            htmlFor="form-movie-upload">
+
+
+
+            <div className='flex flex-col items-center '>
+              <BiCameraMovie size={80} />
+              <p className='uppercase text-zinc-200 font-bold mt-2 text-center'>Cliquez pour upload</p>
+              <p className="py-2 px-4 bg-zinc-700 text-zinc-200 rounded-3xl text-sm mt-2 text-center">MP4 ou MKV • Max 500Mo</p>
+            </div>
+
+
+
+            <input
+              className="sr-only"
+              id="form-movie-upload"
+              name="movie-upload"
+              type="file"
+              title={t(target + 'video.title')}
+              {...form.register('video', { required: t(errors + 'required') })}
+            ></input>
+
+          </label>
           <FormErrors
             form={form}
             name={"video"}
@@ -32,25 +50,29 @@ function MovieSubmitDeliverables({ form }) {
 
         </div>
 
-        <div>
-          <p>{t(target + 'hasSubs.header')}</p>
+        <div className='flex flex-col gap-2 pb-3 items-center'>
+          {/* <p>{t(target + 'hasSubs.header')}</p> */}
 
-          <input
-            className="mr-3"
-            type="checkbox"
-            id="form-has-subtitles"
-            name="has-subtitles"
-            value="true"
-            title={t(target + 'hasSubs.title')}
-            {...form.register('hasSubs')}
-          ></input>
-          <label htmlFor="form-has-subtitles">
-            {t(target + 'hasSubs.label')}
-          </label>
+          <div className='flex flex-row items'>
+            <input
+              className="mr-3"
+              type="checkbox"
+              id="form-has-subtitles"
+              name="has-subtitles"
+              value="true"
+              title={t(target + 'hasSubs.title')}
+              {...form.register('hasSubs')}
+            ></input>
+            <label htmlFor="form-has-subtitles">
+              {t(target + 'hasSubs.label')}
+            </label>
+          </div>
+
+
         </div>
       </div>
 
-      <div className="w-5/6 flex flex-col justify-center sm:flex-row sm:justify-evenly gap-6">
+      <div className="w-5/6 flex flex-col justify-center md:flex-row md:justify-evenly gap-6">
         <div className="flex flex-col justify-center items-center gap-3 w-full">
           <p className="">{t(target + 'coverImage.header')}</p>
           <InputImage

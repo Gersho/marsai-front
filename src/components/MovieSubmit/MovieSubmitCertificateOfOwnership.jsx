@@ -1,13 +1,17 @@
 import { useTranslation } from 'react-i18next';
+import FormSectionTitle from './base/FormSectionTitle';
 
 function MovieCertificateOfOwnership() {
   const { t } = useTranslation();
   const target = "submitMovieForm.certificate.";
 
   return (
-    <div className="border-2 border-gray rounded-md pl-2 pr-1 py-1 w-5/6">
-      <h2>{t(target + 'title')}</h2>
-      <p>
+    <div className="border-2 border-accent rounded-md p-3 w-5/7 flex flex-col items-center">
+      <FormSectionTitle
+        className=""
+        text={t(target + 'title')} />
+      {/* <h2>{t(target + 'title')}</h2> */}
+      <p className=''>
         {t(target + 'paragraph')}
       </p>
     </div>

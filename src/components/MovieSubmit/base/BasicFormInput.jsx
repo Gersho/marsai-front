@@ -15,7 +15,7 @@ function BasicFormInput({
 
   const register = form.register;
 
-  className = 'flex flex-col sm:w-full gap-2 sm:pb-4 pb-3' + ' ' + className;
+  className = 'flex flex-col md:w-full gap-2 md:pb-4 pb-3' + ' ' + className;
 
   if (!validation) {
     validation = { required: false }
@@ -25,7 +25,7 @@ function BasicFormInput({
     <div className={className}>
       <label htmlFor={id}>{label}</label>
       <input
-        className="border border-gray rounded-sm pl-2 py-1"
+        className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 border-0 focus:outline-neutral-100"
         id={id}
         type={type}
         placeholder={placeholder}

@@ -31,7 +31,7 @@ function FormTextArea({
         setCount(event?.target.value.length);
     }
 
-    className = "flex flex-col w-full gap-2 sm:pb-0 pb-3" + " " + className;
+    className = "flex flex-col w-full gap-2 md:pb-0 pb-3" + " " + className;
 
     return (
         <div className={className}>
@@ -42,7 +42,8 @@ function FormTextArea({
                 <p className={count > maxCount ? "text-red-600" : ""}>{count} / {maxCount}</p>
             </div>
             <textarea
-                className="border border-gray rounded-sm p-3 h-36 sm:h-44"
+                // className="border border-gray rounded-sm p-3 h-36 md:h-44"
+                className="outline-2 outline-neutral-400 rounded-sm p-3 h-36 md:h-44 border-0 focus:outline-neutral-100"
                 id={id}
                 type="textarea"
                 placeholder={placeholder}

@@ -225,7 +225,7 @@
     "deliverables":{
       "title": "03. Livrables & Accessibilité",
       "video" : {
-        "label": "Ajout du film",
+        "label": "Ajout du film *",
         "title": "Ajout du film"
       },
       "hasSubs":{
@@ -304,7 +304,7 @@
           "label": "Pays *",
           "title": "Pays du realisateur"
         },
-        "socials": "présence en ligne",
+        "socials": "Présence en ligne:",
         "facebook":{
           "label": "Facebook",
           "title": "facebook du directeur"

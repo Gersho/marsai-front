@@ -5,6 +5,7 @@ import MovieSubmitDeliverables from '../components/MovieSubmit/MovieSubmitDelive
 import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
 import { useTranslation } from 'react-i18next';
+import TopPage from '../components/base/TopPage';
 
 
 function SubmitMoviePage() {
@@ -70,10 +71,17 @@ function SubmitMoviePage() {
 
   return (
     <>
-      <div className="py-25 flex flex-col items-center text-white">
+      <TopPage className="text-white pt-20">
+
+        <h2 className="">{t(target + 'titlePart1')}</h2>
+        <h1 className="">{t(target + 'titlePart2')}</h1>
+      </TopPage>
+      <div className="pb-25 pt-5 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
-          <h2 className="text-2xl">{t(target + 'titlePart1')}</h2>
-          <h1 className="text-5xl">{t(target + 'titlePart2')}</h1>
+
+          {/* 
+            <h2 className="">{t(target + 'titlePart1')}</h2>
+            <h1 className="">{t(target + 'titlePart2')}</h1> */}
           <p>
             {t(target + 'paragraph')}
           </p>
@@ -89,7 +97,7 @@ function SubmitMoviePage() {
           <MovieSubmitDeliverables form={form} />
           <MovieSubmitTeamComposition form={form} />
           <MovieCertificateOfOwnership />
-          <button className="border p-3 rounded-md">
+          <button className="border p-3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all" >
             {t(target + 'submitButton')}
           </button>
         </form>

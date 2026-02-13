@@ -10,12 +10,12 @@ function MovieSubmitInfo({ form }) {
     const errors = "submitMovieForm.formErrors.";
 
     return (
-        <FormSection className="bg-zinc-700 text-zinc-200">
+        <FormSection className=" text-zinc-200">
             <FormSectionTitle
                 text={t(target + 'title')}
             />
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+            <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
                 <BasicFormInput
                     label={t(target + 'originalTitle.label')}
                     id="form-original-title"
@@ -59,7 +59,7 @@ function MovieSubmitInfo({ form }) {
 
             </div>
 
-            <div className="flex flex-col w-full sm:flex-row sm:justify-between sm:gap-20">
+            <div className="flex flex-col w-full md:flex-row md:justify-between md:gap-20">
                 <BasicFormInput
                     label={t(target + 'duration.label')}
                     id="form-duration"
@@ -98,7 +98,7 @@ function MovieSubmitInfo({ form }) {
 
             </div>
 
-            <div className="flex flex-col items-center w-full sm:flex-row sm:justify-between sm:gap-20">
+            <div className="flex flex-col items-center w-full md:flex-row md:justify-between md:gap-20">
                 <FormTextArea
                     className=""
                     label={t(target + 'originalSynopsis.label')}
