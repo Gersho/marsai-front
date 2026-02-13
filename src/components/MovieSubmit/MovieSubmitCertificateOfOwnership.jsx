@@ -10,7 +10,6 @@ function MovieCertificateOfOwnership() {
       <FormSectionTitle
         className=""
         text={t(target + 'title')} />
-      {/* <h2>{t(target + 'title')}</h2> */}
       <p className=''>
         {t(target + 'paragraph')}
       </p>

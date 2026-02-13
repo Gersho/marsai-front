@@ -59,10 +59,8 @@ function MovieSubmitDeclaration({ form }) {
               name="ai-classification"
               value={true}
               {...form.register('isHybrid', { required: t(errors + 'requiredRadio') })}
-
             ></input>
           </label>
-
         </div>
 
         <FormErrors
@@ -71,9 +69,7 @@ function MovieSubmitDeclaration({ form }) {
           name="isHybrid"
         />
       </div>
-
       <div className="flex flex-col items-center md:flex-row w-full md:justify-between md:gap-20">
-
         <FormTextArea
           className=""
           label={t(target + 'aiTools.label')}

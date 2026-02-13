@@ -25,8 +25,8 @@ function InputImage({
     validation = { required: false }
   }
 
-
-  const { onChange: onFormChange, onBlur, ref } = register(name, validation);
+  const { onChange: onFormChange, onBlur, ref } = register(name);
+  // const { onChange: onFormChange, onBlur, ref } = register(name, validation);
 
   function handlePreview(e) {
     onFormChange(e);
