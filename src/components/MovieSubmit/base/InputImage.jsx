@@ -52,7 +52,7 @@ function InputImage({
       {preview ? (
         <div className="relative group w-fit">
           <img
-            className={`object-cover rounded-xl outline-2 outline-dashed outline-zinc-300 ${className}`}
+            className={`rounded-xl outline-2 outline-dashed outline-zinc-300 ${className}`}
             src={preview}
             alt="preview"
           />

@@ -45,7 +45,7 @@ function MovieSubmitDeliverables({ form }) {
         <div className="flex flex-col justify-center items-center gap-3 w-full">
           <p className="">{t(target + 'coverImage.header')}</p>
           <InputImage
-            className="aspect-video w-full max-w-sm"
+            className="aspect-video w-full max-w-sm object-scale-down"
             label={t(target + 'coverImage.label')}
             id="poster"
             name="coverImage"
@@ -60,21 +60,21 @@ function MovieSubmitDeliverables({ form }) {
           <p>{t(target + 'stills.header')}</p>
           <div className="flex justify-center items-center gap-3">
             <InputImage
-              className="aspect-3/4 w-20 justify-center"
+              className="aspect-3/4 w-20 justify-center object-cover"
               label={t(target + 'stills.stillA')}
               id="still-image-a"
               name="stillImageA"
               form={form}
             />
             <InputImage
-              className="aspect-3/4 w-20 justify-center"
+              className="aspect-3/4 w-20 justify-center object-cover"
               label={t(target + 'stills.stillB')}
               id="still-image-b"
               name="stillImageB"
               form={form}
             />
             <InputImage
-              className="aspect-3/4 w-20 justify-center"
+              className="aspect-3/4 w-20 justify-center object-cover"
               label={t(target + 'stills.stillC')}
               id="still-image-c"
               name="stillImageC"

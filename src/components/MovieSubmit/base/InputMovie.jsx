@@ -48,7 +48,7 @@ function InputMovie({
                     <video
                         className={`rounded-xl outline-2 outline-dashed outline-zinc-300 aspect-video object-scale-down w-full max-w-sm`}
                         src={preview}
-                        autoPlay
+                        controls
                         alt="preview"
                     />
                     <button
@@ -67,7 +67,7 @@ function InputMovie({
                 <div className="md:self-center flex flex-col gap-2 items-center w-full">
                     <p>{t(target + 'label')}</p>
                     <label
-                        className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl outline-2 outline-zinc-300 outline-dashed hover:bg-zinc-900 focus-within:bg-zinc-900 cursor-pointer w-1/2 h-44"
+                        className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl outline-2 outline-zinc-300 outline-dashed hover:bg-zinc-900 focus-within:bg-zinc-900 cursor-pointer w-5/6 md:w-1/2 h-44"
                         htmlFor="form-movie-upload">
 
                         <div className='flex flex-col items-center '>
