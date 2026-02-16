@@ -4,6 +4,7 @@ import Login from './components/Login';
 import GaleryPage from './pages/GaleryPage';
 import HomePage from './pages/HomePage';
 import { Routes, Route } from 'react-router-dom';
+import SubmitMoviePage from './pages/SubmitMoviePage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<GaleryPage />} />
+        <Route path="/submit" element={<SubmitMoviePage />} />{' '}
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />

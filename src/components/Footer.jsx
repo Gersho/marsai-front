@@ -17,12 +17,15 @@ const Footer = () => {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-20">
           <div className="space-y-6 text-center lg:text-left">
-            <div className="inline-block text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
+            {/* Badge Logo MARS.A.I */}
+            <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
               <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
             <p className=" text-white text-sm leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-4">
               {t('footer.description')}
             </p>
+
+            {/* Icônes Réseaux Sociaux */}
             <div className="flex justify-center lg:justify-start space-x-4 pt-2">
               <a
                 href="#"
@@ -64,7 +67,7 @@ const Footer = () => {
                 type="submit"
                 className="bg-accent text-white rounded-full px-6 py-3 font-bold text-xs uppercase"
               >
-                {t('footer.subscribe')}
+                S&apos;inscrire
               </button>
             </form>
           </div>
@@ -83,7 +86,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div>{t('footer.copyright')}</div>
+          <div>© 2025 MARS.A.I</div>
         </div>
       </div>
     </footer>

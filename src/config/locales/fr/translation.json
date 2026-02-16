@@ -164,5 +164,221 @@
     "press": "Presse",
     "contact": "Contact",
     "copyright": "© 2025 MARS.A.I"
+  },
+  "submitMovieForm": {
+    "page": {
+      "titlePart1": "Appel à Projets 2026",
+      "titlePart2": "soumettre un film",
+      "paragraph": "Transmettez les éléments techniques, l'usage de l'IA et la composition de votre équipe. Tous les champs marqués d'une étoile (*) sont obligatoires.",
+      "submitButton": "finaliser ma soumission"
+    },
+    "info": {
+      "title": "01. Identité du film",
+      "originalTitle": {
+        "label": "Titre original *",
+        "title": "Titre original"
+      },
+      "englishTitle": {
+        "label": "Traduction anglaise *",
+        "title": "Traduction anglaise"
+      },
+      "duration": {
+        "label": "Dureé exacte * (en secondes)",
+        "title": "Dureé exacte (en secondes)"
+      },
+      "language": {
+        "label": "Langue parlée/Principale du film *",
+        "placeholder": "Langue",
+        "title": "Langue parlée ou Principale du film"
+      },
+      "originalSynopsis": {
+        "label": "Synopsis langue originale *",
+        "placeholder": "Résumez l'intention de votre film et l'histoire qu'il raconte en quelques lignes...",
+        "title": "synopsis langue originale (max. 300 caractères)"
+      },
+
+      "englishSynopsis": {
+        "label": "Synopsis anglais *",
+        "placeholder": "Traduction en anglais du synopsis",
+        "title": "synopsis anglais (max. 300 caractères)"
+      }
+    },
+    "declaration": {
+      "title": "02. Déclaration Usage de l'IA",
+      "paragraph": "MARS.A.I exige une transparence totale sur l'utilisation de l'Intelligence Artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.",
+      "isHybrid": {
+        "title": "Classification de l'Œuvre :* Choix exclusif entre :",
+        "false": ["Génération intégrale", "(100% IA)"],
+        "true": ["Production hybride", "(Prises de vues réelles + apports IA)"]
+      },
+      "aiTools": {
+        "label": "Stack Technologique *",
+        "placeholder": "Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)",
+        "title": "Stack Technologique (max. 500 caractères)"
+      },
+      "creativeProcess": {
+        "label": "Méthodologie Créative *",
+        "placeholder": "Décrivez l'interaction entre l'humain et la machine dans ce processus..",
+        "title": "Méthodologie Créative (max. 500 caractères)"
+      }
+    },
+    "deliverables": {
+      "title": "03. Livrables & Accessibilité",
+      "video": {
+        "label": "Ajout du film *",
+        "title": "Ajout du film"
+      },
+      "hasSubs": {
+        "header": "Sous-titres (.srt)",
+        "label": "La video contient des sous titres incrustés",
+        "title": "Est-ce que la video contient des sous titres incrustés"
+      },
+      "coverImage": {
+        "header": "Vignette Officielle (16:9) *",
+        "label": "Vignette Officielle (16:9) *",
+        "description": "Cliquez pour upload",
+        "subDescription": "PNG ou JPG • Max 15Mo"
+      },
+      "stills": {
+        "header": "Galerie Médias (Stills - Max 3)",
+        "stillA": "Galerie Médias premiere image",
+        "stillB": "Galerie Médias deuxieme image",
+        "stillC": "Galerie Médias troisieme image"
+      }
+    },
+    "teamComposition": {
+      "title": "04. Composition de l'Équipe",
+      "director": {
+        "header": "Realisateur:",
+        "gender": {
+          "label": "civilité *",
+          "mr": "Mr.",
+          "mrs": "Mme.",
+          "mx": "Mx."
+        },
+        "firstname": {
+          "label": "Prenom *",
+          "placeholder": "Prenom",
+          "title": "Prenom du realisateur"
+        },
+        "lastname": {
+          "label": "Nom *",
+          "placeholder": "Nom",
+          "title": "Nom du realisateur"
+        },
+        "job": {
+          "label": "métier actuel *",
+          "title": "métier actuel du realisateur"
+        },
+        "birthdate": {
+          "label": "date de naissance *",
+          "title": "date de naissance du realisateur"
+        },
+        "email": {
+          "label": "email *",
+          "placeholder": "exemple@gmail.com",
+          "title": "email du realisateur"
+        },
+        "phone": {
+          "label": "Telephone *",
+          "placeholder": "0102030405",
+          "title": "Numero de telephone du realisateur"
+        },
+        "address": {
+          "label": "Addresse *",
+          "title": "Addresse postale du directeur"
+        },
+        "city": {
+          "label": "Ville *",
+          "title": "Ville du directeur"
+        },
+        "zipcode": {
+          "label": "Code Postal",
+          "title": "Code Postal du realisateur"
+        },
+        "region": {
+          "label": "Region",
+          "title": "Region du directeur"
+        },
+        "country": {
+          "label": "Pays *",
+          "title": "Pays du realisateur"
+        },
+        "socials": "Présence en ligne:",
+        "facebook": {
+          "label": "Facebook",
+          "title": "facebook du directeur"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "title": "instagram du realisateur"
+        },
+        "youtube": {
+          "label": "Youtube",
+          "title": "Youtube du directeur"
+        },
+        "linkedin": {
+          "label": "LinkedIn",
+          "title": "Linkedin du directeur"
+        },
+        "twitter": {
+          "label": "Twitter",
+          "title": "twitter du directeur"
+        }
+      },
+      "collaborators": {
+        "header": "Collaborateurs:",
+        "button": "+ ajouter collaborateur"
+      },
+      "newCollaborator": {
+        "remove": "Retirer le collaborateur",
+        "gender": {
+          "label": "civilité *",
+          "mr": "Mr.",
+          "mrs": "Mme.",
+          "mx": "Mx."
+        },
+        "firstname": {
+          "label": "Prenom *",
+          "placeholder": "Prenom",
+          "title": "Prenom du collaborateur"
+        },
+        "lastname": {
+          "label": "Nom *",
+          "placeholder": "Nom",
+          "title": "Nom du collaborateur"
+        },
+        "contribution": {
+          "label": "Contribution *",
+          "title": "Contribution du collaborateur"
+        },
+        "email": {
+          "label": "email *",
+          "placeholder": "exemple@gmail.com",
+          "title": "email du collaborateur"
+        }
+      }
+    },
+    "certificate": {
+      "title": "Certificat de Propriété",
+      "paragraph": "En soumettant ce dossier, vous certifiez sur l'honneur être l'auteur original de l'œuvre et détenir l'intégralité des droits de diffusion. Vous acceptez que MARS.A.I utilise ces éléments pour la promotion du festival."
+    },
+    "formErrors": {
+      "required": "Ce champ est obligatoire",
+      "requiredRadio": "Veuillez choisir une option",
+      "minLength3": "Au moins 3 caracteres",
+      "minLength5": "Au moins 5 caracteres",
+      "maxLength20": "Maximum 20 caracteres",
+      "maxLength50": "Maximum 50 caracteres",
+      "maxLength100": "Maximum 100 caracteres",
+      "maxLength255": "Maximum 255 caracteres",
+      "maxLength300": "Maximum 300 caracteres",
+      "maxLength500": "Maximum 500 caracteres",
+      "validPhone": "Entrez le numero sans espace ni separateur",
+      "validEmail": "Entrez un email valide",
+      "digitsOnly": "Chiffres uniquement",
+      "minDuration": "Minimum 1 sec",
+      "maxDuration": "Maximum 90 sec"
+    }
   }
 }

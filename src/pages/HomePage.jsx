@@ -1,4 +1,5 @@
 import SectionProjet from '../components/Projet';
+
 import Hero from '../components/Hero';
 import FilmsCompetition from '../components/FilmsCompet';
 import FormatSelection from '../components/FormatSelection';
