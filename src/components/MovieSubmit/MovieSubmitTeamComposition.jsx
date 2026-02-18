@@ -24,8 +24,8 @@ function MovieSubmitTeamComposition({ form }) {
       email: '',
       contribution: '',
     });
-    console.log(fields);
   }
+
   return (
     <FormSection className="bg-primary text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
