@@ -1,27 +1,30 @@
 import { useFieldArray, useForm } from 'react-hook-form';
 import { useApi } from '../../hooks/useApi';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { FaPlus } from 'react-icons/fa';
 import JuryFormInput from './base/JuryFormInput';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
-function JuryForm({ toggleVisible }) {
-  //TODO fix id names
+function JuryForm({ onSuccess, toggleVisible }) {
   const form = useForm();
   const api = useApi();
-
+  const { setError } = form;
+  const {
+    formState: { isSubmitting },
+  } = form;
   const { fields, append, remove } = useFieldArray({
     name: 'juries',
     control: form.control,
   });
 
-  function addJury() {
+  const addJury = useCallback(() => {
     append({
       email: '',
       firstname: '',
       lastname: '',
     });
-  }
+  }, [append]);
 
   async function onSubmit(data) {
     console.log('data: ', data);
@@ -30,14 +33,26 @@ function JuryForm({ toggleVisible }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
-    if (res) {
-      console.log('res body: ', await res.json());
+    if (res.ok) {
+      onSuccess();
+      toggleVisible();
+    } else if (res.status === 409) {
+      const body = await res.json();
+      const email = body.error.value;
+      const index = data.juries.findIndex(jury => jury.email === email);
+
+      if (index != -1) {
+        setError(`juries.${index}.email`, {
+          type: 'server',
+          message: body.message,
+        });
+      }
     }
   }
 
   useEffect(() => {
     addJury();
-  }, []);
+  }, [addJury]);
 
   return (
     <div className="fixed left-0 top-0 h-full w-full flex items-center justify-center bg-neutral-900/5 backdrop-blur-xs">
@@ -75,10 +90,15 @@ function JuryForm({ toggleVisible }) {
             </div>
           </button>
           <button
-            className="bg-accent/90 hover:bg-accent cursor-pointer rounded-md px-4 py-2 w-3/4"
+            className="flex justify-center items-center bg-accent/90 hover:bg-accent cursor-pointer rounded-md px-4 py-2 w-3/4 disabled:bg-primary"
             type="submit"
+            disabled={isSubmitting}
           >
-            Save
+            {isSubmitting ? (
+              <AiOutlineLoading3Quarters className="animate-spin size-6" />
+            ) : (
+              'Save'
+            )}
           </button>
         </div>
       </form>
