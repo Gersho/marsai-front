@@ -3,8 +3,7 @@ import { useCallback } from 'react';
 
 export const useApi = () => {
   const navigate = useNavigate();
-  // TODO replace with env
-  const baseUrl = `http://localhost:5000`;
+  const baseUrl = import.meta.env.VITE_SERVER_ADDRESS;
 
   const fetchApi = useCallback(async (path, init = {}) => {
     try {
