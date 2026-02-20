@@ -10,13 +10,20 @@ function GalleryPage() {
   const target = 'gallery.page.';
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const [fullAi, setFullAi] = useState(1);
+  const [hybrid, setHybrid] = useState(1);
+  const [search, setSearch] = useState("");
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
     async function getMovieData() {
       try {
-        console.log("Loading page" + page);
-        const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + 'movies/?page=' + page, {
+        if (!fullAi && !hybrid) { console.log("abort"); }
+        const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS
+          + 'movies/?page=' + page
+          + '&fullAi=' + fullAi
+          + '&hybrid=' + hybrid
+          + '&search=' + search, {
           method: 'GET'
         });
         const json = await res.json();
@@ -32,7 +39,7 @@ function GalleryPage() {
       }
     }
     getMovieData();
-  }, [page]);
+  }, [page, fullAi, hybrid, search]);
 
   return (
     <div>
@@ -48,8 +55,37 @@ function GalleryPage() {
           </div>
         </div>
 
-        {/* <LanguagePicker /> */}
-        <p>MOVIE COUNT: {total}</p>
+        <form
+          className='border rounded-md border-white flex flex-row p-4 mb-8 gap-x-10'
+          action="">
+          <div className='min-w-fit'>
+            {/* <p>Classification</p> */}
+            <div className=''>
+              <input type="checkbox" id="hybrid" name="hybrid"
+                onChange={() => hybrid === 1 ? setHybrid(0) : setHybrid(1)}
+                defaultChecked />
+              <label htmlFor="hybrid">Hybrid</label>
+            </div>
+            <div>
+              <input type="checkbox" id="fullai" name="fullai"
+                onChange={() => fullAi === 1 ? setFullAi(0) : setFullAi(1)}
+                defaultChecked />
+              <label htmlFor="fullai">Full-IA</label>
+            </div>
+          </div>
+          <div className="pt-2">
+            <label htmlFor="searchbar" hidden>{t(target + 'search')}</label>
+            <input
+              className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 border-0 focus:outline-neutral-100"
+              id="searchbar"
+              type="text"
+              placeholder="..."
+              onChange={(e) => setSearch(e.target.value)}
+              title={t(target + 'search')}
+            ></input>
+          </div>
+        </form>
+
         <div className='flex flex-col gap-y-6 gap-x-4 items-center pb-6 sm:flex-row sm:w-11/12 sm:flex-wrap sm:justify-evenly sm:flex-start'>
 
           {
