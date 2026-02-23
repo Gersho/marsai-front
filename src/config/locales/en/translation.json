@@ -385,5 +385,18 @@
       "maxDuration": "Maximum 90 sec",
       "mustBeAdult": "You must be 18 to participate."
     }
+  },
+    "gallery": {
+    "page": {
+      "titlePart1": "Movie",
+      "titlePart2": "Gallery",
+      "paragraph": "Explore the entire official selection. Unique visions, pioneering short films created with Artificial Intelligence.",
+      "search": "Searchbar",
+      "searchPlaceholder" : "Search...",
+      "videoClassification" : "Video classification",
+      "all": "All",
+      "hybridOnly": "Hybrid only",
+      "fullAIOnly": "Full-AI only"
+    }
   }
 }

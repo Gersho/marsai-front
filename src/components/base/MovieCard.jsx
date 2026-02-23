@@ -45,11 +45,11 @@ function MovieCard({ data }) {
         </span>
       </div>
 
-      <div className="px-1 ">
+      <div className="px-2 pt-1">
         <div className="flex flex-row justify-between ">
           <div className="flex flex-col  min-w-0 max-w-100">
             <p
-              className="text-md font-bold truncate"
+              className="text-md font-bold truncate "
               title={data.english_title}
             >
               {english_title}
@@ -61,10 +61,10 @@ function MovieCard({ data }) {
         </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-col min-w-0 max-w-100">
-            <p className="text-xs truncate">{director}</p>
+            <p className="text-xs truncate pt-1">{director}</p>
           </div>
-          <div className="flex flex-col">
-            <p
+          <div className="flex flex-col ">
+            <p className='text-xl pb-2'
               title={i18n.language === 'fr' ? language.textFr : language.textEn}
             >
               {language.icon}{' '}

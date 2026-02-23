@@ -388,7 +388,12 @@
       "titlePart1": "La Galerie",
       "titlePart2": "des films",
       "paragraph": "Explorez l'intégralité de la sélection officielle. Des visions uniques, des courts-métrages pionniers créés avec l'Intelligence Artificielle.",
-      "search": "Barre de recherche"
+      "search": "Barre de recherche",
+      "searchPlaceholder" : "Rechercher...",
+      "videoClassification" : "Classification de la video",
+      "all": "Toutes",
+      "hybridOnly": "Hybride uniquement",
+      "fullAIOnly": "100% IA uniquement"
     }
   }
 }

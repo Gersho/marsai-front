@@ -24,7 +24,7 @@ function PaginationMenu({ page, setPage, total, perPage = 20 }) {
       {page !== 1 ? (
         <div
           onClick={decrementPage}
-          className="border border-sm rounded-md min-w-10 text-center pt-1 bg-primary"
+          className="border-2 border-sm rounded-md min-w-10 text-center pt-1 bg-primary"
         >
           {' '}
           {page - 1}{' '}
@@ -32,14 +32,14 @@ function PaginationMenu({ page, setPage, total, perPage = 20 }) {
       ) : (
         <></>
       )}
-      <div className="border border-sm rounded-md min-w-10 text-center pt-1 bg-accent">
+      <div className="border-2 border-sm rounded-md min-w-10 text-center pt-1 bg-accent">
         {' '}
         {page}{' '}
       </div>
       {page * perPage < total ? (
         <div
           onClick={incrementPage}
-          className="border border-sm rounded-md min-w-10 text-center pt-1 bg-primary"
+          className="border-2 border-sm rounded-md min-w-10 text-center pt-1 bg-primary"
         >
           {' '}
           {page + 1}{' '}

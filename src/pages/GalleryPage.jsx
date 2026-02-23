@@ -4,6 +4,8 @@ import MovieCard from '../components/base/MovieCard';
 import TopPage from '../components/base/TopPage';
 import { useTranslation } from 'react-i18next';
 import PaginationMenu from '../components/base/PaginationMenu';
+import { useDebouncedCallback } from "use-debounce";
+
 
 function GalleryPage() {
   const { t } = useTranslation();
@@ -14,6 +16,11 @@ function GalleryPage() {
   const [type, setType] = useState('all');
   const [search, setSearch] = useState('');
   const [movieData, setMovieData] = useState([]);
+  const debounced = useDebouncedCallback((e) => {
+    setSearch(e);
+    setIsPageChange(false);
+  }, 500);
+
 
   useEffect(() => {
     async function getMovieData() {
@@ -24,12 +31,12 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-            'movies/?page=' +
-            page +
-            '&type=' +
-            type +
-            '&search=' +
-            search,
+          'movies/?page=' +
+          page +
+          '&type=' +
+          type +
+          '&search=' +
+          search,
           {
             method: 'GET',
           }
@@ -64,18 +71,18 @@ function GalleryPage() {
         </div>
 
         <form
-          className="border rounded-md border-white flex flex-row p-4 mb-8 gap-x-10"
+          className="border rounded-md border-white flex flex-row  px-4 pb-4 pt-2 mb-8 gap-x-10"
           action=""
         >
           {/* <p>Classification</p> */}
 
           <div>
             <label htmlFor="type" hidden>
-              Video classification
+              {t(target + 'videoClassification')}
             </label>
 
             <select
-              className="w-fit  bg-secondary px-2 pt-2 pb-1.5 rounded-md border border-zinc-200"
+              className="w-fit outline-2  bg-secondary px-2 py-2 rounded-md mt-2 border-0 border-zinc-200"
               onChange={e => {
                 setType(e.target.value);
                 setIsPageChange(false);
@@ -83,9 +90,9 @@ function GalleryPage() {
               name="type"
               id="type"
             >
-              <option value="all">All</option>
-              <option value="hybrid">Hybrid Only</option>
-              <option value="fullai">Full-AI Only</option>
+              <option value="all">{t(target + 'all')}</option>
+              <option value="hybrid">{t(target + 'hybridOnly')}</option>
+              <option value="fullai">{t(target + 'fullAIOnly')}</option>
             </select>
           </div>
 
@@ -94,13 +101,12 @@ function GalleryPage() {
               {t(target + 'search')}
             </label>
             <input
-              className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 border-0 focus:outline-neutral-100"
+              className="outline-2 rounded-sm pl-2 py-1.5 border-0  focus:outline-neutral-100"
               id="searchbar"
               type="text"
-              placeholder="..."
+              placeholder={t(target + 'searchPlaceholder')}
               onChange={e => {
-                setSearch(e.target.value);
-                setIsPageChange(false);
+                debounced(e.target.value);
               }}
               title={t(target + 'search')}
             ></input>
