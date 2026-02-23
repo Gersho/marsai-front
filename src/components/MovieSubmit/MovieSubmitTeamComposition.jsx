@@ -24,8 +24,8 @@ function MovieSubmitTeamComposition({ form }) {
       email: '',
       contribution: '',
     });
-    console.log(fields);
   }
+
   return (
     <FormSection className="bg-primary text-zinc-200">
       <FormSectionTitle text={t(target + 'title')} />
@@ -131,7 +131,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           validation={{
             required: t(errors + 'required'),
-            validate: (value) => {
+            validate: value => {
               let now = Date.now();
               value = Date.parse(value);
               let age = new Date(now - value).getFullYear() - 1970;
@@ -139,10 +139,7 @@ function MovieSubmitTeamComposition({ form }) {
                 return t(errors + 'mustBeAdult');
               }
               return true;
-
             },
-
-
           }}
         />
       </div>
