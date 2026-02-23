@@ -383,8 +383,8 @@
       "mustBeAdult": "Minimum 18 ans pour participer."
     }
   },
-  "gallery":{
-    "page":{
+  "gallery": {
+    "page": {
       "titlePart1": "La Galerie",
       "titlePart2": "des films",
       "paragraph": "Explorez l'intégralité de la sélection officielle. Des visions uniques, des courts-métrages pionniers créés avec l'Intelligence Artificielle.",

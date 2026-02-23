@@ -9,28 +9,37 @@ function GalleryPage() {
   const { t } = useTranslation();
   const target = 'gallery.page.';
   const [page, setPage] = useState(1);
+  const [isPageChange, setIsPageChange] = useState(false);
   const [total, setTotal] = useState(0);
-  const [fullAi, setFullAi] = useState(1);
-  const [hybrid, setHybrid] = useState(1);
-  const [search, setSearch] = useState("");
+  const [type, setType] = useState('all');
+  const [search, setSearch] = useState('');
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
     async function getMovieData() {
       try {
-        if (!fullAi && !hybrid) { console.log("abort"); }
-        const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS
-          + 'movies/?page=' + page
-          + '&fullAi=' + fullAi
-          + '&hybrid=' + hybrid
-          + '&search=' + search, {
-          method: 'GET'
-        });
+        if (!isPageChange) {
+          setPage(1);
+          setIsPageChange(true);
+        }
+        const res = await fetch(
+          import.meta.env.VITE_SERVER_ADDRESS +
+            'movies/?page=' +
+            page +
+            '&type=' +
+            type +
+            '&search=' +
+            search,
+          {
+            method: 'GET',
+          }
+        );
         const json = await res.json();
         if (res.ok) {
           console.log(json);
           setMovieData(json.data);
           setTotal(json.total);
+          return json;
         } else {
           console.log(json);
         }
@@ -39,7 +48,7 @@ function GalleryPage() {
       }
     }
     getMovieData();
-  }, [page, fullAi, hybrid, search]);
+  }, [page, type, search, isPageChange]);
 
   return (
     <div>
@@ -48,7 +57,6 @@ function GalleryPage() {
         <h1 className="text-accent">{t(target + 'titlePart2')}</h1>
       </TopPage>
       <div className="text-white flex flex-col items-center">
-
         <div className="pb-5 pt-5 flex flex-col items-center">
           <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
             <p>{t(target + 'paragraph')}</p>
@@ -56,51 +64,61 @@ function GalleryPage() {
         </div>
 
         <form
-          className='border rounded-md border-white flex flex-row p-4 mb-8 gap-x-10'
-          action="">
-          <div className='min-w-fit'>
-            {/* <p>Classification</p> */}
-            <div className=''>
-              <input type="checkbox" id="hybrid" name="hybrid"
-                onChange={() => hybrid === 1 ? setHybrid(0) : setHybrid(1)}
-                defaultChecked />
-              <label htmlFor="hybrid">Hybrid</label>
-            </div>
-            <div>
-              <input type="checkbox" id="fullai" name="fullai"
-                onChange={() => fullAi === 1 ? setFullAi(0) : setFullAi(1)}
-                defaultChecked />
-              <label htmlFor="fullai">Full-IA</label>
-            </div>
+          className="border rounded-md border-white flex flex-row p-4 mb-8 gap-x-10"
+          action=""
+        >
+          {/* <p>Classification</p> */}
+
+          <div>
+            <label htmlFor="type" hidden>
+              Video classification
+            </label>
+
+            <select
+              className="w-fit  bg-secondary px-2 pt-2 pb-1.5 rounded-md border border-zinc-200"
+              onChange={e => {
+                setType(e.target.value);
+                setIsPageChange(false);
+              }}
+              name="type"
+              id="type"
+            >
+              <option value="all">All</option>
+              <option value="hybrid">Hybrid Only</option>
+              <option value="fullai">Full-AI Only</option>
+            </select>
           </div>
+
           <div className="pt-2">
-            <label htmlFor="searchbar" hidden>{t(target + 'search')}</label>
+            <label htmlFor="searchbar" hidden>
+              {t(target + 'search')}
+            </label>
             <input
               className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 border-0 focus:outline-neutral-100"
               id="searchbar"
               type="text"
               placeholder="..."
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={e => {
+                setSearch(e.target.value);
+                setIsPageChange(false);
+              }}
               title={t(target + 'search')}
             ></input>
           </div>
         </form>
 
-        <div className='flex flex-col gap-y-6 gap-x-4 items-center pb-6 sm:flex-row sm:w-11/12 sm:flex-wrap sm:justify-evenly sm:flex-start'>
-
-          {
-            movieData.map((e, index) => (
-              <MovieCard
-                key={index}
-                data={e}
-              />
-            ))
-          }
+        <div className="flex flex-col gap-y-6 gap-x-4 items-center pb-6 sm:flex-row sm:w-11/12 sm:flex-wrap sm:justify-evenly sm:flex-start">
+          {movieData.map((e, index) => (
+            <MovieCard key={index} data={e} />
+          ))}
         </div>
-        <PaginationMenu total={total} page={page} setPage={setPage} />
+        <PaginationMenu
+          total={total}
+          page={page}
+          setPage={setPage}
+          setIsPageChange={setIsPageChange}
+        />
       </div>
-
-
     </div>
   );
 }
