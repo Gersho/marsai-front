@@ -1,59 +1,297 @@
 const languages = [
-  { lang: 'FR', text: 'Français', icon: '🇫🇷' },
-  { lang: 'EN', text: 'English', icon: '🇬🇧' },
-  { lang: 'SQ', text: 'Shqip', icon: '🇦🇱' }, // Albanian
-  { lang: 'AM', text: 'አማርኛ', icon: '🇪🇹' }, // Amharic
-  { lang: 'AR', text: 'العربية', icon: '🇸🇦' }, // Arabic
-  { lang: 'HY', text: 'Հայերեն', icon: '🇦🇲' }, // Armenian
-  { lang: 'AZ', text: 'Azərbaycan dili', icon: '🇦🇿' }, // Azerbaijani
-  { lang: 'BN', text: 'বাংলা', icon: '🇧🇩' }, // Bengali
-  { lang: 'BS', text: 'Bosanski', icon: '🇧🇦' }, // Bosnian
-  { lang: 'BG', text: 'Български', icon: '🇧🇬' }, // Bulgarian
-  { lang: 'MY', text: 'မြန်မာဘာသာ', icon: '🇲🇲' }, // Burmese
-  { lang: 'ZH', text: '中文', icon: '🇨🇳' }, // Chinese (Mandarin)
-  { lang: 'HR', text: 'Hrvatski', icon: '🇭🇷' }, // Croatian
-  { lang: 'CS', text: 'Čeština', icon: '🇨🇿' }, // Czech
-  { lang: 'NL', text: 'Nederlands', icon: '🇳🇱' }, // Dutch
-  { lang: 'EN', text: 'English', icon: '🇬🇧' }, // English
-  { lang: 'FR', text: 'Français', icon: '🇫🇷' }, // French
-  { lang: 'DE', text: 'Deutsch', icon: '🇩🇪' }, // German
-  { lang: 'EL', text: 'Ελληνικά', icon: '🇬🇷' }, // Greek
-  { lang: 'GU', text: 'ગુજરાતી', icon: '🇮🇳' }, // Gujarati
-  { lang: 'HA', text: 'Hausa', icon: '🇳🇬' }, // Hausa
-  { lang: 'HE', text: 'עברית', icon: '🇮🇱' }, // Hebrew
-  { lang: 'HI', text: 'हिन्दी', icon: '🇮🇳' }, // Hindi
-  { lang: 'HU', text: 'Magyar', icon: '🇭🇺' }, // Hungarian
-  { lang: 'ID', text: 'Bahasa Indonesia', icon: '🇮🇩' }, // Indonesian
-  { lang: 'IG', text: 'Igbo', icon: '🇳🇬' }, // Igbo
-  { lang: 'IT', text: 'Italiano', icon: '🇮🇹' }, // Italian
-  { lang: 'JA', text: '日本語', icon: '🇯🇵' }, // Japanese
-  { lang: 'JV', text: 'Basa Jawa', icon: '🇮🇩' }, // Javanese
-  { lang: 'KN', text: 'ಕನ್ನಡ', icon: '🇮🇳' }, // Kannada
-  { lang: 'KK', text: 'Қазақ тілі', icon: '🇰🇿' }, // Kazakh
-  { lang: 'KM', text: 'ខ្មែរ', icon: '🇰🇭' }, // Khmer
-  { lang: 'KO', text: '한국어', icon: '🇰🇷' }, // Korean
-  { lang: 'MS', text: 'Bahasa Melayu', icon: '🇲🇾' }, // Malay
-  { lang: 'ML', text: 'മലയാളം', icon: '🇮🇳' }, // Malayalam
-  { lang: 'MR', text: 'मराठी', icon: '🇮🇳' }, // Marathi
-  { lang: 'NE', text: 'नेपाली', icon: '🇳🇵' }, // Nepali
-  { lang: 'FA', text: 'فارسی', icon: '🇮🇷' }, // Persian
-  { lang: 'PL', text: 'Polski', icon: '🇵🇱' }, // Polish
-  { lang: 'PT', text: 'Português', icon: '🇵🇹' }, // Portuguese
-  { lang: 'PA', text: 'ਪੰਜਾਬੀ', icon: '🇮🇳' }, // Punjabi
-  { lang: 'RO', text: 'Română', icon: '🇷🇴' }, // Romanian
-  { lang: 'RU', text: 'Русский', icon: '🇷🇺' }, // Russian
-  { lang: 'SR', text: 'Српски', icon: '🇷🇸' }, // Serbian
-  { lang: 'SI', text: 'සිංහල', icon: '🇱🇰' }, // Sinhala
-  { lang: 'ES', text: 'Español', icon: '🇪🇸' }, // Spanish
-  { lang: 'SW', text: 'Kiswahili', icon: '🇹🇿' }, // Swahili
-  { lang: 'TA', text: 'தமிழ்', icon: '🇮🇳' }, // Tamil
-  { lang: 'TE', text: 'తెలుగు', icon: '🇮🇳' }, // Telugu
-  { lang: 'TH', text: 'ไทย', icon: '🇹🇭' }, // Thai
-  { lang: 'TR', text: 'Türkçe', icon: '🇹🇷' }, // Turkish
-  { lang: 'UK', text: 'Українська', icon: '🇺🇦' }, // Ukrainian
-  { lang: 'UR', text: 'اردو', icon: '🇵🇰' }, // Urdu
-  { lang: 'VI', text: 'Tiếng Việt', icon: '🇻🇳' }, // Vietnamese
-  { lang: 'YO', text: 'Yorùbá', icon: '🇳🇬' }, // Yoruba
+  {
+    lang: 'FR',
+    text: 'Français',
+    icon: '🇫🇷',
+    textFr: 'France',
+    textEn: 'France',
+  },
+  {
+    lang: 'EN',
+    text: 'English',
+    icon: '🇬🇧',
+    textFr: 'Royaume-Uni',
+    textEn: 'United Kingdom',
+  },
+  {
+    lang: 'SQ',
+    text: 'Shqip',
+    icon: '🇦🇱',
+    textFr: 'Albanie',
+    textEn: 'Albania',
+  },
+  {
+    lang: 'AM',
+    text: 'አማርኛ',
+    icon: '🇪🇹',
+    textFr: 'Éthiopie',
+    textEn: 'Ethiopia',
+  },
+  {
+    lang: 'AR',
+    text: 'العربية',
+    icon: '🇸🇦',
+    textFr: 'Arabie saoudite',
+    textEn: 'Saudi Arabia',
+  },
+  {
+    lang: 'HY',
+    text: 'Հայերեն',
+    icon: '🇦🇲',
+    textFr: 'Arménie',
+    textEn: 'Armenia',
+  },
+  {
+    lang: 'AZ',
+    text: 'Azərbaycan dili',
+    icon: '🇦🇿',
+    textFr: 'Azerbaïdjan',
+    textEn: 'Azerbaijan',
+  },
+  {
+    lang: 'BN',
+    text: 'বাংলা',
+    icon: '🇧🇩',
+    textFr: 'Bangladesh',
+    textEn: 'Bangladesh',
+  },
+  {
+    lang: 'BS',
+    text: 'Bosanski',
+    icon: '🇧🇦',
+    textFr: 'Bosnie-Herzégovine',
+    textEn: 'Bosnia and Herzegovina',
+  },
+  {
+    lang: 'BG',
+    text: 'Български',
+    icon: '🇧🇬',
+    textFr: 'Bulgarie',
+    textEn: 'Bulgaria',
+  },
+  {
+    lang: 'MY',
+    text: 'မြန်မာဘာသာ',
+    icon: '🇲🇲',
+    textFr: 'Myanmar',
+    textEn: 'Myanmar',
+  },
+  { lang: 'ZH', text: '中文', icon: '🇨🇳', textFr: 'Chine', textEn: 'China' },
+  {
+    lang: 'HR',
+    text: 'Hrvatski',
+    icon: '🇭🇷',
+    textFr: 'Croatie',
+    textEn: 'Croatia',
+  },
+  {
+    lang: 'CS',
+    text: 'Čeština',
+    icon: '🇨🇿',
+    textFr: 'Tchéquie',
+    textEn: 'Czech Republic',
+  },
+  {
+    lang: 'NL',
+    text: 'Nederlands',
+    icon: '🇳🇱',
+    textFr: 'Pays-Bas',
+    textEn: 'Netherlands',
+  },
+  {
+    lang: 'DE',
+    text: 'Deutsch',
+    icon: '🇩🇪',
+    textFr: 'Allemagne',
+    textEn: 'Germany',
+  },
+  {
+    lang: 'EL',
+    text: 'Ελληνικά',
+    icon: '🇬🇷',
+    textFr: 'Grèce',
+    textEn: 'Greece',
+  },
+  { lang: 'GU', text: 'ગુજરાતી', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  {
+    lang: 'HA',
+    text: 'Hausa',
+    icon: '🇳🇬',
+    textFr: 'Nigéria',
+    textEn: 'Nigeria',
+  },
+  { lang: 'HE', text: 'עברית', icon: '🇮🇱', textFr: 'Israël', textEn: 'Israel' },
+  { lang: 'HI', text: 'हिन्दी', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  {
+    lang: 'HU',
+    text: 'Magyar',
+    icon: '🇭🇺',
+    textFr: 'Hongrie',
+    textEn: 'Hungary',
+  },
+  {
+    lang: 'ID',
+    text: 'Bahasa Indonesia',
+    icon: '🇮🇩',
+    textFr: 'Indonésie',
+    textEn: 'Indonesia',
+  },
+  {
+    lang: 'IG',
+    text: 'Igbo',
+    icon: '🇳🇬',
+    textFr: 'Nigéria',
+    textEn: 'Nigeria',
+  },
+  {
+    lang: 'IT',
+    text: 'Italiano',
+    icon: '🇮🇹',
+    textFr: 'Italie',
+    textEn: 'Italy',
+  },
+  { lang: 'JA', text: '日本語', icon: '🇯🇵', textFr: 'Japon', textEn: 'Japan' },
+  {
+    lang: 'JV',
+    text: 'Basa Jawa',
+    icon: '🇮🇩',
+    textFr: 'Indonésie',
+    textEn: 'Indonesia',
+  },
+  { lang: 'KN', text: 'ಕನ್ನಡ', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  {
+    lang: 'KK',
+    text: 'Қазақ тілі',
+    icon: '🇰🇿',
+    textFr: 'Kazakhstan',
+    textEn: 'Kazakhstan',
+  },
+  {
+    lang: 'KM',
+    text: 'ខ្មែរ',
+    icon: '🇰🇭',
+    textFr: 'Cambodge',
+    textEn: 'Cambodia',
+  },
+  {
+    lang: 'KO',
+    text: '한국어',
+    icon: '🇰🇷',
+    textFr: 'Corée du Sud',
+    textEn: 'South Korea',
+  },
+  {
+    lang: 'MS',
+    text: 'Bahasa Melayu',
+    icon: '🇲🇾',
+    textFr: 'Malaisie',
+    textEn: 'Malaysia',
+  },
+  { lang: 'ML', text: 'മലയാളം', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  { lang: 'MR', text: 'मराठी', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  { lang: 'NE', text: 'नेपाली', icon: '🇳🇵', textFr: 'Népal', textEn: 'Nepal' },
+  { lang: 'FA', text: 'فارسی', icon: '🇮🇷', textFr: 'Iran', textEn: 'Iran' },
+  {
+    lang: 'PL',
+    text: 'Polski',
+    icon: '🇵🇱',
+    textFr: 'Pologne',
+    textEn: 'Poland',
+  },
+  {
+    lang: 'PT',
+    text: 'Português',
+    icon: '🇵🇹',
+    textFr: 'Portugal',
+    textEn: 'Portugal',
+  },
+  { lang: 'PA', text: 'ਪੰਜਾਬੀ', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  {
+    lang: 'RO',
+    text: 'Română',
+    icon: '🇷🇴',
+    textFr: 'Roumanie',
+    textEn: 'Romania',
+  },
+  {
+    lang: 'RU',
+    text: 'Русский',
+    icon: '🇷🇺',
+    textFr: 'Russie',
+    textEn: 'Russia',
+  },
+  {
+    lang: 'SR',
+    text: 'Српски',
+    icon: '🇷🇸',
+    textFr: 'Serbie',
+    textEn: 'Serbia',
+  },
+  {
+    lang: 'SI',
+    text: 'සිංහල',
+    icon: '🇱🇰',
+    textFr: 'Sri Lanka',
+    textEn: 'Sri Lanka',
+  },
+  {
+    lang: 'ES',
+    text: 'Español',
+    icon: '🇪🇸',
+    textFr: 'Espagne',
+    textEn: 'Spain',
+  },
+  {
+    lang: 'SW',
+    text: 'Kiswahili',
+    icon: '🇹🇿',
+    textFr: 'Tanzanie',
+    textEn: 'Tanzania',
+  },
+  { lang: 'TA', text: 'தமிழ்', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  { lang: 'TE', text: 'తెలుగు', icon: '🇮🇳', textFr: 'Inde', textEn: 'India' },
+  {
+    lang: 'TH',
+    text: 'ไทย',
+    icon: '🇹🇭',
+    textFr: 'Thaïlande',
+    textEn: 'Thailand',
+  },
+  {
+    lang: 'TR',
+    text: 'Türkçe',
+    icon: '🇹🇷',
+    textFr: 'Turquie',
+    textEn: 'Turkey',
+  },
+  {
+    lang: 'UK',
+    text: 'Українська',
+    icon: '🇺🇦',
+    textFr: 'Ukraine',
+    textEn: 'Ukraine',
+  },
+  {
+    lang: 'UR',
+    text: 'اردو',
+    icon: '🇵🇰',
+    textFr: 'Pakistan',
+    textEn: 'Pakistan',
+  },
+  {
+    lang: 'VI',
+    text: 'Tiếng Việt',
+    icon: '🇻🇳',
+    textFr: 'Viêt Nam',
+    textEn: 'Vietnam',
+  },
+  {
+    lang: 'YO',
+    text: 'Yorùbá',
+    icon: '🇳🇬',
+    textFr: 'Nigéria',
+    textEn: 'Nigeria',
+  },
 ];
 
 export default languages;

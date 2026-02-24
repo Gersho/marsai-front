@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar';
 import Login from './components/Login';
-import GaleryPage from './pages/GaleryPage';
+import GalleryPage from './pages/GalleryPage';
 import HomePage from './pages/HomePage';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import SubmitMoviePage from './pages/SubmitMoviePage';
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/movies" element={<GaleryPage />} />
+          <Route path="/movies" element={<GalleryPage />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/login" element={<Login />} />
         </Route>
