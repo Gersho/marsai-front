@@ -388,5 +388,18 @@
       "maxSize15MB" : "Maximum file size 15MB",
       "maxSize300MB": "Maximum file size 300MB"
     }
+  },
+    "gallery": {
+    "page": {
+      "titlePart1": "Movie",
+      "titlePart2": "Gallery",
+      "paragraph": "Explore the entire official selection. Unique visions, pioneering short films created with Artificial Intelligence.",
+      "search": "Searchbar",
+      "searchPlaceholder" : "Search...",
+      "videoClassification" : "Video classification",
+      "all": "All",
+      "hybridOnly": "Hybrid only",
+      "fullAIOnly": "Full-AI only"
+    }
   }
 }
