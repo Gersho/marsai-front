@@ -14,7 +14,7 @@ function Card({
       className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
     >
       {icon && <div className="text-accent text-5xl pb-4">{icon}</div>}
-      <h3 className="pr-6 uppercase">{title}</h3>
+      <h3 className="pr-6 md:pr-0 uppercase">{title}</h3>
       {subtitle && (
         <h4 className="uppercase text-accent text-xs pb-4"> {subtitle} </h4>
       )}

@@ -2,33 +2,59 @@ import { AiFillThunderbolt } from 'react-icons/ai';
 import TitleSection from './base/TitleSection';
 import { useEffect, useState } from 'react';
 import { useApi } from '../hooks/useApi';
-import SecondaryButton from './base/SecondaryButton';
-function CardWorkshop({
-  time,
-  title,
-  text,
-  disponibility,
-  path,
-  className = '',
-}) {
+import { useFormatDate } from '../hooks/useFormatDate';
+import PrimaryButton from './base/PrimaryButton';
+import { useTranslation, Trans } from 'react-i18next';
+
+function CardWorkshop({ time, date, title, text, path, className = '' }) {
+  const { t } = useTranslation();
+  const fetchApi = useApi();
+  const [remainingSeats, setRemainingSeats] = useState(null);
+
+  useEffect(() => {
+    const fetchSeats = async () => {
+      try {
+        const response = await fetchApi(`/events/${path}/remaining-seats`);
+        if (response && response.ok) {
+          const data = await response.json();
+          setRemainingSeats(data.remainingSeats);
+        }
+      } catch (err) {
+        console.error('Error fetching seats:', err);
+      }
+    };
+    fetchSeats();
+  }, [fetchApi, path]);
+  console.log(remainingSeats);
   return (
     <div
       className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
     >
-      <div className="text-accent text-lg pb-4">{time}</div>
-      <h3 className="pr-6 uppercase">{title}</h3>
+      <div className="flex flex-col items-start pb-4">
+        {date && (
+          <span className="text-xs uppercase text-primary bg-white px-2 py-1 rounded-xs mb-2">
+            {date}
+          </span>
+        )}
+        <div className="text-accent text-4xl">{time}</div>
+      </div>
+      <h3 className="pr-6 uppercase lg:text-xl">{title}</h3>
       <p className="text-dark pb-12">{text}</p>
       <div className="flex items-center justify-between mb-6">
-        <p className="text-dark">Disponibilié:</p>
-        <h4 className="uppercase text-accent text-xs">{disponibility}</h4>
+        <p className="text-dark">{t('workshops.availability')}</p>
+        <h4 className="uppercase text-accent text-xs">
+          {remainingSeats !== null
+            ? t('workshops.remainingPlaces', { count: remainingSeats })
+            : '...'}
+        </h4>
       </div>
-      <SecondaryButton
+      <PrimaryButton
         to={'/events/' + path}
         hasIcon={false}
-        className="justify-center"
+        className="justify-center rounded-md bg-accent"
       >
-        Réserver ma place
-      </SecondaryButton>
+        {t('workshops.bookNow')}
+      </PrimaryButton>
     </div>
   );
 }
@@ -37,11 +63,14 @@ function Workshops() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const fetchApi = useApi();
+  const { formatDate, formatTime } = useFormatDate();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language.split('-')[0].toUpperCase();
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetchApi('/events');
+        const response = await fetchApi(`/events?lang=${currentLang}`);
         if (response && response.ok) {
           const data = await response.json();
           const filteredEvents = data.filter(
@@ -49,10 +78,10 @@ function Workshops() {
           );
           setEvents(filteredEvents);
         } else {
-          setError('Failed to fetch events');
+          setError(t('workshops.errorFetch'));
         }
       } catch (err) {
-        setError('An error occurred while fetching events');
+        setError(t('program.errorOccurred'));
         console.error(err);
       } finally {
         setLoading(false);
@@ -60,29 +89,28 @@ function Workshops() {
     };
 
     fetchEvents();
-  }, [fetchApi]);
+  }, [fetchApi, t, currentLang]);
   return (
     <section className="section bg-primary text-white">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="flex gap-2 items-center uppercase mb-6">
           <AiFillThunderbolt className="text-amber-400 text-4xl" />
-          <h4 className="font-thin text-lg">Ateliers Pratiques</h4>
+          <h4 className="font-thin text-lg">{t('workshops.tag')}</h4>
         </div>
         <TitleSection
           hasUnderline
           underlineColor="bg-white"
           className="mb-8 uppercase"
         >
-          Workshops
-          <strong className="text-accent"> IA Créative</strong>
+          <Trans
+            i18nKey="workshops.title"
+            components={[<strong key="highlight" className="text-accent" />]}
+          />
         </TitleSection>
-        <p className="max-w-2xl mb-6">
-          Passez de la théorie à la pratique avec les meilleurs experts
-          internationaux. Attention, places très limitées (max 15 par session).
-        </p>
+        <p className="max-w-2xl mb-6">{t('workshops.description')}</p>
         {loading && (
           <div className="text-white text-center py-12">
-            Chargement des conférences...
+            {t('workshops.loading')}
           </div>
         )}
 
@@ -90,7 +118,7 @@ function Workshops() {
 
         {!loading && !error && events.length === 0 && (
           <div className="text-white text-center py-12">
-            Aucune conférence programmée pour le moment.
+            {t('workshops.noEvents')}
           </div>
         )}
 
@@ -99,10 +127,10 @@ function Workshops() {
             <CardWorkshop
               key={event.id}
               path={event.id}
-              time={`${new Date(event.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
+              time={formatTime(event.date)}
+              date={formatDate(event.date)}
               title={event.title}
               text={event.description}
-              disponibility={'10 places restantes'}
               className={`text-white bg-secondary`}
             />
           ))}

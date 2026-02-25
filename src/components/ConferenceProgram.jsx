@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import TitleSection from './base/TitleSection';
 import { useApi } from '../hooks/useApi';
+import { useFormatDate } from '../hooks/useFormatDate';
 import SmallCard from './base/SmallCard';
 
 function ConferenceProgram() {
@@ -9,11 +10,15 @@ function ConferenceProgram() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const fetchApi = useApi();
+  const { formatDate, formatTime } = useFormatDate();
+  const { t, i18n } = useTranslation();
+
+  const currentLang = i18n.language.split('-')[0].toUpperCase();
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetchApi('/events');
+        const response = await fetchApi(`/events?lang=${currentLang}`);
         if (response && response.ok) {
           const data = await response.json();
           // Filter events where is_bookable is false
@@ -22,10 +27,10 @@ function ConferenceProgram() {
           );
           setEvents(filteredEvents);
         } else {
-          setError('Failed to fetch events');
+          setError(t('program.errorFetch'));
         }
       } catch (err) {
-        setError('An error occurred while fetching events');
+        setError(t('program.errorOccurred'));
         console.error(err);
       } finally {
         setLoading(false);
@@ -33,11 +38,11 @@ function ConferenceProgram() {
     };
 
     fetchEvents();
-  }, [fetchApi]);
+  }, [fetchApi, t, currentLang]);
 
   return (
     <section className="section bg-primary">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <TitleSection
           hasUnderline
           underlineColor="bg-white"
@@ -51,7 +56,7 @@ function ConferenceProgram() {
 
         {loading && (
           <div className="text-white text-center py-12">
-            Chargement des conférences...
+            {t('program.loading')}
           </div>
         )}
 
@@ -59,7 +64,7 @@ function ConferenceProgram() {
 
         {!loading && !error && events.length === 0 && (
           <div className="text-white text-center py-12">
-            Aucune conférence programmée pour le moment.
+            {t('program.noEvents')}
           </div>
         )}
 
@@ -68,7 +73,13 @@ function ConferenceProgram() {
             <SmallCard
               key={event.id}
               title={event.title}
-              subtitle={`${new Date(event.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
+              subtitle={formatTime(event.date)}
+              date={`${formatDate(event.date)}`}
+              duration={
+                event.duration
+                  ? t('conference.program.duration') + event.duration + ' min'
+                  : ''
+              }
               label={event.description}
               hasUnderline={false}
               className={`text-white bg-secondary ${

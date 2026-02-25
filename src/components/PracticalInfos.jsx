@@ -9,7 +9,7 @@ function PracticalInfos() {
 
   return (
     <section className="section">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="flex gap-2 items-center uppercase mb-6">
           <BsStars className="text-amber-400 text-5xl" />
           <h4 className="text-white font-thin text-lg">

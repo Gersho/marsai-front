@@ -11,11 +11,8 @@ import JuryManager from './components/admin/JuryManager';
 import LeaderboardManager from './components/admin/LeaderboardManager';
 import EventsManager from './components/admin/EventsManager';
 import PublicLayout from './components/PublicLayout';
-<<<<<<< HEAD
 import Newsletter from './components/admin/Newsletter';
-=======
 import EventsPage from './pages/EventsPage';
->>>>>>> 3008f3c (event page ok)
 
 function App() {
   return (

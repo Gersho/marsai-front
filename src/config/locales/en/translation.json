@@ -98,6 +98,14 @@
       "date": "June 13",
       "time": "from 7 p.m.",
       "cta": "Get my pass"
+    },
+    "program": {
+      "loading": "Loading conferences...",
+      "noEvents": "No conferences scheduled at this time.",
+      "errorFetch": "Error fetching conferences.",
+      "errorOccurred": "An error occurred while fetching conferences.",
+      "duration": "Duration: ",
+      "datePrefix": ""
     }
   },
   "lieuxPlateforme": {
@@ -400,6 +408,64 @@
       "all": "All",
       "hybridOnly": "Hybrid only",
       "fullAIOnly": "Full-AI only"
+    }
+  },
+  "unsubscribe": {
+    "loading": "Unsubscribing...",
+    "success_title": "Unsubscribed successfully",
+    "success_message": "You have been successfully unsubscribed from this event.",
+    "error_title": "Error",
+    "error_message": "An error occurred during unsubscription. The link may be invalid or has already been used."
+  },
+  "access": {
+    "title": "Access",
+    "publicTransport": {
+      "title": "Public Transport",
+      "subtitle": "Tram T2 / T3 - Arenc Le Silo stop. Metro M2 - Désirée Clary station."
+    },
+    "car": {
+      "title": "By Car",
+      "subtitle": "Highway A55 - Exit 2. Indigo Quai du Lazaret parking 200m away."
+    },
+    "address": {
+      "title": "Address",
+      "subtitle": "12 Rue d'Uzes, 13002 Marseille (Main Entrance)."
+    }
+  },
+  "workshops": {
+    "tag": "Practical Workshops",
+    "title": "Creative AI <0>Workshops</0>",
+    "description": "Go from theory to practice with the best international experts. Please note, places are very limited (max 15 per session).",
+    "loading": "Loading workshops...",
+    "noEvents": "No workshops scheduled at this time.",
+    "errorFetch": "Error fetching workshops.",
+    "availability": "Availability:",
+    "remainingPlaces_one": "{{count}} place remaining",
+    "remainingPlaces_other": "{{count}} places remaining",
+    "bookNow": "Book my place"
+  },
+  "booking": {
+    "title": "<0>Book</0> my place",
+    "success_title": "Booking confirmed!",
+    "success_message": "You will be redirected to the program...",
+    "submit": "Confirm my registration",
+    "firstname": {
+      "label": "First name *",
+      "placeholder": "Your first name"
+    },
+    "lastname": {
+      "label": "Last name *",
+      "placeholder": "Your last name"
+    },
+    "email": {
+      "label": "Email *",
+      "placeholder": "Your email"
+    },
+    "errors": {
+      "default": "An error occurred during booking",
+      "connection": "Server connection error",
+      "notFound": "Event not found",
+      "fetch": "Error while fetching the event"
     }
   }
 }

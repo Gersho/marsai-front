@@ -10,8 +10,8 @@ function EventsPage() {
       <TopPageTwo />
       <PracticalInfos />
       <ConferenceProgram />
-      <AccessProgram />
       <Workshops />
+      <AccessProgram />
     </>
   );
 }
