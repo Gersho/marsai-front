@@ -24,7 +24,7 @@ function MovieCard({ data }) {
       <div className="relative">
         <img
           className={`aspect-video w-full  object-contain rounded-t-xl bg-dark`}
-          src={import.meta.env.VITE_SERVER_ADDRESS + "/" + data.cover_path}
+          src={data.cover_path}
         />
         <span
           className=" bg-secondary
@@ -64,7 +64,8 @@ function MovieCard({ data }) {
             <p className="text-xs truncate pt-1">{director}</p>
           </div>
           <div className="flex flex-col ">
-            <p className='text-xl pb-2'
+            <p
+              className="text-xl pb-2"
               title={i18n.language === 'fr' ? language.textFr : language.textEn}
             >
               {language.icon}{' '}

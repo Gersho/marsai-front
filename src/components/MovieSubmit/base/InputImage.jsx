@@ -15,13 +15,13 @@ function InputImage({
   maxSize = 0,
   iconSize = 40,
   className = '',
-  errorClassName = ''
+  errorClassName = '',
 }) {
   const { t } = useTranslation();
   const [preview, setPreview] = useState(null);
   const { register, resetField } = form;
   const errors = 'submitMovieForm.formErrors.';
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   if (!validation) {
     validation = { required: false };
@@ -30,7 +30,7 @@ function InputImage({
   const { onChange: onFormChange, ref } = register(name, validation);
 
   function handlePreview(e) {
-    setError("");
+    setError('');
     onFormChange(e);
     const file = e.target.files[0];
     if (file.size > maxSize * 1024 * 1024) {
@@ -85,7 +85,7 @@ function InputImage({
               id={id}
               name={name}
               ref={ref}
-              onBlur={() => setError("")}
+              onBlur={() => setError('')}
               onChange={handlePreview}
               accept="image/*"
               aria-label={label}

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 export const useFormatDate = () => {
   const { t, i18n } = useTranslation();
 
-  const formatDate = (dateStr) => {
+  const formatDate = dateStr => {
     if (!dateStr) return '';
     const date = new Date(dateStr);
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -11,7 +11,7 @@ export const useFormatDate = () => {
     return `${t('conference.program.datePrefix')}${formattedDate}`;
   };
 
-  const formatTime = (dateStr) => {
+  const formatTime = dateStr => {
     if (!dateStr) return '';
     return new Date(dateStr).toLocaleTimeString([], {
       hour: '2-digit',

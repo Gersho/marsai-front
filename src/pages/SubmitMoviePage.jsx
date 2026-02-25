@@ -6,14 +6,17 @@ import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
 import { useTranslation } from 'react-i18next';
 import TopPage from '../components/base/TopPage';
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 function SubmitMoviePage() {
   const form = useForm({
     criteriaMode: 'all',
   });
-
+  const {
+    formState: { isSubmitting },
+  } = form;
   const { t } = useTranslation();
   const navigate = useNavigate();
   const target = 'submitMovieForm.page.';
@@ -41,13 +44,13 @@ function SubmitMoviePage() {
       });
       const data = await res.json();
       if (res.ok) {
-        toast.success("Form submit OK.");
-        navigate('/');
+        toast.success('Form submit OK.');
+        // navigate('/');
       } else {
-        toast.error(data.message + "\n" + data.errors[0].message);
+        toast.error(data.message + '\n' + data.errors[0].message);
       }
     } catch (e) {
-      toast.error("Something went wrong: " + e);
+      toast.error('Something went wrong: ' + e);
     }
   }
 
@@ -72,8 +75,15 @@ function SubmitMoviePage() {
           <MovieSubmitDeliverables form={form} />
           <MovieSubmitTeamComposition form={form} />
           <MovieCertificateOfOwnership />
-          <button className="border p-3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all">
-            {t(target + 'submitButton')}
+          <button
+            className="flex justify-center items-center border p-3 w-1/3 rounded-md bg-accent border-red-500 uppercase cursor-pointer font-bold hover:bg-red-600 transition-all disabled:bg-primary disabled:cursor-not-allowed"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <AiOutlineLoading3Quarters className="animate-spin size-6" />
+            ) : (
+              t(target + 'submitButton')
+            )}
           </button>
         </form>
       </div>

@@ -18,7 +18,7 @@ function InputMovie({
   const errors = 'submitMovieForm.formErrors.';
 
   const [preview, setPreview] = useState(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const { register, resetField } = form;
 
   if (!validation) {
@@ -28,7 +28,7 @@ function InputMovie({
   const { onChange: onFormChange, ref } = register(name, validation);
 
   function handlePreview(e) {
-    setError("");
+    setError('');
     onFormChange(e);
     const file = e.target.files[0];
     if (file.size > maxSize * 1024 * 1024) {
@@ -93,15 +93,14 @@ function InputMovie({
               id={id}
               name={name}
               ref={ref}
-              onBlur={() => setError("")}
+              onBlur={() => setError('')}
               onChange={handlePreview}
               accept="video/*"
               title={t(target + 'title')}
             ></input>
           </label>
-        </div >
-      )
-      }
+        </div>
+      )}
       <div className="self-center text-red-500 "> {error}</div>
       <FormErrors className="self-center" form={form} name={name} />
     </>
