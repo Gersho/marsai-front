@@ -33,7 +33,7 @@ function FormNewCollaborator({ index, form, remove, className = '' }) {
             >
               <option value="mr">{t(target + 'gender.mr')}</option>
               <option value="mme">{t(target + 'gender.mrs')}</option>
-              <option value="mx">{t(target + 'gender.mx')}</option>
+              <option value="iel">{t(target + 'gender.mx')}</option>
             </select>
           </div>
           <div className="flex flex-col md:w-full">

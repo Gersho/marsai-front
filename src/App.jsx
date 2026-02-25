@@ -13,6 +13,7 @@ import EventsManager from './components/admin/EventsManager';
 import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
 import EventsPage from './pages/EventsPage';
+import MoviePage from './pages/MoviePage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/movies/:id" element={<MoviePage />} />
           <Route path="/movies" element={<GalleryPage />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
