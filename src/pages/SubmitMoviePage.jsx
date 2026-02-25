@@ -6,6 +6,8 @@ import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
 import { useTranslation } from 'react-i18next';
 import TopPage from '../components/base/TopPage';
+import toast from "react-hot-toast";
+import { useNavigate } from 'react-router-dom';
 
 function SubmitMoviePage() {
   const form = useForm({
@@ -13,6 +15,7 @@ function SubmitMoviePage() {
   });
 
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const target = 'submitMovieForm.page.';
 
   async function onSubmit(data) {
@@ -38,12 +41,13 @@ function SubmitMoviePage() {
       });
       const data = await res.json();
       if (res.ok) {
-        console.log(data);
+        toast.success("Form submit OK.");
+        navigate('/');
       } else {
-        console.log(data);
+        toast.error(data.message + "\n" + data.errors[0].message);
       }
     } catch (e) {
-      console.error('error: ', e);
+      toast.error("Something went wrong: " + e);
     }
   }
 
