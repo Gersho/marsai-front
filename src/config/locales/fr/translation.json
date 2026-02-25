@@ -98,6 +98,14 @@
       "date": "13 juin",
       "time": "à partir de 19h",
       "cta": "Prendre mon pass"
+    },
+    "program": {
+      "loading": "Chargement des conférences...",
+      "noEvents": "Aucune conférence programmée pour le moment.",
+      "errorFetch": "Erreur lors du chargement des conférences.",
+      "errorOccurred": "Une erreur est survenue lors du chargement des conférences.",
+      "duration": "Durée : ",
+      "datePrefix": "Le "
     }
   },
   "lieuxPlateforme": {
@@ -397,6 +405,64 @@
       "all": "Toutes",
       "hybridOnly": "Hybride uniquement",
       "fullAIOnly": "100% IA uniquement"
+    }
+  },
+  "unsubscribe": {
+    "loading": "Désinscription en cours...",
+    "success_title": "Désinscription réussie",
+    "success_message": "Vous avez été désinscrit avec succès de cet événement.",
+    "error_title": "Erreur",
+    "error_message": "Une erreur est survenue lors de la désinscription. Le lien est peut-être invalide ou a déjà été utilisé."
+  },
+  "access": {
+    "title": "Accès",
+    "publicTransport": {
+      "title": "Transports en commun",
+      "subtitle": "Tram T2 / T3 - Arrêt Arenc Le Silo. Métro M2 - Station Désirée Clary."
+    },
+    "car": {
+      "title": "Voiture",
+      "subtitle": "Autoroute A55 - Sortie 2. Parking Indigo Quai du Lazaret à 200m."
+    },
+    "address": {
+      "title": "Adresse",
+      "subtitle": "12 Rue d'Uzes, 13002 Marseille (Entrée Principale)."
+    }
+  },
+  "workshops": {
+    "tag": "Ateliers Pratiques",
+    "title": "Workshops <0>IA Créative</0>",
+    "description": "Passez de la théorie à la pratique avec les meilleurs experts internationaux. Attention, places très limitées (max 15 par session).",
+    "loading": "Chargement des ateliers...",
+    "noEvents": "Aucun atelier programmé pour le moment.",
+    "errorFetch": "Erreur lors du chargement des ateliers.",
+    "availability": "Disponibilité :",
+    "remainingPlaces_one": "{{count}} place restante",
+    "remainingPlaces_other": "{{count}} places restantes",
+    "bookNow": "Réserver ma place"
+  },
+  "booking": {
+    "title": "<0>Réserver</0> ma place",
+    "success_title": "Réservation confirmée !",
+    "success_message": "Vous allez être redirigé vers le programme...",
+    "submit": "Valider mon inscription",
+    "firstname": {
+      "label": "Prénom *",
+      "placeholder": "Votre prénom"
+    },
+    "lastname": {
+      "label": "Nom *",
+      "placeholder": "Votre nom"
+    },
+    "email": {
+      "label": "Email *",
+      "placeholder": "Votre email"
+    },
+    "errors": {
+      "default": "Une erreur est survenue lors de la réservation",
+      "connection": "Erreur de connexion au serveur",
+      "notFound": "Événement non trouvé",
+      "fetch": "Erreur lors de la récupération de l'événement"
     }
   }
 }

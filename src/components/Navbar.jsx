@@ -23,7 +23,7 @@ function Navbar() {
     menu: [
       { id: 1, url: '/', text: t('navbar.home') },
       { id: 2, url: '/movies', text: t('navbar.gallery') },
-      { id: 3, url: '/programme-info', text: t('navbar.programmeInfo') },
+      { id: 3, url: '/events', text: t('navbar.programmeInfo') },
       { id: 4, url: '/jury', text: t('navbar.jury') },
       { id: 5, url: '/admin', text: t('navbar.admin') },
     ],

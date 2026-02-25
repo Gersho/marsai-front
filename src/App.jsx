@@ -12,6 +12,7 @@ import LeaderboardManager from './components/admin/LeaderboardManager';
 import EventsManager from './components/admin/EventsManager';
 import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
+import EventsPage from './pages/EventsPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<GalleryPage />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
+          <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
         </Route>
         <Route path="/admin" element={<AdminPage />}>
