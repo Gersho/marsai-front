@@ -45,7 +45,7 @@ function SubmitMoviePage() {
       const data = await res.json();
       if (res.ok) {
         toast.success('Form submit OK.');
-        // navigate('/');
+        navigate('/');
       } else {
         toast.error(data.message + '\n' + data.errors[0].message);
       }
