@@ -390,7 +390,7 @@
       "minDuration": "Minimum 1 sec",
       "maxDuration": "Maximum 90 sec",
       "mustBeAdult": "Minimum 18 ans pour participer.",
-      "maxSize15MB" : "Taille de fichier maximale 15Mo",
+      "maxSize15MB": "Taille de fichier maximale 15Mo",
       "maxSize300MB": "Taille de fichier maximale 300Mo"
     }
   },
@@ -400,8 +400,8 @@
       "titlePart2": "des films",
       "paragraph": "Explorez l'intégralité de la sélection officielle. Des visions uniques, des courts-métrages pionniers créés avec l'Intelligence Artificielle.",
       "search": "Barre de recherche",
-      "searchPlaceholder" : "Rechercher...",
-      "videoClassification" : "Classification de la video",
+      "searchPlaceholder": "Rechercher...",
+      "videoClassification": "Classification de la video",
       "all": "Toutes",
       "hybridOnly": "Hybride uniquement",
       "fullAIOnly": "100% IA uniquement"

@@ -4,8 +4,7 @@ import MovieCard from '../components/base/MovieCard';
 import TopPage from '../components/base/TopPage';
 import { useTranslation } from 'react-i18next';
 import PaginationMenu from '../components/base/PaginationMenu';
-import { useDebouncedCallback } from "use-debounce";
-
+import { useDebouncedCallback } from 'use-debounce';
 
 function GalleryPage() {
   const { t } = useTranslation();
@@ -16,11 +15,10 @@ function GalleryPage() {
   const [type, setType] = useState('all');
   const [search, setSearch] = useState('');
   const [movieData, setMovieData] = useState([]);
-  const debounced = useDebouncedCallback((e) => {
+  const debounced = useDebouncedCallback(e => {
     setSearch(e);
     setIsPageChange(false);
   }, 500);
-
 
   useEffect(() => {
     async function getMovieData() {
@@ -31,12 +29,12 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-          '/movies/?page=' +
-          page +
-          '&type=' +
-          type +
-          '&search=' +
-          search,
+            '/movies/?page=' +
+            page +
+            '&type=' +
+            type +
+            '&search=' +
+            search,
           {
             method: 'GET',
           }
@@ -70,10 +68,7 @@ function GalleryPage() {
           </div>
         </div>
 
-        <form
-          className="border rounded-md border-white flex flex-row  px-4 pb-4 pt-2 mb-8 gap-x-10"
-          action=""
-        >
+        <form className="flex flex-row  px-4 pb-4 pt-2 mb-8 gap-x-10" action="">
           {/* <p>Classification</p> */}
 
           <div>
@@ -82,7 +77,7 @@ function GalleryPage() {
             </label>
 
             <select
-              className="w-fit outline-2  bg-secondary px-2 py-2 rounded-md mt-2 border-0 border-zinc-200"
+              className="w-fit bg-secondary px-2 py-2 rounded-md mt-2 outline-1 outline-neutral-400 focus:outline-neutral-100"
               onChange={e => {
                 setType(e.target.value);
                 setIsPageChange(false);
@@ -101,7 +96,7 @@ function GalleryPage() {
               {t(target + 'search')}
             </label>
             <input
-              className="outline-2 rounded-sm pl-2 py-1.5 border-0  focus:outline-neutral-100"
+              className="outline-1 outline-neutral-400 rounded-sm pl-2 py-1.5 focus:outline-neutral-100"
               id="searchbar"
               type="text"
               placeholder={t(target + 'searchPlaceholder')}

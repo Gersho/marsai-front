@@ -19,12 +19,15 @@ function Login() {
   async function onSubmit(data) {
     setError(null);
     try {
-      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-        credentials: 'include',
-      });
+      const res = await fetch(
+        import.meta.env.VITE_SERVER_ADDRESS + '/auth/login',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          credentials: 'include',
+        }
+      );
       if (res.ok) {
         // const data = await res.json();
         navigate('/');

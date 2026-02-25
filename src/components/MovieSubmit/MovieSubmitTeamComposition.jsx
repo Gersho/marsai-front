@@ -304,7 +304,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           label={t(target + 'director.facebook.label')}
           id="director-facebook"
-          name="director.facebook"
+          name="director.facebookUrl"
           placeholder=""
           title={t(target + 'director.facebook.title')}
           validation={{
@@ -323,7 +323,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           label={t(target + 'director.instagram.label')}
           id="director-instagram"
-          name="director.instagram"
+          name="director.instagramUrl"
           placeholder=""
           title={t(target + 'director.instagram.title')}
           validation={{
@@ -343,7 +343,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           label={t(target + 'director.youtube.label')}
           id="director-youtube"
-          name="director.youtube"
+          name="director.youtubeUrl"
           placeholder=""
           title={t(target + 'director.youtube.title')}
           validation={{
@@ -362,7 +362,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           label={t(target + 'director.linkedin.label')}
           id="director-linkedin"
-          name="director.linkedin"
+          name="director.linkedinUrl"
           placeholder=""
           title={t(target + 'director.linkedin.title')}
           validation={{
@@ -382,7 +382,7 @@ function MovieSubmitTeamComposition({ form }) {
           form={form}
           label={t(target + 'director.twitter.label')}
           id="director-twitter"
-          name="director.twitter"
+          name="director.twitterUrl"
           placeholder=""
           title={t(target + 'director.twitter.title')}
           validation={{

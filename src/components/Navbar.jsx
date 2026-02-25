@@ -6,7 +6,7 @@ import marsaiLogoDark from '../assets/marsai-logo-dark.svg';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import PrimaryButton from './base/PrimaryButton';
-import { Toaster } from "react-hot-toast";
+import { Toaster } from 'react-hot-toast';
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -47,10 +47,11 @@ function Navbar() {
   return (
     <>
       <div
-        className={`z-40 flex w-full items-center  py-4 lg:py-2 ${sticky
-          ? 'fixed top-0 bg-opacity-0 shadow-sticky backdrop-blur-lg bg-[rgba(3,3,3,0.4)] transition duration-300'
-          : `absolute bg-transparent`
-          }`}
+        className={`z-40 flex w-full items-center  py-4 lg:py-2 ${
+          sticky
+            ? 'fixed top-0 bg-opacity-0 shadow-sticky backdrop-blur-lg bg-[rgba(3,3,3,0.4)] transition duration-300'
+            : `absolute bg-transparent`
+        }`}
       >
         <div className="relative flex-1 flex items-center justify-between px-4 lg:px-24">
           <Logo src={navbarData.logo.src} alt={navbarData.logo.alt} />
@@ -61,24 +62,28 @@ function Navbar() {
             className={`absolute right-2 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-1.5  focus:ring-2  ring-white lg:hidden`}
           >
             <span
-              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${navbarOpen ? ' top-1.75 rotate-45' : ' '
-                }`}
+              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${
+                navbarOpen ? ' top-1.75 rotate-45' : ' '
+              }`}
             />
             <span
-              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${navbarOpen ? 'opacity-0 ' : ' '
-                }`}
+              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${
+                navbarOpen ? 'opacity-0 ' : ' '
+              }`}
             />
             <span
-              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${navbarOpen ? ' -top-2 -rotate-45' : ' '
-                }`}
+              className={`relative my-1.5 block h-0.5 w-7.5 bg-white transition-all duration-300 ${
+                navbarOpen ? ' -top-2 -rotate-45' : ' '
+              }`}
             />
           </button>
           <nav
             id="navbarCollapse"
-            className={`navbar absolute left-0 right-0 z-30 w-full bg-primary px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
-              ? 'visibility top-[150%] opacity-100'
-              : 'invisible top-[260%] opacity-0'
-              }`}
+            className={`navbar absolute left-0 right-0 z-30 w-full bg-primary px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+              navbarOpen
+                ? 'visibility top-[150%] opacity-100'
+                : 'invisible top-[260%] opacity-0'
+            }`}
           >
             <ul className="block items-center lg:flex lg:space-x-12">
               {navbarData.menu.map(menuItem => {
@@ -118,7 +123,6 @@ function Navbar() {
         position="top-center"
         reverseOrder={false}
       />
-
     </>
   );
 }
