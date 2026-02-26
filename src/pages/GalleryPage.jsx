@@ -5,6 +5,8 @@ import TopPage from '../components/base/TopPage';
 import { useTranslation } from 'react-i18next';
 import PaginationMenu from '../components/base/PaginationMenu';
 import { useDebouncedCallback } from 'use-debounce';
+import TopPageTwo from '../components/base/TopPageTwo';
+import TitlePage from '../components/base/TitlePage';
 
 function GalleryPage() {
   const { t } = useTranslation();
@@ -56,71 +58,72 @@ function GalleryPage() {
   }, [page, type, search, isPageChange]);
 
   return (
-    <div>
-      <TopPage className="pt-20 text-white">
-        <h1 className="">{t(target + 'titlePart1')}</h1>
-        <h1 className="text-accent">{t(target + 'titlePart2')}</h1>
-      </TopPage>
-      <div className="text-white flex flex-col items-center">
-        <div className="pb-5 pt-5 flex flex-col items-center">
-          <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
-            <p>{t(target + 'paragraph')}</p>
+    <>
+      <TopPageTwo />
+      <section className="section">
+        <div className="max-w-5xl mx-auto">
+          <TitlePage className="text-start items-start max-w-md">
+            <h1>
+              {t(target + 'titlePart1')}{' '}
+              <strong className="text-accent">
+                {t(target + 'titlePart2')}
+              </strong>
+            </h1>
+          </TitlePage>
+          <p className="text-dark mb-12 max-w-md">{t(target + 'paragraph')}</p>
+          <form className="flex flex-row gap-6 mb-12" action="">
+            <div className="flex-1 text-dark">
+              <label htmlFor="type" hidden>
+                {t(target + 'videoClassification')}
+              </label>
+
+              <select
+                className="w-full bg-secondary px-2 py-2 rounded-md outline-2 outline-neutral-400 focus:outline-neutral-100"
+                onChange={e => {
+                  setType(e.target.value);
+                  setIsPageChange(false);
+                }}
+                name="type"
+                id="type"
+              >
+                <option value="all">{t(target + 'all')}</option>
+                <option value="hybrid">{t(target + 'hybridOnly')}</option>
+                <option value="fullai">{t(target + 'fullAIOnly')}</option>
+              </select>
+            </div>
+            <div className="flex-1 text-dark">
+              <label htmlFor="searchbar" hidden>
+                {t(target + 'search')}
+              </label>
+              <input
+                className="w-full outline-2 outline-neutral-400 rounded-sm pl-2 py-1.5 focus:outline-neutral-100"
+                id="searchbar"
+                type="text"
+                placeholder={t(target + 'searchPlaceholder')}
+                onChange={e => {
+                  debounced(e.target.value);
+                }}
+                title={t(target + 'search')}
+              ></input>
+            </div>
+          </form>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-6 md:mb-12 md:gap-12">
+            {movieData.map((e, index) => (
+              <MovieCard key={index} data={e} />
+            ))}
+          </div>
+          <div className="text-white flex items-center justify-center">
+            <PaginationMenu
+              total={total}
+              page={page}
+              setPage={setPage}
+              setIsPageChange={setIsPageChange}
+            />
           </div>
         </div>
-
-        <form className="flex flex-row  px-4 pb-4 pt-2 mb-8 gap-x-10" action="">
-          {/* <p>Classification</p> */}
-
-          <div>
-            <label htmlFor="type" hidden>
-              {t(target + 'videoClassification')}
-            </label>
-
-            <select
-              className="w-fit bg-secondary px-2 py-2 rounded-md mt-2 outline-1 outline-neutral-400 focus:outline-neutral-100"
-              onChange={e => {
-                setType(e.target.value);
-                setIsPageChange(false);
-              }}
-              name="type"
-              id="type"
-            >
-              <option value="all">{t(target + 'all')}</option>
-              <option value="hybrid">{t(target + 'hybridOnly')}</option>
-              <option value="fullai">{t(target + 'fullAIOnly')}</option>
-            </select>
-          </div>
-
-          <div className="pt-2">
-            <label htmlFor="searchbar" hidden>
-              {t(target + 'search')}
-            </label>
-            <input
-              className="outline-1 outline-neutral-400 rounded-sm pl-2 py-1.5 focus:outline-neutral-100"
-              id="searchbar"
-              type="text"
-              placeholder={t(target + 'searchPlaceholder')}
-              onChange={e => {
-                debounced(e.target.value);
-              }}
-              title={t(target + 'search')}
-            ></input>
-          </div>
-        </form>
-
-        <div className="flex flex-col gap-y-6 gap-x-4 items-center pb-6 sm:flex-row sm:w-11/12 sm:flex-wrap sm:justify-evenly sm:flex-start">
-          {movieData.map((e, index) => (
-            <MovieCard key={index} data={e} />
-          ))}
-        </div>
-        <PaginationMenu
-          total={total}
-          page={page}
-          setPage={setPage}
-          setIsPageChange={setIsPageChange}
-        />
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 
