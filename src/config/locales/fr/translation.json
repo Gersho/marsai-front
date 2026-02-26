@@ -5,7 +5,9 @@
     "gallery": "Galerie",
     "programmeInfo": "Programme & Infos",
     "jury": "Jury",
-    "admin": "Admin dashboard"
+    "admin": "Admin dashboard",
+    "login": "Connexion",
+    "logout": "Déconnexion"
   },
   "hero": {
     "title": "Imaginez des <0>futurs</0> souhaitables",

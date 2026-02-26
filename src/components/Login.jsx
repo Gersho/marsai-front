@@ -9,11 +9,13 @@ import { MdOutlineReportGmailerrorred } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 import TopPage from './base/TopPage';
 import TitlePage from './base/TitlePage';
+import { useAuthStore } from '../hooks/useAuth';
 
 function Login() {
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const authStore = useAuthStore();
   const { t } = useTranslation();
 
   async function onSubmit(data) {
@@ -29,7 +31,8 @@ function Login() {
         }
       );
       if (res.ok) {
-        // const data = await res.json();
+        const user = await res.json();
+        authStore.setUser(user);
         navigate('/');
       } else {
         setError(t('login.errors.invalidCredentials'));
