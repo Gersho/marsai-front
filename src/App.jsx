@@ -13,6 +13,7 @@ import EventsManager from './components/admin/EventsManager';
 import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
 import EventsPage from './pages/EventsPage';
+import EventBookingPage from './pages/EventBookingPage';
 import MoviePage from './pages/MoviePage';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/events/:id" element={<EventBookingPage />} />
         </Route>
         <Route path="/admin" element={<AdminPage />}>
           <Route index element={<Navigate to="dashboard" replace />} />
