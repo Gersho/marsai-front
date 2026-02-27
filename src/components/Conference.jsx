@@ -105,7 +105,7 @@ function Conference() {
             </p>
             <div className="flex">
               <Link
-                to={'/'}
+                to={'/events'}
                 className="uppercase button flex items-center gap-2 bg-accent text-white"
               >
                 {t('conference.closingCeremony.cta')}

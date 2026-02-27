@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-20">
           <div className="space-y-6 text-center lg:text-left">
             {/* Badge Logo MARS.A.I */}
-            <div className="inline-block bg-[#52525B] text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
+            <div className="inline-block text-white font-bold px-4 py-2 rounded-lg text-sm tracking-wide">
               <Logo src={footerLogo.logo.src} alt={footerLogo.logo.alt} />
             </div>
             <p className=" text-white text-sm leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-4">
