@@ -39,7 +39,7 @@ function AdminPage() {
           </NavLink>
         </nav>
       </div>
-      <div className="w-full bg-primary">
+      <div className="w-full bg-primary text-white">
         <Outlet />
       </div>
     </div>

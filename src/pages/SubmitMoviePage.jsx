@@ -9,6 +9,8 @@ import TopPage from '../components/base/TopPage';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import TopPageTwo from '../components/base/TopPageTwo';
+import TitlePage from '../components/base/TitlePage';
 
 function SubmitMoviePage() {
   const form = useForm({
@@ -56,12 +58,17 @@ function SubmitMoviePage() {
 
   return (
     <>
-      <TopPage className="text-white pt-20">
-        <h2 className="">{t(target + 'titlePart1')}</h2>
-        <h1 className="">{t(target + 'titlePart2')}</h1>
-      </TopPage>
-      <div className="pb-25 pt-5 flex flex-col items-center text-white">
+      <TopPageTwo />
+      <div className="pb-25 pt-10 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
+          <TitlePage className="">
+            <h1>
+              {t(target + 'titlePart1')}{' '}
+              <strong className="text-accent">
+                {t(target + 'titlePart2')}
+              </strong>
+            </h1>
+          </TitlePage>
           <p>{t(target + 'paragraph')}</p>
         </div>
         <form
