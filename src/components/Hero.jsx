@@ -16,10 +16,10 @@ function Hero() {
         </h1>
         <p className="pb-6 text-center text-white">{t('hero.subtitle')}</p>
         <div className="flex gap-4 mx-2 lg:mx-0">
-          <PrimaryButton to="/movies" hasIcon={true}>
+          <PrimaryButton to="/submit" hasIcon={true}>
             {t('hero.ctaParticipate')}
           </PrimaryButton>
-          <Link to="/programme-infos" className="button text-black bg-white">
+          <Link to="/events" className="button text-black bg-white">
             <Trans
               i18nKey="hero.ctaLearn_more"
               components={[<strong key="highlight" className="text-accent" />]}

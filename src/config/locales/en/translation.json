@@ -71,45 +71,6 @@
       "default": "Something went wrong"
     }
   },
-  "conference": {
-    "tag": "The heart of the festival",
-    "title": "Two days of free <0>conferences</0>",
-    "list": [
-      "Engaging debates on ethics and the future",
-      "Confrontations of ideas between artists and tech",
-      "Stimulating questions about creation"
-    ],
-    "listTwo": [
-      {
-        "title": "screenings",
-        "text": "Films in and out of competition on a giant screen."
-      },
-      {
-        "title": "Workshops",
-        "text": "Screenwriting, creation and post-production with AI experts."
-      },
-      {
-        "title": "Awards ceremony",
-        "text": "Renowned filmmakers, actors and creators to reward excellence."
-      }
-    ],
-    "closingCeremony": {
-      "tag": "Closing ceremony",
-      "title": "Mars.a.i night",
-      "text": "Electro party mixing AI and desirable futures. An immersive sound and visual experience.",
-      "date": "June 13",
-      "time": "from 7 p.m.",
-      "cta": "Get my pass"
-    },
-    "program": {
-      "loading": "Loading conferences...",
-      "noEvents": "No conferences scheduled at this time.",
-      "errorFetch": "Error fetching conferences.",
-      "errorOccurred": "An error occurred while fetching conferences.",
-      "duration": "Duration: ",
-      "datePrefix": ""
-    }
-  },
   "lieuxPlateforme": {
     "tag": "the place",
     "titlePart1": "The",
@@ -219,10 +180,7 @@
       "isHybrid": {
         "title": "Work Classification:* Exclusive choice between:",
         "false": ["Fully generated", "(100% AI)"],
-        "true": [
-          "Hybrid production",
-          "(Live-action footage + AI contributions)"
-        ]
+        "true": ["Hybrid production", "(Live-action footage + AI contributions)"]
       },
       "aiTools": {
         "label": "Technology stack *",
@@ -419,33 +377,6 @@
     "error_title": "Error",
     "error_message": "An error occurred during unsubscription. The link may be invalid or has already been used."
   },
-  "access": {
-    "title": "Access",
-    "publicTransport": {
-      "title": "Public Transport",
-      "subtitle": "Tram T2 / T3 - Arenc Le Silo stop. Metro M2 - Désirée Clary station."
-    },
-    "car": {
-      "title": "By Car",
-      "subtitle": "Highway A55 - Exit 2. Indigo Quai du Lazaret parking 200m away."
-    },
-    "address": {
-      "title": "Address",
-      "subtitle": "12 Rue d'Uzes, 13002 Marseille (Main Entrance)."
-    }
-  },
-  "workshops": {
-    "tag": "Practical Workshops",
-    "title": "Creative AI <0>Workshops</0>",
-    "description": "Go from theory to practice with the best international experts. Please note, places are very limited (max 15 per session).",
-    "loading": "Loading workshops...",
-    "noEvents": "No workshops scheduled at this time.",
-    "errorFetch": "Error fetching workshops.",
-    "availability": "Availability:",
-    "remainingPlaces_one": "{{count}} place remaining",
-    "remainingPlaces_other": "{{count}} places remaining",
-    "bookNow": "Book my place"
-  },
   "booking": {
     "title": "<0>Book</0> my place",
     "success_title": "Booking confirmed!",
@@ -468,6 +399,74 @@
       "connection": "Server connection error",
       "notFound": "Event not found",
       "fetch": "Error while fetching the event"
+    }
+  },
+  "events":{
+    "conference": {
+      "tag": "The heart of the festival",
+      "title": "Two days of free <0>conferences</0>",
+      "list": [
+        "Engaging debates on ethics and the future",
+        "Confrontations of ideas between artists and tech",
+        "Stimulating questions about creation"
+      ],
+      "listTwo": [
+        {
+          "title": "screenings",
+          "text": "Films in and out of competition on a giant screen."
+        },
+        {
+          "title": "Workshops",
+          "text": "Screenwriting, creation and post-production with AI experts."
+        },
+        {
+          "title": "Awards ceremony",
+          "text": "Renowned filmmakers, actors and creators to reward excellence."
+        }
+      ],
+      "closingCeremony": {
+        "tag": "Closing ceremony",
+        "title": "Mars.a.i night",
+        "text": "Electro party mixing AI and desirable futures. An immersive sound and visual experience.",
+        "date": "June 13",
+        "time": "from 7 p.m.",
+        "cta": "Get my pass"
+      },
+      "program": {
+        "loading": "Loading conferences...",
+        "noEvents": "No conferences scheduled at this time.",
+        "errorFetch": "Error fetching conferences.",
+        "errorOccurred": "An error occurred while fetching conferences.",
+        "duration": "Duration: ",
+        "datePrefix": ""
+      }
+    },
+    "access": {
+      "title": "Access",
+      "publicTransport": {
+        "title": "Public Transport",
+        "subtitle": "Tram T2 / T3 - Arenc Le Silo stop. Metro M2 - Désirée Clary station."
+      },
+      "car": {
+        "title": "By Car",
+        "subtitle": "Highway A55 - Exit 2. Indigo Quai du Lazaret parking 200m away."
+      },
+      "address": {
+        "title": "Address",
+        "subtitle": "12 Rue d'Uzes, 13002 Marseille (Main Entrance)."
+      }
+    },
+    "workshops": {
+      "tag": "Practical Workshops",
+      "title": "Creative AI <0>Workshops</0>",
+      "description": "Go from theory to practice with the best international experts. Please note, places are very limited (max 15 per session).",
+      "loading": "Loading workshops...",
+      "noEvents": "No workshops scheduled at this time.",
+      "errorFetch": "Error fetching workshops.",
+      "availability": "Availability:",
+      "remainingPlaces_one": "{{count}} place remaining",
+      "remainingPlaces_other": "{{count}} places remaining",
+      "bookNow": "Book my place"
     }
   }
 }

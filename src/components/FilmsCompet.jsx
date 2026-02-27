@@ -2,6 +2,7 @@ import { IoMdPlay } from 'react-icons/io';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { useTranslation, Trans } from 'react-i18next';
 import TitleSection from './base/TitleSection';
+import { Link } from 'react-router-dom';
 
 const films = [
   {
@@ -91,13 +92,10 @@ const FilmsCompetition = () => {
           ))}
         </div>
         <div className="border-t border-white/10 pt-8">
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white transition group"
-          >
+          <Link to="/movies" className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white transition group">
             {t('filmsCompet.viewSelection')}
             <FaArrowRightLong className="text-accent group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

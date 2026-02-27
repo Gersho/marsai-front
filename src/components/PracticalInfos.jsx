@@ -6,6 +6,7 @@ import Card from './base/Card';
 
 function PracticalInfos() {
   const { t } = useTranslation();
+  const target = 'events.conference.';
 
   return (
     <section className="section">
@@ -21,7 +22,7 @@ function PracticalInfos() {
           underlineColor="bg-white"
           className="text-white mb-8"
         >
-          {t('conference.closingCeremony.date')} 2026{' '}
+          {t(target + 'closingCeremony.date')} 2026{' '}
           <strong className="text-accent">Marseille</strong>
         </TitleSection>
         <Card

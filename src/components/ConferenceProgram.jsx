@@ -12,6 +12,7 @@ function ConferenceProgram() {
   const fetchApi = useApi();
   const { formatDate, formatTime } = useFormatDate();
   const { t, i18n } = useTranslation();
+  const target = 'events.conference.';
 
   const currentLang = i18n.language.split('-')[0].toUpperCase();
 
@@ -27,10 +28,10 @@ function ConferenceProgram() {
           );
           setEvents(filteredEvents);
         } else {
-          setError(t('program.errorFetch'));
+          setError(t(target + 'program.errorFetch'));
         }
       } catch (err) {
-        setError(t('program.errorOccurred'));
+        setError(t(target + 'program.errorOccurred'));
         console.error(err);
       } finally {
         setLoading(false);
@@ -49,14 +50,14 @@ function ConferenceProgram() {
           className="text-white mb-12"
         >
           <Trans
-            i18nKey="conference.title"
+            i18nKey={target + "title"}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
 
         {loading && (
           <div className="text-white text-center py-12">
-            {t('program.loading')}
+            {t(target + 'program.loading')}
           </div>
         )}
 
@@ -64,7 +65,7 @@ function ConferenceProgram() {
 
         {!loading && !error && events.length === 0 && (
           <div className="text-white text-center py-12">
-            {t('program.noEvents')}
+            {t(target + 'program.noEvents')}
           </div>
         )}
 
@@ -77,14 +78,13 @@ function ConferenceProgram() {
               date={`${formatDate(event.date)}`}
               duration={
                 event.duration
-                  ? t('conference.program.duration') + event.duration + ' min'
+                  ? t(target + 'program.duration') + event.duration + ' min'
                   : ''
               }
               label={event.description}
               hasUnderline={false}
-              className={`text-white bg-secondary ${
-                index === events.length - 1 ? 'col-span-2' : ''
-              }`}
+              className={`text-white bg-secondary ${index === events.length - 1 ? 'col-span-2' : ''
+                }`}
             />
           ))}
         </div>

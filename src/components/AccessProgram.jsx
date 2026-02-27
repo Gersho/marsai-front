@@ -17,6 +17,7 @@ function AccessCard({ icon, title, subtitle }) {
 }
 function AccessProgram() {
   const { t } = useTranslation();
+  const target = 'events.access.';
 
   return (
     <section className="section">
@@ -26,23 +27,23 @@ function AccessProgram() {
           underlineColor="bg-accent"
           className="text-white"
         >
-          {t('access.title')}
+          {t(target + 'title')}
         </TitleSection>
         <div className=" flex flex-col gap-4">
           <AccessCard
             icon={<FaBusAlt />}
-            title={t('access.publicTransport.title')}
-            subtitle={t('access.publicTransport.subtitle')}
+            title={t(target + 'publicTransport.title')}
+            subtitle={t(target + 'publicTransport.subtitle')}
           />
           <AccessCard
             icon={<FaCarSide />}
-            title={t('access.car.title')}
-            subtitle={t('access.car.subtitle')}
+            title={t(target + 'car.title')}
+            subtitle={t(target + 'car.subtitle')}
           />
           <AccessCard
             icon={<MdNearMe />}
-            title={t('access.address.title')}
-            subtitle={t('access.address.subtitle')}
+            title={t(target + 'address.title')}
+            subtitle={t(target + 'address.subtitle')}
           />
         </div>
       </div>
