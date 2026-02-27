@@ -179,7 +179,7 @@
   "submitMovieForm": {
     "page": {
       "titlePart1": "Call for Projects 2026",
-      "titlePart2": "submit a movie",
+      "titlePart2": "submit a <0>movie</0>",
       "paragraph": "Please provide the technical details, AI usage, and your team composition. All fields marked with an asterisk (*) are required.",
       "submitButton": "finalize my submission"
     },
