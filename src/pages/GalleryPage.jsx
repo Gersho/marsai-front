@@ -63,12 +63,8 @@ function GalleryPage() {
       <section className="section">
         <div className="max-w-5xl mx-auto">
           <TitlePage className="text-start items-start max-w-md">
-            <h1>
-              {t(target + 'titlePart1')}{' '}
-              <strong className="text-accent">
-                {t(target + 'titlePart2')}
-              </strong>
-            </h1>
+            {t(target + 'titlePart1')}{' '}
+            <strong className="text-accent">{t(target + 'titlePart2')}</strong>
           </TitlePage>
           <p className="text-dark mb-12 max-w-md">{t(target + 'paragraph')}</p>
           <form className="flex flex-row gap-6 mb-12" action="">

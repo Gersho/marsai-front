@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
+import { useAuthStore } from './useAuth';
 
 export const useApi = () => {
   const navigate = useNavigate();
+  const { setUser } = useAuthStore();
   const baseUrl = import.meta.env.VITE_SERVER_ADDRESS;
 
   const fetchApi = useCallback(
@@ -25,7 +27,7 @@ export const useApi = () => {
               credentials: 'include',
             });
           } else {
-            navigate('/login');
+            setUser(null);
             return null;
           }
         }
@@ -36,7 +38,7 @@ export const useApi = () => {
         return null;
       }
     },
-    [navigate, baseUrl]
+    [navigate, baseUrl, setUser]
   );
 
   return fetchApi;

@@ -5,7 +5,9 @@
     "gallery": "Gallery",
     "programmeInfo": "Programme & Info",
     "jury": "Jury",
-    "admin": "Admin dashboard"
+    "admin": "Admin dashboard",
+    "login": "Login",
+    "logout": "Logout"
   },
   "hero": {
     "title": "Imagine desirable <0>futures</0>",

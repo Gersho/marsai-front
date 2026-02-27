@@ -9,7 +9,7 @@ function JuryFormInput({ index, form, remove }) {
     <div className="relative flex gap-6 p-3 pt-10 bg-neutral-700 rounded-md outline-1 outline-neutral-500">
       {index > 0 && (
         <button
-          className="absolute right-1 top-1 p-0.5 rounded-full transition bg-secondary hover:bg-neutral-300 hover:text-black cursor-pointer"
+          className="absolute right-1 top-1 p-0.5 rounded-full transition bg-none hover:bg-neutral-300 hover:text-black cursor-pointer"
           type="button"
           onClick={() => remove(index)}
           title="remove jury"
