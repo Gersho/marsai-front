@@ -14,16 +14,13 @@ import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
 import EventsPage from './pages/EventsPage';
 import EventBookingPage from './pages/EventBookingPage';
-<<<<<<< HEAD
 import { useApi } from './hooks/useApi';
 import { useAuthStore } from './hooks/useAuth';
 import { useEffect } from 'react';
 import marsaiLogo from './assets/marsai-logo.svg';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import ProtectedRoute from './components/ProtectedRoute';
-=======
 import UnsubscribePage from './pages/UnsubscribePage';
->>>>>>> 0f34fc8 (fix title page ok)
 
 function App() {
   const api = useApi();
