@@ -7,25 +7,26 @@ import Card from './base/Card';
 
 function ObjectivesFestival() {
   const { t } = useTranslation();
+  const target = 'home.objectif.';
 
   const objectifsData = [
     {
       id: 1,
       icon: <TbTargetArrow />,
-      title: t('objectif.items.0.title'),
-      text: t('objectif.items.0.text'),
+      title: t(target + 'items.0.title'),
+      text: t(target + 'items.0.text'),
     },
     {
       id: 2,
       icon: <AiOutlineThunderbolt />,
-      title: t('objectif.items.1.title'),
-      text: t('objectif.items.1.text'),
+      title: t(target + 'items.1.title'),
+      text: t(target + 'items.1.text'),
     },
     {
       id: 3,
       icon: <MdOutlineRocketLaunch />,
-      title: t('objectif.items.2.title'),
-      text: t('objectif.items.2.text'),
+      title: t(target + 'items.2.title'),
+      text: t(target + 'items.2.text'),
     },
   ];
 
@@ -34,7 +35,7 @@ function ObjectivesFestival() {
       <div className="max-w-5xl mx-auto">
         <TitleSection hasUnderline={true} underlineColor="bg-white">
           <Trans
-            i18nKey="objectif.title"
+            i18nKey={target + 'title'}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>

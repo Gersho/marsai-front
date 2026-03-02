@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import TitleSection from './base/TitleSection';
-import { useApi } from '../hooks/useApi';
 import { useFormatDate } from '../hooks/useFormatDate';
 import SmallCard from './base/SmallCard';
 
 function ConferenceProgram({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const target = "events.conference.";
   return (
     <section className="section bg-primary">
       <div className="max-w-4xl mx-auto">
@@ -17,14 +16,14 @@ function ConferenceProgram({ data, error, loading }) {
           className="text-white mb-12"
         >
           <Trans
-            i18nKey="conference.title"
+            i18nKey={target + "title"}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
 
         {loading && (
           <div className="text-white text-center py-12">
-            {t('program.loading')}
+            {t(target + 'program.loading')}
           </div>
         )}
 
@@ -32,7 +31,7 @@ function ConferenceProgram({ data, error, loading }) {
 
         {!loading && !error && data.length === 0 && (
           <div className="text-white text-center py-12">
-            {t('program.noEvents')}
+            {t(target + 'program.noEvents')}
           </div>
         )}
 
@@ -45,14 +44,13 @@ function ConferenceProgram({ data, error, loading }) {
               date={`${formatDate(event.date)}`}
               duration={
                 event.duration
-                  ? t('conference.program.duration') + event.duration + ' min'
+                  ? t(target + 'program.duration') + event.duration + ' min'
                   : ''
               }
               label={event.description}
               hasUnderline={false}
-              className={`text-white bg-secondary ${
-                index === data.length - 1 ? 'col-span-2' : ''
-              }`}
+              className={`text-white bg-secondary ${index === data.length - 1 ? 'col-span-2' : ''
+                }`}
             />
           ))}
         </div>

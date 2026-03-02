@@ -14,7 +14,6 @@ import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
 import EventsPage from './pages/EventsPage';
 import EventBookingPage from './pages/EventBookingPage';
-import { useApi } from './hooks/useApi';
 import { useAuthStore } from './hooks/useAuth';
 import { useEffect } from 'react';
 import marsaiLogo from './assets/marsai-logo.svg';
@@ -23,25 +22,15 @@ import ProtectedRoute from './components/ProtectedRoute';
 import UnsubscribePage from './pages/UnsubscribePage';
 
 function App() {
-  const api = useApi();
   const { setUser, isInit } = useAuthStore();
 
   useEffect(() => {
     try {
       setUser(JSON.parse(localStorage.getItem('user')));
     } catch (e) {
+      console.log(e);
       setUser(null);
     }
-    // const refresh = async () => {
-    //   const res = await api('/auth/me', null, false);
-    //   if (res?.ok) {
-    //     const user = await res.json();
-    //     setUser(user);
-    //   } else {
-    //     setUser(null);
-    //   }
-    // };
-    // refresh();
   }, []);
 
   if (!isInit) {

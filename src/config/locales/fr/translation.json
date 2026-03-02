@@ -9,56 +9,6 @@
     "login": "Connexion",
     "logout": "Déconnexion"
   },
-  "hero": {
-    "title": "Imaginez des <0>futurs</0> souhaitables",
-    "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
-    "ctaParticipate": "Participez maintenant",
-    "ctaLearn_more": "En savoir plus <0>+</0>"
-  },
-  "objectif": {
-    "title": " Objectifs du <0>festival</0>",
-    "items": [
-      {
-        "title": "L'humain au centre",
-        "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
-      },
-      {
-        "title": "Challenge Créatif",
-        "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
-      },
-      {
-        "title": "Futurs Souhaitables",
-        "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
-      }
-    ]
-  },
-  "formatSelection": {
-    "title": "Format de la Sélection",
-    "subtitle": "Le parcours des œuvres",
-    "items": [
-      {
-        "title": "2 mois",
-        "subtitle": "appel à projet",
-        "text": "Candidatures ouvertes aux créateurs du monde entier."
-      },
-      {
-        "title": "50 Films",
-        "subtitle": "Sélection Officielle",
-        "text": "Courts-métrages d'une minute retenus pour la compétition."
-      },
-      {
-        "title": "Web & RS",
-        "subtitle": "Diffusion Digitale",
-        "text": "Visibilité mondiale via les réseaux et plateformes."
-      },
-      {
-        "title": "Festival",
-        "subtitle": "Salles de Cinéma",
-        "text": "Projection sur grand écran pour une immersion totale."
-      }
-    ],
-    "ctaParticipate": "Participez maintenant"
-  },
   "login": {
     "title": "CONNEXION",
     "subTitle": "ESPACE MEMBRE MARS.A.I",
@@ -70,101 +20,6 @@
       "invalidCredentials": "Email ou mot de passe invalide",
       "default": "Quelque chose s'est mal passé"
     }
-  },
-  "conference": {
-    "tag": "le coeur du festival",
-    "title": "Deux journées de <0>conférences</0> gratuites",
-    "list": [
-      "Débats engagés sur l'éthique et le futur",
-      "Confrontations d'idées entre artistes et tech",
-      "Interrogations stimulantes sur la création"
-    ],
-    "listTwo": [
-      {
-        "title": "projections",
-        "text": "Films en compétition et hors-compétition sur écran géant."
-      },
-      {
-        "title": "Workshops",
-        "text": "Scénario, création et post-prod avec des experts de l'IA."
-      },
-      {
-        "title": "Remise des prix",
-        "text": "Cinéastes, acteurs et créateurs renommés pour récompenser l'excellence."
-      }
-    ],
-    "closingCeremony": {
-      "tag": "Cérémonie de clôture",
-      "title": "Mars.a.i night",
-      "text": "Fête Électro mêlant IA et futurs souhaitables.Une expérience immersive sonore et visuelle.",
-      "date": "13 juin",
-      "time": "à partir de 19h",
-      "cta": "Prendre mon pass"
-    },
-    "program": {
-      "loading": "Chargement des conférences...",
-      "noEvents": "Aucune conférence programmée pour le moment.",
-      "errorFetch": "Erreur lors du chargement des conférences.",
-      "errorOccurred": "Une erreur est survenue lors du chargement des conférences.",
-      "duration": "Durée : ",
-      "datePrefix": "Le "
-    }
-  },
-  "lieuxPlateforme": {
-    "tag": "le lieu",
-    "titlePart1": "La",
-    "titlePart2": "plateforme",
-    "description": "4 000 m² d'espaces modulables dans le centre de Marseille, au cœur de l'écosystème numérique.",
-    "salles": [
-      {
-        "title": "Salle des Sucres",
-        "text": "Futur sanctuaire des conférences et de la remise des prix de Mars.A.I. Un espace majestueux alliant patrimoine et technologie."
-      },
-      {
-        "title": "Salle Plaza",
-        "text": "L'épicentre du festival : accueil, animations, workshops et restauration. Le point de rencontre de tous les participants."
-      }
-    ],
-    "location1": "Marseille, France",
-    "location2": "Centre Événementiel La Plateforme"
-  },
-  "chiffres": {
-    "title": "Chiffres <0>projetés</0>",
-    "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
-    "countriesRepresented": "Pays représentés",
-    "filmsSubmitted": "Films soumis"
-  },
-  "partner": {
-    "tag": "Nos partenaires",
-    "title": "ils soutiennent <0>le futur</0>"
-  },
-  "projet": {
-    "title": "LE PROJET MARS.A.I",
-    "items": {
-      "oneMinute": {
-        "title": "1 minute",
-        "text": "Format ultra-court pour maximiser l'impact créatif."
-      },
-      "free": {
-        "title": "gratuité",
-        "text": "Conférences et workshops accessibles à tous."
-      },
-      "forEveryone": {
-        "title": "Pour tous",
-        "text": "Professionnels, étudiants et curieux."
-      },
-      "expertise": {
-        "title": "Expertise",
-        "text": "Rencontrez les leaders mondiaux de l'IA."
-      }
-    }
-  },
-  "filmsCompet": {
-    "previewSelection": "Aperçu Sélection",
-    "title": "Films en <0>compétition</0>",
-    "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
-    "directorLabel": "Réalisateur",
-    "viewSelection": "Voir toute la sélection"
   },
   "footer": {
     "description": "Une co-création de l'école du numérique La Plateforme et le Mobile Film Festival. Ensemble pour dessiner les nouveaux horizons du cinéma.",
@@ -416,33 +271,6 @@
     "error_title": "Erreur",
     "error_message": "Une erreur est survenue lors de la désinscription. Le lien est peut-être invalide ou a déjà été utilisé."
   },
-  "access": {
-    "title": "Accès",
-    "publicTransport": {
-      "title": "Transports en commun",
-      "subtitle": "Tram T2 / T3 - Arrêt Arenc Le Silo. Métro M2 - Station Désirée Clary."
-    },
-    "car": {
-      "title": "Voiture",
-      "subtitle": "Autoroute A55 - Sortie 2. Parking Indigo Quai du Lazaret à 200m."
-    },
-    "address": {
-      "title": "Adresse",
-      "subtitle": "12 Rue d'Uzes, 13002 Marseille (Entrée Principale)."
-    }
-  },
-  "workshops": {
-    "tag": "Ateliers Pratiques",
-    "title": "Workshops <0>IA Créative</0>",
-    "description": "Passez de la théorie à la pratique avec les meilleurs experts internationaux. Attention, places très limitées (max 15 par session).",
-    "loading": "Chargement des ateliers...",
-    "noEvents": "Aucun atelier programmé pour le moment.",
-    "errorFetch": "Erreur lors du chargement des ateliers.",
-    "availability": "Disponibilité :",
-    "remainingPlaces_one": "{{count}} place restante",
-    "remainingPlaces_other": "{{count}} places restantes",
-    "bookNow": "Réserver ma place"
-  },
   "booking": {
     "title": "<0>Réserver</0> ma place",
     "success_title": "Réservation confirmée !",
@@ -465,6 +293,182 @@
       "connection": "Erreur de connexion au serveur",
       "notFound": "Événement non trouvé",
       "fetch": "Erreur lors de la récupération de l'événement"
+    }
+  },
+  "events": {
+    "conference": {
+      "tag": "le coeur du festival",
+      "title": "Deux journées de <0>conférences</0> gratuites",
+      "list": [
+        "Débats engagés sur l'éthique et le futur",
+        "Confrontations d'idées entre artistes et tech",
+        "Interrogations stimulantes sur la création"
+      ],
+      "listTwo": [
+        {
+          "title": "projections",
+          "text": "Films en compétition et hors-compétition sur écran géant."
+        },
+        {
+          "title": "Workshops",
+          "text": "Scénario, création et post-prod avec des experts de l'IA."
+        },
+        {
+          "title": "Remise des prix",
+          "text": "Cinéastes, acteurs et créateurs renommés pour récompenser l'excellence."
+        }
+      ],
+      "closingCeremony": {
+        "tag": "Cérémonie de clôture",
+        "title": "Mars.a.i night",
+        "text": "Fête Électro mêlant IA et futurs souhaitables.Une expérience immersive sonore et visuelle.",
+        "date": "13 juin",
+        "time": "à partir de 19h",
+        "cta": "Prendre mon pass"
+      },
+      "program": {
+        "loading": "Chargement des conférences...",
+        "noEvents": "Aucune conférence programmée pour le moment.",
+        "errorFetch": "Erreur lors du chargement des conférences.",
+        "errorOccurred": "Une erreur est survenue lors du chargement des conférences.",
+        "duration": "Durée : ",
+        "datePrefix": "Le "
+      }
+    },
+    "access": {
+      "title": "Accès",
+      "publicTransport": {
+        "title": "Transports en commun",
+        "subtitle": "Tram T2 / T3 - Arrêt Arenc Le Silo. Métro M2 - Station Désirée Clary."
+      },
+      "car": {
+        "title": "Voiture",
+        "subtitle": "Autoroute A55 - Sortie 2. Parking Indigo Quai du Lazaret à 200m."
+      },
+      "address": {
+        "title": "Adresse",
+        "subtitle": "12 Rue d'Uzes, 13002 Marseille (Entrée Principale)."
+      }
+    },
+    "workshops": {
+      "tag": "Ateliers Pratiques",
+      "title": "Workshops <0>IA Créative</0>",
+      "description": "Passez de la théorie à la pratique avec les meilleurs experts internationaux. Attention, places très limitées (max 15 par session).",
+      "loading": "Chargement des ateliers...",
+      "noEvents": "Aucun atelier programmé pour le moment.",
+      "errorFetch": "Erreur lors du chargement des ateliers.",
+      "availability": "Disponibilité :",
+      "remainingPlaces_one": "{{count}} place restante",
+      "remainingPlaces_other": "{{count}} places restantes",
+      "bookNow": "Réserver ma place"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Imaginez des <0>futurs</0> souhaitables",
+      "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
+      "ctaParticipate": "Participez maintenant",
+      "ctaLearn_more": "En savoir plus <0>+</0>"
+    },
+    "projet": {
+      "title": "LE PROJET MARS.A.I",
+      "items": {
+        "oneMinute": {
+          "title": "1 minute",
+          "text": "Format ultra-court pour maximiser l'impact créatif."
+        },
+        "free": {
+          "title": "gratuité",
+          "text": "Conférences et workshops accessibles à tous."
+        },
+        "forEveryone": {
+          "title": "Pour tous",
+          "text": "Professionnels, étudiants et curieux."
+        },
+        "expertise": {
+          "title": "Expertise",
+          "text": "Rencontrez les leaders mondiaux de l'IA."
+        }
+      }
+    },
+    "filmsCompet": {
+      "previewSelection": "Aperçu Sélection",
+      "title": "Films en <0>compétition</0>",
+      "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
+      "directorLabel": "Réalisateur",
+      "viewSelection": "Voir toute la sélection"
+    },
+    "objectif": {
+      "title": " Objectifs du <0>festival</0>",
+      "items": [
+        {
+          "title": "L'humain au centre",
+          "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
+        },
+        {
+          "title": "Challenge Créatif",
+          "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
+        },
+        {
+          "title": "Futurs Souhaitables",
+          "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
+        }
+      ]
+    },
+    "formatSelection": {
+      "title": "Format de la Sélection",
+      "subtitle": "Le parcours des œuvres",
+      "items": [
+        {
+          "title": "2 mois",
+          "subtitle": "appel à projet",
+          "text": "Candidatures ouvertes aux créateurs du monde entier."
+        },
+        {
+          "title": "50 Films",
+          "subtitle": "Sélection Officielle",
+          "text": "Courts-métrages d'une minute retenus pour la compétition."
+        },
+        {
+          "title": "Web & RS",
+          "subtitle": "Diffusion Digitale",
+          "text": "Visibilité mondiale via les réseaux et plateformes."
+        },
+        {
+          "title": "Festival",
+          "subtitle": "Salles de Cinéma",
+          "text": "Projection sur grand écran pour une immersion totale."
+        }
+      ],
+      "ctaParticipate": "Participez maintenant"
+    },
+    "lieuxPlateforme": {
+      "tag": "le lieu",
+      "titlePart1": "La",
+      "titlePart2": "plateforme",
+      "description": "4 000 m² d'espaces modulables dans le centre de Marseille, au cœur de l'écosystème numérique.",
+      "salles": [
+        {
+          "title": "Salle des Sucres",
+          "text": "Futur sanctuaire des conférences et de la remise des prix de Mars.A.I. Un espace majestueux alliant patrimoine et technologie."
+        },
+        {
+          "title": "Salle Plaza",
+          "text": "L'épicentre du festival : accueil, animations, workshops et restauration. Le point de rencontre de tous les participants."
+        }
+      ],
+      "location1": "Marseille, France",
+      "location2": "Centre Événementiel La Plateforme"
+    },
+    "chiffres": {
+      "title": "Chiffres <0>projetés</0>",
+      "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
+      "countriesRepresented": "Pays représentés",
+      "filmsSubmitted": "Films soumis"
+    },
+    "partner": {
+      "tag": "Nos partenaires",
+      "title": "ils soutiennent <0>le futur</0>"
     }
   }
 }

@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 function EventsPage() {
-  const [events, setEvents] = useState([]);
   const [bookableEvents, setBookableEvents] = useState([]);
   const [notBookableEvents, setNotBookableEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,6 +15,8 @@ function EventsPage() {
   const fetchApi = useApi();
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language.split('-')[0].toUpperCase();
+  const target = 'events.conference.program.';
+
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -33,10 +34,10 @@ function EventsPage() {
           );
           setBookableEvents(filteredBookableEvents);
         } else {
-          setError(t('program.errorFetch'));
+          setError(t(target + 'errorFetch'));
         }
       } catch (err) {
-        setError(t('program.errorOccurred'));
+        setError(t(target + 'errorOccurred'));
         console.error(err);
       } finally {
         setLoading(false);

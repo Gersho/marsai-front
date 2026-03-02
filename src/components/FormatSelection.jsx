@@ -5,40 +5,41 @@ import Card from './base/Card';
 
 function FormatSelection() {
   const { t } = useTranslation();
+  const target = 'home.formatSelection.';
   const formatSelectionData = [
     {
       id: 1,
-      title: t('formatSelection.items.0.title'),
-      subtitle: t('formatSelection.items.0.subtitle'),
-      text: t('formatSelection.items.0.text'),
+      title: t(target + 'items.0.title'),
+      subtitle: t(target + 'items.0.subtitle'),
+      text: t(target + 'items.0.text'),
     },
     {
       id: 2,
-      title: t('formatSelection.items.1.title'),
-      subtitle: t('formatSelection.items.1.subtitle'),
-      text: t('formatSelection.items.1.text'),
+      title: t(target + 'items.1.title'),
+      subtitle: t(target + 'items.1.subtitle'),
+      text: t(target + 'items.1.text'),
     },
     {
       id: 3,
-      title: t('formatSelection.items.2.title'),
-      subtitle: t('formatSelection.items.2.subtitle'),
-      text: t('formatSelection.items.2.text'),
+      title: t(target + 'items.2.title'),
+      subtitle: t(target + 'items.2.subtitle'),
+      text: t(target + 'items.2.text'),
     },
     {
       id: 4,
-      title: t('formatSelection.items.3.title'),
-      subtitle: t('formatSelection.items.3.subtitle'),
-      text: t('formatSelection.items.3.text'),
+      title: t(target + 'items.3.title'),
+      subtitle: t(target + 'items.3.subtitle'),
+      text: t(target + 'items.3.text'),
     },
   ];
   return (
     <section className="section text-white ">
       <div className="max-w-5xl mx-auto">
         <TitleSection className="mx-auto text-center">
-          {t('formatSelection.title')}
+          {t(target + 'title')}
         </TitleSection>
         <p className="uppercase text-dark text-center mb-6 lg:mb-12">
-          {t('formatSelection.subtitle')}
+          {t(target + 'subtitle')}
         </p>
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 mb-6 lg:mb-12">
           {formatSelectionData.map(obj => (
@@ -54,7 +55,7 @@ function FormatSelection() {
         </div>
         <div className="flex justify-center">
           <SecondaryButton to="/submit">
-            {t('formatSelection.ctaParticipate')}
+            {t(target + 'ctaParticipate')}
           </SecondaryButton>
         </div>
       </div>
