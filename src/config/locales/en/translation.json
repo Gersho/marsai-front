@@ -34,7 +34,7 @@
   "submitMovieForm": {
     "page": {
       "titlePart1": "Call for Projects 2026",
-      "titlePart2": "submit a movie",
+      "titlePart2": "submit a <0>movie</0>",
       "paragraph": "Please provide the technical details, AI usage, and your team composition. All fields marked with an asterisk (*) are required.",
       "submitButton": "finalize my submission"
     },
@@ -447,8 +447,8 @@
     },
     "lieuxPlateforme": {
       "tag": "the place",
-      "titlePart1": "The",
-      "titlePart2": "platform",
+      "titlePart1": "La",
+      "titlePart2": "Plateforme",
       "description": "4,000 m² of modular spaces in the center of Marseille, at the heart of the digital ecosystem.",
       "salles": [
         {

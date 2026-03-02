@@ -34,7 +34,7 @@
   "submitMovieForm": {
     "page": {
       "titlePart1": "Appel à Projets 2026",
-      "titlePart2": "Soumettre un film",
+      "titlePart2": "Soumettre un <0>film</0>",
       "paragraph": "Transmettez les éléments techniques, l'usage de l'IA et la composition de votre équipe. Tous les champs marqués d'une étoile (*) sont obligatoires.",
       "submitButton": "Finaliser ma soumission"
     },

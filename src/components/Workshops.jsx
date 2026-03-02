@@ -26,7 +26,6 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
     };
     fetchSeats();
   }, [fetchApi, path]);
-  console.log(remainingSeats);
   return (
     <div
       className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
@@ -59,39 +58,10 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
     </div>
   );
 }
-function Workshops() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const fetchApi = useApi();
+function Workshops({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language.split('-')[0].toUpperCase();
   const target = 'events.workshops.';
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetchApi(`/events?lang=${currentLang}`);
-        if (response && response.ok) {
-          const data = await response.json();
-          const filteredEvents = data.filter(
-            event => event.is_bookable === true || event.is_bookable === 1
-          );
-          setEvents(filteredEvents);
-        } else {
-          setError(t('errorFetch'));
-        }
-      } catch (err) {
-        setError(t('program.errorOccurred'));
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEvents();
-  }, [fetchApi, t, currentLang]);
   return (
     <section className="section bg-primary text-white">
       <div className="max-w-4xl mx-auto">
@@ -118,14 +88,14 @@ function Workshops() {
 
         {error && <div className="text-red-500 text-center py-12">{error}</div>}
 
-        {!loading && !error && events.length === 0 && (
+        {!loading && !error && data.length === 0 && (
           <div className="text-white text-center py-12">
             {t(target + 'noEvents')}
           </div>
         )}
 
         <div className="grid grid-cols-2 gap-2">
-          {events.map(event => (
+          {data.map(event => (
             <CardWorkshop
               key={event.id}
               path={event.id}
