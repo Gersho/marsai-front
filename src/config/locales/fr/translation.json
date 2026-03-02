@@ -9,56 +9,6 @@
     "login": "Connexion",
     "logout": "Déconnexion"
   },
-  "hero": {
-    "title": "Imaginez des <0>futurs</0> souhaitables",
-    "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
-    "ctaParticipate": "Participez maintenant",
-    "ctaLearn_more": "En savoir plus <0>+</0>"
-  },
-  "objectif": {
-    "title": " Objectifs du <0>festival</0>",
-    "items": [
-      {
-        "title": "L'humain au centre",
-        "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
-      },
-      {
-        "title": "Challenge Créatif",
-        "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
-      },
-      {
-        "title": "Futurs Souhaitables",
-        "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
-      }
-    ]
-  },
-  "formatSelection": {
-    "title": "Format de la Sélection",
-    "subtitle": "Le parcours des œuvres",
-    "items": [
-      {
-        "title": "2 mois",
-        "subtitle": "appel à projet",
-        "text": "Candidatures ouvertes aux créateurs du monde entier."
-      },
-      {
-        "title": "50 Films",
-        "subtitle": "Sélection Officielle",
-        "text": "Courts-métrages d'une minute retenus pour la compétition."
-      },
-      {
-        "title": "Web & RS",
-        "subtitle": "Diffusion Digitale",
-        "text": "Visibilité mondiale via les réseaux et plateformes."
-      },
-      {
-        "title": "Festival",
-        "subtitle": "Salles de Cinéma",
-        "text": "Projection sur grand écran pour une immersion totale."
-      }
-    ],
-    "ctaParticipate": "Participez maintenant"
-  },
   "login": {
     "title": "CONNEXION",
     "subTitle": "ESPACE MEMBRE MARS.A.I",
@@ -70,62 +20,6 @@
       "invalidCredentials": "Email ou mot de passe invalide",
       "default": "Quelque chose s'est mal passé"
     }
-  },
-  "lieuxPlateforme": {
-    "tag": "le lieu",
-    "titlePart1": "La",
-    "titlePart2": "plateforme",
-    "description": "4 000 m² d'espaces modulables dans le centre de Marseille, au cœur de l'écosystème numérique.",
-    "salles": [
-      {
-        "title": "Salle des Sucres",
-        "text": "Futur sanctuaire des conférences et de la remise des prix de Mars.A.I. Un espace majestueux alliant patrimoine et technologie."
-      },
-      {
-        "title": "Salle Plaza",
-        "text": "L'épicentre du festival : accueil, animations, workshops et restauration. Le point de rencontre de tous les participants."
-      }
-    ],
-    "location1": "Marseille, France",
-    "location2": "Centre Événementiel La Plateforme"
-  },
-  "chiffres": {
-    "title": "Chiffres <0>projetés</0>",
-    "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
-    "countriesRepresented": "Pays représentés",
-    "filmsSubmitted": "Films soumis"
-  },
-  "partner": {
-    "tag": "Nos partenaires",
-    "title": "ils soutiennent <0>le futur</0>"
-  },
-  "projet": {
-    "title": "LE PROJET MARS.A.I",
-    "items": {
-      "oneMinute": {
-        "title": "1 minute",
-        "text": "Format ultra-court pour maximiser l'impact créatif."
-      },
-      "free": {
-        "title": "gratuité",
-        "text": "Conférences et workshops accessibles à tous."
-      },
-      "forEveryone": {
-        "title": "Pour tous",
-        "text": "Professionnels, étudiants et curieux."
-      },
-      "expertise": {
-        "title": "Expertise",
-        "text": "Rencontrez les leaders mondiaux de l'IA."
-      }
-    }
-  },
-  "filmsCompet": {
-    "previewSelection": "Aperçu Sélection",
-    "title": "Films en <0>compétition</0>",
-    "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
-    "directorLabel": "Réalisateur",
-    "viewSelection": "Voir toute la sélection"
   },
   "footer": {
     "description": "Une co-création de l'école du numérique La Plateforme et le Mobile Film Festival. Ensemble pour dessiner les nouveaux horizons du cinéma.",
@@ -401,7 +295,7 @@
       "fetch": "Erreur lors de la récupération de l'événement"
     }
   },
-  "events":{
+  "events": {
     "conference": {
       "tag": "le coeur du festival",
       "title": "Deux journées de <0>conférences</0> gratuites",
@@ -467,6 +361,114 @@
       "remainingPlaces_one": "{{count}} place restante",
       "remainingPlaces_other": "{{count}} places restantes",
       "bookNow": "Réserver ma place"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Imaginez des <0>futurs</0> souhaitables",
+      "subtitle": "Le festival de courts-métrages de 60 secondes réalisés par IA. 2 jours d'immersion au cœur de Marseille.",
+      "ctaParticipate": "Participez maintenant",
+      "ctaLearn_more": "En savoir plus <0>+</0>"
+    },
+    "projet": {
+      "title": "LE PROJET MARS.A.I",
+      "items": {
+        "oneMinute": {
+          "title": "1 minute",
+          "text": "Format ultra-court pour maximiser l'impact créatif."
+        },
+        "free": {
+          "title": "gratuité",
+          "text": "Conférences et workshops accessibles à tous."
+        },
+        "forEveryone": {
+          "title": "Pour tous",
+          "text": "Professionnels, étudiants et curieux."
+        },
+        "expertise": {
+          "title": "Expertise",
+          "text": "Rencontrez les leaders mondiaux de l'IA."
+        }
+      }
+    },
+    "filmsCompet": {
+      "previewSelection": "Aperçu Sélection",
+      "title": "Films en <0>compétition</0>",
+      "description": "Découvrez les courts-métrages finalistes générés par l'IA.",
+      "directorLabel": "Réalisateur",
+      "viewSelection": "Voir toute la sélection"
+    },
+    "objectif": {
+      "title": " Objectifs du <0>festival</0>",
+      "items": [
+        {
+          "title": "L'humain au centre",
+          "text": "Mettre l'humain au cœur de la création d'œuvres générées par IA pour ne pas perdre l'émotion."
+        },
+        {
+          "title": "Challenge Créatif",
+          "text": "Challenger la créativité des participants grâce à un format très court de 60 secondes."
+        },
+        {
+          "title": "Futurs Souhaitables",
+          "text": "Mettre à profit la puissance de l'IA pour illustrer un thème : Imaginez des futurs souhaitables."
+        }
+      ]
+    },
+    "formatSelection": {
+      "title": "Format de la Sélection",
+      "subtitle": "Le parcours des œuvres",
+      "items": [
+        {
+          "title": "2 mois",
+          "subtitle": "appel à projet",
+          "text": "Candidatures ouvertes aux créateurs du monde entier."
+        },
+        {
+          "title": "50 Films",
+          "subtitle": "Sélection Officielle",
+          "text": "Courts-métrages d'une minute retenus pour la compétition."
+        },
+        {
+          "title": "Web & RS",
+          "subtitle": "Diffusion Digitale",
+          "text": "Visibilité mondiale via les réseaux et plateformes."
+        },
+        {
+          "title": "Festival",
+          "subtitle": "Salles de Cinéma",
+          "text": "Projection sur grand écran pour une immersion totale."
+        }
+      ],
+      "ctaParticipate": "Participez maintenant"
+    },
+    "lieuxPlateforme": {
+      "tag": "le lieu",
+      "titlePart1": "La",
+      "titlePart2": "plateforme",
+      "description": "4 000 m² d'espaces modulables dans le centre de Marseille, au cœur de l'écosystème numérique.",
+      "salles": [
+        {
+          "title": "Salle des Sucres",
+          "text": "Futur sanctuaire des conférences et de la remise des prix de Mars.A.I. Un espace majestueux alliant patrimoine et technologie."
+        },
+        {
+          "title": "Salle Plaza",
+          "text": "L'épicentre du festival : accueil, animations, workshops et restauration. Le point de rencontre de tous les participants."
+        }
+      ],
+      "location1": "Marseille, France",
+      "location2": "Centre Événementiel La Plateforme"
+    },
+    "chiffres": {
+      "title": "Chiffres <0>projetés</0>",
+      "description": "Basé sur l'expertise du Mobile Film Festival et le rayonnement de La Plateforme.",
+      "countriesRepresented": "Pays représentés",
+      "filmsSubmitted": "Films soumis"
+    },
+    "partner": {
+      "tag": "Nos partenaires",
+      "title": "ils soutiennent <0>le futur</0>"
     }
   }
 }
