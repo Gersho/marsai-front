@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import marsaiLogo from './assets/marsai-logo.svg';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import ProtectedRoute from './components/ProtectedRoute';
+import UnsubscribePage from './pages/UnsubscribePage';
 
 function App() {
   const api = useApi();
@@ -64,6 +65,10 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/events/:id" element={<EventBookingPage />} />
+          <Route
+            path="/bookings/unsubscribe/:token"
+            element={<UnsubscribePage />}
+          />
         </Route>
         <Route element={<ProtectedRoute allowedRole="admin" />}>
           <Route path="/admin" element={<AdminPage />}>
