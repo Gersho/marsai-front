@@ -1,7 +1,6 @@
 // import LanguagePicker from '../components/base/LanguagePicker';
 import { useEffect, useState } from 'react';
 import MovieCard from '../components/base/MovieCard';
-import TopPage from '../components/base/TopPage';
 import { useTranslation } from 'react-i18next';
 import PaginationMenu from '../components/base/PaginationMenu';
 import { useDebouncedCallback } from 'use-debounce';
@@ -31,12 +30,12 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-            '/movies/?page=' +
-            page +
-            '&type=' +
-            type +
-            '&search=' +
-            search,
+          '/movies/?page=' +
+          page +
+          '&type=' +
+          type +
+          '&search=' +
+          search,
           {
             method: 'GET',
           }

@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 function EventsPage() {
-  const [events, setEvents] = useState([]);
   const [bookableEvents, setBookableEvents] = useState([]);
   const [notBookableEvents, setNotBookableEvents] = useState([]);
   const [loading, setLoading] = useState(true);

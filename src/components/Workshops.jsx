@@ -60,7 +60,7 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
 }
 function Workshops({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const target = 'events.workshops.';
   return (
     <section className="section bg-primary text-white">

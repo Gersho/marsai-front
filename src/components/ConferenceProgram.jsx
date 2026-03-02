@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import TitleSection from './base/TitleSection';
-import { useApi } from '../hooks/useApi';
 import { useFormatDate } from '../hooks/useFormatDate';
 import SmallCard from './base/SmallCard';
 
 function ConferenceProgram({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const target = "events.conference.";
   return (
     <section className="section bg-primary">
