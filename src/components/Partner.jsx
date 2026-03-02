@@ -4,16 +4,17 @@ import marsai from '../assets/marsai-logo.svg';
 import TitleSection from './base/TitleSection';
 function Partner() {
   const { t } = useTranslation();
+  const target = 'home.partner.';
   return (
     <section className="section text-white">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-center gap-2 mb-4">
           <FaRegHandshake className="text-2xl text-accent" />
-          <p className="text-white uppercase text-lg">{t('partner.tag')}</p>
+          <p className="text-white uppercase text-lg">{t(target + 'tag')}</p>
         </div>
         <TitleSection className="mx-auto text-center">
           <Trans
-            i18nKey="partner.title"
+            i18nKey={target + 'title'}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>

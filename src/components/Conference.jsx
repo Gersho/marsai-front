@@ -11,39 +11,40 @@ import Card from './base/Card';
 
 function Conference() {
   const { t } = useTranslation();
+  const target = 'events.conference.';
   const conferenceData = {
     list: [
       {
         id: 1,
-        title: t('conference.list.0'),
+        title: t(target + 'list.0'),
       },
       {
         id: 2,
-        title: t('conference.list.1'),
+        title: t(target + 'list.1'),
       },
       {
         id: 3,
-        title: t('conference.list.2'),
+        title: t(target + 'list.2'),
       },
     ],
     listTwo: [
       {
         id: 1,
         icon: <TbMovie />,
-        title: t('conference.listTwo.0.title'),
-        text: t('conference.listTwo.0.text'),
+        title: t(target + 'listTwo.0.title'),
+        text: t(target + 'listTwo.0.text'),
       },
       {
         id: 2,
         icon: <BsCpu />,
-        title: t('conference.listTwo.1.title'),
-        text: t('conference.listTwo.1.text'),
+        title: t(target + 'listTwo.1.title'),
+        text: t(target + 'listTwo.1.text'),
       },
       {
         id: 3,
         icon: <LiaCertificateSolid />,
-        title: t('conference.listTwo.2.title'),
-        text: t('conference.listTwo.2.text'),
+        title: t(target + 'listTwo.2.title'),
+        text: t(target + 'listTwo.2.text'),
       },
     ],
   };
@@ -51,11 +52,11 @@ function Conference() {
     <section className="section text-white bg-primary">
       <div className="max-w-5xl mx-auto">
         <div className="flex mb-8">
-          <PrimaryTag>{t('conference.tag')}</PrimaryTag>
+          <PrimaryTag>{t(target + 'tag')}</PrimaryTag>
         </div>
         <TitleSection>
           <Trans
-            i18nKey="conference.title"
+            i18nKey={target + "title"}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
@@ -86,29 +87,29 @@ function Conference() {
           <div className="absolute inset-0 bg-black/80 rounded-2xl"></div>
           <div className="relative z-10 mb-12 lg:mb-0">
             <div className="flex mb-8">
-              <SecondaryTag>{t('conference.closingCeremony.tag')}</SecondaryTag>
+              <SecondaryTag>{t(target + 'closingCeremony.tag')}</SecondaryTag>
             </div>
             <p className="uppercase text-7xl font-extrabold max-w-lg mb-6 text-white">
-              {t('conference.closingCeremony.title')}
+              {t(target + 'closingCeremony.title')}
             </p>
             <p className="text-white max-w-md">
-              {t('conference.closingCeremony.text')}
+              {t(target + 'closingCeremony.text')}
             </p>
           </div>
           <div className="relative z-10 bg-white flex flex-col items-center gap-4 p-4 rounded-2xl">
             <CiCalendar className="text-primary text-4xl" />
             <p className="text-5xl text-black font-extrabold uppercase">
-              {t('conference.closingCeremony.date')}
+              {t(target + 'closingCeremony.date')}
             </p>
             <p className="text-accent uppercase">
-              {t('conference.closingCeremony.time')}
+              {t(target + 'closingCeremony.time')}
             </p>
             <div className="flex">
               <Link
                 to={'/events'}
                 className="uppercase button flex items-center gap-2 bg-accent text-white"
               >
-                {t('conference.closingCeremony.cta')}
+                {t(target + 'closingCeremony.cta')}
               </Link>
             </div>
           </div>

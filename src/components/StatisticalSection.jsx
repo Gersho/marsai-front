@@ -5,6 +5,7 @@ import TitleSection from './base/TitleSection';
 
 function StatisticalSection() {
   const { t } = useTranslation();
+  const target = 'home.chiffres.';
   return (
     <section className="section text-white bg-primary">
       <div className="max-w-5xl mx-auto">
@@ -12,14 +13,14 @@ function StatisticalSection() {
           <div className="">
             <TitleSection hasUnderline underlineColor="bg-white">
               <Trans
-                i18nKey="chiffres.title"
+                i18nKey={target + 'title'}
                 components={[
                   <strong key="highlight" className="text-accent" />,
                 ]}
               />
             </TitleSection>
             <p className="text-white max-w-sm mb-6">
-              {t('chiffres.description')}
+              {t(target + 'description')}
             </p>
           </div>
           <div className="flex gap-2">
@@ -28,14 +29,14 @@ function StatisticalSection() {
                 <TbWorld />
               </span>
               <h3 className="text-white uppercase">+120</h3>
-              <p className="text-white">{t('chiffres.countriesRepresented')}</p>
+              <p className="text-white">{t(target + 'countriesRepresented')}</p>
             </div>
             <div className="flex-1 bg-secondary p-4 text-white rounded-xl hover:opacity-75">
               <span className="block text-accent text-2xl pb-4">
                 <RiMovie2Line />
               </span>
               <h3 className="text-white uppercase ">+600</h3>
-              <p className="text-white">{t('chiffres.filmsSubmitted')}</p>
+              <p className="text-white">{t(target + 'filmsSubmitted')}</p>
             </div>
           </div>
         </div>

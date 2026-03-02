@@ -9,56 +9,6 @@
     "login": "Login",
     "logout": "Logout"
   },
-  "hero": {
-    "title": "Imagine desirable <0>futures</0>",
-    "subtitle": "The 60-second short film festival made by AI. 2 days of immersion in the heart of Marseille.",
-    "ctaParticipate": "Participate now",
-    "ctaLearn_more": "Learn more <0>+</0>"
-  },
-  "objectif": {
-    "title": "Objectives of the <0>festival</0>",
-    "items": [
-      {
-        "title": "Putting Humans First",
-        "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
-      },
-      {
-        "title": "Creative Challenge",
-        "text": "Pushing participants’ creativity through an ultra-short 60-second format."
-      },
-      {
-        "title": "Desirable Futures",
-        "text": "Using the power of AI to explore a theme: Imagine desirable futures."
-      }
-    ]
-  },
-  "formatSelection": {
-    "title": "Selection Format",
-    "subtitle": "The Journey of the Works",
-    "items": [
-      {
-        "title": "2 Months",
-        "subtitle": "Open Call for Projects",
-        "text": "Submissions open to creators from around the world."
-      },
-      {
-        "title": "50 Films",
-        "subtitle": "Official Selection",
-        "text": "One-minute short films selected for the competition."
-      },
-      {
-        "title": "Web & Social Media",
-        "subtitle": "Digital Distribution",
-        "text": "Global visibility through social networks and online platforms."
-      },
-      {
-        "title": "Festival",
-        "subtitle": "Cinema Theaters",
-        "text": "Screening on the big screen for a fully immersive experience."
-      }
-    ],
-    "ctaParticipate": "Participate now"
-  },
   "login": {
     "title": "LOGIN",
     "subTitle": "MARS.A.I MEMBERS AREA",
@@ -70,101 +20,6 @@
       "invalidCredentials": "Invalid credentials",
       "default": "Something went wrong"
     }
-  },
-  "conference": {
-    "tag": "The heart of the festival",
-    "title": "Two days of free <0>conferences</0>",
-    "list": [
-      "Engaging debates on ethics and the future",
-      "Confrontations of ideas between artists and tech",
-      "Stimulating questions about creation"
-    ],
-    "listTwo": [
-      {
-        "title": "screenings",
-        "text": "Films in and out of competition on a giant screen."
-      },
-      {
-        "title": "Workshops",
-        "text": "Screenwriting, creation and post-production with AI experts."
-      },
-      {
-        "title": "Awards ceremony",
-        "text": "Renowned filmmakers, actors and creators to reward excellence."
-      }
-    ],
-    "closingCeremony": {
-      "tag": "Closing ceremony",
-      "title": "Mars.a.i night",
-      "text": "Electro party mixing AI and desirable futures. An immersive sound and visual experience.",
-      "date": "June 13",
-      "time": "from 7 p.m.",
-      "cta": "Get my pass"
-    },
-    "program": {
-      "loading": "Loading conferences...",
-      "noEvents": "No conferences scheduled at this time.",
-      "errorFetch": "Error fetching conferences.",
-      "errorOccurred": "An error occurred while fetching conferences.",
-      "duration": "Duration: ",
-      "datePrefix": ""
-    }
-  },
-  "lieuxPlateforme": {
-    "tag": "the place",
-    "titlePart1": "The",
-    "titlePart2": "platform",
-    "description": "4,000 m² of modular spaces in the center of Marseille, at the heart of the digital ecosystem.",
-    "salles": [
-      {
-        "title": "Salle des Sucres",
-        "text": "Future sanctuary for Mars.A.I. conferences and awards ceremony. A majestic space combining heritage and technology."
-      },
-      {
-        "title": "Salle Plaza",
-        "text": "The epicenter of the festival: reception, entertainment, workshops and catering. The meeting point for all participants."
-      }
-    ],
-    "location1": "Marseille, France",
-    "location2": "La Plateforme Event Center"
-  },
-  "chiffres": {
-    "title": "Projected <0>figures</0>",
-    "description": "Based on the expertise of the Mobile Film Festival and the influence of La Plateforme.",
-    "countriesRepresented": "Countries represented",
-    "filmsSubmitted": "Films submitted"
-  },
-  "partner": {
-    "tag": "Our partners",
-    "title": "they support <0>the future</0>"
-  },
-  "projet": {
-    "title": "THE MARS.A.I PROJECT",
-    "items": {
-      "oneMinute": {
-        "title": "1 minute",
-        "text": "Ultra-short format to maximize creative impact."
-      },
-      "free": {
-        "title": "free",
-        "text": "Conferences and workshops accessible to all."
-      },
-      "forEveryone": {
-        "title": "For all",
-        "text": "Professionals, students and curious minds."
-      },
-      "expertise": {
-        "title": "Expertise",
-        "text": "Meet the world's leading AI experts."
-      }
-    }
-  },
-  "filmsCompet": {
-    "previewSelection": "Preview Selection",
-    "title": "Films in <0>competition</0>",
-    "description": "Discover the finalist short films generated by AI.",
-    "directorLabel": "Director",
-    "viewSelection": "View all selections"
   },
   "footer": {
     "description": "A co-creation of the digital school La Plateforme and the Mobile Film Festival. Together to draw the new horizons of cinema.",
@@ -179,7 +34,7 @@
   "submitMovieForm": {
     "page": {
       "titlePart1": "Call for Projects 2026",
-      "titlePart2": "submit a movie",
+      "titlePart2": "submit a <0>movie</0>",
       "paragraph": "Please provide the technical details, AI usage, and your team composition. All fields marked with an asterisk (*) are required.",
       "submitButton": "finalize my submission"
     },
@@ -419,33 +274,6 @@
     "error_title": "Error",
     "error_message": "An error occurred during unsubscription. The link may be invalid or has already been used."
   },
-  "access": {
-    "title": "Access",
-    "publicTransport": {
-      "title": "Public Transport",
-      "subtitle": "Tram T2 / T3 - Arenc Le Silo stop. Metro M2 - Désirée Clary station."
-    },
-    "car": {
-      "title": "By Car",
-      "subtitle": "Highway A55 - Exit 2. Indigo Quai du Lazaret parking 200m away."
-    },
-    "address": {
-      "title": "Address",
-      "subtitle": "12 Rue d'Uzes, 13002 Marseille (Main Entrance)."
-    }
-  },
-  "workshops": {
-    "tag": "Practical Workshops",
-    "title": "Creative AI <0>Workshops</0>",
-    "description": "Go from theory to practice with the best international experts. Please note, places are very limited (max 15 per session).",
-    "loading": "Loading workshops...",
-    "noEvents": "No workshops scheduled at this time.",
-    "errorFetch": "Error fetching workshops.",
-    "availability": "Availability:",
-    "remainingPlaces_one": "{{count}} place remaining",
-    "remainingPlaces_other": "{{count}} places remaining",
-    "bookNow": "Book my place"
-  },
   "booking": {
     "title": "<0>Book</0> my place",
     "success_title": "Booking confirmed!",
@@ -468,6 +296,182 @@
       "connection": "Server connection error",
       "notFound": "Event not found",
       "fetch": "Error while fetching the event"
+    }
+  },
+  "events": {
+    "conference": {
+      "tag": "The heart of the festival",
+      "title": "Two days of free <0>conferences</0>",
+      "list": [
+        "Engaging debates on ethics and the future",
+        "Confrontations of ideas between artists and tech",
+        "Stimulating questions about creation"
+      ],
+      "listTwo": [
+        {
+          "title": "screenings",
+          "text": "Films in and out of competition on a giant screen."
+        },
+        {
+          "title": "Workshops",
+          "text": "Screenwriting, creation and post-production with AI experts."
+        },
+        {
+          "title": "Awards ceremony",
+          "text": "Renowned filmmakers, actors and creators to reward excellence."
+        }
+      ],
+      "closingCeremony": {
+        "tag": "Closing ceremony",
+        "title": "Mars.a.i night",
+        "text": "Electro party mixing AI and desirable futures. An immersive sound and visual experience.",
+        "date": "June 13",
+        "time": "from 7 p.m.",
+        "cta": "Get my pass"
+      },
+      "program": {
+        "loading": "Loading conferences...",
+        "noEvents": "No conferences scheduled at this time.",
+        "errorFetch": "Error fetching conferences.",
+        "errorOccurred": "An error occurred while fetching conferences.",
+        "duration": "Duration: ",
+        "datePrefix": ""
+      }
+    },
+    "access": {
+      "title": "Access",
+      "publicTransport": {
+        "title": "Public Transport",
+        "subtitle": "Tram T2 / T3 - Arenc Le Silo stop. Metro M2 - Désirée Clary station."
+      },
+      "car": {
+        "title": "By Car",
+        "subtitle": "Highway A55 - Exit 2. Indigo Quai du Lazaret parking 200m away."
+      },
+      "address": {
+        "title": "Address",
+        "subtitle": "12 Rue d'Uzes, 13002 Marseille (Main Entrance)."
+      }
+    },
+    "workshops": {
+      "tag": "Practical Workshops",
+      "title": "Creative AI <0>Workshops</0>",
+      "description": "Go from theory to practice with the best international experts. Please note, places are very limited (max 15 per session).",
+      "loading": "Loading workshops...",
+      "noEvents": "No workshops scheduled at this time.",
+      "errorFetch": "Error fetching workshops.",
+      "availability": "Availability:",
+      "remainingPlaces_one": "{{count}} place remaining",
+      "remainingPlaces_other": "{{count}} places remaining",
+      "bookNow": "Book my place"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Imagine desirable <0>futures</0>",
+      "subtitle": "The 60-second short film festival made by AI. 2 days of immersion in the heart of Marseille.",
+      "ctaParticipate": "Participate now",
+      "ctaLearn_more": "Learn more <0>+</0>"
+    },
+    "projet": {
+      "title": "THE MARS.A.I PROJECT",
+      "items": {
+        "oneMinute": {
+          "title": "1 minute",
+          "text": "Ultra-short format to maximize creative impact."
+        },
+        "free": {
+          "title": "free",
+          "text": "Conferences and workshops accessible to all."
+        },
+        "forEveryone": {
+          "title": "For all",
+          "text": "Professionals, students and curious minds."
+        },
+        "expertise": {
+          "title": "Expertise",
+          "text": "Meet the world's leading AI experts."
+        }
+      }
+    },
+    "filmsCompet": {
+      "previewSelection": "Preview Selection",
+      "title": "Films in <0>competition</0>",
+      "description": "Discover the finalist short films generated by AI.",
+      "directorLabel": "Director",
+      "viewSelection": "View all selections"
+    },
+    "objectif": {
+      "title": "Objectives of the <0>festival</0>",
+      "items": [
+        {
+          "title": "Putting Humans First",
+          "text": "Keeping people at the heart of AI-generated creations to preserve emotion and meaning."
+        },
+        {
+          "title": "Creative Challenge",
+          "text": "Pushing participants’ creativity through an ultra-short 60-second format."
+        },
+        {
+          "title": "Desirable Futures",
+          "text": "Using the power of AI to explore a theme: Imagine desirable futures."
+        }
+      ]
+    },
+    "formatSelection": {
+      "title": "Selection Format",
+      "subtitle": "The Journey of the Works",
+      "items": [
+        {
+          "title": "2 Months",
+          "subtitle": "Open Call for Projects",
+          "text": "Submissions open to creators from around the world."
+        },
+        {
+          "title": "50 Films",
+          "subtitle": "Official Selection",
+          "text": "One-minute short films selected for the competition."
+        },
+        {
+          "title": "Web & Social Media",
+          "subtitle": "Digital Distribution",
+          "text": "Global visibility through social networks and online platforms."
+        },
+        {
+          "title": "Festival",
+          "subtitle": "Cinema Theaters",
+          "text": "Screening on the big screen for a fully immersive experience."
+        }
+      ],
+      "ctaParticipate": "Participate now"
+    },
+    "lieuxPlateforme": {
+      "tag": "the place",
+      "titlePart1": "La",
+      "titlePart2": "Plateforme",
+      "description": "4,000 m² of modular spaces in the center of Marseille, at the heart of the digital ecosystem.",
+      "salles": [
+        {
+          "title": "Salle des Sucres",
+          "text": "Future sanctuary for Mars.A.I. conferences and awards ceremony. A majestic space combining heritage and technology."
+        },
+        {
+          "title": "Salle Plaza",
+          "text": "The epicenter of the festival: reception, entertainment, workshops and catering. The meeting point for all participants."
+        }
+      ],
+      "location1": "Marseille, France",
+      "location2": "La Plateforme Event Center"
+    },
+    "chiffres": {
+      "title": "Projected <0>figures</0>",
+      "description": "Based on the expertise of the Mobile Film Festival and the influence of La Plateforme.",
+      "countriesRepresented": "Countries represented",
+      "filmsSubmitted": "Films submitted"
+    },
+    "partner": {
+      "tag": "Our partners",
+      "title": "they support <0>the future</0>"
     }
   }
 }

@@ -10,6 +10,7 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
   const { t } = useTranslation();
   const fetchApi = useApi();
   const [remainingSeats, setRemainingSeats] = useState(null);
+  const target = 'events.workshops.';
 
   useEffect(() => {
     const fetchSeats = async () => {
@@ -25,7 +26,6 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
     };
     fetchSeats();
   }, [fetchApi, path]);
-  console.log(remainingSeats);
   return (
     <div
       className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
@@ -41,10 +41,10 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
       <h3 className="pr-6 uppercase lg:text-xl">{title}</h3>
       <p className="text-dark pb-12">{text}</p>
       <div className="flex items-center justify-between mb-6">
-        <p className="text-dark">{t('workshops.availability')}</p>
+        <p className="text-dark">{t(target + 'availability')}</p>
         <h4 className="uppercase text-accent text-xs">
           {remainingSeats !== null
-            ? t('workshops.remainingPlaces', { count: remainingSeats })
+            ? t(target + 'remainingPlaces', { count: remainingSeats })
             : '...'}
         </h4>
       </div>
@@ -53,49 +53,21 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
         hasIcon={false}
         className="justify-center rounded-md bg-accent"
       >
-        {t('workshops.bookNow')}
+        {t(target + 'bookNow')}
       </PrimaryButton>
     </div>
   );
 }
-function Workshops() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const fetchApi = useApi();
+function Workshops({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
-  const { t, i18n } = useTranslation();
-  const currentLang = i18n.language.split('-')[0].toUpperCase();
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetchApi(`/events?lang=${currentLang}`);
-        if (response && response.ok) {
-          const data = await response.json();
-          const filteredEvents = data.filter(
-            event => event.is_bookable === true || event.is_bookable === 1
-          );
-          setEvents(filteredEvents);
-        } else {
-          setError(t('workshops.errorFetch'));
-        }
-      } catch (err) {
-        setError(t('program.errorOccurred'));
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEvents();
-  }, [fetchApi, t, currentLang]);
+  const { t } = useTranslation();
+  const target = 'events.workshops.';
   return (
     <section className="section bg-primary text-white">
       <div className="max-w-4xl mx-auto">
         <div className="flex gap-2 items-center uppercase mb-6">
           <AiFillThunderbolt className="text-amber-400 text-4xl" />
-          <h4 className="font-thin text-lg">{t('workshops.tag')}</h4>
+          <h4 className="font-thin text-lg">{t(target + 'tag')}</h4>
         </div>
         <TitleSection
           hasUnderline
@@ -103,27 +75,27 @@ function Workshops() {
           className="mb-8 uppercase"
         >
           <Trans
-            i18nKey="workshops.title"
+            i18nKey={target + "title"}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
-        <p className="max-w-2xl mb-6">{t('workshops.description')}</p>
+        <p className="max-w-2xl mb-6">{t(target + 'description')}</p>
         {loading && (
           <div className="text-white text-center py-12">
-            {t('workshops.loading')}
+            {t(target + 'loading')}
           </div>
         )}
 
         {error && <div className="text-red-500 text-center py-12">{error}</div>}
 
-        {!loading && !error && events.length === 0 && (
+        {!loading && !error && data.length === 0 && (
           <div className="text-white text-center py-12">
-            {t('workshops.noEvents')}
+            {t(target + 'noEvents')}
           </div>
         )}
 
         <div className="grid grid-cols-2 gap-2">
-          {events.map(event => (
+          {data.map(event => (
             <CardWorkshop
               key={event.id}
               path={event.id}

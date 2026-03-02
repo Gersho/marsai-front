@@ -2,7 +2,9 @@ import { IoMdPlay } from 'react-icons/io';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { useTranslation, Trans } from 'react-i18next';
 import TitleSection from './base/TitleSection';
+import { Link } from 'react-router-dom';
 
+const target = 'home.filmsCompet.';
 const films = [
   {
     id: 1,
@@ -38,15 +40,15 @@ const FilmsCompetition = () => {
         <div className="mb-12">
           <span className="flex text-xs font-bold tracking-[0.2em] uppercase gap-2 mb-3">
             <IoMdPlay className="text-accent" />{' '}
-            {t('filmsCompet.previewSelection')}
+            {t(target + 'previewSelection')}
           </span>
           <TitleSection hasUnderline={true} underlineColor="bg-white">
             <Trans
-              i18nKey="filmsCompet.title"
+              i18nKey={target + 'title'}
               components={[<strong key="highlight" className="text-accent" />]}
             />
           </TitleSection>
-          <p className="text-white">{t('filmsCompet.description')}</p>
+          <p className="text-white">{t(target + 'description')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {films.map(film => (
@@ -73,7 +75,7 @@ const FilmsCompetition = () => {
                   {/* Réalisateur */}
                   <div className="text-sm text-gray-400">
                     <span className="block text-xs uppercase text-gray-600 mb-0.5">
-                      {t('filmsCompet.directorLabel')}
+                      {t(target + 'directorLabel')}
                     </span>
                     {film.director}
                   </div>
@@ -91,13 +93,13 @@ const FilmsCompetition = () => {
           ))}
         </div>
         <div className="border-t border-white/10 pt-8">
-          <a
-            href="#"
+          <Link
+            to="/movies"
             className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white transition group"
           >
-            {t('filmsCompet.viewSelection')}
+            {t(target + 'viewSelection')}
             <FaArrowRightLong className="text-accent group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

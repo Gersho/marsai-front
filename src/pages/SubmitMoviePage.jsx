@@ -4,13 +4,13 @@ import MovieSubmitDeclaration from '../components/MovieSubmit/MovieSubmitDeclara
 import MovieSubmitDeliverables from '../components/MovieSubmit/MovieSubmitDeliverables';
 import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
-import { useTranslation } from 'react-i18next';
-import TopPage from '../components/base/TopPage';
+import { Trans, useTranslation } from 'react-i18next';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import TopPageTwo from '../components/base/TopPageTwo';
 import TitlePage from '../components/base/TitlePage';
+import { BsStars } from 'react-icons/bs';
 
 function SubmitMoviePage() {
   const form = useForm({
@@ -61,15 +61,19 @@ function SubmitMoviePage() {
       <TopPageTwo />
       <div className="pb-25 pt-10 flex flex-col items-center text-white">
         <div className="flex flex-col items-center w-5/6 gap-4 pb-4">
+          <div className="flex gap-2 items-center uppercase mb-6">
+            <BsStars className="text-amber-400 text-4xl" />
+            <p className="text-white font-thin text-lg">
+              {t(target + 'titlePart1')}
+            </p>
+          </div>
           <TitlePage className="">
-            <h1>
-              {t(target + 'titlePart1')}{' '}
-              <strong className="text-accent">
-                {t(target + 'titlePart2')}
-              </strong>
-            </h1>
+            <Trans
+              i18nKey={t(target + 'titlePart2')}
+              components={[<strong key="highlight" className="text-accent" />]}
+            />
           </TitlePage>
-          <p>{t(target + 'paragraph')}</p>
+          <p className="max-w-lg text-center">{t(target + 'paragraph')}</p>
         </div>
         <form
           className="flex flex-col items-center gap-7 w-full"

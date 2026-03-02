@@ -6,6 +6,7 @@ import Card from './base/Card';
 
 function PracticalInfos() {
   const { t } = useTranslation();
+  const target = 'home.lieuxPlateforme.';
 
   return (
     <section className="section">
@@ -21,13 +22,13 @@ function PracticalInfos() {
           underlineColor="bg-white"
           className="text-white mb-8"
         >
-          {t('conference.closingCeremony.date')} 2026{' '}
+          {t('events.conference.closingCeremony.date')} 2026{' '}
           <strong className="text-accent">Marseille</strong>
         </TitleSection>
         <Card
           icon={<LuMapPin />}
-          title={`${t('lieuxPlateforme.titlePart1')} ${t('lieuxPlateforme.titlePart2')}`}
-          text={t('lieuxPlateforme.description')}
+          title={`${t(target + 'titlePart1')} ${t(target + 'titlePart2')}`}
+          text={t(target + 'description')}
           hasUnderline
           underlineColor="bg-accent"
           className="text-white mb-12"

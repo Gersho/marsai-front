@@ -8,37 +8,38 @@ import Card from './base/Card';
 
 const SectionProjet = () => {
   const { t } = useTranslation();
+  const target = 'home.projet.';
   const projectsData = [
     {
       id: 1,
       icon: <MdLocalMovies />,
-      title: t('projet.items.oneMinute.title'),
-      text: t('projet.items.oneMinute.text'),
+      title: t(target + 'items.oneMinute.title'),
+      text: t(target + 'items.oneMinute.text'),
     },
     {
       id: 2,
       icon: <FaBookOpen />,
-      title: t('projet.items.free.title'),
-      text: t('projet.items.free.text'),
+      title: t(target + 'items.free.title'),
+      text: t(target + 'items.free.text'),
     },
     {
       id: 3,
       icon: <CiUser />,
-      title: t('projet.items.forEveryone.title'),
-      text: t('projet.items.forEveryone.text'),
+      title: t(target + 'items.forEveryone.title'),
+      text: t(target + 'items.forEveryone.text'),
     },
     {
       id: 4,
       icon: <FaUsersCog />,
-      title: t('projet.items.expertise.title'),
-      text: t('projet.items.expertise.text'),
+      title: t(target + 'items.expertise.title'),
+      text: t(target + 'items.expertise.text'),
     },
   ];
   return (
     <section className="section text-white">
       <div className="max-w-5xl mx-auto">
         <TitleSection hasUnderline={true} underlineColor="bg-accent">
-          {t('projet.title')}
+          {t(target + 'title')}
         </TitleSection>
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
           {projectsData.map(obj => (
