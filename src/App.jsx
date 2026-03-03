@@ -53,7 +53,7 @@ function App() {
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/events/:id" element={<EventBookingPage />} />
+          <Route path="/events/:slug" element={<EventBookingPage />} />
           <Route
             path="/bookings/unsubscribe/:token"
             element={<UnsubscribePage />}
