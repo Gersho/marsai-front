@@ -40,9 +40,9 @@ function CardWorkshop({
         </h4>
       </div>
       <PrimaryButton
-        to={'/events/' + path}
+        to={remainingSeats === 0 ? null : '/events/' + path}
         hasIcon={false}
-        className="justify-center rounded-md bg-accent"
+        className={`justify-center rounded-md ${remainingSeats === 0 ? 'bg-gray-500 opacity-50 pointer-events-none' : 'bg-accent'}`}
       >
         {t(target + 'bookNow')}
       </PrimaryButton>
