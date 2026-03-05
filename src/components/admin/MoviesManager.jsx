@@ -3,11 +3,8 @@ import { useApi } from '../../hooks/useApi';
 import MovieRow from './base/MovieRow';
 import PaginationMenu from '../base/PaginationMenu';
 import { useDebouncedCallback } from 'use-debounce';
-import { TbTriangleFilled } from "react-icons/tb";
-import { TbTriangleInvertedFilled } from "react-icons/tb";
+import SortableTableHead from './base/SortableTableHead';
 
-{/* <TbTriangleFilled /> */ }
-{/* <TbTriangleInvertedFilled /> */ }
 // TODO translation
 
 function MoviesManager() {
@@ -33,6 +30,7 @@ function MoviesManager() {
           setIsPageChange(true);
         }
         let draft = onlyDrafts ? "true" : "false";
+        console.log("sort: " + sort + " order: " + order + " drafts: " + draft + " page: " + page);
         console.log("search: " + search);
         const res = await api(
           '/movies/sort/?page=' + page
@@ -63,7 +61,7 @@ function MoviesManager() {
       {/* <table className='**:border-2'> */}
       <div className='flex flex-col items-center'>
         <div>
-          <div className="p-4 flex-1 text-dark">
+          <div className="pt-4 pb-1 flex-1 text-dark">
             <label htmlFor="searchbar" hidden>
               search
             </label>
@@ -79,15 +77,23 @@ function MoviesManager() {
             ></input>
           </div>
         </div>
+        <div className=' pb-3'>
+          <input
+            onChange={e => {
+              setOnlyDrafts(e.target.checked);
+              setIsPageChange(false);
+            }}
+            type="checkbox" id="only-draft" name="only-draft" value="only-draft"></input>
+          <label htmlFor="only-draft"> Drafts Only</label><br></br>
+        </div>
         <table className='min-w-5/6'>
           <thead>
             <tr className=''>
-              <th className=''>Affiche</th>
-              <th className='flex flex-row justify-center gap-1'><div className='inline'>Titre</div><TbTriangleFilled className='mt-1 inline' /> <TbTriangleInvertedFilled className='mt-1 inline' />  </th>
-              <th className='gap-1'><div className='inline'>Realisateur</div><TbTriangleFilled className='mt-1 inline' /> <TbTriangleInvertedFilled className='mt-1 inline' />  </th>
-              <th className='gap-1'><div className='inline'>Status</div><TbTriangleFilled className='mt-1 inline' /> <TbTriangleInvertedFilled className='mt-1 inline' />  </th>
-              <th className='gap-1'><div className='inline'>Date</div><TbTriangleFilled className='mt-1 inline' /> <TbTriangleInvertedFilled className='mt-1 inline' />  </th>
-              <th className=''></th>
+              <th className='hidden md:block'>Affiche</th>
+              <SortableTableHead value="english_title" text="Titre" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="c.lastname" text="Realisateur" className="hidden md:block" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="status" text="Status" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="submitted_at" text="Date" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
             </tr>
           </thead>
           <tbody>

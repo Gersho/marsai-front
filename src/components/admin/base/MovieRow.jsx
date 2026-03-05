@@ -10,13 +10,12 @@ function MovieRow({ data }) {
     }
 
     return (
-        <tr className="sm:*:p-5 *:text-center">
-            <td><img className="sm:max-w-20 rounded-xl bg-primary" src={data.cover_path} alt="" /></td>
-            <td className="sm:max-w-sm truncate">{data.english_title}</td>
-            <td className="sm:max-w-20">{data.director.firstname}<br />{data.director.lastname}</td>
+        <tr className="md:*:p-5 *:text-center ">
+            <td className="hidden md:block"><img className="md:max-w-20 rounded-xl bg-primary" src={data.cover_path} alt="" /></td>
+            <td className="max-w-sm md:max-w-md  md:min-w-md truncate">{data.english_title}</td>
+            <td className="hidden md:table-cell md:max-w-20">{data.director.firstname}<br />{data.director.lastname}</td>
             <td>{data.status}</td>
             <td title={new Date(data.submitted_at).toLocaleString()}>{dateDiffString(new Date(data.submitted_at))}</td>
-            {/* <td>{data.submitted_at}</td> */}
             <td><div className="border-2 border-sm rounded-md min-w-10 text-center py-2 px-3 bg-dark"><FaFolderOpen /></div></td>
         </tr>
     );
