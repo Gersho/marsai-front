@@ -1,15 +1,23 @@
+import { FaFolderOpen } from "react-icons/fa";
+
 function MovieRow({ data }) {
 
-    // console.log(data);
+    function dateDiffString(date1) {
+        let datediff = (new Date() - date1.getTime()) / (24 * 60 * 60 * 1000);
+
+        if (datediff > 1) { return "" + Math.floor(datediff) + " days ago" }
+        else return "" + Math.floor(datediff * 24) + " hours ago";
+    }
+
     return (
-        <tr className="">
-            <td><img className=" w-20  bg-primary" src={data.cover_path} alt="" /></td>
-            <td>{data.english_title}</td>
-            <td className="p-2">{data.director.firstname}<br />{data.director.lastname}</td>
+        <tr className="sm:*:p-5 *:text-center">
+            <td><img className="sm:max-w-20 rounded-xl bg-primary" src={data.cover_path} alt="" /></td>
+            <td className="sm:max-w-sm truncate">{data.english_title}</td>
+            <td className="sm:max-w-20">{data.director.firstname}<br />{data.director.lastname}</td>
             <td>{data.status}</td>
-            <td>{new Date(data.submitted_at).toLocaleString()}</td>
+            <td title={new Date(data.submitted_at).toLocaleString()}>{dateDiffString(new Date(data.submitted_at))}</td>
             {/* <td>{data.submitted_at}</td> */}
-            <td><button>Edit</button></td>
+            <td><div className="border-2 border-sm rounded-md min-w-10 text-center py-2 px-3 bg-dark"><FaFolderOpen /></div></td>
         </tr>
     );
 }
