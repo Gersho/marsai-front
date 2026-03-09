@@ -34,21 +34,26 @@ function MoviesManager() {
           setPage(1);
           setIsPageChange(true);
         }
-        let draft = onlyDrafts ? "true" : "false";
+        let draft = onlyDrafts ? 'true' : 'false';
         const res = await api(
-          '/movies/sort/?page=' + page
-          + '&sort=' + sort
-          + '&order=' + order
-          + '&onlyDrafts=' + draft
-          + '&search=' + search);
+          '/movies/sort/?page=' +
+            page +
+            '&sort=' +
+            sort +
+            '&order=' +
+            order +
+            '&onlyDrafts=' +
+            draft +
+            '&search=' +
+            search
+        );
         if (res && res.ok) {
           const data = await res.json();
           console.log(data);
           setMovies(data.data);
           setTotal(data.total);
         }
-      }
-      catch (e) {
+      } catch (e) {
         console.error('error: ', e);
       } finally {
         setLoading(false);
@@ -68,10 +73,8 @@ function MoviesManager() {
 
   return (
     <div>
-      <TitlePage className='pt-5'>
-        {t(target + 'title')}
-      </TitlePage>
-      <div className='flex flex-col items-center'>
+      <TitlePage className="pt-5">{t(target + 'title')}</TitlePage>
+      <div className="flex flex-col items-center">
         <div>
           <div className="pt-4 pb-1 flex-1 text-dark">
             <label htmlFor="searchbar" hidden>
@@ -91,24 +94,63 @@ function MoviesManager() {
             ></input>
           </div>
         </div>
-        <div className=' pb-3'>
+        <div className=" pb-3">
           <input
             onChange={e => {
               setOnlyDrafts(e.target.checked);
               setIsPageChange(false);
             }}
-            type="checkbox" id="only-draft" name="only-draft" value="only-draft" checked={onlyDrafts}></input>
-          <label htmlFor="only-draft"> {t(target + 'draftsOnly')}</label><br></br>
+            type="checkbox"
+            id="only-draft"
+            name="only-draft"
+            value="only-draft"
+            checked={onlyDrafts}
+          ></input>
+          <label htmlFor="only-draft"> {t(target + 'draftsOnly')}</label>
+          <br></br>
         </div>
-        <table className='min-w-5/6'>
+        <table className="min-w-5/6">
           <thead>
-            <tr className=''>
-              <th className='lg:block'></th>
-              <th className='hidden lg:block'>{t(target + 'table.cover')}</th>
-              <SortableTableHead value="english_title" text={t(target + 'table.title')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="c.lastname" text={t(target + 'table.director')} className="hidden lg:block" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="status" text={t(target + 'table.status')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="submitted_at" text={t(target + 'table.submitted')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+            <tr className="">
+              <th className="lg:block"></th>
+              <th className="hidden lg:block">{t(target + 'table.cover')}</th>
+              <SortableTableHead
+                value="english_title"
+                text={t(target + 'table.title')}
+                sort={sort}
+                order={order}
+                setSort={setSort}
+                setOrder={setOrder}
+                setIsPageChange={setIsPageChange}
+              />
+              <SortableTableHead
+                value="c.lastname"
+                text={t(target + 'table.director')}
+                className="hidden lg:block"
+                sort={sort}
+                order={order}
+                setSort={setSort}
+                setOrder={setOrder}
+                setIsPageChange={setIsPageChange}
+              />
+              <SortableTableHead
+                value="status"
+                text={t(target + 'table.status')}
+                sort={sort}
+                order={order}
+                setSort={setSort}
+                setOrder={setOrder}
+                setIsPageChange={setIsPageChange}
+              />
+              <SortableTableHead
+                value="submitted_at"
+                text={t(target + 'table.submitted')}
+                sort={sort}
+                order={order}
+                setSort={setSort}
+                setOrder={setOrder}
+                setIsPageChange={setIsPageChange}
+              />
             </tr>
           </thead>
           <tbody>

@@ -74,7 +74,10 @@
       "isHybrid": {
         "title": "Work Classification:* Exclusive choice between:",
         "false": ["Fully generated", "(100% AI)"],
-        "true": ["Hybrid production","(Live-action footage + AI contributions)"]
+        "true": [
+          "Hybrid production",
+          "(Live-action footage + AI contributions)"
+        ]
       },
       "aiTools": {
         "label": "Technology stack *",
@@ -472,7 +475,7 @@
     }
   },
   "admin": {
-    "moviesManager":{
+    "moviesManager": {
       "title": "Submitted Movies",
       "loading": "Loading...",
       "search": "Search",

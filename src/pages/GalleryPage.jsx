@@ -30,12 +30,12 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-          '/movies/?page=' +
-          page +
-          '&type=' +
-          type +
-          '&search=' +
-          search,
+            '/movies/?page=' +
+            page +
+            '&type=' +
+            type +
+            '&search=' +
+            search,
           {
             method: 'GET',
           }
