@@ -17,7 +17,6 @@ function EventsPage() {
   const currentLang = i18n.language.split('-')[0].toUpperCase();
   const target = 'events.conference.program.';
 
-
   useEffect(() => {
     const fetchEvents = async () => {
       try {

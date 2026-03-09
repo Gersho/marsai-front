@@ -28,20 +28,19 @@ function JuryRegisterPage() {
   async function onSubmit(data) {
     setError(null);
     data = { ...data, token };
-    try {
-      const res = await api('/juries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+    const res = await api('/juries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (res) {
       if (res.ok) {
         navigate('/login', { replace: true });
       } else {
         const body = await res.json();
-        console.error('error: ', body.error);
+        console.error('errors: ', body.errors);
+        setError(body.message);
       }
-    } catch (e) {
-      console.error('error: ', e);
     }
   }
 
