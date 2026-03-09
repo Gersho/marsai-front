@@ -15,14 +15,21 @@ function SortableTableHead({
 
 
     return (
-        <th className={`p-4  ${className}`}>
-            <div className='inline'>{text}</div>
+        <th className={`p-4 ${className}`}>
+            <div className='inline'
+                onClick={() => {
+                    setSort(value);
+                    setOrder(sort !== value ? "ASC" : order === "ASC" ? "DESC" : "ASC");
+                    setIsPageChange(false)
+                }}>{text}</div>
             <TbTriangleFilled onClick={() => {
+                if (sort === value && order === "ASC") { return; }
                 setSort(value);
                 setOrder("ASC");
                 setIsPageChange(false);
             }} className={`mt-1 ml-1 inline cursor-pointer ${sort === value && order === "ASC" ? "text-accent" : ""} `} />
             <TbTriangleInvertedFilled onClick={() => {
+                if (sort === value && order === "DESC") { return; }
                 setSort(value);
                 setOrder("DESC");
                 setIsPageChange(false);

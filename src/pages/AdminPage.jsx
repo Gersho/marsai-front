@@ -15,27 +15,27 @@ function AdminPage() {
         <nav className="flex md:flex-col flex-row flex-wrap md:flex-nowrap md:mx-2 md:gap-2 ">
           <NavLink className={linkClass} to="/admin/dashboard">
             <RiDashboard3Line className="size-5" />
-            Dashboard
+            <p className='hidden md:inline'>Dashboard</p>
           </NavLink>
           <NavLink className={linkClass} to="/admin/movies">
             <BiMoviePlay className="size-5" />
-            Gestion de films
+            <p className='hidden md:inline'>Gestion de films</p>
           </NavLink>
           <NavLink className={linkClass} to="/admin/jury">
             <FaUser className="size-5" />
-            Jury
+            <p className='hidden md:inline'>Jury</p>
           </NavLink>
           <NavLink className={linkClass} to="/admin/leaderboard">
             <FaRankingStar className="size-5" />
-            Résultats & classement
+            <p className='hidden md:inline'>Résultats & classement</p>
           </NavLink>
           <NavLink className={linkClass} to="/admin/events">
             <FaCalendarAlt className="size-5" />
-            évènements
+            <p className='hidden md:inline'>évènements</p>
           </NavLink>
           <NavLink className={linkClass} to="/admin/newsletter">
             <IoMdMail className="size-5" />
-            newsletter
+            <p className='hidden md:inline'>newsletter</p>
           </NavLink>
         </nav>
       </div>
