@@ -11,7 +11,7 @@ function GalleryPage() {
   const { t } = useTranslation();
   const target = 'gallery.page.';
   const [page, setPage] = useState(1);
-  const [isPageChange, setIsPageChange] = useState(false);
+  const [isPageChange, setIsPageChange] = useState(true);
   const [total, setTotal] = useState(0);
   const [type, setType] = useState('all');
   const [search, setSearch] = useState('');
@@ -30,12 +30,12 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-          '/movies/?page=' +
-          page +
-          '&type=' +
-          type +
-          '&search=' +
-          search,
+            '/movies/?page=' +
+            page +
+            '&type=' +
+            type +
+            '&search=' +
+            search,
           {
             method: 'GET',
           }
