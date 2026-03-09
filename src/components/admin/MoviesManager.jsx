@@ -6,11 +6,11 @@ import { useDebouncedCallback } from 'use-debounce';
 import SortableTableHead from './base/SortableTableHead';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import TitlePage from '../base/TitlePage';
-
-
-// TODO translation
+import { useTranslation } from 'react-i18next';
 
 function MoviesManager() {
+  const { t } = useTranslation();
+  const target = 'admin.moviesManager.';
   const [page, setPage] = useState(1);
   const [isPageChange, setIsPageChange] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -35,8 +35,6 @@ function MoviesManager() {
           setIsPageChange(true);
         }
         let draft = onlyDrafts ? "true" : "false";
-        // console.log("sort: " + sort + " order: " + order + " drafts: " + draft + " page: " + page);
-        // console.log("search: " + search);
         const res = await api(
           '/movies/sort/?page=' + page
           + '&sort=' + sort
@@ -62,29 +60,28 @@ function MoviesManager() {
   if (loading) {
     return (
       <div className="flex flex-col justify-center items-center h-screen gap-12 text-neutral-300">
-        <p>Please wait</p>
+        <p>{t(target + 'loading')}</p>
         <AiOutlineLoading3Quarters className="animate-spin size-24" />
       </div>
     );
   }
 
-
   return (
     <div>
-      <TitlePage>
-        Films Soumis
+      <TitlePage className='pt-5'>
+        {t(target + 'title')}
       </TitlePage>
       <div className='flex flex-col items-center'>
         <div>
           <div className="pt-4 pb-1 flex-1 text-dark">
             <label htmlFor="searchbar" hidden>
-              search
+              {t(target + 'search')}
             </label>
             <input
               className="w-full outline-2 outline-neutral-400 rounded-sm pl-2 py-1.5 focus:outline-neutral-100"
               id="searchbar"
               type="text"
-              placeholder="Search..."
+              placeholder={t(target + 'placeholder')}
               onChange={e => {
                 debounced(e.target.value);
               }}
@@ -101,17 +98,17 @@ function MoviesManager() {
               setIsPageChange(false);
             }}
             type="checkbox" id="only-draft" name="only-draft" value="only-draft" checked={onlyDrafts}></input>
-          <label htmlFor="only-draft"> Drafts Only</label><br></br>
+          <label htmlFor="only-draft"> {t(target + 'draftsOnly')}</label><br></br>
         </div>
         <table className='min-w-5/6'>
           <thead>
             <tr className=''>
               <th className='lg:block'></th>
-              <th className='hidden lg:block'>Affiche</th>
-              <SortableTableHead value="english_title" text="Titre" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="c.lastname" text="Realisateur" className="hidden lg:block" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="status" text="Status" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
-              <SortableTableHead value="submitted_at" text="Date" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <th className='hidden lg:block'>{t(target + 'table.cover')}</th>
+              <SortableTableHead value="english_title" text={t(target + 'table.title')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="c.lastname" text={t(target + 'table.director')} className="hidden lg:block" sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="status" text={t(target + 'table.status')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
+              <SortableTableHead value="submitted_at" text={t(target + 'table.submitted')} sort={sort} order={order} setSort={setSort} setOrder={setOrder} setIsPageChange={setIsPageChange} />
             </tr>
           </thead>
           <tbody>

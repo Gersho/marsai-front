@@ -470,5 +470,21 @@
       "tag": "Nos partenaires",
       "title": "ils soutiennent <0>le futur</0>"
     }
+  },
+  "admin": {
+    "moviesManager":{
+      "title": "Films Soumis",
+      "loading": "Chargement en cour...",
+      "search": "Recherche",
+      "placeholder": "Recherche...",
+      "draftsOnly": "Drafts Uniquement",
+      "table": {
+        "cover": "Affiche",
+        "title": "Titre",
+        "director": "Réalisateur",
+        "status": "Status",
+        "submitted": "Soumis"
+      }
+    }
   }
 }

@@ -74,10 +74,7 @@
       "isHybrid": {
         "title": "Work Classification:* Exclusive choice between:",
         "false": ["Fully generated", "(100% AI)"],
-        "true": [
-          "Hybrid production",
-          "(Live-action footage + AI contributions)"
-        ]
+        "true": ["Hybrid production","(Live-action footage + AI contributions)"]
       },
       "aiTools": {
         "label": "Technology stack *",
@@ -472,6 +469,22 @@
     "partner": {
       "tag": "Our partners",
       "title": "they support <0>the future</0>"
+    }
+  },
+  "admin": {
+    "moviesManager":{
+      "title": "Submitted Movies",
+      "loading": "Loading...",
+      "search": "Search",
+      "placeholder": "Search...",
+      "draftsOnly": "Drafts Only",
+      "table": {
+        "cover": "Cover",
+        "title": "Title",
+        "director": "Director",
+        "status": "Status",
+        "submitted": "Submitted"
+      }
     }
   }
 }

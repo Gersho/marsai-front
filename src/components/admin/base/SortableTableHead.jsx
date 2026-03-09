@@ -13,10 +13,9 @@ function SortableTableHead({
     className = ""
 }) {
 
-
     return (
         <th className={`p-4 ${className}`}>
-            <div className='inline'
+            <div className='inline cursor-pointer'
                 onClick={() => {
                     setSort(value);
                     setOrder(sort !== value ? "ASC" : order === "ASC" ? "DESC" : "ASC");
