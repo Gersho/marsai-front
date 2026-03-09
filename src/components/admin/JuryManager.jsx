@@ -52,7 +52,7 @@ function JuryManager() {
             >
               <div className="flex items-center gap-5">
                 <div className="flex items-center justify-center uppercase text-3xl bg-primary size-20 rounded-xl">
-                  {jury.firstname.charAt(0)}
+                  {jury.firstname?.charAt(0)}
                 </div>
                 <div className="uppercase font-bold whitespace-nowrap">
                   {jury.firstname} {jury.lastname}
