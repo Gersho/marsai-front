@@ -9,34 +9,29 @@ export const useApi = () => {
 
   const fetchApi = useCallback(
     async (path, init = {}) => {
-      try {
-        const res = await fetch(baseUrl + path, {
-          ...init,
+      const res = await fetch(baseUrl + path, {
+        ...init,
+        credentials: 'include',
+      });
+
+      if (res.status === 401) {
+        const refreshed = await fetch(baseUrl + '/auth/refresh-token', {
+          method: 'POST',
           credentials: 'include',
         });
-
-        if (res.status === 401) {
-          const refreshed = await fetch(baseUrl + '/auth/refresh-token', {
-            method: 'POST',
+        if (refreshed.ok) {
+          // retry original request
+          return await fetch(baseUrl + path, {
+            ...init,
             credentials: 'include',
           });
-          if (refreshed.ok) {
-            // retry original request
-            return await fetch(baseUrl + path, {
-              ...init,
-              credentials: 'include',
-            });
-          } else {
-            setUser(null);
-            return null;
-          }
+        } else {
+          setUser(null);
+          return null;
         }
-
-        return res;
-      } catch (err) {
-        console.error('error fetch: ', err);
-        return null;
       }
+
+      return res;
     },
     [navigate, baseUrl, setUser]
   );
