@@ -6,26 +6,17 @@ import { useFormatDate } from '../hooks/useFormatDate';
 import PrimaryButton from './base/PrimaryButton';
 import { useTranslation, Trans } from 'react-i18next';
 
-function CardWorkshop({ time, date, title, text, path, className = '' }) {
+function CardWorkshop({
+  time,
+  date,
+  title,
+  text,
+  path,
+  remainingSeats,
+  className = '',
+}) {
   const { t } = useTranslation();
-  const fetchApi = useApi();
-  const [remainingSeats, setRemainingSeats] = useState(null);
   const target = 'events.workshops.';
-
-  useEffect(() => {
-    const fetchSeats = async () => {
-      try {
-        const response = await fetchApi(`/events/${path}/remaining-seats`);
-        if (response && response.ok) {
-          const data = await response.json();
-          setRemainingSeats(data.remainingSeats);
-        }
-      } catch (err) {
-        console.error('Error fetching seats:', err);
-      }
-    };
-    fetchSeats();
-  }, [fetchApi, path]);
   return (
     <div
       className={`flex-1 bg-primary rounded-md px-2 py-8 lg:px-8 lg:py-12 lg:mx-0 ${className}`}
@@ -49,9 +40,9 @@ function CardWorkshop({ time, date, title, text, path, className = '' }) {
         </h4>
       </div>
       <PrimaryButton
-        to={'/events/' + path}
+        to={remainingSeats === 0 ? null : '/events/' + path}
         hasIcon={false}
-        className="justify-center rounded-md bg-accent"
+        className={`justify-center rounded-md ${remainingSeats === 0 ? 'bg-gray-500 opacity-50 pointer-events-none' : 'bg-accent'}`}
       >
         {t(target + 'bookNow')}
       </PrimaryButton>
@@ -75,7 +66,7 @@ function Workshops({ data, error, loading }) {
           className="mb-8 uppercase"
         >
           <Trans
-            i18nKey={target + "title"}
+            i18nKey={target + 'title'}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
@@ -98,11 +89,12 @@ function Workshops({ data, error, loading }) {
           {data.map(event => (
             <CardWorkshop
               key={event.id}
-              path={event.id}
+              path={event.slug}
               time={formatTime(event.date)}
               date={formatDate(event.date)}
               title={event.title}
               text={event.description}
+              remainingSeats={event.remaining_seats}
               className={`text-white bg-secondary`}
             />
           ))}

@@ -21,6 +21,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import ProtectedRoute from './components/ProtectedRoute';
 import UnsubscribePage from './pages/UnsubscribePage';
 import MoviePage from './pages/MoviePage';
+import JuryRegisterPage from './pages/JuryRegisterPage';
 
 function App() {
   const { setUser, isInit } = useAuthStore();
@@ -55,7 +56,8 @@ function App() {
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/events/:id" element={<EventBookingPage />} />
+          <Route path="/invite/:token" element={<JuryRegisterPage />} />
+          <Route path="/events/:slug" element={<EventBookingPage />} />
           <Route
             path="/bookings/unsubscribe/:token"
             element={<UnsubscribePage />}

@@ -473,5 +473,28 @@
       "tag": "Our partners",
       "title": "they support <0>the future</0>"
     }
+  },
+  "register": {
+    "title": "Register",
+    "subTitle": "Register to become a jury",
+    "firstname": "firstname",
+    "lastname": "lastname",
+    "submitBtn": "Save"
+  },
+  "admin": {
+    "moviesManager": {
+      "title": "Submitted Movies",
+      "loading": "Loading...",
+      "search": "Search",
+      "placeholder": "Search...",
+      "draftsOnly": "Drafts Only",
+      "table": {
+        "cover": "Cover",
+        "title": "Title",
+        "director": "Director",
+        "status": "Status",
+        "submitted": "Submitted"
+      }
+    }
   }
 }

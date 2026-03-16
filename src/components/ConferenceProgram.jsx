@@ -6,7 +6,7 @@ import SmallCard from './base/SmallCard';
 function ConferenceProgram({ data, error, loading }) {
   const { formatDate, formatTime } = useFormatDate();
   const { t } = useTranslation();
-  const target = "events.conference.";
+  const target = 'events.conference.';
   return (
     <section className="section bg-primary">
       <div className="max-w-4xl mx-auto">
@@ -16,7 +16,7 @@ function ConferenceProgram({ data, error, loading }) {
           className="text-white mb-12"
         >
           <Trans
-            i18nKey={target + "title"}
+            i18nKey={target + 'title'}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>
@@ -49,8 +49,9 @@ function ConferenceProgram({ data, error, loading }) {
               }
               label={event.description}
               hasUnderline={false}
-              className={`text-white bg-secondary ${index === data.length - 1 ? 'col-span-2' : ''
-                }`}
+              className={`text-white bg-secondary ${
+                index === data.length - 1 ? 'col-span-2' : ''
+              }`}
             />
           ))}
         </div>

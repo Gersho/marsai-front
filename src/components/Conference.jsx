@@ -56,7 +56,7 @@ function Conference() {
         </div>
         <TitleSection>
           <Trans
-            i18nKey={target + "title"}
+            i18nKey={target + 'title'}
             components={[<strong key="highlight" className="text-accent" />]}
           />
         </TitleSection>

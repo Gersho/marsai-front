@@ -8,17 +8,19 @@ import { useForm } from 'react-hook-form';
 import { useTranslation, Trans } from 'react-i18next';
 
 function EventBookingPage() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const fetchApi = useApi();
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const form = useForm({
     criteriaMode: 'all',
   });
+  const currentLang = i18n.language.split('-')[0].toUpperCase();
+
   async function onSubmit(data) {
     try {
       const response = await fetchApi('/bookings', {
@@ -27,7 +29,7 @@ function EventBookingPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          eventId: parseInt(id),
+          eventId: parseInt(event.id),
           ...data,
         }),
       });
@@ -46,7 +48,7 @@ function EventBookingPage() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await fetchApi(`/events/${id}`);
+        const response = await fetchApi(`/events/${slug}?lang=${currentLang}`);
         if (response && response.ok) {
           const data = await response.json();
           setEvent(data);
@@ -60,7 +62,7 @@ function EventBookingPage() {
       }
     };
     fetchEvent();
-  }, [id]);
+  }, [slug, currentLang]);
 
   return (
     <>

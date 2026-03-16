@@ -4,7 +4,7 @@ import Card from './base/Card';
 
 function PlacePlateforme() {
   const { t } = useTranslation();
-  const target = "home.lieuxPlateforme."
+  const target = 'home.lieuxPlateforme.';
 
   const salles = [
     {
