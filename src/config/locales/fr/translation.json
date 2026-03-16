@@ -471,6 +471,13 @@
       "title": "ils soutiennent <0>le futur</0>"
     }
   },
+  "register": {
+    "title": "Inscription",
+    "subTitle": "Inscris toi pour devenir jury",
+    "firstname": "Prenom",
+    "lastname": "Nom",
+    "submitBtn": "Enregistrer"
+  },
   "admin": {
     "moviesManager": {
       "title": "Films Soumis",
