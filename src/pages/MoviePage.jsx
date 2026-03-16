@@ -53,7 +53,7 @@ function MoviePage() {
 
     const TechnicalSheet = () => (
         <div className="space-y-6">
-            <div className="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
+            <div className="bg-secondary p-6 rounded-2xl shadow-xl border border-gray-700">
                 <h3 className="text-xl font-bold text-red-500 mb-4 border-b border-gray-700 pb-2">
                     Détails Techniques
                 </h3>
@@ -82,55 +82,48 @@ function MoviePage() {
         <div className={basePageClasses}>
             <TopPageTwo />
 
-            <div className="max-w-7xl mx-auto w-full lg:max-w-full p-4 sm:p-8">
+            <div className="bg-primary bg-cover max-w-7xl mx-auto w-full lg:max-w-full p-4 sm:p-8">
 
+                <div className="bg-secondary p-6 rounded-2xl shadow-xl border border-gray-700 md:w-1/3 mx-auto ">
+                    <h1 className="text-3xl font-extrabold text-white">{data.english_title}</h1>
+                    <h2 className="text-xl font-light text-gray-300">{data.original_title}</h2>
 
+                    <div className="flex items-center text-lg text-gray-400 space-x-4 border-b border-gray-700 pb-3">
+                        <p className="text-white font-bold">{data.duration} s</p>
+                        <span className="text-gray-600">•</span>
+                        <span className={data.is_hybrid ? "font-bold" : "text-red-400 font-bold"}>
+                            {data.is_hybrid ? "Hybrid" : "100% AI"}
+                        </span>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mx-auto">
-
-
-                    <div className="md:order-1 md:col-span-1 space-y-4">
-
-                        <h1 className="text-3xl font-extrabold text-white">{data.english_title}</h1>
-                        <h2 className="text-xl font-light text-gray-300">{data.original_title}</h2>
-
-                        <div className="flex items-center text-lg text-gray-400 space-x-4 border-b border-gray-700 pb-3">
-                            <p className="text-white font-bold">{data.duration} s</p>
-                            <span className="text-gray-600">•</span>
-                            <span className={data.is_hybrid ? "text-yellow-400 font-bold" : "text-red-400 font-bold"}>
-                                {data.is_hybrid ? "Hybrid" : "100% AI"}
-                            </span>
-                        </div>
-
-                        <div className="space-y-3">
-                            <div className="flex justify-between items-center">
-                                <p className="font-medium text-gray-400 text-sm uppercase">Langue</p>
-                                <p className="text-lg font-bold text-white">{data.language || 'N/A'}</p>
-                            </div>
-
-                        </div>
-
-
-                        <div className="md:order-2 md:col-span-3 flex justify-center w-full">
-                            <div className="bg-black rounded-xl overflow-hidden shadow-2xl w-full">
-
-                                <video
-                                    src={data.video_path}
-                                    controls
-                                    poster={data.cover_path}
-                                    className="w-full h-full object-cover"
-                                >
-                                    Votre navigateur ne supporte pas la balise vidéo.
-                                </video>
-                            </div>
-                        </div>
-                        <div className="md:order-3 md:col-span-1">
-                            <TechnicalSheet />
+                    <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                            <p className="font-medium text-gray-400 text-sm uppercase">Langue</p>
+                            <p className="text-lg font-bold text-white">{data.language || 'N/A'}</p>
                         </div>
 
                     </div>
                 </div>
+
+                <div className="md:order-2 md:col-span-3 flex justify-center w-full">
+                    <div className="bg-black rounded-xl overflow-hidden shadow-2xl md:w-5/7 my-5">
+
+                        <video
+                            src={data.video_path}
+                            controls
+                            poster={data.cover_path}
+                            className="w-full h-full object-cover"
+                        >
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                </div>
+                <div className="md:order-3 md:col-span-1">
+                    <TechnicalSheet />
+                </div>
+
             </div>
+
         </div>
     );
 }
