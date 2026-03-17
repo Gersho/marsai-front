@@ -47,3 +47,31 @@ function AdminPage() {
 }
 
 export default AdminPage;
+
+
+{/* <div className="md:w-1/4 flex-shrink-0">
+                        <div className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                            <h3 className="text-xl font-bold text-red-400 mb-4">
+                                Fiche Technique
+                            </h3>
+                            
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="font-semibold text-gray-400 text-sm">Durée</p>
+                                    <p className="text-lg text-white">{data.duration} secondes</p>
+                                </div>
+                                <div>
+                                    <p className="font-semibold text-gray-400 text-sm">Titre Original</p>
+                                    <p className="text-lg text-white">{data.original_title}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            className="mt-6 w-full py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg transition duration-200"
+                        >
+                            Voter pour ce film
+                        </button>
+
+                    </div> 
+                </div>  */}

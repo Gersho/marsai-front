@@ -20,6 +20,7 @@ import marsaiLogo from './assets/marsai-logo.svg';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import ProtectedRoute from './components/ProtectedRoute';
 import UnsubscribePage from './pages/UnsubscribePage';
+import MoviePage from './pages/MoviePage';
 import JuryRegisterPage from './pages/JuryRegisterPage';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/movies/:id" element={<MoviePage />} />
           <Route path="/movies" element={<GalleryPage />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
