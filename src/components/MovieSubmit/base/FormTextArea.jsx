@@ -10,6 +10,7 @@ function FormTextArea({
   form,
   validation,
   name,
+  defaultValue = '',
   className = '',
 }) {
   if (!validation) {
@@ -41,6 +42,7 @@ function FormTextArea({
         placeholder={placeholder}
         title={title}
         name={name}
+        defaultValue={defaultValue}
         ref={ref}
         onChange={countCharacters}
       ></textarea>

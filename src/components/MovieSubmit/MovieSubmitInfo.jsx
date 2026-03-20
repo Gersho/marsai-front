@@ -5,7 +5,7 @@ import FormSectionTitle from './base/FormSectionTitle';
 import FormTextArea from './base/FormTextArea';
 import LanguagePicker from './base/LanguagePicker';
 
-function MovieSubmitInfo({ form }) {
+function MovieSubmitInfo({ form, movie }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.info.';
   const errors = 'submitMovieForm.formErrors.';
@@ -22,6 +22,7 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'originalTitle.title')}
           form={form}
           name="originalTitle"
+          defaultValue={movie?.original_title}
           autoFocus={true}
           validation={{
             required: t(errors + 'required'),
@@ -43,6 +44,7 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'englishTitle.title')}
           form={form}
           name="englishTitle"
+          defaultValue={movie?.english_title}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -65,6 +67,7 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'duration.title')}
           form={form}
           name="duration"
+          defaultValue={movie?.duration}
           validation={{
             required: t(errors + 'required'),
             pattern: {
@@ -88,21 +91,11 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'language.title')}
           form={form}
           name="language"
+          defaultValue={movie?.language}
           validation={{
             required: t(errors + 'required'),
           }}
         />
-        {/* <BasicFormInput
-          label={t(target + 'language.label')}
-          id="form-language"
-          placeholder={t(target + 'language.placeholder')}
-          title={t(target + 'language.title')}
-          form={form}
-          name="language"
-          validation={{
-            required: t(errors + 'required'),
-          }}
-        /> */}
       </div>
 
       <div className="flex flex-col items-center w-full md:flex-row md:justify-between md:gap-20">
@@ -115,6 +108,7 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'originalSynopsis.title')}
           form={form}
           name="originalSynopsis"
+          defaultValue={movie?.original_synopsis}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -137,6 +131,7 @@ function MovieSubmitInfo({ form }) {
           title={t(target + 'englishSynopsis.title')}
           form={form}
           name="englishSynopsis"
+          defaultValue={movie?.english_synopsis}
           validation={{
             required: t(errors + 'required'),
             minLength: {

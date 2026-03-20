@@ -7,6 +7,7 @@ function LanguagePicker({
   id,
   name,
   form,
+  defaultValue = 'FR',
   validation = false,
   className = '',
 }) {
@@ -23,10 +24,11 @@ function LanguagePicker({
         name={name}
         id={id}
         title={title}
+        defaultValue={defaultValue}
         {...form.register(name, validation)}
       >
         {languages.map((e, index) => (
-          <option className="" key={index} value={e.lang}>
+          <option className="" key={index} value={e.lang} >
             {e.icon} &nbsp;&nbsp;&nbsp; {e.text}
           </option>
         ))}
