@@ -56,7 +56,7 @@ function EditMoviePage() {
                 toast.success('Form edit OK.');
                 navigate('/');
             } else {
-                toast.error(data.message + '\n' + data.errors[0].message);
+                toast.error(data.message);
             }
         } catch (e) {
             toast.error('Something went wrong: ' + e);
