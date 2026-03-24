@@ -6,7 +6,7 @@ import FormSectionTitle from './base/FormSectionTitle';
 import { useTranslation } from 'react-i18next';
 import FormErrors from './base/FormErrors';
 
-function MovieSubmitTeamComposition({ form }) {
+function MovieSubmitTeamComposition({ form, movie }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.teamComposition.';
   const errors = 'submitMovieForm.formErrors.';
@@ -16,7 +16,7 @@ function MovieSubmitTeamComposition({ form }) {
     control: form.control,
   });
 
-  function addCollaborator() {
+  function addEmptyCollaborator() {
     append({
       gender: 'mr',
       firstname: '',
@@ -56,6 +56,7 @@ function MovieSubmitTeamComposition({ form }) {
               className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
               id="form-director-firstname"
               type="text"
+              defaultValue={movie?.director.firstname}
               {...form.register('director.firstname', {
                 required: t(errors + 'required'),
                 minLength: {
@@ -83,6 +84,7 @@ function MovieSubmitTeamComposition({ form }) {
             className="outline-2 outline-neutral-400 rounded-sm pl-2 py-1 my-2 min-w-full border-0 focus:outline-neutral-100"
             id="form-director-lastname"
             type="text"
+            defaultValue={movie?.director.lastname}
             {...form.register('director.lastname', {
               required: t(errors + 'required'),
               minLength: {
@@ -108,6 +110,7 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder=""
           title={t(target + 'director.job.title')}
           form={form}
+          defaultValue={movie?.director.job}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -129,6 +132,7 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder=""
           title={t(target + 'director.birthdate.title')}
           form={form}
+          defaultValue={movie?.director.birthdate}
           validation={{
             required: t(errors + 'required'),
             validate: value => {
@@ -151,6 +155,7 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder={t(target + 'director.email.placeholder')}
           title={t(target + 'director.email.title')}
           form={form}
+          defaultValue={movie?.director.email}
           validation={{
             required: t(errors + 'required'),
             pattern: {
@@ -175,6 +180,7 @@ function MovieSubmitTeamComposition({ form }) {
           placeholder={t(target + 'director.phone.placeholder')}
           title={t(target + 'director.phone.title')}
           form={form}
+          defaultValue={movie?.director.phone}
           validation={{
             required: t(errors + 'required'),
             pattern: {
@@ -211,6 +217,7 @@ function MovieSubmitTeamComposition({ form }) {
             },
           })}
           placeholder=""
+          defaultValue={movie?.director.address}
           title={t(target + 'director.address.title')}
         ></input>
 
@@ -224,6 +231,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.city"
           placeholder=""
           title={t(target + 'director.city.title')}
+          defaultValue={movie?.director.city}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -243,6 +251,7 @@ function MovieSubmitTeamComposition({ form }) {
           id="director-zipcode"
           name="director.zipcode"
           placeholder=""
+          defaultValue={movie?.director.zipcode}
           title={t(target + 'director.zipcode.title')}
           validation={{
             minLength: {
@@ -264,6 +273,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.region"
           placeholder=""
           title={t(target + 'director.region.title')}
+          defaultValue={movie?.director.region}
           validation={{
             minLength: {
               value: 3,
@@ -283,6 +293,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.country"
           placeholder=""
           title={t(target + 'director.country.title')}
+          defaultValue={movie?.director.country}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -305,6 +316,7 @@ function MovieSubmitTeamComposition({ form }) {
           label={t(target + 'director.facebook.label')}
           id="director-facebook"
           name="director.facebookUrl"
+          defaultValue={movie?.director.facebook_url}
           placeholder=""
           title={t(target + 'director.facebook.title')}
           validation={{
@@ -326,6 +338,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.instagramUrl"
           placeholder=""
           title={t(target + 'director.instagram.title')}
+          defaultValue={movie?.director.instagram_url}
           validation={{
             minLength: {
               value: 3,
@@ -346,6 +359,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.youtubeUrl"
           placeholder=""
           title={t(target + 'director.youtube.title')}
+          defaultValue={movie?.director.youtube_url}
           validation={{
             minLength: {
               value: 3,
@@ -365,6 +379,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.linkedinUrl"
           placeholder=""
           title={t(target + 'director.linkedin.title')}
+          defaultValue={movie?.director.linkedin_url}
           validation={{
             minLength: {
               value: 3,
@@ -385,6 +400,7 @@ function MovieSubmitTeamComposition({ form }) {
           name="director.twitterUrl"
           placeholder=""
           title={t(target + 'director.twitter.title')}
+          defaultValue={movie?.director.twitter_url}
           validation={{
             minLength: {
               value: 3,
@@ -412,7 +428,7 @@ function MovieSubmitTeamComposition({ form }) {
       <button
         className="border border-gray rounded-sm mr-2 mb-3 px-2 py-2 self-center cursor-pointer uppercase font-bold bg-secondary transition-all hover:bg-neutral-600"
         type="button"
-        onClick={addCollaborator}
+        onClick={addEmptyCollaborator}
       >
         {t(target + 'collaborators.button')}
       </button>

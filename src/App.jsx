@@ -22,6 +22,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import UnsubscribePage from './pages/UnsubscribePage';
 import MoviePage from './pages/MoviePage';
 import JuryRegisterPage from './pages/JuryRegisterPage';
+import AdminMovieTest from './pages/AdminMovieTest';
+import EditMoviePage from './pages/EditMoviePage';
 
 function App() {
   const { setUser, isInit } = useAuthStore();
@@ -53,7 +55,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/movies/:id" element={<MoviePage />} />
           <Route path="/movies" element={<GalleryPage />} />
+          <Route path="/movies/:slug" element={<AdminMovieTest />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
+          <Route path="/submit/:token" element={<EditMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/invite/:token" element={<JuryRegisterPage />} />

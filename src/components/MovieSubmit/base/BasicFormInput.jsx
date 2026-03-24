@@ -10,6 +10,7 @@ function BasicFormInput({
   validation = false,
   type = 'text',
   className = '',
+  defaultValue = '',
   autoFocus = false,
 }) {
   const register = form.register;
@@ -29,6 +30,7 @@ function BasicFormInput({
         type={type}
         placeholder={placeholder}
         title={title}
+        defaultValue={defaultValue}
         {...register(name, validation)}
         autoFocus={autoFocus}
       ></input>

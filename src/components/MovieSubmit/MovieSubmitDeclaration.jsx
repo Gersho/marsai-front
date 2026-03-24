@@ -5,7 +5,7 @@ import FormTextArea from './base/FormTextArea';
 import { useTranslation } from 'react-i18next';
 import FormErrors from './base/FormErrors';
 
-function MovieSubmitDeclaration({ form }) {
+function MovieSubmitDeclaration({ form, movie }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.declaration.';
   const errors = 'submitMovieForm.formErrors.';
@@ -35,6 +35,7 @@ function MovieSubmitDeclaration({ form }) {
               id="form-full-ai"
               name="ai-classification"
               value={false}
+              defaultChecked={movie?.is_hybrid === 0 ? "checked" : null}
               {...form.register('isHybrid', {
                 required: t(errors + 'requiredRadio'),
               })}
@@ -53,6 +54,7 @@ function MovieSubmitDeclaration({ form }) {
               id="form-hybrid"
               name="ai-classification"
               value={true}
+              defaultChecked={movie?.is_hybrid === 1 ? "checked" : null}
               {...form.register('isHybrid', {
                 required: t(errors + 'requiredRadio'),
               })}
@@ -72,6 +74,7 @@ function MovieSubmitDeclaration({ form }) {
           title={t(target + 'aiTools.title')}
           form={form}
           name="aiTools"
+          defaultValue={movie?.ai_tools}
           validation={{
             required: t(errors + 'required'),
             minLength: {
@@ -94,6 +97,7 @@ function MovieSubmitDeclaration({ form }) {
           title={t(target + 'creativeProcess.title')}
           form={form}
           name="creativeProcess"
+          defaultValue={movie?.creative_process}
           validation={{
             required: t(errors + 'required'),
             minLength: {
