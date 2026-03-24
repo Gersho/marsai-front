@@ -53,7 +53,7 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/movies/:id" element={<MoviePage />} />
+          {/* <Route path="/movies/:id" element={<MoviePage />} /> */}
           <Route path="/movies" element={<GalleryPage />} />
           <Route path="/movies/:slug" element={<AdminMovieTest />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
