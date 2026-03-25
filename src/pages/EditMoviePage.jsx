@@ -137,6 +137,8 @@ function EditMoviePage() {
                 >
                     <input type="hidden" name="token" value={token}
                         {...form.register("token", { required: true })} />
+                    <input type="hidden" name="status" value='pending_review'
+                        {...form.register("status", { required: true })} />
 
                     <MovieSubmitInfo form={form} movie={movie} />
                     <MovieSubmitDeclaration form={form} movie={movie} />
