@@ -2,6 +2,9 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import marsaiLogo from '../assets/marsai-logo.svg';
 import Logo from './Logo';
 import { useTranslation } from 'react-i18next';
+import { useApi } from '../hooks/useApi';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 const footerLogo = {
   logo: {
@@ -12,6 +15,30 @@ const footerLogo = {
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { register, handleSubmit } = useForm();
+  const api = useApi();
+
+  async function onSubmit(data) {
+    try {
+      const res = await api('/subscribers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res) {
+        if (res.ok) {
+          toast.success(t('footer.emailOk'));
+        } else {
+          toast.error(t('footer.emailError'));
+        }
+      }
+    }
+    catch (e) {
+      toast.error('Something went wrong: ' + e);
+    }
+  }
+
+
   return (
     <footer className=" bg-primary text-white py-16 px-4">
       <div className="max-w-5xl mx-auto">
@@ -57,11 +84,13 @@ const Footer = () => {
             <h2 className="text-2xl font-bold mb-6 uppercase tracking-wide">
               {t('footer.stayConnected')}
             </h2>
-            <form className="bg-white rounded-full p-1.5 flex items-center max-w-md mx-auto">
+            <form className="bg-white rounded-full p-1.5 flex items-center max-w-md mx-auto"
+              onSubmit={handleSubmit(onSubmit)}>
               <input
                 type="email"
                 placeholder={t('footer.emailPlaceholder')}
                 className="text-primary placeholder text-sm grow px-4 outline-none w-full"
+                {...register('email')}
               />
               <button
                 type="submit"

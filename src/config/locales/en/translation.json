@@ -29,7 +29,9 @@
     "legalNotice": "Legal Notice",
     "press": "Press",
     "contact": "Contact",
-    "copyright": "© 2025 MARS.A.I"
+    "copyright": "© 2025 MARS.A.I",
+    "emailOk": "Successfully registered to newsletter.",
+    "emailError": "Already registered to newsletter"
   },
   "submitMovieForm": {
     "page": {
