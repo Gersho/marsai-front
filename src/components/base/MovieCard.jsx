@@ -29,7 +29,7 @@ function MovieCard({ data }) {
         <span className="bg-secondary text-white absolute right-1 bottom-1 text-center text-xs px-4 rounded-md lowercase">
           {data.duration} s
         </span>
-        <span className=" bg-white absolute text-center text-[10px] px-2 rounded-md left-1 top-2">
+        <span className=" bg-white text-black absolute text-center text-[10px] px-2 rounded-md left-1 top-2">
           {data.is_hybrid ? 'Hybrid' : 'Full-AI'}
         </span>
       </div>
