@@ -55,7 +55,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           {/* <Route path="/movies/:id" element={<MoviePage />} /> */}
           <Route path="/movies" element={<GalleryPage />} />
-          <Route path="/movies/:slug" element={<AdminMovieTest />} />
+          <Route path="/movies/:slug" element={<MoviePage />} />
+          {/* <Route path="/movies/:slug" element={<AdminMovieTest />} /> */}
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/submit/:token" element={<EditMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
