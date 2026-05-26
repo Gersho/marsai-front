@@ -8,7 +8,6 @@ import LanguageSwitcher from './LanguageSwitcher';
 import PrimaryButton from './base/PrimaryButton';
 import { Toaster } from 'react-hot-toast';
 import { useApi } from '../hooks/useApi';
-import { useAuthStore } from '../hooks/useAuth';
 import { AuthContext } from '../context/AuthContext';
 
 function Navbar() {
