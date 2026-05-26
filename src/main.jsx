@@ -5,11 +5,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 import './config/i18n';
+import { AuthProvider } from './context/AuthProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>
 );

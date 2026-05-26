@@ -1,10 +1,11 @@
 import { Navigate, Outlet } from 'react-router-dom';
-import { useAuthStore } from '../hooks/useAuth';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 const ProtectedRoute = ({ allowedRole }) => {
-  const { user } = useAuthStore();
+  const { user, isLoggedIn } = useContext(AuthContext);
 
-  if (!user) {
+  if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
   }
   if (allowedRole && !user.roles.includes(allowedRole)) {
