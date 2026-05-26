@@ -20,11 +20,9 @@ export function AuthProvider({ children }) {
         setIsLoggedIn(true)
         setUser(data)
         if (data.roles.includes('admin')) {
-            console.log("admin yes");
             setIsAdmin(true);
         }
         if (data.roles.includes('jury')) {
-            console.log("jury yes");
             setIsJury(true);
         }
     }

@@ -30,7 +30,6 @@ function EditMoviePage() {
     const target = 'submitMovieForm.page.';
 
     async function onSubmit(data) {
-        console.log('data: ', data);
         const formData = new FormData();
 
         for (const [key, value] of Object.entries(data)) {
@@ -45,7 +44,6 @@ function EditMoviePage() {
             }
         }
 
-        console.log(formData);
         try {
             const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies/edit/' + movie.id, {
                 method: 'POST',
@@ -97,7 +95,6 @@ function EditMoviePage() {
             setLoading(false);
         }
         fetchData();
-        console.log(movie);
     }, []);
 
 

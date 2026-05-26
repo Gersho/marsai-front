@@ -19,7 +19,6 @@ const FilmsCompetition = () => {
   useEffect(() => {
     async function getMovieData() {
       try {
-        // console.log('movieData:' + movieData)
         const res = await api(
           '/movies/random/?qt=3',
           {
@@ -28,11 +27,7 @@ const FilmsCompetition = () => {
         );
         const json = await res.json();
         if (res.ok) {
-          console.log(json);
           setMovieData(json);
-          // return json;
-        } else {
-          console.log(json);
         }
       } catch (e) {
         console.error('error: ', e);

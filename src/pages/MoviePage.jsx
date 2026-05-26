@@ -15,10 +15,8 @@ function MoviePage() {
                 const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies/' + slug, { method: 'GET' });
                 const json = await res.json();
                 if (res.ok) {
-                    console.log(json);
                     setData(json);
                 } else {
-                    console.log(json);
                     setError(json.message || 'Erreur lors de la récupération des données.');
                 }
             } catch (e) {

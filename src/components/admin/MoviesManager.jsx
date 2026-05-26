@@ -37,19 +37,18 @@ function MoviesManager() {
         let draft = onlyDrafts ? 'true' : 'false';
         const res = await api(
           '/movies/sort/?page=' +
-            page +
-            '&sort=' +
-            sort +
-            '&order=' +
-            order +
-            '&onlyDrafts=' +
-            draft +
-            '&search=' +
-            search
+          page +
+          '&sort=' +
+          sort +
+          '&order=' +
+          order +
+          '&onlyDrafts=' +
+          draft +
+          '&search=' +
+          search
         );
         if (res && res.ok) {
           const data = await res.json();
-          console.log(data);
           setMovies(data.data);
           setTotal(data.total);
         }
