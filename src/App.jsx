@@ -14,8 +14,7 @@ import PublicLayout from './components/PublicLayout';
 import Newsletter from './components/admin/Newsletter';
 import EventsPage from './pages/EventsPage';
 import EventBookingPage from './pages/EventBookingPage';
-import { useAuthStore } from './hooks/useAuth';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import marsaiLogo from './assets/marsai-logo.svg';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -24,29 +23,9 @@ import MoviePage from './pages/MoviePage';
 import JuryRegisterPage from './pages/JuryRegisterPage';
 import AdminMovieTest from './pages/AdminMovieTest';
 import EditMoviePage from './pages/EditMoviePage';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
-  const { setUser, isInit } = useAuthStore();
-
-  useEffect(() => {
-    try {
-      setUser(JSON.parse(localStorage.getItem('user')));
-    } catch (e) {
-      console.log(e);
-      setUser(null);
-    }
-  }, []);
-
-  if (!isInit) {
-    return (
-      <div className="flex flex-col justify-center items-center h-screen gap-12 text-neutral-300">
-        <img src={marsaiLogo} alt="Marsai logo" />
-        <p>Please wait</p>
-        <AiOutlineLoading3Quarters className="animate-spin size-24" />
-      </div>
-    );
-  }
-
   return (
     <div className="typography">
       <Navbar />
@@ -55,7 +34,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           {/* <Route path="/movies/:id" element={<MoviePage />} /> */}
           <Route path="/movies" element={<GalleryPage />} />
-          <Route path="/movies/:slug" element={<AdminMovieTest />} />
+          <Route path="/movies/:slug" element={<MoviePage />} />
+          {/* <Route path="/movies/:slug" element={<AdminMovieTest />} /> */}
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/submit/:token" element={<EditMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
@@ -78,6 +58,11 @@ function App() {
             <Route path="newsletter" element={<Newsletter />} />
           </Route>
         </Route>
+
+        <Route element={<ProtectedRoute allowedRole="jury" />}>
+          <Route path="/jury" element={<MoviesManager />} />
+        </Route>
+
       </Routes>
     </div>
   );

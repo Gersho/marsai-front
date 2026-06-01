@@ -24,7 +24,6 @@ function SubmitMoviePage() {
   const target = 'submitMovieForm.page.';
 
   async function onSubmit(data) {
-    console.log('data: ', data);
     const formData = new FormData();
 
     for (const [key, value] of Object.entries(data)) {

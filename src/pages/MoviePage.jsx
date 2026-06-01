@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 function MoviePage() {
-    let { id } = useParams();
+    let { slug } = useParams();
     let [data, setData] = useState({});
     let [isLoading, setIsLoading] = useState(true);
     let [error, setError] = useState();
@@ -12,13 +12,11 @@ function MoviePage() {
     useEffect(() => {
         async function getMovieData() {
             try {
-                const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies/' + id, { method: 'GET' });
+                const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies/' + slug, { method: 'GET' });
                 const json = await res.json();
                 if (res.ok) {
-                    console.log(json);
                     setData(json);
                 } else {
-                    console.log(json);
                     setError(json.message || 'Erreur lors de la récupération des données.');
                 }
             } catch (e) {

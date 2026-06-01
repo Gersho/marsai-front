@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useCallback } from 'react';
-import { useAuthStore } from './useAuth';
+import { useCallback, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 export const useApi = () => {
   const navigate = useNavigate();
-  const { setUser } = useAuthStore();
+  const { logout } = useContext(AuthContext);
   const baseUrl = import.meta.env.VITE_SERVER_ADDRESS;
 
   const fetchApi = useCallback(
@@ -26,14 +26,14 @@ export const useApi = () => {
             credentials: 'include',
           });
         } else {
-          setUser(null);
+          logout(); 
           return null;
         }
       }
 
       return res;
     },
-    [navigate, baseUrl, setUser]
+    [navigate, baseUrl, logout]
   );
 
   return fetchApi;

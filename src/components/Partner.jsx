@@ -1,6 +1,6 @@
 import { FaRegHandshake } from 'react-icons/fa';
 import { Trans, useTranslation } from 'react-i18next';
-import marsai from '../assets/marsai-logo.svg';
+import partners from '../assets/partners/index.js';
 import TitleSection from './base/TitleSection';
 function Partner() {
   const { t } = useTranslation();
@@ -19,23 +19,16 @@ function Partner() {
           />
         </TitleSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-12 md:gap-18 lg:gap-24 md:py-12">
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
-          <img src={marsai} alt="marsai" className="w-32" />
+        <div className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-12 md:gap-18 lg:gap-24 md:py-12">
+          <img src={partners.brooklynStoryLab} alt="marsai" className="w-48" />
+          <img src={partners.cnc} alt="marsai" className="w-48" />
+          <img src={partners.creativeAi} alt="marsai" className="w-48" />
+          <img src={partners.humec} alt="marsai" className="w-48" />
+          <img src={partners.extraCourt} alt="marsai" className="w-48" />
+          <img src={partners.laPlateforme} alt="marsai" className="w-48" />
+          <img src={partners.leProjetImagine} alt="marsai" className="w-48" />
+          <img src={partners.lhc} alt="marsai" className="w-48" />
+          <img src={partners.shortForChange} alt="marsai" className="w-48" />
         </div>
       </div>
     </section>
