@@ -107,14 +107,14 @@ function MoviePage() {
                     </div>
                 </div>
 
-                <div className="md:order-2 md:col-span-3 flex justify-center w-full md:h-max-3/4">
+                <div className="md:order-2 md:col-span-3 flex justify-center w-full lg:aspect-video">
                     <div className="bg-black rounded-xl overflow-hidden shadow-2xl md:w-5/7 my-5">
 
                         <video
                             src={data.video_path}
                             controls
                             poster={data.cover_path}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                         >
                             Votre navigateur ne supporte pas la balise vidéo.
                         </video>
