@@ -1,6 +1,5 @@
-  import React, { useState } from 'react';
+import React, { useState } from 'react';
 
-// --- Données d'Événements Statiques ---
 const FESTIVAL_EVENTS = [
   {
     id: 1,
@@ -64,7 +63,6 @@ const FESTIVAL_EVENTS = [
   }
 ];
 
-// Composant utilitaire pour le badge de catégorie/statut
 const StatusBadge = ({ status, category }) => {
   let classes = "";
   if (status === "A Venir") {
@@ -98,7 +96,6 @@ const StatusBadge = ({ status, category }) => {
 function EventsManager() {
   const [activeFilter, setActiveFilter] = useState("A Venir");
 
-  // Filtre les événements basés sur l'onglet actif
   const filteredEvents = FESTIVAL_EVENTS.filter(event => {
     if (activeFilter === "Tous") {
       return true;
@@ -114,7 +111,6 @@ function EventsManager() {
         Gestion des Événements du Festival
       </h1>
 
-      {/* Barre de navigation des filtres (Tabs) */}
       <div className="border-b border-gray-200 dark:border-gray-700 mb-6">
         <nav className="flex space-x-4">
           {tabs.map((tab) => (
@@ -133,7 +129,6 @@ function EventsManager() {
         </nav>
       </div>
 
-      {/* Liste des Événements */}
       <div className="space-y-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (
@@ -144,11 +139,11 @@ function EventsManager() {
                 </h3>
                 <StatusBadge status={event.status} category={event.category} />
               </div>
-              
+
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
                 <span className="font-semibold text-indigo-500">Date:</span> {new Date(event.date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
-              
+
               <div className="flex flex-wrap gap-x-6 text-sm text-gray-500 dark:text-gray-400">
                 <p>
                   <span className="font-medium">Heure:</span> {event.time}

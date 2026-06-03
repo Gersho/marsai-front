@@ -1,8 +1,7 @@
 import { div } from "framer-motion/client";
 
 function DashboardStats() {
-  // return <>Dashboard Stats</>;
-   const stats = [
+  const stats = [
     {
       category: "100% IA",
       totalSubmissions: 150,
@@ -19,12 +18,10 @@ function DashboardStats() {
     },
   ];
 
-  // Calcul du total général
   const totalFilms = stats.reduce((acc, current) => acc + current.totalSubmissions, 0);
 
-  // Composant interne pour une carte de statistique Tailwind CSS
   const StatCard = ({ title, value, bgColor }) => (
-    <div 
+    <div
       className={`p-4 rounded-lg shadow-md flex-1 min-w-[150px] text-center transition duration-300 transform hover:scale-[1.02] ${bgColor}`}
     >
       <p className="text-sm font-medium uppercase opacity-90">{title}</p>
@@ -38,52 +35,46 @@ function DashboardStats() {
         Dashboard Stats Films IA & Hybrides
       </h1>
 
-      {/* Section du Total Global */}
       <div className="max-w-xs mx-auto mb-10">
         <div className="bg-indigo-600 text-white p-6 rounded-xl shadow-lg">
           <p className="text-lg font-medium text-indigo-200">TOTAL DES SOUMISSIONS</p>
           <p className="text-6xl font-bold mt-2">{totalFilms}</p>
         </div>
       </div>
-      
-      {/* Grille des Catégories de Films - Utilisation de flexbox pour l'adaptabilité */}
+
       <div className="flex flex-col lg:flex-row gap-8 justify-center">
         {stats.map((categoryStats) => (
-          <div 
+          <div
             key={categoryStats.category}
             className="flex-1 min-w-[300px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl p-6"
           >
             <h2 className="text-2xl font-bold mb-5 text-indigo-700 dark:text-indigo-400">
               {categoryStats.category}
             </h2>
-            
+
             <div className="flex flex-wrap gap-4 justify-center">
-              {/* Carte des Soumissions Totales (couleur neutre) */}
-              <StatCard 
-                title="Total" 
-                value={categoryStats.totalSubmissions} 
-                bgColor="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-50" 
+              <StatCard
+                title="Total"
+                value={categoryStats.totalSubmissions}
+                bgColor="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-50"
               />
-              
-              {/* Carte des Films Approuvés (couleur verte) */}
-              <StatCard 
-                title="Approuvés" 
-                value={categoryStats.approved} 
-                bgColor="bg-green-100 text-green-700 dark:bg-green-600 dark:text-white" 
+
+              <StatCard
+                title="Approuvés"
+                value={categoryStats.approved}
+                bgColor="bg-green-100 text-green-700 dark:bg-green-600 dark:text-white"
               />
-              
-              {/* Carte des Films En Attente (couleur jaune/orange) */}
-              <StatCard 
-                title="En Attente" 
-                value={categoryStats.pending} 
-                bgColor="bg-yellow-100 text-yellow-700 dark:bg-yellow-600 dark:text-white" 
+
+              <StatCard
+                title="En Attente"
+                value={categoryStats.pending}
+                bgColor="bg-yellow-100 text-yellow-700 dark:bg-yellow-600 dark:text-white"
               />
-              
-              {/* Carte des Films Rejetés (couleur rouge) */}
-              <StatCard 
-                title="Rejetés" 
-                value={categoryStats.rejected} 
-                bgColor="bg-red-100 text-red-700 dark:bg-red-600 dark:text-white" 
+
+              <StatCard
+                title="Rejetés"
+                value={categoryStats.rejected}
+                bgColor="bg-red-100 text-red-700 dark:bg-red-600 dark:text-white"
               />
             </div>
           </div>

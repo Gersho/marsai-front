@@ -1,6 +1,6 @@
 import React from 'react';
 
-// --- Données de Classement Statiques ---
+
 const RANKING_DATA = [
   {
     category: "100% IA",
@@ -22,7 +22,6 @@ const RANKING_DATA = [
   },
 ];
 
-// Composant pour le badge de statut (stateless)
 const StatusBadge = ({ status }) => {
   let classes = "";
   if (status === "Winner") {
@@ -39,7 +38,6 @@ const StatusBadge = ({ status }) => {
   );
 };
 
-// Composant pour un Tableau de Classement (stateless)
 const RankingTable = ({ films }) => (
   <div className="overflow-x-auto mt-4">
     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -80,7 +78,7 @@ function LeaderboardManager() {
   return (
     <div className="p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6">
-        
+
         <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white border-b border-indigo-200 pb-3">
           Classement Officiel du Festival
         </h1>
