@@ -1,6 +1,9 @@
 import { useParams } from "react-router";
 import TopPageTwo from "../components/base/TopPageTwo";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import AdminMoviePanel from "../components/admin/AdminMoviePanel";
+import JuryMoviePanel from "../components/admin/JuryMoviePanel";
+import { AuthContext } from "../context/AuthContext";
 
 
 function MoviePage() {
@@ -8,6 +11,7 @@ function MoviePage() {
     let [data, setData] = useState({});
     let [isLoading, setIsLoading] = useState(true);
     let [error, setError] = useState();
+    const { isJury, isAdmin } = useContext(AuthContext);
 
     useEffect(() => {
         async function getMovieData() {
@@ -41,7 +45,7 @@ function MoviePage() {
 
     if (error || !data.original_title) {
         return (
-            <div className={`${basePageClasses} p-8`}>
+            <div className={`${basePageClasses} flex justify-center items-center`}>
                 <p className="text-xl text-red-500">
                     {error || "Le film demandé n'a pas été trouvé."}
                 </p>
@@ -103,7 +107,7 @@ function MoviePage() {
                     </div>
                 </div>
 
-                <div className="md:order-2 md:col-span-3 flex justify-center w-full">
+                <div className="md:order-2 md:col-span-3 flex justify-center w-full md:h-max-3/4">
                     <div className="bg-black rounded-xl overflow-hidden shadow-2xl md:w-5/7 my-5">
 
                         <video
@@ -121,7 +125,8 @@ function MoviePage() {
                 </div>
 
             </div>
-
+            {isAdmin ? <AdminMoviePanel movie={data} setMovie={setData} /> : <></>}
+            {isJury ? <JuryMoviePanel movie={data} /> : <></>}
         </div>
     );
 }
