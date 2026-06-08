@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useApi } from '../../hooks/useApi';
-import MovieRow from './base/MovieRow';
-import PaginationMenu from '../base/PaginationMenu';
+import { useApi } from '../hooks/useApi';
+import PaginationMenu from '../components/base/PaginationMenu';
 import { useDebouncedCallback } from 'use-debounce';
-import SortableTableHead from './base/SortableTableHead';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import TitlePage from '../base/TitlePage';
+import TitlePage from '../components/base/TitlePage';
 import { useTranslation } from 'react-i18next';
+import MovieRow from '../components/admin/base/MovieRow';
+import SortableTableHead from '../components/admin/base/MovieRow';
+
 
 function MoviesManager() {
   const { t } = useTranslation();
