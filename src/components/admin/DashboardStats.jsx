@@ -30,14 +30,14 @@ function DashboardStats() {
   );
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <h1 className="text-3xl font-semibold border-b-2 border-indigo-200 pb-3 mb-8 dark:border-gray-700">
+    <div className="p-4 sm:p-6 lg:p-8 bg-secondary text-white rounded-xl shadow-2xl min-h-screen">
+      <h1 className="text-3xl font-bold mb-6 text-white border-b border-indigo-200 pb-3">
         Dashboard Stats Films IA & Hybrides
       </h1>
 
       <div className="max-w-xs mx-auto mb-10">
-        <div className="bg-indigo-600 text-white p-6 rounded-xl shadow-lg">
-          <p className="text-lg font-medium text-indigo-200">TOTAL DES SOUMISSIONS</p>
+        <div className="bg-accent text-white p-6 rounded-xl shadow-lg text-center">
+          <p className="text-lg font-medium">TOTAL DES SOUMISSIONS</p>
           <p className="text-6xl font-bold mt-2">{totalFilms}</p>
         </div>
       </div>
@@ -46,9 +46,9 @@ function DashboardStats() {
         {stats.map((categoryStats) => (
           <div
             key={categoryStats.category}
-            className="flex-1 min-w-[300px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl p-6"
+            className="flex-1 min-w-[300px] bg-primary border border-indigo-200/20 rounded-xl shadow-xl p-6"
           >
-            <h2 className="text-2xl font-bold mb-5 text-indigo-700 dark:text-indigo-400">
+            <h2 className="text-2xl font-bold mb-5 text-white">
               {categoryStats.category}
             </h2>
 
@@ -56,25 +56,22 @@ function DashboardStats() {
               <StatCard
                 title="Total"
                 value={categoryStats.totalSubmissions}
-                bgColor="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-50"
+                bgColor="bg-secondary text-white border border-indigo-200/20"
               />
-
               <StatCard
                 title="Approuvés"
                 value={categoryStats.approved}
-                bgColor="bg-green-100 text-green-700 dark:bg-green-600 dark:text-white"
+                bgColor="bg-green-700 text-white"
               />
-
               <StatCard
                 title="En Attente"
                 value={categoryStats.pending}
-                bgColor="bg-yellow-100 text-yellow-700 dark:bg-yellow-600 dark:text-white"
+                bgColor="bg-yellow-600 text-white"
               />
-
               <StatCard
                 title="Rejetés"
                 value={categoryStats.rejected}
-                bgColor="bg-red-100 text-red-700 dark:bg-red-600 dark:text-white"
+                bgColor="bg-red-700 text-white"
               />
             </div>
           </div>
@@ -83,5 +80,6 @@ function DashboardStats() {
     </div>
   );
 }
+
 
 export default DashboardStats;
