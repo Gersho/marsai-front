@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const RANKING_DATA = [
   {
     category: "100% IA",
@@ -24,15 +23,16 @@ const RANKING_DATA = [
 
 const StatusBadge = ({ status }) => {
   let classes = "";
+  // Adaptation avec bg-accent et indigo pour rester dans le thème EventsManager
   if (status === "Winner") {
-    classes = "bg-yellow-100 text-yellow-800 border-yellow-500";
+    classes = "bg-accent text-white";
   } else if (status === "Finalist") {
-    classes = "bg-green-100 text-green-800 border-green-500";
+    classes = "bg-indigo-600 text-white";
   } else {
-    classes = "bg-gray-100 text-gray-700 border-gray-300";
+    classes = "bg-gray-700 text-gray-200";
   }
   return (
-    <span className={`px-3 py-1 text-xs font-semibold rounded-full border ${classes}`}>
+    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${classes}`}>
       {status}
     </span>
   );
@@ -40,29 +40,29 @@ const StatusBadge = ({ status }) => {
 
 const RankingTable = ({ films }) => (
   <div className="overflow-x-auto mt-4">
-    <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-      <thead className="bg-gray-50 dark:bg-gray-700">
+    <table className="min-w-full divide-y divide-indigo-200">
+      <thead className="bg-secondary">
         <tr>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 w-1/12">Rang</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 w-5/12">Titre du Film</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 hidden sm:table-cell w-3/12">Réalisateur</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 w-1/12">Score</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 w-2/12">Statut</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-1/12">Rang</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-5/12">Titre du Film</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider hidden sm:table-cell w-3/12">Réalisateur</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-1/12">Score</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-2/12">Statut</th>
         </tr>
       </thead>
-      <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+      <tbody className="bg-secondary divide-y divide-indigo-200">
         {films.map((film, index) => (
-          <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 transition duration-100">
-            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900 dark:text-white">
+          <tr key={index} className="hover:bg-indigo-900/30 transition duration-100">
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-white">
               {film.rank}
             </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-200">
               {film.title}
             </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 hidden sm:table-cell">
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300 hidden sm:table-cell">
               {film.director}
             </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900 dark:text-white">
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-white">
               {film.score.toFixed(2)}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm">
@@ -74,27 +74,25 @@ const RankingTable = ({ films }) => (
     </table>
   </div>
 );
+
 function LeaderboardManager() {
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6">
+    // Utilisation de bg-secondary et du même padding que EventsManager
+    <div className="p-4 sm:p-6 lg:p-8 bg-secondary text-white rounded-xl shadow-2xl">
+      <h1 className="text-3xl font-bold mb-8 text-white border-b border-indigo-200 pb-3">
+        Classement Officiel du Festival
+      </h1>
 
-        <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white border-b border-indigo-200 pb-3">
-          Classement Officiel du Festival
-        </h1>
-
-        {RANKING_DATA.map((data, index) => (
-          <div key={index} className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">
-              Catégorie : {data.category}
-            </h2>
-            <RankingTable films={data.films} />
-          </div>
-        ))}
-      </div>
+      {RANKING_DATA.map((data, index) => (
+        <div key={index} className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4 text-white">
+            Catégorie : {data.category}
+          </h2>
+          <RankingTable films={data.films} />
+        </div>
+      ))}
     </div>
   );
 }
-
 
 export default LeaderboardManager;
