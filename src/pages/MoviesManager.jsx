@@ -6,7 +6,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import TitlePage from '../components/base/TitlePage';
 import { useTranslation } from 'react-i18next';
 import MovieRow from '../components/admin/base/MovieRow';
-import SortableTableHead from '../components/admin/base/MovieRow';
+import SortableTableHead from '../components/admin/base/SortableTableHead';
 
 
 function MoviesManager() {
