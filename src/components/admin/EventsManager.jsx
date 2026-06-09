@@ -36,6 +36,7 @@ function EventsManager() {
       setEvents((prev) => {
         return prev.sort((a, b) => new Date(a.date) - new Date(b.date));
       })
+      setLoading(false);
     }
     getEvents();
   }, [api]);
@@ -76,7 +77,7 @@ function EventsManager() {
 
       <div className="space-y-4">
         {/* <p className='text-black'> {events.length}</p> */}
-        {events.length > 0 ?
+        {!loading ?
 
           (
 
@@ -85,7 +86,7 @@ function EventsManager() {
             ))) : (
             <div className="text-center p-10 bg-gray-50 dark:bg-gray-700 rounded-lg">
               <p className="text-lg text-gray-500 dark:text-gray-400 italic">
-                Aucun événement trouvé pour la catégorie "{activeFilter}".
+                Chargement en cour
               </p>
             </div>
           )}
