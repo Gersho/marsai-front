@@ -6,7 +6,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import SubmitMoviePage from './pages/SubmitMoviePage';
 import AdminPage from './pages/AdminPage';
 import DashboardStats from './components/admin/DashboardStats';
-import MoviesManager from './components/admin/MoviesManager';
+import MoviesManager from './pages/MoviesManager';
 import JuryManager from './components/admin/JuryManager';
 import LeaderboardManager from './components/admin/LeaderboardManager';
 import EventsManager from './components/admin/EventsManager';
@@ -23,6 +23,7 @@ import MoviePage from './pages/MoviePage';
 import JuryRegisterPage from './pages/JuryRegisterPage';
 import AdminMovieTest from './pages/AdminMovieTest';
 import EditMoviePage from './pages/EditMoviePage';
+import MoviesManagerJury from './pages/MoviesManagerJury';
 import { AuthContext } from './context/AuthContext';
 import EventsCreateManagerPage from './pages/EventsCreateManagerPage';
 
@@ -62,9 +63,9 @@ function App() {
         </Route>
 
         <Route element={<ProtectedRoute allowedRole="jury" />}>
-          <Route path="/jury" element={<MoviesManager />} />
+          <Route path="/jury" element={<MoviesManagerJury />} />
         </Route>
-
+        
       </Routes>
     </div>
   );
