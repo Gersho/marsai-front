@@ -6,9 +6,9 @@ function AdminMoviePanel({ movie, setMovie }) {
 
 
     return (
-        <div className="flex flex-col items-center text-white">
+        <div className="flex flex-col bg-primary items-center text-white">
             <p className="">Admin Panel</p>
-            <div className="flex flex-col text-white bg-secondary  w-5/7 items-center">
+            <div className="flex flex-col text-white  w-5/7 items-center">
                 <textarea className="h-50 w-full bg-white text-black rounded-xl p-3" name=" admin-response" id="admin-response"
                     // &#10; is newline
                     value={textContent} placeholder="Administrator comment &#10;for Winner input won title" onChange={e => setTextContent(e.target.value)} ></textarea>

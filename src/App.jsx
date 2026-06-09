@@ -25,6 +25,7 @@ import AdminMovieTest from './pages/AdminMovieTest';
 import EditMoviePage from './pages/EditMoviePage';
 import MoviesManagerJury from './pages/MoviesManagerJury';
 import { AuthContext } from './context/AuthContext';
+import EventsCreateManagerPage from './pages/EventsCreateManagerPage';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
             <Route path="jury" element={<JuryManager />} />
             <Route path="leaderboard" element={<LeaderboardManager />} />
             <Route path="events" element={<EventsManager />} />
+            <Route path="events/add" element={<EventsCreateManagerPage />} />
             <Route path="newsletter" element={<Newsletter />} />
           </Route>
         </Route>
