@@ -5,6 +5,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+ARG VITE_SERVER_ADDRESS
+
 COPY . .
 RUN npm run build
 
