@@ -6,7 +6,7 @@ import MovieSubmitInfo from '../components/MovieSubmit/MovieSubmitInfo';
 import MovieSubmitTeamComposition from '../components/MovieSubmit/MovieSubmitTeamComposition';
 import { Trans, useTranslation } from 'react-i18next';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import TopPageTwo from '../components/base/TopPageTwo';
 import TitlePage from '../components/base/TitlePage';
@@ -20,40 +20,45 @@ function SubmitMoviePage() {
     formState: { isSubmitting },
   } = form;
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const target = 'submitMovieForm.page.';
 
-  async function onSubmit(data) {
-    const formData = new FormData();
-
-    for (const [key, value] of Object.entries(data)) {
-      if (key === 'director' || key === 'collaborators') {
-        formData.append(key, JSON.stringify(value));
-      } else if (value instanceof FileList) {
-        if (value.length > 0) {
-          formData.append(key, value[0]);
-        }
-      } else {
-        formData.append(key, value);
-      }
-    }
-
-    try {
-      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies', {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await res.json();
-      if (res.ok) {
-        toast.success('Form submit OK.');
-        navigate('/');
-      } else {
-        toast.error(data.message + '\n' + data.errors[0].message);
-      }
-    } catch (e) {
-      toast.error('Something went wrong: ' + e);
-    }
+  async function onSubmitClosed() {
+    toast.error("Form Submit disabled on demo site");
   }
+
+  // async function onSubmit(data) {
+  //   const formData = new FormData();
+
+  //   for (const [key, value] of Object.entries(data)) {
+  //     if (key === 'director' || key === 'collaborators') {
+  //       formData.append(key, JSON.stringify(value));
+  //     } else if (value instanceof FileList) {
+  //       if (value.length > 0) {
+  //         formData.append(key, value[0]);
+  //       }
+  //     } else {
+  //       formData.append(key, value);
+  //     }
+  //   }
+
+  //   try {
+  //     const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies', {
+  //       method: 'POST',
+  //       body: formData,
+  //     });
+  //     const data = await res.json();
+  //     if (res.ok) {
+  //       toast.success('Form submit OK.');
+  //       navigate('/');
+  //     } else {
+  //       toast.error(data.message + '\n' + data.errors[0].message);
+  //     }
+  //   } catch (e) {
+  //     toast.error('Something went wrong: ' + e);
+  //   }
+  // }
+
 
   return (
     <>
@@ -76,7 +81,7 @@ function SubmitMoviePage() {
         </div>
         <form
           className="flex flex-col items-center gap-7 w-full"
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(onSubmitClosed)}
           encType="multipart/form-data"
           noValidate
         >
